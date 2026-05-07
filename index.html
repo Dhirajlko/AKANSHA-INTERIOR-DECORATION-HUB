@@ -285,6 +285,7 @@
       .hero h2 { font-size: 2.3rem; }
       .section-title { font-size: 2rem; }
       .call-float { right: 90px; }
+      nav a { margin: 0 10px; font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -396,7 +397,7 @@
   if(reviews.length){ setInterval(()=>{ current = (current+1)%reviews.length; showReview(current); }, 5000); dots.forEach((dot,i)=>{ dot.addEventListener('click',()=>{ current=i; showReview(current); }); }); showReview(0); }
   const cForm = document.getElementById('contactForm');
   if(cForm){ cForm.addEventListener('submit', (e)=>{ e.preventDefault(); alert("✨ Thank you! Our design expert will contact you within 2 hours."); cForm.reset(); }); }
-  document.querySelectorAll('nav a, .btn-primary[href="#contact"]').forEach(anchor => { anchor.addEventListener('click', function(e){ const href = this.getAttribute('href'); if(href && href.startsWith('#')){ e.preventDefault(); const target = document.querySelector(href); if(target){ const offset = 70; window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth'}); } } }); });
+  document.querySelectorAll('nav a[href^="#"], .btn-primary[href="#contact"]').forEach(anchor => { anchor.addEventListener('click', function(e){ const href = this.getAttribute('href'); if(href && href.startsWith('#')){ e.preventDefault(); const target = document.querySelector(href); if(target){ const offset = 70; window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth'}); } } }); });
 </script>
 </body>
 </html>
