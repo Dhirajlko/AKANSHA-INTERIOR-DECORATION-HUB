@@ -74,8 +74,10 @@
     .logo h1 {
       font-size: 1.9rem;
       font-weight: 800;
-      background: none !important;
-      color: #1F3B2C !important;
+      background: linear-gradient(135deg, #1F3B2C, #2e7d32);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent !important;
       letter-spacing: -0.3px;
     }
     .logo p {
@@ -91,14 +93,6 @@
       transition: 0.2s;
     }
     nav a:hover { color: #2e7d32 !important; }
-    .btn-back {
-      background: linear-gradient(105deg, #1b5e20, #2e7d32);
-      padding: 10px 24px;
-      border-radius: 40px;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
     .section {
       padding: 80px 6%;
     }
@@ -106,17 +100,19 @@
       font-size: 2.8rem;
       font-weight: 800;
       text-align: center;
-      background: none !important;
-      color: #b8d8ff !important;
+      background: linear-gradient(135deg, #FF8C00, #FFD700, #FF6B9D);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent !important;
       margin-bottom: 40px;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      text-shadow: 0 0 20px rgba(255,140,0,0.3);
     }
     .subsection-title {
       font-size: 1.8rem;
       font-weight: 700;
       margin: 50px 0 25px;
       color: #b8d8ff;
-      border-left: 6px solid #2e7d32;
+      border-left: 6px solid #FFD700;
       padding-left: 20px;
     }
     .client-grid, .corporate-grid {
@@ -136,7 +132,14 @@
       transition: 0.2s;
       text-align: center;
     }
-    .client-card i { margin-right: 10px; color: #FFB81C; }
+    .client-card:hover {
+      transform: scale(1.03);
+      border-color: #FFD700;
+    }
+    .client-card i {
+      margin-right: 10px;
+      color: #FFD700;
+    }
     .achievement-badge {
       background: #000000;
       border-radius: 30px;
@@ -153,9 +156,18 @@
       text-align: center;
       padding: 10px;
     }
-    .achievement-item i { font-size: 2.5rem; color: #FFB81C; margin-bottom: 12px; }
-    .achievement-item h3 { color: #FFD966; margin-bottom: 8px; }
-    .achievement-item p { color: #b8d8ff; }
+    .achievement-item i {
+      font-size: 2.5rem;
+      color: #FFD700;
+      margin-bottom: 12px;
+    }
+    .achievement-item h3 {
+      color: #FFD966;
+      margin-bottom: 8px;
+    }
+    .achievement-item p {
+      color: #b8d8ff;
+    }
     .portfolio-table {
       width: 100%;
       border-collapse: collapse;
@@ -190,7 +202,42 @@
       border: 1px solid #2e7d32 !important;
       color: #b8d8ff !important;
     }
-    .service-chip i { color: #b8d8ff !important; margin-right: 12px; }
+    .service-chip i {
+      color: #FFD700 !important;
+      margin-right: 12px;
+    }
+    /* Awards Gallery Styles */
+    .awards-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
+    }
+    .award-card {
+      background: #000000;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 2px solid #FFD700;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .award-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(255,215,0,0.2);
+    }
+    .award-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+    .award-caption {
+      padding: 14px 16px;
+      text-align: center;
+      color: #FFD700 !important;
+      font-weight: 700;
+      background: #1a1a1a;
+      font-size: 0.9rem;
+    }
     footer {
       background: #000000 !important;
       text-align: center;
@@ -198,7 +245,9 @@
       border-top: 2px solid #2e7d32 !important;
       color: #b8d8ff !important;
     }
-    footer p { color: #b8d8ff !important; }
+    footer p {
+      color: #b8d8ff !important;
+    }
     .whatsapp-float, .call-float {
       position: fixed;
       bottom: 28px;
@@ -215,10 +264,15 @@
       z-index: 99;
       text-decoration: none;
     }
-    .call-float { right: 110px; background: #0b3b0f !important; }
+    .call-float {
+      right: 110px;
+      background: #0b3b0f !important;
+    }
     @media (max-width: 780px) {
       .section-title { font-size: 2rem; }
       .subsection-title { font-size: 1.4rem; }
+      nav a { margin: 0 10px; font-size: 0.8rem; }
+      .awards-gallery { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
     }
   </style>
 </head>
@@ -233,8 +287,10 @@
     <p>ISO 9001:2015 | COMPLETE PORTFOLIO</p>
   </div>
   <nav>
-    <a href="index.html">← Back to Home</a>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
     <a href="index.html#services">Services</a>
+    <a href="index.html#reviews">Reviews</a>
     <a href="index.html#contact">Contact</a>
   </nav>
 </header>
@@ -248,11 +304,44 @@
     <p style="color: #b8d8ff; margin-top: 15px; line-height: 1.5;">AKANSHA-INTERIOR is a premier interior design and architectural visualization firm. Recognized for technical precision and functional luxury, the firm is an <strong>ISO 9001:2015 Certified</strong> organization committed to international quality standards in design and execution.</p>
   </div>
 
-  <!-- Major Achievements -->
+  <!-- Major Achievements Text -->
   <div class="subsection-title">🏆 Major Achievements</div>
   <div class="achievement-badge">
     <div class="achievement-item"><i class="fas fa-trophy"></i><h3>2024 Architecture Summit Meet</h3><p>Best Architect & Interior Designer (Modular Kitchens)</p></div>
     <div class="achievement-item"><i class="fas fa-medal"></i><h3>2025 Architecture Summit Meet</h3><p>Best Architect & Interior Designer (Modern Architecture)</p></div>
+  </div>
+
+  <!-- ========== AWARDS & PRIZES GALLERY - IMAGES FROM FOLDER ========== -->
+  <div class="subsection-title">🏅 Awards & Recognitions Gallery</div>
+  <div class="awards-gallery">
+    <div class="award-card">
+      <img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Sponsor Award 2025">
+      <div class="award-caption">🏆 Gold Sponsor Award 2025</div>
+    </div>
+    <div class="award-card">
+      <img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards Collage">
+      <div class="award-caption">🏅 Architecture Awards Collage</div>
+    </div>
+    <div class="award-card">
+      <img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO 9001 Certification">
+      <div class="award-caption">📜 ISO 9001:2015 Certification</div>
+    </div>
+    <div class="award-card">
+      <img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Architecture Reconnect Award Ceremony">
+      <div class="award-caption">🎉 Architecture Reconnect Award Ceremony</div>
+    </div>
+    <div class="award-card">
+      <img src="images/29-architect-wow-award-2024.jpg" alt="Architect WOW Award 2024">
+      <div class="award-caption">🌟 Architect WOW Award 2024</div>
+    </div>
+    <div class="award-card">
+      <img src="images/30-award-event-architecture-summit.jpg" alt="Architecture Summit Award Event">
+      <div class="award-caption">🎊 Architecture Summit Award Event</div>
+    </div>
+    <div class="award-card">
+      <img src="images/31-award-recognition-collage-akanksha.jpg" alt="Award Recognition Collage">
+      <div class="award-caption">🏅 Award Recognition Collage</div>
+    </div>
   </div>
 
   <!-- Celebrity & Residential -->
@@ -317,12 +406,12 @@
     </tbody>
   </table>
 
-  <!-- Contact Snippet (no address) -->
+  <!-- Contact Section -->
   <div style="background: #000000; border-radius: 48px; padding: 30px; margin-top: 30px; text-align: center; border: 1px solid #2e7d32;">
-    <i class="fas fa-phone-alt" style="color:#FFB81C; font-size: 2rem;"></i>
+    <i class="fas fa-phone-alt" style="color:#FFD700; font-size: 2rem;"></i>
     <p style="color: #b8d8ff; margin: 10px 0;"><strong>Contact for Portfolio Consultation:</strong> <a href="tel:+919140097029" style="color:#b8d8ff;">+91 9140097029</a> | interiorhub007@gmail.com</p>
     <p style="color: #b8d8ff;">ISO 9001:2015 | Operating hours: 9:30 AM – 9:00 PM (Daily)</p>
-    <a href="index.html#contact" class="btn-back" style="display: inline-block; margin-top: 20px;">← Back to Home & Contact</a>
+    <a href="index.html#contact" style="display: inline-block; margin-top: 20px; background: linear-gradient(105deg, #1b5e20, #2e7d32); padding: 12px 30px; border-radius: 40px; color: white; text-decoration: none; font-weight: 600;">← Back to Home & Contact</a>
   </div>
 </section>
 
@@ -336,7 +425,17 @@
 
 <script>
   const sparkField = document.getElementById('particleField');
-  for(let i=0;i<60;i++){ let sp = document.createElement('div'); sp.classList.add('spark'); let size = Math.random()*6+2; sp.style.width = size+'px'; sp.style.height = size+'px'; sp.style.left = Math.random()*100+'%'; sp.style.top = Math.random()*100+'%'; sp.style.animationDuration = Math.random()*12+6+'s'; sparkField.appendChild(sp); }
+  for(let i=0;i<60;i++){ 
+    let sp = document.createElement('div'); 
+    sp.classList.add('spark'); 
+    let size = Math.random()*6+2; 
+    sp.style.width = size+'px'; 
+    sp.style.height = size+'px'; 
+    sp.style.left = Math.random()*100+'%'; 
+    sp.style.top = Math.random()*100+'%'; 
+    sp.style.animationDuration = Math.random()*12+6+'s'; 
+    sparkField.appendChild(sp); 
+  }
 </script>
 </body>
 </html>
