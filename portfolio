@@ -1,1 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>AKANSHA-INTERIOR | Complete Portfolio | Achievements & Projects</title>
+  <meta name="description" content="Complete portfolio of AKANSHA-INTERIOR: celebrity residences, hotels, corporate clients, awards, and turnkey projects.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FFFBF5;
+      overflow-x: hidden;
+      color: #1F1A17;
+    }
+    .radiant-bg {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 30% 10%, #FFE9C7, #FFF0DD, #FFE1C4);
+      z-index: -2;
+    }
+    .glow-motion {
+      position: fixed;
+      width: 150%;
+      height: 150%;
+      top: -30%;
+      left: -30%;
+      background: radial-gradient(ellipse at 40% 60%, rgba(255, 180, 80, 0.25), rgba(255, 100, 130, 0.15), transparent 70%);
+      animation: slowDrift 24s infinite alternate;
+      z-index: -1;
+      pointer-events: none;
+    }
+    @keyframes slowDrift {
+      0% { transform: translate(0,0) scale(1); opacity: 0.6; }
+      100% { transform: translate(4%, -6%) scale(1.2); opacity: 1; }
+    }
+    .spark-particles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .spark {
+      position: absolute;
+      background: radial-gradient(circle, #FFB347, #FF6F61);
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: floatSpark 13s infinite alternate;
+    }
+    @keyframes floatSpark {
+      0% { transform: translateY(0) scale(0.6); opacity: 0.2; }
+      100% { transform: translateY(-70px) scale(1.2); opacity: 0.8; }
+    }
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 245, 230, 0.88);
+      border-bottom: 3px solid #2e7d32;
+      padding: 16px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      flex-wrap: wrap;
+    }
+    .logo h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      background: none !important;
+      color: #1F3B2C !important;
+      letter-spacing: -0.3px;
+    }
+    .logo p {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #1F3B2C !important;
+    }
+    nav a {
+      color: #3E2C23;
+      margin: 0 18px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    nav a:hover { color: #2e7d32 !important; }
+    .btn-back {
+      background: linear-gradient(105deg, #1b5e20, #2e7d32);
+      padding: 10px 24px;
+      border-radius: 40px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .section {
+      padding: 80px 6%;
+    }
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-align: center;
+      background: none !important;
+      color: #b8d8ff !important;
+      margin-bottom: 40px;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .subsection-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin: 50px 0 25px;
+      color: #b8d8ff;
+      border-left: 6px solid #2e7d32;
+      padding-left: 20px;
+    }
+    .client-grid, .corporate-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .client-card {
+      background: #000000;
+      border-radius: 40px;
+      padding: 18px 28px;
+      border: 1px solid #2e7d32;
+      color: #b8d8ff;
+      font-weight: 600;
+      transition: 0.2s;
+      text-align: center;
+    }
+    .client-card i { margin-right: 10px; color: #FFB81C; }
+    .achievement-badge {
+      background: #000000;
+      border-radius: 30px;
+      padding: 20px;
+      margin: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      border: 1px solid #2e7d32;
+    }
+    .achievement-item {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+    }
+    .achievement-item i { font-size: 2.5rem; color: #FFB81C; margin-bottom: 12px; }
+    .achievement-item h3 { color: #FFD966; margin-bottom: 8px; }
+    .achievement-item p { color: #b8d8ff; }
+    .portfolio-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #000000;
+      border-radius: 32px;
+      overflow: hidden;
+      margin: 30px 0;
+    }
+    .portfolio-table th, .portfolio-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid #2e7d32;
+      color: #b8d8ff;
+    }
+    .portfolio-table th {
+      background: #1a3a1a;
+      font-weight: 800;
+      color: #FFD966;
+    }
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .service-chip {
+      background: #000000 !important;
+      border-radius: 80px;
+      padding: 14px 32px;
+      font-weight: 700;
+      border: 1px solid #2e7d32 !important;
+      color: #b8d8ff !important;
+    }
+    .service-chip i { color: #b8d8ff !important; margin-right: 12px; }
+    footer {
+      background: #000000 !important;
+      text-align: center;
+      padding: 40px;
+      border-top: 2px solid #2e7d32 !important;
+      color: #b8d8ff !important;
+    }
+    footer p { color: #b8d8ff !important; }
+    .whatsapp-float, .call-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: #1b5e20 !important;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      z-index: 99;
+      text-decoration: none;
+    }
+    .call-float { right: 110px; background: #0b3b0f !important; }
+    @media (max-width: 780px) {
+      .section-title { font-size: 2rem; }
+      .subsection-title { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="radiant-bg"></div>
+<div class="glow-motion"></div>
+<div class="spark-particles" id="particleField"></div>
 
+<header>
+  <div class="logo">
+    <h1><i class="fas fa-feather-alt"></i> AKANSHA-INTERIOR</h1>
+    <p>ISO 9001:2015 | COMPLETE PORTFOLIO</p>
+  </div>
+  <nav>
+    <a href="index.html">← Back to Home</a>
+    <a href="index.html#services">Services</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="section">
+  <div class="section-title">📁 Complete Portfolio & Track Record</div>
+
+  <!-- Company Overview -->
+  <div style="background: #000000; border-radius: 48px; padding: 30px; margin-bottom: 30px; border: 1px solid #2e7d32;">
+    <h3 style="color: #FFD966; font-size: 1.8rem;">Company Overview</h3>
+    <p style="color: #b8d8ff; margin-top: 15px; line-height: 1.5;">AKANSHA-INTERIOR is a premier interior design and architectural visualization firm. Recognized for technical precision and functional luxury, the firm is an <strong>ISO 9001:2015 Certified</strong> organization committed to international quality standards in design and execution.</p>
+  </div>
+
+  <!-- Major Achievements -->
+  <div class="subsection-title">🏆 Major Achievements</div>
+  <div class="achievement-badge">
+    <div class="achievement-item"><i class="fas fa-trophy"></i><h3>2024 Architecture Summit Meet</h3><p>Best Architect & Interior Designer (Modular Kitchens)</p></div>
+    <div class="achievement-item"><i class="fas fa-medal"></i><h3>2025 Architecture Summit Meet</h3><p>Best Architect & Interior Designer (Modern Architecture)</p></div>
+  </div>
+
+  <!-- Celebrity & Residential -->
+  <div class="subsection-title">🏡 Celebrity & High-End Residential</div>
+  <div class="client-grid">
+    <div class="client-card"><i class="fas fa-star"></i> Pawan Singh Residence (Studio Designing & Execution)</div>
+    <div class="client-card"><i class="fas fa-building"></i> Shalimar Valencia</div>
+    <div class="client-card"><i class="fas fa-building"></i> Shalimar Mannat</div>
+    <div class="client-card"><i class="fas fa-hard-hat"></i> Amrawati Developer</div>
+  </div>
+
+  <!-- Commercial & Hospitality -->
+  <div class="subsection-title">🏨 Commercial & Hospitality</div>
+  <div class="client-grid">
+    <div class="client-card"><i class="fas fa-mall"></i> Lulu Mall – Coffee Cup outlet</div>
+    <div class="client-card"><i class="fas fa-hotel"></i> Summit Hotels & Resorts (full execution)</div>
+    <div class="client-card"><i class="fas fa-spa"></i> Bodycraft Salon & Spa</div>
+    <div class="client-card"><i class="fas fa-spa"></i> Ads Spa (full designing & execution)</div>
+    <div class="client-card"><i class="fas fa-hotel"></i> Cherks Group of Hotels</div>
+    <div class="client-card"><i class="fas fa-hotel"></i> Levana Group of Hotels</div>
+    <div class="client-card"><i class="fas fa-building"></i> Best Western Hotels (as per norms)</div>
+    <div class="client-card"><i class="fas fa-cut"></i> Slimming Center & Saloon – Perfect Personality</div>
+  </div>
+
+  <!-- Real Estate Partnerships -->
+  <div class="subsection-title">🏗️ Real Estate Partnerships</div>
+  <div class="client-grid">
+    <div class="client-card"><i class="fas fa-chart-line"></i> Sample flat development & premium project executing</div>
+    <div class="client-card"><i class="fas fa-handshake"></i> Rishita Builders & Levana Builders (consulting)</div>
+  </div>
+
+  <!-- Corporate Clients -->
+  <div class="subsection-title">🏭 Corporate & Industrial Clients</div>
+  <div class="corporate-grid" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+    <div class="client-card"><i class="fas fa-industry"></i> Lafarge India Ltd</div>
+    <div class="client-card"><i class="fas fa-car"></i> Tata Motors</div>
+    <div class="client-card"><i class="fas fa-chart-line"></i> Tata Steel</div>
+    <div class="client-card"><i class="fas fa-cogs"></i> Tata Timken</div>
+    <div class="client-card"><i class="fas fa-truck"></i> Tata Cummins</div>
+  </div>
+
+  <!-- Core Expertise -->
+  <div class="subsection-title">🔧 Core Expertise</div>
+  <div class="services-grid">
+    <div class="service-chip"><i class="fas fa-cube"></i> Architectural Visualization (3D/2D)</div>
+    <div class="service-chip"><i class="fas fa-utensils"></i> Award-winning Modular Kitchens</div>
+    <div class="service-chip"><i class="fas fa-concierge-bell"></i> Turnkey Hospitality Focus</div>
+    <div class="service-chip"><i class="fas fa-drafting-compass"></i> Vertical Planning & Detailing</div>
+  </div>
+
+  <!-- Service Portfolio Table -->
+  <div class="subsection-title">📊 Service Portfolio</div>
+  <table class="portfolio-table">
+    <thead>
+      <tr><th>Service Category</th><th>Notable Projects / Clients</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Residential Interiors</td><td>Studio Singh, Shalimar Valencia, Amrawati Developer</td></tr>
+      <tr><td>Modular Kitchens</td><td>Residences & commercial spaces (Award-winning)</td></tr>
+      <tr><td>Hospitality & Wellness</td><td>Summit Hotels, Bodycraft, Ads Spa, Cherks Group</td></tr>
+      <tr><td>Modern Architecture</td><td>Celebrity projects, Corporate offices, Industrial sites</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Contact Snippet (no address) -->
+  <div style="background: #000000; border-radius: 48px; padding: 30px; margin-top: 30px; text-align: center; border: 1px solid #2e7d32;">
+    <i class="fas fa-phone-alt" style="color:#FFB81C; font-size: 2rem;"></i>
+    <p style="color: #b8d8ff; margin: 10px 0;"><strong>Contact for Portfolio Consultation:</strong> <a href="tel:+919140097029" style="color:#b8d8ff;">+91 9140097029</a> | interiorhub007@gmail.com</p>
+    <p style="color: #b8d8ff;">ISO 9001:2015 | Operating hours: 9:30 AM – 9:00 PM (Daily)</p>
+    <a href="index.html#contact" class="btn-back" style="display: inline-block; margin-top: 20px;">← Back to Home & Contact</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 AKANSHA-INTERIOR — Best Architect & Interior Designer | ISO 9001:2015 | Luxury & Hospitality Experts</p>
+  <p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a class="call-float" href="tel:+919140097029"><i class="fas fa-phone-alt"></i></a>
+
+<script>
+  const sparkField = document.getElementById('particleField');
+  for(let i=0;i<60;i++){ let sp = document.createElement('div'); sp.classList.add('spark'); let size = Math.random()*6+2; sp.style.width = size+'px'; sp.style.height = size+'px'; sp.style.left = Math.random()*100+'%'; sp.style.top = Math.random()*100+'%'; sp.style.animationDuration = Math.random()*12+6+'s'; sparkField.appendChild(sp); }
+</script>
+</body>
+</html>
