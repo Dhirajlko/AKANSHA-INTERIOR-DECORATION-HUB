@@ -8,172 +8,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #FFFBF5;
-      overflow-x: hidden;
-      color: #1F1A17;
-    }
-    .radiant-bg {
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(circle at 30% 10%, #FFE9C7, #FFF0DD, #FFE1C4);
-      z-index: -2;
-    }
-    .glow-motion {
-      position: fixed;
-      width: 150%;
-      height: 150%;
-      top: -30%;
-      left: -30%;
-      background: radial-gradient(ellipse at 40% 60%, rgba(255, 180, 80, 0.25), rgba(255, 100, 130, 0.15), transparent 70%);
-      animation: slowDrift 24s infinite alternate;
-      z-index: -1;
-      pointer-events: none;
-    }
-    @keyframes slowDrift {
-      0% { transform: translate(0,0) scale(1); opacity: 0.6; }
-      100% { transform: translate(4%, -6%) scale(1.2); opacity: 1; }
-    }
-    .spark-particles {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-    }
-    .spark {
-      position: absolute;
-      background: radial-gradient(circle, #FFB347, #FF6F61);
-      border-radius: 50%;
-      opacity: 0.5;
-      animation: floatSpark 13s infinite alternate;
-    }
-    @keyframes floatSpark {
-      0% { transform: translateY(0) scale(0.6); opacity: 0.2; }
-      100% { transform: translateY(-70px) scale(1.2); opacity: 0.8; }
-    }
-    header {
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(20px);
-      background: rgba(255, 245, 230, 0.88);
-      border-bottom: 3px solid #2e7d32;
-      padding: 16px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-      flex-wrap: wrap;
-    }
-    .logo h1 {
-      font-size: 1.9rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #1F3B2C, #2e7d32);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent !important;
-      letter-spacing: -0.3px;
-    }
-    .logo p {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: #1F3B2C !important;
-    }
-    nav a {
-      color: #3E2C23;
-      margin: 0 18px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: 0.2s;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #FFFBF5; overflow-x: hidden; color: #1F1A17; }
+    .radiant-bg { position: fixed; inset: 0; background: radial-gradient(circle at 30% 10%, #FFE9C7, #FFF0DD, #FFE1C4); z-index: -2; }
+    .glow-motion { position: fixed; width: 150%; height: 150%; top: -30%; left: -30%; background: radial-gradient(ellipse at 40% 60%, rgba(255, 180, 80, 0.25), rgba(255, 100, 130, 0.15), transparent 70%); animation: slowDrift 24s infinite alternate; z-index: -1; pointer-events: none; }
+    @keyframes slowDrift { 0% { transform: translate(0,0) scale(1); opacity: 0.6; } 100% { transform: translate(4%, -6%) scale(1.2); opacity: 1; } }
+    .spark-particles { position: fixed; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+    .spark { position: absolute; background: radial-gradient(circle, #FFB347, #FF6F61); border-radius: 50%; opacity: 0.5; animation: floatSpark 13s infinite alternate; }
+    @keyframes floatSpark { 0% { transform: translateY(0) scale(0.6); opacity: 0.2; } 100% { transform: translateY(-70px) scale(1.2); opacity: 0.8; } }
+    header { position: sticky; top: 0; backdrop-filter: blur(20px); background: rgba(255, 245, 230, 0.88); border-bottom: 3px solid #2e7d32; padding: 16px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 100; flex-wrap: wrap; }
+    .logo h1 { font-size: 1.9rem; font-weight: 800; background: linear-gradient(135deg, #1F3B2C, #2e7d32); -webkit-background-clip: text; background-clip: text; color: transparent !important; letter-spacing: -0.3px; }
+    .logo p { font-size: 0.7rem; font-weight: 600; color: #1F3B2C !important; }
+    nav a { color: #3E2C23; margin: 0 18px; font-weight: 700; text-decoration: none; transition: 0.2s; }
     nav a:hover { color: #2e7d32 !important; }
-    .section {
-      padding: 80px 6%;
-    }
-    .section-title {
-      font-size: 3rem;
-      font-weight: 800;
-      text-align: center;
-      background: linear-gradient(135deg, #00D2FF, #3A7BD5, #00E5FF, #6A11CB);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent !important;
-      margin-bottom: 20px;
-      text-shadow: 0 0 25px rgba(0,210,255,0.4);
-      animation: vibrantGlow 3s ease-in-out infinite;
-    }
-    @keyframes vibrantGlow {
-      0% { text-shadow: 0 0 15px rgba(0,210,255,0.3); }
-      50% { text-shadow: 0 0 35px rgba(106,17,203,0.5); }
-      100% { text-shadow: 0 0 15px rgba(0,210,255,0.3); }
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
-    .gallery-item {
-      background: #000000 !important;
-      border-radius: 28px;
-      overflow: hidden;
-      border: 2px solid #2e7d32 !important;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .gallery-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 30px rgba(0,0,0,0.3);
-      border-color: #FFD700 !important;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      display: block;
-    }
-    .gallery-caption {
-      padding: 14px 16px;
-      text-align: center;
-      color: #b8d8ff !important;
-      font-weight: 600;
-      background: #1a1a1a;
-      font-size: 0.9rem;
-    }
-    footer {
-      background: #000000 !important;
-      text-align: center;
-      padding: 40px;
-      border-top: 2px solid #2e7d32 !important;
-      color: #b8d8ff !important;
-    }
+    .section { padding: 80px 6%; }
+    .section-title { font-size: 3rem; font-weight: 800; text-align: center; background: linear-gradient(135deg, #00D2FF, #3A7BD5, #00E5FF, #6A11CB); -webkit-background-clip: text; background-clip: text; color: transparent !important; margin-bottom: 20px; text-shadow: 0 0 25px rgba(0,210,255,0.4); animation: vibrantGlow 3s ease-in-out infinite; }
+    @keyframes vibrantGlow { 0% { text-shadow: 0 0 15px rgba(0,210,255,0.3); } 50% { text-shadow: 0 0 35px rgba(106,17,203,0.5); } 100% { text-shadow: 0 0 15px rgba(0,210,255,0.3); } }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-top: 40px; }
+    .gallery-item { background: #000000 !important; border-radius: 28px; overflow: hidden; border: 2px solid #2e7d32 !important; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .gallery-item:hover { transform: translateY(-8px); box-shadow: 0 20px 30px rgba(0,0,0,0.3); border-color: #FFD700 !important; }
+    .gallery-item img { width: 100%; height: 280px; object-fit: cover; display: block; }
+    .gallery-caption { padding: 14px 16px; text-align: center; color: #b8d8ff !important; font-weight: 600; background: #1a1a1a; font-size: 0.9rem; }
+    footer { background: #000000 !important; text-align: center; padding: 40px; border-top: 2px solid #2e7d32 !important; color: #b8d8ff !important; }
     footer p { color: #b8d8ff !important; }
-    .whatsapp-float, .call-float {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      background: #1b5e20 !important;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      color: white;
-      z-index: 99;
-      text-decoration: none;
-    }
+    .whatsapp-float, .call-float { position: fixed; bottom: 28px; right: 28px; background: #1b5e20 !important; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: white; z-index: 99; text-decoration: none; }
     .call-float { right: 110px; background: #0b3b0f !important; }
-    @media (max-width: 780px) {
-      .section-title { font-size: 2.2rem; }
-      .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-    }
+    @media (max-width: 780px) { .section-title { font-size: 2.2rem; } .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); } nav a { margin: 0 10px; font-size: 0.8rem; } }
   </style>
 </head>
 <body>
@@ -190,6 +50,7 @@
     <a href="index.html">Home</a>
     <a href="portfolio.html">Portfolio</a>
     <a href="index.html#services">Services</a>
+    <a href="index.html#reviews">Reviews</a>
     <a href="index.html#contact">Contact</a>
   </nav>
 </header>
@@ -199,12 +60,12 @@
   <p style="text-align: center; color: #555; margin-bottom: 20px; font-size: 1.1rem;">👇 Explore our premium interior design projects — luxury bedrooms, modular kitchens, award ceremonies, and more.</p>
   
   <div class="gallery-grid">
-    <div class="gallery-item"><img src="images/01-spa-wellness-interior-design.jpg" alt="Spa Wellness Interior"><div class="gallery-caption">✨ Spa & Wellness Interior Design</div></div>
+    <div class="gallery-item"><img src="images/01-spa-wellness-interior-design.jpg" alt="Spa Wellness"><div class="gallery-caption">✨ Spa & Wellness Interior Design</div></div>
     <div class="gallery-item"><img src="images/02-luxury-bedroom-collage.jpg" alt="Luxury Bedroom"><div class="gallery-caption">🛏️ Luxury Bedroom Collection</div></div>
     <div class="gallery-item"><img src="images/03-premium-bedroom-gallery.jpg" alt="Premium Bedroom"><div class="gallery-caption">🌟 Premium Bedroom Gallery</div></div>
-    <div class="gallery-item"><img src="images/04-modern-living-room-design.jpg" alt="Modern Living Room"><div class="gallery-caption">🛋️ Modern Living Room Design</div></div>
+    <div class="gallery-item"><img src="images/04-modern-living-room-design.jpg" alt="Living Room"><div class="gallery-caption">🛋️ Modern Living Room Design</div></div>
     <div class="gallery-item"><img src="images/05-master-bedroom-interior.jpg" alt="Master Bedroom"><div class="gallery-caption">👑 Master Bedroom Interior</div></div>
-    <div class="gallery-item"><img src="images/06-dining-wall-panel-design.jpg" alt="Dining Wall Panel"><div class="gallery-caption">🍽️ Dining Wall Panel Design</div></div>
+    <div class="gallery-item"><img src="images/06-dining-wall-panel-design.jpg" alt="Dining Panel"><div class="gallery-caption">🍽️ Dining Wall Panel Design</div></div>
     <div class="gallery-item"><img src="images/07-modern-tv-unit-design.jpg" alt="TV Unit"><div class="gallery-caption">📺 Modern TV Unit Design</div></div>
     <div class="gallery-item"><img src="images/08-modular-kitchen-design-collage.jpg" alt="Modular Kitchen"><div class="gallery-caption">🍳 Award-Winning Modular Kitchens</div></div>
     <div class="gallery-item"><img src="images/09-kitchen-interior-collection.jpg" alt="Kitchen Collection"><div class="gallery-caption">🏠 Kitchen Interior Collection</div></div>
@@ -219,4 +80,39 @@
     <div class="gallery-item"><img src="images/18-luxury-butterfly-bedroom.jpg" alt="Butterfly Bedroom"><div class="gallery-caption">🦋 Luxury Butterfly Bedroom</div></div>
     <div class="gallery-item"><img src="images/19-false-ceiling-light-design.jpg" alt="False Ceiling"><div class="gallery-caption">✨ False Ceiling & Light Design</div></div>
     <div class="gallery-item"><img src="images/20-modern-luxury-living-room.jpg" alt="Luxury Living Room"><div class="gallery-caption">🏡 Modern Luxury Living Room</div></div>
-    <div class="gallery
+    <div class="gallery-item"><img src="images/21-modern-bedroom-interior-design.jpg" alt="Modern Bedroom"><div class="gallery-caption">🛌 Modern Bedroom Interior</div></div>
+    <div class="gallery-item"><img src="images/22-luxury-tv-wall-unit-design.jpg" alt="TV Wall Unit"><div class="gallery-caption">📺 Luxury TV Wall Unit</div></div>
+    <div class="gallery-item"><img src="images/23-bedroom-wall-panel-lighting.jpg" alt="Wall Panel"><div class="gallery-caption">✨ Bedroom Wall Panel Lighting</div></div>
+    <div class="gallery-item"><img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Award"><div class="gallery-caption">🏆 Gold Sponsor Award 2025</div></div>
+    <div class="gallery-item"><img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards"><div class="gallery-caption">🏅 Architecture Awards Collage</div></div>
+    <div class="gallery-item"><img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO Certification"><div class="gallery-caption">📜 ISO 9001:2015 Certification</div></div>
+    <div class="gallery-item"><img src="images/27-company-profile-overview-akanksha.jpg" alt="Company Profile"><div class="gallery-caption">📊 Company Profile Overview</div></div>
+    <div class="gallery-item"><img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Award Ceremony"><div class="gallery-caption">🎉 Architecture Reconnect Award</div></div>
+    <div class="gallery-item"><img src="images/29-architect-wow-award-2024.jpg" alt="WOW Award"><div class="gallery-caption">🏆 Architect WOW Award 2024</div></div>
+    <div class="gallery-item"><img src="images/30-award-event-architecture-summit.jpg" alt="Award Event"><div class="gallery-caption">🎊 Architecture Summit Award</div></div>
+    <div class="gallery-item"><img src="images/31-award-recognition-collage-akanksha.jpg" alt="Award Recognition"><div class="gallery-caption">🏅 Award Recognition Collage</div></div>
+    <div class="gallery-item"><img src="images/32-modern-sliding-wardrobe-design.jpg" alt="Sliding Wardrobe"><div class="gallery-caption">🚪 Modern Sliding Wardrobe</div></div>
+    <div class="gallery-item"><img src="images/33-luxury-living-room-collage.jpg" alt="Luxury Living Collage"><div class="gallery-caption">🏡 Luxury Living Room Collage</div></div>
+    <div class="gallery-item"><img src="images/34-white-luxury-modular-kitchen.jpg" alt="White Luxury Kitchen"><div class="gallery-caption">🤍 White Luxury Modular Kitchen</div></div>
+    <div class="gallery-item"><img src="images/35-commercial-cafe-interior-design.jpg" alt="Commercial Cafe"><div class="gallery-caption">☕ Commercial Cafe Interior</div></div>
+    <div class="gallery-item"><img src="images/36-modern-pooja-room-design.jpg" alt="Modern Pooja Room"><div class="gallery-caption">🕉️ Modern Pooja Room Design</div></div>
+    <div class="gallery-item"><img src="images/37-modern-bar-unit-design.jpg" alt="Bar Unit"><div class="gallery-caption">🍸 Modern Bar Unit Design</div></div>
+    <div class="gallery-item"><img src="images/38-luxury-home-interior-work.jpg" alt="Luxury Home"><div class="gallery-caption">🏰 Luxury Home Interior Work</div></div>
+    <div class="gallery-item"><img src="images/39-modern-arch-wall-panel-design.jpg" alt="Arch Wall Panel"><div class="gallery-caption">🎨 Modern Arch Wall Panel Design</div></div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 AKANSHA-INTERIOR — Best Architect & Interior Designer | ISO 9001:2015 | Luxury & Hospitality Experts</p>
+  <p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</p>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a class="call-float" href="tel:+919140097029"><i class="fas fa-phone-alt"></i></a>
+
+<script>
+  const sparkField = document.getElementById('particleField');
+  for(let i=0;i<60;i++){ let sp = document.createElement('div'); sp.classList.add('spark'); let size = Math.random()*6+2; sp.style.width = size+'px'; sp.style.height = size+'px'; sp.style.left = Math.random()*100+'%'; sp.style.top = Math.random()*100+'%'; sp.style.animationDuration = Math.random()*12+6+'s'; sparkField.appendChild(sp); }
+</script>
+</body>
+</html>
