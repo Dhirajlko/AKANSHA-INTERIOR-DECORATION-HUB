@@ -1,571 +1,650 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>AKANSHA · WonderWeave | Modern Interior & Civil Magic</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Space Grotesk', sans-serif;
-    background: #0c0b1a;
-    overflow-x: hidden;
-  }
-
-  /* animated gradient orb background */
-  .orb-bg {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 30% 10%, rgba(255, 120, 160, 0.15), rgba(20, 15, 45, 0.95));
-    z-index: -2;
-  }
-
-  .moving-glow {
-    position: fixed;
-    width: 150%;
-    height: 150%;
-    top: -25%;
-    left: -25%;
-    background: radial-gradient(circle at 40% 50%, rgba(255, 100, 200, 0.08), transparent 70%);
-    animation: drift 22s infinite alternate ease-in-out;
-    z-index: -1;
-    pointer-events: none;
-  }
-
-  @keyframes drift {
-    0% { transform: translate(0%, 0%) rotate(0deg); opacity: 0.4; }
-    100% { transform: translate(8%, -8%) rotate(6deg); opacity: 0.9; }
-  }
-
-  /* floating particles */
-  .floating-particles {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    pointer-events: none;
-  }
-
-  .particle {
-    position: absolute;
-    background: rgba(255, 200, 220, 0.5);
-    border-radius: 50%;
-    animation: floatParticle 14s infinite alternate;
-  }
-
-  @keyframes floatParticle {
-    0% { transform: translateY(0px) scale(1); opacity: 0.2; }
-    100% { transform: translateY(-90px) scale(1.4); opacity: 0.7; }
-  }
-
-  /* header modern candy */
-  header {
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(20px);
-    background: rgba(10, 8, 25, 0.55);
-    border-bottom: 1px solid rgba(255, 200, 220, 0.3);
-    padding: 18px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    flex-wrap: wrap;
-  }
-
-  .logo h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: linear-gradient(125deg, #FFDEE9, #FFB5D0, #C084FC);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    letter-spacing: -0.5px;
-  }
-
-  .logo p {
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    color: #cdb4ff;
-  }
-
-  nav a {
-    color: #f0eaff;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.2s;
-    position: relative;
-  }
-
-  nav a:hover {
-    color: #ffb7d2;
-    text-shadow: 0 0 8px #ff99cc;
-  }
-
-  /* hero explosion */
-  .hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 50px 5%;
-    position: relative;
-  }
-
-  .hero-badge {
-    background: rgba(255, 200, 220, 0.15);
-    backdrop-filter: blur(12px);
-    display: inline-block;
-    padding: 8px 20px;
-    border-radius: 60px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    border: 1px solid #ffbfd5;
-    margin-bottom: 20px;
-  }
-
-  .hero h2 {
-    font-size: 4.6rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #FFFFFF, #FFC8E0, #E0AAFF, #A587FF);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    line-height: 1.2;
-  }
-
-  .wonder-text {
-    font-size: 1.3rem;
-    margin: 24px 0;
-    color: #dad2ff;
-  }
-
-  .cta-group {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: linear-gradient(95deg, #df78b0, #b162ea);
-    border: none;
-    padding: 14px 38px;
-    border-radius: 60px;
-    font-weight: 700;
-    color: white;
-    font-size: 1.1rem;
-    transition: 0.2s;
-    box-shadow: 0 8px 20px #d06bc050;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .btn-primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 14px 28px #ff87bb70;
-  }
-
-  .btn-outline {
-    background: transparent;
-    border: 2px solid #ffb6d9;
-    padding: 12px 34px;
-    border-radius: 60px;
-    color: #ffd9ec;
-    font-weight: 600;
-    transition: 0.2s;
-    text-decoration: none;
-  }
-
-  /* section style */
-  .section {
-    padding: 80px 6%;
-  }
-
-  .section-title {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 50px;
-    background: linear-gradient(to right, #FFE6F0, #D9B8FF);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-
-  /* service cards - party mode */
-  .service-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 35px;
-  }
-
-  .card-wonder {
-    background: rgba(25, 20, 45, 0.65);
-    backdrop-filter: blur(12px);
-    border-radius: 48px;
-    width: 280px;
-    padding: 36px 22px;
-    text-align: center;
-    transition: all 0.3s cubic-bezier(0.2, 1.1, 0.4, 1);
-    border: 1px solid rgba(255, 180, 210, 0.4);
-  }
-
-  .card-wonder:hover {
-    transform: translateY(-18px) rotate(1deg);
-    background: rgba(55, 40, 85, 0.7);
-    border-color: #ffabc9;
-    box-shadow: 0 35px 45px -20px #ffa0ce70;
-  }
-
-  .card-wonder i {
-    font-size: 3.5rem;
-    background: linear-gradient(145deg, #FFB7D2, #C38EFF);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 20px;
-  }
-
-  /* gallery roller */
-  .gallery-wow {
-    display: flex;
-    overflow-x: auto;
-    gap: 28px;
-    padding: 20px 0 40px;
-    scroll-snap-type: x mandatory;
-    cursor: grab;
-  }
-
-  .gallery-wow::-webkit-scrollbar {
-    height: 6px;
-  }
-
-  .gallery-card {
-    flex: 0 0 340px;
-    scroll-snap-align: start;
-    background: #1a1630;
-    border-radius: 40px;
-    overflow: hidden;
-    transition: 0.3s;
-    border: 1px solid #ffbbdd;
-  }
-
-  .gallery-card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    transition: 0.5s;
-  }
-
-  .gallery-card:hover img {
-    transform: scale(1.07);
-  }
-
-  .card-caption {
-    padding: 18px;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(4px);
-    font-weight: 600;
-  }
-
-  /* contact with personality */
-  .contact-chaos {
-    background: radial-gradient(ellipse at 50% 30%, #281f3c, #0a0820);
-    border-radius: 70px;
-    padding: 50px 40px;
-    margin-top: 30px;
-    border: 1px solid #ff99c3;
-  }
-
-  .split-contact {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-  }
-
-  .info-bling {
-    flex: 1;
-  }
-
-  .info-bling p, .info-bling h3 {
-    margin: 16px 0;
-  }
-
-  .info-bling i {
-    width: 35px;
-    color: #ffaad2;
-  }
-
-  form {
-    flex: 1;
-  }
-
-  .modern-input {
-    width: 100%;
-    background: rgba(40, 30, 65, 0.7);
-    border: 1px solid #ffb0cf;
-    border-radius: 60px;
-    padding: 14px 22px;
-    margin: 12px 0;
-    color: white;
-    font-size: 1rem;
-  }
-
-  textarea.modern-input {
-    border-radius: 30px;
-    resize: vertical;
-  }
-
-  button {
-    background: linear-gradient(120deg, #f27eb6, #b47aff);
-    border: none;
-    border-radius: 60px;
-    padding: 14px 32px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: white;
-    transition: 0.2s;
-  }
-
-  button:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 18px #ffa1cb;
-  }
-
-  footer {
-    text-align: center;
-    padding: 35px;
-    border-top: 1px solid #ffb3d150;
-    font-size: 0.8rem;
-  }
-
-  .whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #25d366;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 33px;
-    color: white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    z-index: 999;
-    transition: 0.2s;
-  }
-
-  @media (max-width:800px) {
-    .hero h2 { font-size: 2.2rem; }
-    .section-title { font-size: 2rem; }
-    .btn-primary, .btn-outline { padding: 10px 20px; font-size: 0.9rem; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>AKANKSHA | Best Architect & Interior Designer Lucknow | ISO Certified</title>
+  <meta name="description" content="Akanksha Interior Decoration Hub - Award-winning modular kitchens, modern architecture, vastu, construction & turnkey projects in Lucknow. ISO 9001:2015 certified.">
+  <meta name="keywords" content="Interior Designer Lucknow, Best Architect Lucknow, Modular Kitchen, Vastu Consultant, Construction, 3D Elevation, Turnkey Projects">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FFFBF5;
+      overflow-x: hidden;
+      color: #1F1A17;
+    }
+    /* bright animated background */
+    .radiant-bg {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 30% 10%, #FFE9C7, #FFF0DD, #FFE1C4);
+      z-index: -2;
+    }
+    .glow-motion {
+      position: fixed;
+      width: 150%;
+      height: 150%;
+      top: -30%;
+      left: -30%;
+      background: radial-gradient(ellipse at 40% 60%, rgba(255, 180, 80, 0.25), rgba(255, 100, 130, 0.15), transparent 70%);
+      animation: slowDrift 24s infinite alternate;
+      z-index: -1;
+      pointer-events: none;
+    }
+    @keyframes slowDrift {
+      0% { transform: translate(0,0) scale(1); opacity: 0.6; }
+      100% { transform: translate(4%, -6%) scale(1.2); opacity: 1; }
+    }
+    /* floating spark particles */
+    .spark-particles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    .spark {
+      position: absolute;
+      background: radial-gradient(circle, #FFB347, #FF6F61);
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: floatSpark 13s infinite alternate;
+    }
+    @keyframes floatSpark {
+      0% { transform: translateY(0) scale(0.6); opacity: 0.2; }
+      100% { transform: translateY(-70px) scale(1.2); opacity: 0.8; }
+    }
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(20px);
+      background: rgba(255, 245, 230, 0.88);
+      border-bottom: 3px solid #FFB15E;
+      padding: 16px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      flex-wrap: wrap;
+    }
+    .logo h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      background: linear-gradient(125deg, #E55A1F, #FF9940, #DD3B7A);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.3px;
+    }
+    .logo p {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #BB571F;
+    }
+    nav a {
+      color: #3E2C23;
+      margin: 0 20px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    nav a:hover { color: #E55A1F; text-shadow: 0 0 4px #ffbe76; }
+    .hero {
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 6%;
+    }
+    .hero-badge {
+      background: rgba(255, 215, 150, 0.9);
+      backdrop-filter: blur(8px);
+      display: inline-block;
+      padding: 8px 24px;
+      border-radius: 60px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      border: 1px solid #FFA451;
+      margin-bottom: 20px;
+    }
+    .hero h2 {
+      font-size: 4rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #E5571C, #FF8C42, #FF4D7A, #AF47D4);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      line-height: 1.2;
+    }
+    .btn-group {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .btn-primary {
+      background: linear-gradient(105deg, #F97316, #E63E6B);
+      padding: 14px 38px;
+      border-radius: 60px;
+      font-weight: 800;
+      color: white;
+      font-size: 1rem;
+      transition: 0.25s;
+      box-shadow: 0 12px 20px #fc7b3f60;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #E55A1F;
+      padding: 12px 32px;
+      border-radius: 60px;
+      font-weight: 700;
+      color: #C2470E;
+      text-decoration: none;
+    }
+    .section {
+      padding: 80px 6%;
+    }
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      text-align: center;
+      background: linear-gradient(145deg, #E3621A, #D43F7A);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 40px;
+    }
+    /* GOOGLE BUSINESS CARD */
+    .google-business-card {
+      background: white;
+      border-radius: 48px;
+      box-shadow: 0 30px 45px -20px rgba(0,0,0,0.2), 0 0 0 1px #FFD9A3;
+      padding: 28px 32px;
+      margin: 30px 0 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    /* Services & features */
+    .services-grid, .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+    .service-chip {
+      background: #ffffffdd;
+      backdrop-filter: blur(4px);
+      border-radius: 80px;
+      padding: 14px 32px;
+      font-weight: 700;
+      border: 1px solid #FFB66F;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.02);
+      transition: 0.2s;
+    }
+    .service-chip i { color: #E55A1F; margin-right: 12px; }
+    .feature-card {
+      background: #fef7e8;
+      border-radius: 40px;
+      padding: 20px 24px;
+      width: 250px;
+      text-align: center;
+      border-bottom: 4px solid #FF8C42;
+    }
+    /* Project Slider (existing) */
+    .slider-container {
+      overflow-x: auto;
+      display: flex;
+      gap: 28px;
+      padding: 20px 0 30px;
+      scroll-snap-type: x mandatory;
+      cursor: grab;
+    }
+    .project-card {
+      flex: 0 0 340px;
+      scroll-snap-align: start;
+      background: #FFF5E8;
+      border-radius: 48px;
+      overflow: hidden;
+      border: 2px solid #FFB36B;
+    }
+    .project-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+    /* ========== NEW GALLERY PAGE (massive image grid) ========== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .gallery-item {
+      background: #FFF5E8;
+      border-radius: 32px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 2px solid #FFC48A;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      border-color: #F97316;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.02);
+    }
+    .gallery-caption {
+      padding: 12px 16px;
+      font-weight: 600;
+      background: #fffbf0;
+      font-size: 0.9rem;
+      color: #bc5a24;
+      text-align: center;
+    }
+    /* Reviews slider */
+    .reviews-slider {
+      background: #FFF2E2;
+      border-radius: 64px;
+      padding: 40px 24px;
+      margin-top: 40px;
+      position: relative;
+    }
+    .review-card {
+      text-align: center;
+      max-width: 600px;
+      margin: auto;
+      display: none;
+    }
+    .review-card.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .stars { color: #FFB81C; margin: 10px 0; }
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .info-panel {
+      flex: 1;
+      background: #ffffffc9;
+      border-radius: 48px;
+      padding: 30px;
+    }
+    .social-icons a {
+      font-size: 2rem;
+      margin: 0 12px;
+      color: #E65C1E;
+      transition: 0.2s;
+    }
+    .whatsapp-float, .call-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: #25D366;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      z-index: 99;
+    }
+    .call-float {
+      right: 110px;
+      background: #1E88E5;
+    }
+    .modern-input {
+      width: 100%;
+      padding: 14px;
+      margin: 8px 0;
+      border-radius: 60px;
+      border: 2px solid #FFB15E;
+      background: #fff9f0;
+    }
+    @media (max-width: 780px) {
+      .hero h2 { font-size: 2.3rem; }
+      .section-title { font-size: 2rem; }
+      .call-float { right: 90px; }
+    }
+    footer {
+      background: #FFECD9;
+      text-align: center;
+      padding: 40px;
+      border-top: 2px solid #FFBC6E;
+    }
+  </style>
 </head>
 <body>
-
-<div class="orb-bg"></div>
-<div class="moving-glow"></div>
-<div class="floating-particles" id="particles"></div>
+<div class="radiant-bg"></div>
+<div class="glow-motion"></div>
+<div class="spark-particles" id="particleField"></div>
 
 <header>
   <div class="logo">
-    <h1><i class="fas fa-sparkles"></i> AKANSHA</h1>
-    <p>WONDER CRAFT · INTERIOR + CIVIL</p>
+    <h1><i class="fas fa-feather-alt"></i> AKANKSHA</h1>
+    <p>BEST ARCHITECT • INTERIOR • VASTU • TURNKEY</p>
   </div>
   <nav>
-    <a href="#home">HOME</a>
-    <a href="#services">WONDERS</a>
-    <a href="#gallery">GALLERY</a>
-    <a href="#contact">CONNECT</a>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#gallery-main">Gallery</a>    <!-- new gallery link -->
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section id="home" class="hero">
   <div>
-    <div class="hero-badge"><i class="fas fa-magic"></i> welcome to the modern wonderland</div>
-    <h2>Modern World<br>Becomes <span style="background: linear-gradient(145deg,#FFB347,#FF6A88); background-clip:text; -webkit-background-clip:text; color:transparent;">Wonderful</span> ✨</h2>
-    <p class="wonder-text">Where interiors dance with joy & civil engineering feels like poetry.</p>
-    <div class="cta-group">
-      <a href="#contact" class="btn-primary"><i class="fas fa-star"></i> Build Your Wonder</a>
-      <a href="#gallery" class="btn-outline"><i class="fas fa-images"></i> Dream Scroll</a>
+    <div class="hero-badge"><i class="fas fa-certificate"></i> ISO 9001:2015 | Award Winner 2024 & 2025</div>
+    <h2>Where Architecture Meets <br> <span style="background: linear-gradient(145deg,#FF6A3D,#E64980); background-clip:text; -webkit-background-clip:text; color:transparent;">Wonder & Vastu</span></h2>
+    <p style="font-size:1.2rem; max-width:700px; margin:20px auto;">🏆 Best Modular Kitchen Design 2024 | 🏅 Best Modern Architecture 2025 | Luxury Construction | 360° Turnkey</p>
+    <div class="btn-group">
+      <a href="#contact" class="btn-primary"><i class="fas fa-calendar-alt"></i> Free Consultation</a>
+      <a href="#gallery-main" class="btn-outline"><i class="fas fa-images"></i> Full Gallery</a>
     </div>
   </div>
 </section>
 
+<!-- Google style premium business card -->
+<div class="section" style="padding-top:0">
+  <div class="google-business-card">
+    <div class="business-info">
+      <h3><i class="fab fa-google"></i> Akanksha Interior Decoration Hub</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Sushant Golf City, Ansal API, Lucknow - 226030</p>
+      <div class="rating"><i class="fas fa-star" style="color:#FBBC05;"></i> 4.9 ★ (181+ Google Reviews) | ISO Certified</div>
+      <p>✔️ Best Architect & Interior Designer Lucknow | Vastu Expert | Construction</p>
+    </div>
+    <div>
+      <a href="https://www.google.com/search?kgmid=/g/11jxyhn2xy&hl=en-IN&q=AKANKSHA+INTERIOR+DECORATION+HUB" target="_blank" style="background:#4285F4; color:white; padding:12px 26px; border-radius:50px; display:inline-flex; gap:8px; align-items:center; text-decoration:none; font-weight:bold;"><i class="fab fa-google"></i> View Google Profile</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES LIST -->
 <section id="services" class="section">
-  <div class="section-title">🌈 magical offerings 🌈</div>
-  <div class="service-grid">
-    <div class="card-wonder"><i class="fas fa-crown"></i><h3>Royal Interiors</h3><p>Luxurious, vibrant, soulful spaces — fully personalized.</p></div>
-    <div class="card-wonder"><i class="fas fa-drafting-compass"></i><h3>Civil Wonderworks</h3><p>Modern construction, eco-smart & structurally epic.</p></div>
-    <div class="card-wonder"><i class="fas fa-hands-helping"></i><h3>Turnkey Magic</h3><p>Stress-free end-to-end — we dream, we deliver.</p></div>
-    <div class="card-wonder"><i class="fas fa-vr-cardboard"></i><h3>3D Wonder Vision</h3><p>Experience your space before it exists — AR/VR enabled.</p></div>
+  <div class="section-title">✨ Our Core Services ✨</div>
+  <div class="services-grid">
+    <div class="service-chip"><i class="fas fa-couch"></i> Interior Designing</div>
+    <div class="service-chip"><i class="fas fa-utensils"></i> Modular Kitchen</div>
+    <div class="service-chip"><i class="fas fa-drafting-compass"></i> Architecture</div>
+    <div class="service-chip"><i class="fas fa-hard-hat"></i> Construction</div>
+    <div class="service-chip"><i class="fas fa-chart-line"></i> Vastu Consultation</div>
+    <div class="service-chip"><i class="fas fa-cube"></i> 3D Elevation</div>
+    <div class="service-chip"><i class="fas fa-key"></i> Turnkey Projects</div>
+    <div class="service-chip"><i class="fas fa-spa"></i> Hospitality & Spa Design</div>
+  </div>
+  
+  <div class="section-title" style="margin-top:40px;">🌟 Premium Special Features</div>
+  <div class="features-grid">
+    <div class="feature-card"><i class="fas fa-chalkboard-user" style="font-size:2rem; color:#E55A1F;"></i><h3>Free Consultation</h3><p>Expert advice on design & budget</p></div>
+    <div class="feature-card"><i class="fas fa-building" style="font-size:2rem;"></i><h3>Site Visit</h3><p>On-location measurement & planning</p></div>
+    <div class="feature-card"><i class="fas fa-vr-cardboard"></i><h3>3D Planning</h3><p>Walkthrough before execution</p></div>
+    <div class="feature-card"><i class="fas fa-gem"></i><h3>Luxury Design</h3><p>High-end materials & aesthetics</p></div>
+    <div class="feature-card"><i class="fas fa-hard-hat"></i><h3>Civil + Interior</h3><p>End-to-end execution</p></div>
+    <div class="feature-card"><i class="fas fa-store"></i><h3>Commercial Projects</h3><p>Hotels, Offices, Malls</p></div>
   </div>
 </section>
 
-<section id="gallery" class="section">
-  <div class="section-title">❤️‍🔥 wonderful projects ❤️‍🔥</div>
-  <div class="gallery-wow" id="gallerySlider">
-    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="dream living"><div class="card-caption">🌿 Serenity Lounge</div></div>
-    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600" alt="modern kitchen"><div class="card-caption">🍷 Neon Kitchen</div></div>
-    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600" alt="minimal"><div class="card-caption">✨ Minimalist Magic</div></div>
-    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1616486338812-3badae7b9a1b?w=600" alt="contemporary"><div class="card-caption">💎 Royal Bedroom</div></div>
-    <div class="gallery-card"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="office"><div class="card-caption">🚀 Futuristic Workspace</div></div>
+<!-- PROJECT SLIDER (existing) -->
+<section id="projects" class="section" style="background:#FFF5EA; border-radius: 70px; margin:0 6%;">
+  <div class="section-title">🏆 Award-Winning Portfolio</div>
+  <div class="slider-container" id="projectSlider">
+    <div class="project-card"><img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600" alt="Pawan Singh Residence"><p><i class="fas fa-star-of-life"></i> Pawan Singh Residence | Studio Designing</p></div>
+    <div class="project-card"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600" alt="Modular Kitchen Award"><p>🏅 Award-Winning Modular Kitchen (2024 Summit)</p></div>
+    <div class="project-card"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Lulu Mall Coffee Cup"><p>☕ Lulu Mall | Coffee Cup outlet design</p></div>
+    <div class="project-card"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600" alt="Summit Hotels"><p>🏨 Summit Hotels & Resorts | Full Execution</p></div>
+    <div class="project-card"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600" alt="Bodycraft Salon"><p>💆 Bodycraft Salon & Spa | Interior Styling</p></div>
+    <div class="project-card"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="Tata Motors Corporate"><p>🏭 Tata Motors | Industrial Architecture</p></div>
+    <div class="project-card"><img src="https://images.unsplash.com/photo-1616486338812-3badae7b9a1b?w=600" alt="Shalimar Valencia"><p>✨ Shalimar Valencia | Luxury Residential</p></div>
   </div>
-  <p style="text-align:center; margin-top:20px;"><i class="fas fa-arrows-alt-h"></i> scroll sideways → more wonders</p>
+  <div style="text-align:center; margin-top:12px;"><i class="fas fa-arrows-alt-h"></i> drag to explore more wonders →</div>
 </section>
 
-<section id="contact" class="section">
-  <div class="contact-chaos">
-    <div style="text-align:center;"><span class="section-title" style="font-size:2rem;">📞 let’s make wonderful happen</span></div>
-    <div class="split-contact">
-      <div class="info-bling">
-        <h3><i class="fas fa-smile-wink"></i> Principal & Creative Head</h3>
-        <p><strong>Akanksha Nigam</strong> — wonder architect</p>
-        <p><i class="fas fa-mobile-alt"></i> <a href="tel:9140097029" style="color:#ffbbee;">+91 9140097029</a></p>
-        <p><i class="fas fa-envelope-open-text"></i> <a href="mailto:service@akanshainteriordecorationhub.com" style="color:#ffbbee;">service@akanshainteriordecorationhub.com</a></p>
-        <hr style="margin:20px 0; border-color:#ff99bb40;">
-        <h3><i class="fas fa-map-pin"></i> Lucknow Wonder Studio</h3>
-        <p>First Floor, Shop 334, Ansal API, Sushant Golf City, Lucknow-226030</p>
-        <h3><i class="fas fa-tree"></i> Kanpur Creative Hub</h3>
-        <p>127/U/351, Nirala Nagar, Kidwai Nagar, Kanpur-208014</p>
-        <div style="margin-top:25px;"><i class="fab fa-instagram"></i> @akansha.wonder   <i class="fab fa-pinterest"></i> wonder_interiors</div>
+<!-- ========== NEW MASSIVE GALLERY PAGE (ready for 100+ images) ========== -->
+<section id="gallery-main" class="section" style="background: #FFFCF5;">
+  <div class="section-title">📸 Our Complete Wonder Gallery (100+ Designs)</div>
+  <p style="text-align: center; margin-bottom: 20px;">👇 Scroll through our premium projects — modular kitchens, luxury villas, hospitality & more. <strong>You can easily add/update images below.</strong></p>
+  
+  <div class="gallery-grid" id="dynamicGallery">
+    <!-- 
+      ************************************************************
+      *  HOW TO ADD YOUR OWN IMAGES (UP TO 100+):
+      *  1. Copy the following <div class="gallery-item"> block.
+      *  2. Replace the "src" with your image URL.
+      *  3. Change the alt text and caption.
+      *  4. Repeat as many times as needed.
+      *  
+      *  Example:
+      *  <div class="gallery-item">
+      *    <img src="YOUR_IMAGE_URL.jpg" alt="Project Name" loading="lazy">
+      *    <div class="gallery-caption">Your Project Title</div>
+      *  </div>
+      ************************************************************
+    -->
+    
+    <!-- Sample starter items (replace with your actual project images) -->
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616486338812-3badae7b9a1b?w=600" alt="Modern Modular Kitchen" loading="lazy"><div class="gallery-caption">✨ Award Modular Kitchen | 2024</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Luxury Living Room" loading="lazy"><div class="gallery-caption">🌟 Pawan Singh Residence | Living Area</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600" alt="Modern Architecture Home" loading="lazy"><div class="gallery-caption">🏛️ Shalimar Valencia | Modern Architecture</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Coffee Shop Interior" loading="lazy"><div class="gallery-caption">☕ Lulu Mall Coffee Cup | Commercial</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600" alt="Hotel Suite Design" loading="lazy"><div class="gallery-caption">🏨 Summit Hotels | Hospitality Suite</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600" alt="Spa & Wellness Center" loading="lazy"><div class="gallery-caption">💆 Bodycraft Spa | Wellness Interior</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="Corporate Office" loading="lazy"><div class="gallery-caption">🏢 Tata Motors | Corporate Architecture</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600" alt="Celebrity Home Studio" loading="lazy"><div class="gallery-caption">🎤 Studio Singh | Celebrity Residence</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600" alt="Luxury Bedroom" loading="lazy"><div class="gallery-caption">🛏️ Master Suite | Shalimar Mannat</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600" alt="Minimalist Interior" loading="lazy"><div class="gallery-caption">🌿 Minimalist Apartment | Rishita Builders</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616486338812-3badae7b9a1b?w=600" alt="Open Plan Kitchen" loading="lazy"><div class="gallery-caption">🍽️ Vertical Storage Kitchen | 2025 Design</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Modern Bathroom" loading="lazy"><div class="gallery-caption">🛁 Luxury Bathroom | Levana Builders</div></div>
+    <!-- 
+      ************  ADD MORE IMAGES HERE  ************
+      Just copy/paste the <div class="gallery-item">...</div> block and update the image URL.
+      The grid will automatically adjust. Perfect for 100+ photos.
+    -->
+  </div>
+  <div style="text-align: center; margin-top: 30px;">
+    <p><i class="fas fa-plus-circle" style="color:#E55A1F;"></i> <strong>Ready to add more magic?</strong> Duplicate any gallery-item block above and replace the image path. Your gallery will scale beautifully!</p>
+  </div>
+</section>
+
+<!-- ANIMATED REVIEWS SECTION -->
+<section id="reviews" class="section">
+  <div class="section-title">❤️ Client Love & Reviews</div>
+  <div class="reviews-slider">
+    <div id="reviewContainer">
+      <div class="review-card active">
+        <i class="fas fa-quote-left" style="font-size: 2rem; color:#F97316;"></i>
+        <p style="font-size:1.2rem; font-weight:500;">"Akanksha team designed our modular kitchen and it won compliments from everyone! Professional & creative. Best in Lucknow."</p>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <h4>— Pawan Singh (Celebrity Residence)</h4>
       </div>
-      <form id="joyForm">
-        <input class="modern-input" type="text" placeholder="✨ your joyful name" required>
-        <input class="modern-input" type="email" placeholder="💌 your best email" required>
-        <textarea class="modern-input" rows="4" placeholder="🌟 describe your dream project..."></textarea>
-        <button type="submit"><i class="fas fa-heart"></i> Send Wonder Request</button>
-        <p style="margin-top:14px; font-size:0.7rem;">we reply with sparkles within 2 hrs</p>
+      <div class="review-card">
+        <i class="fas fa-quote-left" style="font-size: 2rem; color:#F97316;"></i>
+        <p style="font-size:1.2rem;">"Excellent Vastu consultation and modern architecture for our hotel chain. Summit Hotels looks phenomenal. Highly recommended!"</p>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <h4>— Summit Hotels & Resorts</h4>
+      </div>
+      <div class="review-card">
+        <i class="fas fa-quote-left" style="font-size: 2rem; color:#F97316;"></i>
+        <p style="font-size:1.2rem;">"One of the finest interior and construction teams. They delivered our Shalimar Mannat project with elegance and speed."</p>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <h4>— Shalimar Group</h4>
+      </div>
+      <div class="review-card">
+        <i class="fas fa-quote-left" style="font-size: 2rem; color:#F97316;"></i>
+        <p style="font-size:1.2rem;">"We hired them for turnkey execution of our spa & salon. Superb quality & innovative design. They are truly best architects."</p>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <h4>— Ads Spa & Perfect Personality Salon</h4>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:24px;">
+      <span class="dot" style="display:inline-block; width:12px; height:12px; background:#FF8C42; border-radius:50%; margin:0 6px; cursor:pointer;"></span>
+      <span class="dot" style="background:#ddd;"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT + SOCIAL + MAP -->
+<section id="contact" class="section">
+  <div class="section-title">📞 Let's Create Wonder Together</div>
+  <div class="contact-flex">
+    <div class="info-panel">
+      <h3><i class="fas fa-map-pin"></i> Visit Our Studio</h3>
+      <p><strong>Akanksha Interior Decoration Hub</strong><br>First Floor, Shop 334, Ansal API, Sushant Golf City, Lucknow - 226030</p>
+      <p><i class="fas fa-phone-alt"></i> <a href="tel:+919140009729" style="color:#E65C1E;">+91 9140009729</a> <br>
+      <i class="fas fa-envelope"></i> interiorhub007@gmail.com</p>
+      <p><i class="far fa-clock"></i> Operating Hours: 9:30 AM – 9:00 PM (Daily)</p>
+      <div class="social-icons" style="margin: 20px 0;">
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
+      </div>
+      <a href="https://www.google.com/search?kgmid=/g/11jxyhn2xy" target="_blank" style="background:#4285F4; color:white; padding:10px 20px; border-radius:36px; display:inline-block; margin-top:10px; text-decoration:none;"><i class="fab fa-google"></i> Rate us on Google</a>
+    </div>
+    <div class="info-panel">
+      <form id="contactForm">
+        <input type="text" placeholder="Your name *" class="modern-input" required>
+        <input type="email" placeholder="Email / Phone *" class="modern-input" required>
+        <textarea rows="3" placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)" class="modern-input" style="border-radius:32px;"></textarea>
+        <button type="submit" class="btn-primary" style="margin-top:12px; border:none;">🚀 Get Free Estimate</button>
       </form>
+      <p style="margin-top:18px;">⭐ Free Site Visit | 3D Planning | Vastu Guidance included</p>
     </div>
-    <div style="margin-top: 40px;">
-      <iframe src="https://maps.google.com/maps?q=Sushant%20Golf%20City%20Lucknow&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="240" style="border-radius: 36px; border:2px solid #ff99cc;" allowfullscreen></iframe>
-    </div>
+  </div>
+  <div style="margin-top: 40px; border-radius: 48px; overflow:hidden; border:3px solid #FFB974;">
+    <iframe src="https://maps.google.com/maps?q=Sushant%20Golf%20City%20Lucknow%20Ansal%20API&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 AKANSHA INTERIOR DECORATION HUB — where modern world becomes wonderfully alive ✨</p>
-  <p style="margin-top: 7px;"><i class="fas fa-heart" style="color:#ff99bb;"></i> imagination meets reality</p>
+  <p>© 2026 AKANKSHA INTERIOR DECORATION HUB — Best Architect & Interior Designer, Vastu & Construction Experts Lucknow</p>
+  <p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture) | ISO 9001:2015</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<!-- Floating Buttons -->
+<a class="whatsapp-float" href="https://wa.me/919140009729" target="_blank"><i class="fab fa-whatsapp"></i></a>
+<a class="call-float" href="tel:+919140009729"><i class="fas fa-phone-alt"></i></a>
 
 <script>
-  // particle effect to add fun
-  function createParticles() {
-    const container = document.getElementById('particles');
-    for(let i=0;i<55;i++) {
-      const particle = document.createElement('div');
-      particle.classList.add('particle');
-      const size = Math.random() * 6 + 2;
-      particle.style.width = size + 'px';
-      particle.style.height = size + 'px';
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.top = Math.random() * 100 + '%';
-      particle.style.animationDuration = Math.random() * 12 + 6 + 's';
-      particle.style.animationDelay = Math.random() * 5 + 's';
-      particle.style.background = `rgba(255, 160, 200, ${Math.random() * 0.5 + 0.2})`;
-      container.appendChild(particle);
-    }
+  // spark particles
+  const sparkField = document.getElementById('particleField');
+  for(let i=0;i<80;i++){
+    let sp = document.createElement('div');
+    sp.classList.add('spark');
+    let size = Math.random()*6+2;
+    sp.style.width = size+'px';
+    sp.style.height = size+'px';
+    sp.style.left = Math.random()*100+'%';
+    sp.style.top = Math.random()*100+'%';
+    sp.style.animationDuration = Math.random()*12+6+'s';
+    sp.style.animationDelay = Math.random()*6+'s';
+    sparkField.appendChild(sp);
   }
-  createParticles();
-
-  // interactive gallery drag scroll
-  const slider = document.getElementById('gallerySlider');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-  if(slider) {
-    slider.addEventListener('mousedown', (e) => {
+  // project slider drag
+  const sliderDiv = document.getElementById('projectSlider');
+  let isDown = false, startX, scrollLeftPos;
+  if(sliderDiv){
+    sliderDiv.addEventListener('mousedown', (e) => {
       isDown = true;
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-      slider.style.cursor = 'grabbing';
+      startX = e.pageX - sliderDiv.offsetLeft;
+      scrollLeftPos = sliderDiv.scrollLeft;
+      sliderDiv.style.cursor = 'grabbing';
     });
-    slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
-    slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
-    slider.addEventListener('mousemove', (e) => {
+    sliderDiv.addEventListener('mouseleave', () => { isDown = false; sliderDiv.style.cursor = 'grab'; });
+    sliderDiv.addEventListener('mouseup', () => { isDown = false; sliderDiv.style.cursor = 'grab'; });
+    sliderDiv.addEventListener('mousemove', (e) => {
       if(!isDown) return;
       e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      slider.scrollLeft = scrollLeft - walk;
+      const x = e.pageX - sliderDiv.offsetLeft;
+      const walk = (x - startX)*1.5;
+      sliderDiv.scrollLeft = scrollLeftPos - walk;
     });
   }
-
-  // form joy alert
-  const joyForm = document.getElementById('joyForm');
-  if(joyForm) {
-    joyForm.addEventListener('submit', (e) => {
+  // reviews carousel
+  const reviews = document.querySelectorAll('.review-card');
+  const dots = document.querySelectorAll('.dot');
+  let currentReview = 0;
+  function showReview(index){
+    reviews.forEach((rev,i)=>{
+      rev.classList.toggle('active', i===index);
+      if(dots[i]) dots[i].style.background = i===index ? '#FF8C42' : '#ddd';
+    });
+  }
+  if(reviews.length){
+    setInterval(()=>{
+      currentReview = (currentReview+1) % reviews.length;
+      showReview(currentReview);
+    }, 5200);
+    dots.forEach((dot,i)=>{
+      dot.addEventListener('click',()=>{
+        currentReview = i;
+        showReview(currentReview);
+      });
+    });
+    showReview(0);
+  }
+  // contact form
+  const cForm = document.getElementById('contactForm');
+  if(cForm){
+    cForm.addEventListener('submit', (e)=>{
       e.preventDefault();
-      const nameField = joyForm.querySelector('input[placeholder*="joyful"]');
-      if(nameField.value.trim() !== "") {
-        alert("🎉 Yayyy! Your wonderful idea reached AKANSHA! Expect magic in inbox ✨");
-        joyForm.reset();
-      } else {
-        alert("💖 Please tell us your name, we’d love to create wonder for you!");
-      }
+      alert("✨ Thank you! Our design expert will contact you within 2 hours with free consultation & site visit details. Welcome to Akanksha wonder!");
+      cForm.reset();
     });
   }
-
-  // smooth navigation
-  document.querySelectorAll('nav a, .btn-primary[href="#contact"], .btn-outline[href="#gallery"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-      const href = this.getAttribute('href');
-      if(href && href.startsWith('#')) {
+  // smooth nav
+  document.querySelectorAll('nav a, .btn-primary[href="#contact"], .btn-outline[href="#gallery-main"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      const hash = this.getAttribute('href');
+      if(hash && hash.startsWith('#')){
         e.preventDefault();
-        const target = document.querySelector(href);
-        if(target) {
+        const target = document.querySelector(hash);
+        if(target){
           const offset = 70;
           const pos = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top: pos, behavior: 'smooth' });
+          window.scrollTo({top: pos, behavior: 'smooth'});
         }
       }
     });
   });
-
-  // extra confetti on hero click - just for maza!
-  const heroArea = document.querySelector('.hero');
-  if(heroArea) {
-    heroArea.addEventListener('click', (e) => {
-      if(e.target.tagName!=='A' && e.target.tagName!=='BUTTON') {
-        for(let i=0;i<30;i++) {
-          let conf = document.createElement('div');
-          conf.innerHTML = ['✨','🌟','💖','🎨','🔨','🌈','🪄'][Math.floor(Math.random()*7)];
-          conf.style.position = 'fixed';
-          conf.style.left = e.clientX + 'px';
-          conf.style.top = e.clientY + 'px';
-          conf.style.fontSize = '22px';
-          conf.style.pointerEvents = 'none';
-          conf.style.zIndex = '9999';
-          conf.style.transition = 'all 1s ease-out';
-          document.body.appendChild(conf);
-          setTimeout(() => {
-            conf.style.transform = `translate(${(Math.random() - 0.5) * 200}px, ${Math.random() * -150 - 50}px)`;
-            conf.style.opacity = '0';
-          }, 10);
-          setTimeout(() => conf.remove(), 1100);
-        }
-      }
-    });
-  }
 </script>
 </body>
 </html>
