@@ -74,8 +74,10 @@
     .logo h1 {
       font-size: 1.9rem;
       font-weight: 800;
-      background: none !important;
-      color: #1F3B2C !important;
+      background: linear-gradient(135deg, #1F3B2C, #2e7d32);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent !important;
       letter-spacing: -0.3px;
     }
     .logo p {
@@ -91,25 +93,25 @@
       transition: 0.2s;
     }
     nav a:hover { color: #2e7d32 !important; }
-    .btn-back {
-      background: linear-gradient(105deg, #1b5e20, #2e7d32);
-      padding: 10px 24px;
-      border-radius: 40px;
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
     .section {
       padding: 80px 6%;
     }
     .section-title {
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: 800;
       text-align: center;
-      background: none !important;
-      color: #b8d8ff !important;
+      background: linear-gradient(135deg, #00D2FF, #3A7BD5, #00E5FF, #6A11CB);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent !important;
       margin-bottom: 20px;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      text-shadow: 0 0 25px rgba(0,210,255,0.4);
+      animation: vibrantGlow 3s ease-in-out infinite;
+    }
+    @keyframes vibrantGlow {
+      0% { text-shadow: 0 0 15px rgba(0,210,255,0.3); }
+      50% { text-shadow: 0 0 35px rgba(106,17,203,0.5); }
+      100% { text-shadow: 0 0 15px rgba(0,210,255,0.3); }
     }
     .gallery-grid {
       display: grid;
@@ -127,6 +129,7 @@
     .gallery-item:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 30px rgba(0,0,0,0.3);
+      border-color: #FFD700 !important;
     }
     .gallery-item img {
       width: 100%;
@@ -168,7 +171,7 @@
     }
     .call-float { right: 110px; background: #0b3b0f !important; }
     @media (max-width: 780px) {
-      .section-title { font-size: 2rem; }
+      .section-title { font-size: 2.2rem; }
       .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
     }
   </style>
@@ -193,38 +196,27 @@
 
 <section class="section">
   <div class="section-title">📸 Our Complete Design Gallery</div>
-  <p style="text-align: center; color: #555; margin-bottom: 20px;">👇 Explore our premium interior design projects — luxury bedrooms, modular kitchens, award ceremonies, and more.</p>
+  <p style="text-align: center; color: #555; margin-bottom: 20px; font-size: 1.1rem;">👇 Explore our premium interior design projects — luxury bedrooms, modular kitchens, award ceremonies, and more.</p>
   
   <div class="gallery-grid">
-    <!-- Using all image filenames from the provided list -->
-    <div class="gallery-item"><img src="images/01-spa-wellness-interior-design.jpg" alt="Spa Wellness Interior"><div class="gallery-caption">Spa & Wellness Interior Design</div></div>
-    <div class="gallery-item"><img src="images/02-luxury-bedroom-collage.jpg" alt="Luxury Bedroom"><div class="gallery-caption">Luxury Bedroom Collection</div></div>
-    <div class="gallery-item"><img src="images/03-premium-bedroom-gallery.jpg" alt="Premium Bedroom"><div class="gallery-caption">Premium Bedroom Gallery</div></div>
-    <div class="gallery-item"><img src="images/04-modern-living-room-design.jpg" alt="Modern Living Room"><div class="gallery-caption">Modern Living Room Design</div></div>
-    <div class="gallery-item"><img src="images/05-master-bedroom-interior.jpg" alt="Master Bedroom"><div class="gallery-caption">Master Bedroom Interior</div></div>
-    <div class="gallery-item"><img src="images/06-dining-wall-panel-design.jpg" alt="Dining Wall Panel"><div class="gallery-caption">Dining Wall Panel Design</div></div>
-    <div class="gallery-item"><img src="images/07-modern-tv-unit-design.jpg" alt="TV Unit"><div class="gallery-caption">Modern TV Unit Design</div></div>
-    <div class="gallery-item"><img src="images/08-modular-kitchen-design-collage.jpg" alt="Modular Kitchen"><div class="gallery-caption">Modular Kitchen Designs</div></div>
-    <div class="gallery-item"><img src="images/09-kitchen-interior-collection.jpg" alt="Kitchen Collection"><div class="gallery-caption">Kitchen Interior Collection</div></div>
-    <div class="gallery-item"><img src="images/10-wooden-modular-kitchen.jpg" alt="Wooden Kitchen"><div class="gallery-caption">Wooden Modular Kitchen</div></div>
-    <div class="gallery-item"><img src="images/11-luxury-dressing-room-design.jpg" alt="Dressing Room"><div class="gallery-caption">Luxury Dressing Room</div></div>
-    <div class="gallery-item"><img src="images/12-modern-stair-lobby-design.jpg" alt="Stair Lobby"><div class="gallery-caption">Modern Stair Lobby Design</div></div>
-    <div class="gallery-item"><img src="images/13-premium-bedroom-lightning.jpg" alt="Bedroom Lighting"><div class="gallery-caption">Premium Bedroom Lighting</div></div>
-    <div class="gallery-item"><img src="images/14-luxury-tv-wall-design.jpg" alt="TV Wall"><div class="gallery-caption">Luxury TV Wall Design</div></div>
-    <div class="gallery-item"><img src="images/15-white-golden-modular-kitchen.jpg" alt="White Golden Kitchen"><div class="gallery-caption">White & Golden Modular Kitchen</div></div>
-    <div class="gallery-item"><img src="images/16-purple-modern-kitchen-design.jpg" alt="Purple Kitchen"><div class="gallery-caption">Purple Modern Kitchen</div></div>
-    <div class="gallery-item"><img src="images/17-pooja-room-interior-design.jpg" alt="Pooja Room"><div class="gallery-caption">Pooja Room Interior</div></div>
-    <div class="gallery-item"><img src="images/18-luxury-butterfly-bedroom.jpg" alt="Butterfly Bedroom"><div class="gallery-caption">Luxury Butterfly Bedroom</div></div>
-    <div class="gallery-item"><img src="images/19-false-ceiling-light-design.jpg" alt="False Ceiling"><div class="gallery-caption">False Ceiling & Light Design</div></div>
-    <div class="gallery-item"><img src="images/20-modern-luxury-living-room.jpg" alt="Luxury Living Room"><div class="gallery-caption">Modern Luxury Living Room</div></div>
-    <div class="gallery-item"><img src="images/21-modern-bedroom-interior-design.jpg" alt="Modern Bedroom"><div class="gallery-caption">Modern Bedroom Interior</div></div>
-    <div class="gallery-item"><img src="images/22-luxury-tv-wall-unit-design.jpg" alt="TV Wall Unit"><div class="gallery-caption">Luxury TV Wall Unit</div></div>
-    <div class="gallery-item"><img src="images/23-bedroom-wall-panel-lighting.jpg" alt="Wall Panel Lighting"><div class="gallery-caption">Bedroom Wall Panel with Lighting</div></div>
-    <div class="gallery-item"><img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Award"><div class="gallery-caption">Gold Sponsor Award 2025</div></div>
-    <div class="gallery-item"><img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards"><div class="gallery-caption">Architecture Awards Collage</div></div>
-    <div class="gallery-item"><img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO Certification"><div class="gallery-caption">ISO 9001:2015 Certification</div></div>
-    <div class="gallery-item"><img src="images/27-company-profile-overview-akanksha.jpg" alt="Company Profile"><div class="gallery-caption">Company Profile Overview</div></div>
-    <div class="gallery-item"><img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Award Ceremony"><div class="gallery-caption">Architecture Reconnect Award Ceremony</div></div>
-    <div class="gallery-item"><img src="images/29-architect-wow-award-2024.jpg" alt="WOW Award"><div class="gallery-caption">Architect WOW Award 2024</div></div>
-    <div class="gallery-item"><img src="images/30-award-event-architecture-summit.jpg" alt="Award Event"><div class="gallery-caption">Architecture Summit Award Event</div></div>
-    <div class="gallery-item"><img src="images/31-award-recognition-collage-akanksha.jpg" alt="Award Recognition"><div class="gallery-caption">Award Recognition Coll
+    <div class="gallery-item"><img src="images/01-spa-wellness-interior-design.jpg" alt="Spa Wellness Interior"><div class="gallery-caption">✨ Spa & Wellness Interior Design</div></div>
+    <div class="gallery-item"><img src="images/02-luxury-bedroom-collage.jpg" alt="Luxury Bedroom"><div class="gallery-caption">🛏️ Luxury Bedroom Collection</div></div>
+    <div class="gallery-item"><img src="images/03-premium-bedroom-gallery.jpg" alt="Premium Bedroom"><div class="gallery-caption">🌟 Premium Bedroom Gallery</div></div>
+    <div class="gallery-item"><img src="images/04-modern-living-room-design.jpg" alt="Modern Living Room"><div class="gallery-caption">🛋️ Modern Living Room Design</div></div>
+    <div class="gallery-item"><img src="images/05-master-bedroom-interior.jpg" alt="Master Bedroom"><div class="gallery-caption">👑 Master Bedroom Interior</div></div>
+    <div class="gallery-item"><img src="images/06-dining-wall-panel-design.jpg" alt="Dining Wall Panel"><div class="gallery-caption">🍽️ Dining Wall Panel Design</div></div>
+    <div class="gallery-item"><img src="images/07-modern-tv-unit-design.jpg" alt="TV Unit"><div class="gallery-caption">📺 Modern TV Unit Design</div></div>
+    <div class="gallery-item"><img src="images/08-modular-kitchen-design-collage.jpg" alt="Modular Kitchen"><div class="gallery-caption">🍳 Award-Winning Modular Kitchens</div></div>
+    <div class="gallery-item"><img src="images/09-kitchen-interior-collection.jpg" alt="Kitchen Collection"><div class="gallery-caption">🏠 Kitchen Interior Collection</div></div>
+    <div class="gallery-item"><img src="images/10-wooden-modular-kitchen.jpg" alt="Wooden Kitchen"><div class="gallery-caption">🪵 Wooden Modular Kitchen</div></div>
+    <div class="gallery-item"><img src="images/11-luxury-dressing-room-design.jpg" alt="Dressing Room"><div class="gallery-caption">💎 Luxury Dressing Room</div></div>
+    <div class="gallery-item"><img src="images/12-modern-stair-lobby-design.jpg" alt="Stair Lobby"><div class="gallery-caption">🏛️ Modern Stair Lobby Design</div></div>
+    <div class="gallery-item"><img src="images/13-premium-bedroom-lightning.jpg" alt="Bedroom Lighting"><div class="gallery-caption">💡 Premium Bedroom Lighting</div></div>
+    <div class="gallery-item"><img src="images/14-luxury-tv-wall-design.jpg" alt="TV Wall"><div class="gallery-caption">📺 Luxury TV Wall Design</div></div>
+    <div class="gallery-item"><img src="images/15-white-golden-modular-kitchen.jpg" alt="White Golden Kitchen"><div class="gallery-caption">✨ White & Golden Modular Kitchen</div></div>
+    <div class="gallery-item"><img src="images/16-purple-modern-kitchen-design.jpg" alt="Purple Kitchen"><div class="gallery-caption">💜 Purple Modern Kitchen</div></div>
+    <div class="gallery-item"><img src="images/17-pooja-room-interior-design.jpg" alt="Pooja Room"><div class="gallery-caption">🕉️ Pooja Room Interior</div></div>
+    <div class="gallery-item"><img src="images/18-luxury-butterfly-bedroom.jpg" alt="Butterfly Bedroom"><div class="gallery-caption">🦋 Luxury Butterfly Bedroom</div></div>
+    <div class="gallery-item"><img src="images/19-false-ceiling-light-design.jpg" alt="False Ceiling"><div class="gallery-caption">✨ False Ceiling & Light Design</div></div>
+    <div class="gallery-item"><img src="images/20-modern-luxury-living-room.jpg" alt="Luxury Living Room"><div class="gallery-caption">🏡 Modern Luxury Living Room</div></div>
+    <div class="gallery
