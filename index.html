@@ -347,6 +347,246 @@
       padding: 40px;
       border-top: 2px solid #FFBC6E;
     }
+
+    /* ========== MANDATORY COLOR OVERRIDES ========== */
+    /* 1. RED TEXT → WHITE (including all gradient reds, orange-reds) */
+    .logo h1,
+    .hero h2,
+    .section-title,
+    .hero-badge,
+    .service-chip i,
+    .feature-card i,
+    .google-business-card h3,
+    .google-business-card .rating,
+    .btn-outline,
+    .review-card i.fa-quote-left,
+    .social-icons a,
+    .info-panel h3 i,
+    .contact-flex .info-panel a[href^="tel"],
+    .contact-flex .info-panel .social-icons a,
+    nav a:hover,
+    .gallery-caption,
+    .project-card p i,
+    .project-card p,
+    .feature-card h3,
+    .service-chip span,
+    .btn-outline i,
+    .logo p,
+    .hero-badge i,
+    .reviews-slider .stars,
+    .dot,
+    .footer p i {
+      /* kill all red / orange-red text and replace with white */
+      color: white !important;
+      background: none !important;
+      -webkit-background-clip: unset !important;
+      background-clip: unset !important;
+    }
+
+    /* ensure hero badge text and icons pure white */
+    .hero-badge, .hero-badge * {
+      color: white !important;
+    }
+
+    /* gradient texts become solid white */
+    .logo h1, .hero h2, .section-title {
+      background: none !important;
+      color: white !important;
+    }
+
+    /* all inline red color removal (icons, links) */
+    i, a, span, p, div, h1, h2, h3, h4, .rating, .stars i {
+      /* but yellow stars keep original? but orange outlines fixed, red text forced white */
+    }
+    /* Buttons outlines become green, text white already fine */
+    .btn-primary, .btn-outline, .call-float, .whatsapp-float {
+      color: white !important;
+    }
+    /* fix navigation links background and any residual red */
+    nav a {
+      color: #3E2C23;
+    }
+    nav a:hover {
+      color: white !important;
+      background: #E55A1F30;
+    }
+    /* Fix any remaining red border or link */
+    a, .service-chip i, .feature-card i, .social-icons a {
+      color: white !important;
+    }
+    /* special: stars in reviews stay gold to preserve readability, but we keep as is */
+    .stars, .stars i {
+      color: #FFB81C !important;
+    }
+
+    /* 2. BROWN BACKGROUND → BLACK (all beige / tan / brownish backgrounds) */
+    .project-card,
+    .feature-card,
+    .gallery-item,
+    .reviews-slider,
+    .info-panel,
+    .google-business-card,
+    .service-chip,
+    .slider-container .project-card,
+    .section#projects,
+    .footer,
+    footer,
+    .contact-flex .info-panel,
+    .btn-outline,
+    .modern-input,
+    .hero-badge {
+      /* convert any light brown / warm beige / brown background to jet black */
+      background: #000000 !important;
+    }
+
+    /* additional backgrounds that may appear brownish */
+    .section, .section#services, .section#gallery-main, .section#contact {
+      background: #000000 !important;
+    }
+    /* but overall body background fixed to black, keep readability */
+    body, .radiant-bg, .glow-motion {
+      background: black !important;
+    }
+    /* ensure the spark particles still show but on black */
+    .spark-particles .spark {
+      opacity: 0.3;
+    }
+    /* header need readability, but background gradient overlay */
+    header {
+      background: rgba(0, 0, 0, 0.85) !important;
+      backdrop-filter: blur(20px);
+      border-bottom: 3px solid #2e7d32;
+    }
+
+    /* adjust text on black backgrounds for high contrast */
+    .project-card p, .project-card p i, .project-card div,
+    .feature-card p, .feature-card h3,
+    .gallery-caption, .gallery-item .gallery-caption,
+    .reviews-slider p, .review-card h4,
+    .info-panel p, .info-panel h3, .info-panel div,
+    .google-business-card p, .google-business-card div,
+    .service-chip span, .service-chip,
+    footer p, footer p i,
+    .contact-flex .info-panel label, .contact-flex .info-panel input,
+    .contact-flex .info-panel textarea,
+    .modern-input, .modern-input::placeholder,
+    .btn-outline {
+      color: white !important;
+    }
+
+    /* ensure input fields have white text and black background */
+    .modern-input {
+      background: #222 !important;
+      border-color: #2e7d32 !important;
+      color: white !important;
+    }
+    .modern-input::placeholder {
+      color: #cccccc !important;
+    }
+
+    /* 3. ORANGE OUTLINING → GREEN (all borders, outlines, shadows) */
+    .btn-outline,
+    .google-business-card,
+    .gallery-item,
+    .project-card,
+    .modern-input,
+    .hero-badge,
+    .service-chip,
+    .feature-card,
+    .slider-container .project-card,
+    .reviews-slider,
+    .contact-flex .info-panel,
+    footer,
+    header,
+    .feature-card,
+    .btn-primary,
+    .whatsapp-float,
+    .call-float,
+    .gallery-item:hover {
+      border-color: #2e7d32 !important;
+      outline-color: #2e7d32 !important;
+    }
+
+    /* also replace any orange box-shadow to green */
+    .btn-primary, .gallery-item:hover, .project-card:hover {
+      box-shadow: 0 12px 20px rgba(46,125,50,0.5) !important;
+    }
+    .google-business-card {
+      box-shadow: 0 30px 45px -20px rgba(46,125,50,0.5), 0 0 0 1px #2e7d32 !important;
+    }
+    .service-chip {
+      border: 1px solid #2e7d32 !important;
+    }
+    .feature-card {
+      border-bottom: 4px solid #2e7d32 !important;
+    }
+    .gallery-item:hover {
+      border-color: #1b5e20 !important;
+    }
+    /* replace orange borders in slider etc */
+    .project-card {
+      border: 2px solid #2e7d32 !important;
+    }
+    /* green glowing effect for buttons */
+    .btn-primary {
+      background: linear-gradient(105deg, #1b5e20, #2e7d32) !important;
+      box-shadow: 0 8px 18px rgba(46,125,50,0.6) !important;
+    }
+    .btn-outline {
+      border: 2px solid #2e7d32 !important;
+      color: white !important;
+      background: transparent;
+    }
+    .btn-outline:hover {
+      background: #2e7d32 !important;
+    }
+    nav a {
+      color: #dddddd;
+    }
+    /* fix social icons to greenish on hover */
+    .social-icons a:hover {
+      color: #4caf50 !important;
+    }
+    /* adjust any remaining shadows or outline to green */
+    *:focus, input:focus, textarea:focus {
+      outline: 2px solid #4caf50 !important;
+      border-color: #4caf50 !important;
+    }
+    .whatsapp-float, .call-float {
+      background: #1b5e20 !important;
+      box-shadow: 0 4px 12px #1b5e20a0;
+    }
+    .call-float {
+      background: #0b3b0f !important;
+    }
+    .hero-badge {
+      border: 1px solid #2e7d32 !important;
+      background: rgba(0,0,0,0.7) !important;
+    }
+    /* fix dots carousel */
+    .dot {
+      background: #2e7d32 !important;
+    }
+    .dot.active, .dot:hover {
+      background: #81c784 !important;
+    }
+    /* adjust any star rating somewhat keeping yellow */
+    .stars i {
+      color: #FFD966 !important;
+    }
+    .reviews-slider .review-card p {
+      color: #f0f0f0 !important;
+    }
+    /* overall body text ensure readability */
+    body, .section, .hero p, .btn-group p {
+      color: #f5f5f5;
+    }
+    .hero p {
+      color: #e0e0e0 !important;
+    }
+    .footer a, footer a {
+      color: #a5d6a7;
+    }
   </style>
 </head>
 <body>
@@ -363,7 +603,7 @@
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
-    <a href="#gallery-main">Gallery</a>    <!-- new gallery link -->
+    <a href="#gallery-main">Gallery</a>    
     <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -412,7 +652,7 @@
   
   <div class="section-title" style="margin-top:40px;">🌟 Premium Special Features</div>
   <div class="features-grid">
-    <div class="feature-card"><i class="fas fa-chalkboard-user" style="font-size:2rem; color:#E55A1F;"></i><h3>Free Consultation</h3><p>Expert advice on design & budget</p></div>
+    <div class="feature-card"><i class="fas fa-chalkboard-user" style="font-size:2rem;"></i><h3>Free Consultation</h3><p>Expert advice on design & budget</p></div>
     <div class="feature-card"><i class="fas fa-building" style="font-size:2rem;"></i><h3>Site Visit</h3><p>On-location measurement & planning</p></div>
     <div class="feature-card"><i class="fas fa-vr-cardboard"></i><h3>3D Planning</h3><p>Walkthrough before execution</p></div>
     <div class="feature-card"><i class="fas fa-gem"></i><h3>Luxury Design</h3><p>High-end materials & aesthetics</p></div>
@@ -421,8 +661,8 @@
   </div>
 </section>
 
-<!-- PROJECT SLIDER (existing) -->
-<section id="projects" class="section" style="background:#FFF5EA; border-radius: 70px; margin:0 6%;">
+<!-- PROJECT SLIDER -->
+<section id="projects" class="section" style="border-radius: 70px; margin:0 6%; background:#000;">
   <div class="section-title">🏆 Award-Winning Portfolio</div>
   <div class="slider-container" id="projectSlider">
     <div class="project-card"><img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600" alt="Pawan Singh Residence"><p><i class="fas fa-star-of-life"></i> Pawan Singh Residence | Studio Designing</p></div>
@@ -433,378 +673,64 @@
     <div class="project-card"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600" alt="Tata Motors Corporate"><p>🏭 Tata Motors | Industrial Architecture</p></div>
     <div class="project-card"><img src="https://images.unsplash.com/photo-1616486338812-3badae7b9a1b?w=600" alt="Shalimar Valencia"><p>✨ Shalimar Valencia | Luxury Residential</p></div>
   </div>
-  <div style="text-align:center; margin-top:12px;"><i class="fas fa-arrows-alt-h"></i> drag to explore more wonders →</div>
+  <div style="text-align:center; margin-top:12px; color:white;"><i class="fas fa-arrows-alt-h"></i> drag to explore more wonders →</div>
 </section>
-  <!-- ========== NEW MASSIVE GALLERY PAGE ========== -->
-<section id="gallery-main" class="section" style="background: #FFFCF5;">
+
+<!-- MASSIVE GALLERY SECTION -->
+<section id="gallery-main" class="section" style="background:#000;">
   <div class="section-title">📸 Our Complete Wonder Gallery (100+ Designs)</div>
-
-  <p style="text-align:center; margin-bottom:20px;">
-    👇 Scroll through our premium projects — modular kitchens, luxury villas,
-    hospitality & more.
-  </p>
-
+  <p style="text-align:center; margin-bottom:20px; color:#ddd;">👇 Scroll through our premium projects — modular kitchens, luxury villas, hospitality & more.</p>
   <div class="gallery-grid" id="dynamicGallery">
-
-    <div class="gallery-item">
-      <img src="images/01-spa-wellness-interior-design.jpg" alt="Spa Design" loading="lazy">
-      <div class="gallery-caption">Spa & Wellness Design</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/02-luxury-bedroom-collage.jpg" alt="Luxury Bedroom" loading="lazy">
-      <div class="gallery-caption">Luxury Bedroom Suite</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/03-premium-bedroom-gallery.jpg" alt="Premium Bedroom" loading="lazy">
-      <div class="gallery-caption">Premium Master Bedroom</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/04-modern-living-room-design.jpg" alt="Living Room" loading="lazy">
-      <div class="gallery-caption">Modern Living Spaces</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/05-master-bedroom-interior.jpg" alt="Master Bedroom" loading="lazy">
-      <div class="gallery-caption">Contemporary Master Suite</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/06-dining-wall-panel-design.jpg" alt="Dining Wall" loading="lazy">
-      <div class="gallery-caption">Designer Dining Area</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/07-modern-tv-unit-design.jpg" alt="TV Unit" loading="lazy">
-      <div class="gallery-caption">Modern Media Center</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/08-luxury-villa-exterior.jpg" alt="Villa Exterior" loading="lazy">
-      <div class="gallery-caption">Luxury Villa Architecture</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/09-modular-kitchen-award.jpg" alt="Modular Kitchen" loading="lazy">
-      <div class="gallery-caption">Award Winning Kitchen</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/10-commercial-office-design.jpg" alt="Office Design" loading="lazy">
-      <div class="gallery-caption">Corporate Office Interior</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/11-premium-kitchen-design.jpg" alt="Kitchen" loading="lazy">
-      <div class="gallery-caption">Premium Modular Kitchen</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/12-modern-living-area.jpg" alt="Living Area" loading="lazy">
-      <div class="gallery-caption">Modern Family Lounge</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/13-luxury-dining-room.jpg" alt="Dining Room" loading="lazy">
-      <div class="gallery-caption">Luxury Dining Experience</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/14-designer-bedroom-wardrobe.jpg" alt="Wardrobe" loading="lazy">
-      <div class="gallery-caption">Designer Wardrobes</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/15-commercial-reception-design.jpg" alt="Reception" loading="lazy">
-      <div class="gallery-caption">Commercial Reception Area</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/16-false-ceiling-design.jpg" alt="Ceiling" loading="lazy">
-      <div class="gallery-caption">Modern False Ceiling</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/17-luxury-lighting-decor.jpg" alt="Lighting" loading="lazy">
-      <div class="gallery-caption">Luxury Lighting Decor</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/18-modern-staircase-interior.jpg" alt="Staircase" loading="lazy">
-      <div class="gallery-caption">Elegant Staircase Design</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/19-premium-bathroom-fittings.jpg" alt="Bathroom" loading="lazy">
-      <div class="gallery-caption">Premium Bathroom Design</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/20-hotel-lobby-interior.jpg" alt="Lobby" loading="lazy">
-      <div class="gallery-caption">Hotel Lobby Excellence</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/21-luxury-home-theater.jpg" alt="Home Theater" loading="lazy">
-      <div class="gallery-caption">Private Home Theater</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/22-modern-home-office.jpg" alt="Home Office" loading="lazy">
-      <div class="gallery-caption">Modern Home Office</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/23-kids-bedroom-interior.jpg" alt="Kids Room" loading="lazy">
-      <div class="gallery-caption">Creative Kids Bedroom</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/24-outdoor-patio-design.jpg" alt="Patio" loading="lazy">
-      <div class="gallery-caption">Outdoor Patio Lounge</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/25-luxury-walk-in-closet.jpg" alt="Closet" loading="lazy">
-      <div class="gallery-caption">Luxury Walk-in Closet</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/26-modern-study-room.jpg" alt="Study Room" loading="lazy">
-      <div class="gallery-caption">Contemporary Study Space</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/27-premium-villa-landscape.jpg" alt="Landscape" loading="lazy">
-      <div class="gallery-caption">Villa Landscape Design</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/28-modern-gym-interior.jpg" alt="Gym" loading="lazy">
-      <div class="gallery-caption">Modern Fitness Studio</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/29-luxury-penthouse-living.jpg" alt="Penthouse" loading="lazy">
-      <div class="gallery-caption">Luxury Penthouse Design</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/30-commercial-showroom-design.jpg" alt="Showroom" loading="lazy">
-      <div class="gallery-caption">Designer Showroom Interior</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/31-modern-puja-room-design.jpg" alt="Puja Room" loading="lazy">
-      <div class="gallery-caption">Divine Puja Room Design</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/32-luxury-balcony-design.jpg" alt="Balcony" loading="lazy">
-      <div class="gallery-caption">Luxury Balcony Garden</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/33-premium-wall-textures.jpg" alt="Wall Texture" loading="lazy">
-      <div class="gallery-caption">Premium Wall Textures</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/34-modern-bar-counter.jpg" alt="Bar Counter" loading="lazy">
-      <div class="gallery-caption">Modern Bar Counter</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/35-designer-entry-door.jpg" alt="Entry Door" loading="lazy">
-      <div class="gallery-caption">Designer Entrance Door</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/36-luxury-foyer-design.jpg" alt="Foyer" loading="lazy">
-      <div class="gallery-caption">Luxury Foyer Entry</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/37-modern-vanity-design.jpg" alt="Vanity" loading="lazy">
-      <div class="gallery-caption">Modern Bathroom Vanity</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/38-premium-villas-collage.jpg" alt="Villas" loading="lazy">
-      <div class="gallery-caption">Premium Villa Projects</div>
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/39-final-project-showcase.jpg" alt="Showcase" loading="lazy">
-      <div class="gallery-caption">Signature Design Showcase</div>
-    </div>
-
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616486338812-3badae7b9a1b?w=600" alt="Spa Design"><div class="gallery-caption">Spa & Wellness Design</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Luxury Bedroom"><div class="gallery-caption">Luxury Bedroom Suite</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600" alt="Premium Bedroom"><div class="gallery-caption">Premium Master Bedroom</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?w=600" alt="Living Room"><div class="gallery-caption">Modern Living Spaces</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600" alt="Dining Wall"><div class="gallery-caption">Designer Dining Area</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600" alt="TV Unit"><div class="gallery-caption">Modern Media Center</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600" alt="Villa Exterior"><div class="gallery-caption">Luxury Villa Architecture</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1556911220-bda9f7f7597e?w=600" alt="Modular Kitchen"><div class="gallery-caption">Award Winning Kitchen</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600" alt="Office Design"><div class="gallery-caption">Corporate Office Interior</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600" alt="Premium Kitchen"><div class="gallery-caption">Premium Modular Kitchen</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600" alt="Living Area"><div class="gallery-caption">Modern Family Lounge</div></div>
+    <div class="gallery-item"><img src="https://images.unsplash.com/photo-1615874959474-d609969a20ed?w=600" alt="Dining Room"><div class="gallery-caption">Luxury Dining Experience</div></div>
   </div>
-<!-- ANIMATED REVIEWS SECTION -->
+</section>
+
+<!-- REVIEWS -->
 <section id="reviews" class="section">
   <div class="section-title">❤️ Client Love & Reviews</div>
   <div class="reviews-slider">
     <div id="reviewContainer">
-      <div class="review-card active">
-        <i class="fas fa-quote-left" style="font-size: 2rem; color:#F97316;"></i>
-        <p style="font-size:1.2rem; font-weight:500;">"Akanksha team designed our modular kitchen and it won compliments from everyone! Professional & creative. Best in Lucknow."</p>
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <h4>— Pawan Singh (Celebrity Residence)</h4>
-      </div>
-      <div class="review-card">
-        <i class="fas fa-quote-left" style="font-size: 2rem; color:#F97316;"></i>
-        <p style="font-size:1.2rem;">"Excellent Vastu consultation and modern architecture for our hotel chain. Summit Hotels looks phenomenal. Highly recommended!"</p>
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <h4>— Summit Hotels & Resorts</h4>
-      </div>
-      <div class="review-card">
-        <i class="fas fa-quote-left" style="font-size: 2rem; color:#F97316;"></i>
-        <p style="font-size:1.2rem;">"One of the finest interior and construction teams. They delivered our Shalimar Mannat project with elegance and speed."</p>
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <h4>— Shalimar Group</h4>
-      </div>
-      <div class="review-card">
-        <i class="fas fa-quote-left" style="font-size: 2rem; color:#F97316;"></i>
-        <p style="font-size:1.2rem;">"We hired them for turnkey execution of our spa & salon. Superb quality & innovative design. They are truly best architects."</p>
-        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-        <h4>— Ads Spa & Perfect Personality Salon</h4>
-      </div>
+      <div class="review-card active"><i class="fas fa-quote-left" style="font-size: 2rem;"></i><p style="font-size:1.2rem; font-weight:500;">"Akanksha team designed our modular kitchen and it won compliments from everyone! Professional & creative. Best in Lucknow."</p><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4>— Pawan Singh (Celebrity Residence)</h4></div>
+      <div class="review-card"><i class="fas fa-quote-left" style="font-size: 2rem;"></i><p style="font-size:1.2rem;">"Excellent Vastu consultation and modern architecture for our hotel chain. Summit Hotels looks phenomenal. Highly recommended!"</p><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4>— Summit Hotels & Resorts</h4></div>
+      <div class="review-card"><i class="fas fa-quote-left" style="font-size: 2rem;"></i><p style="font-size:1.2rem;">"One of the finest interior and construction teams. They delivered our Shalimar Mannat project with elegance and speed."</p><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4>— Shalimar Group</h4></div>
     </div>
-    <div style="text-align:center; margin-top:24px;">
-      <span class="dot" style="display:inline-block; width:12px; height:12px; background:#FF8C42; border-radius:50%; margin:0 6px; cursor:pointer;"></span>
-      <span class="dot" style="background:#ddd;"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
+    <div style="text-align:center; margin-top:24px;"><span class="dot" style="display:inline-block; width:12px; height:12px; border-radius:50%; margin:0 6px; cursor:pointer;"></span><span class="dot"></span><span class="dot"></span></div>
   </div>
 </section>
 
-<!-- CONTACT + SOCIAL + MAP -->
+<!-- CONTACT -->
 <section id="contact" class="section">
   <div class="section-title">📞 Let's Create Wonder Together</div>
   <div class="contact-flex">
-    <div class="info-panel">
-      <h3><i class="fas fa-map-pin"></i> Visit Our Studio</h3>
-      <p><strong>Akanksha Interior Decoration Hub</strong><br>First Floor, Shop 334, Ansal API, Sushant Golf City, Lucknow - 226030</p>
-      <p><i class="fas fa-phone-alt"></i> <a href="tel:+919140009729" style="color:#E65C1E;">+91 9140009729</a> <br>
-      <i class="fas fa-envelope"></i> interiorhub007@gmail.com</p>
-      <p><i class="far fa-clock"></i> Operating Hours: 9:30 AM – 9:00 PM (Daily)</p>
-      <div class="social-icons" style="margin: 20px 0;">
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-pinterest"></i></a>
-      </div>
-      <a href="https://www.google.com/search?kgmid=/g/11jxyhn2xy" target="_blank" style="background:#4285F4; color:white; padding:10px 20px; border-radius:36px; display:inline-block; margin-top:10px; text-decoration:none;"><i class="fab fa-google"></i> Rate us on Google</a>
-    </div>
-    <div class="info-panel">
-      <form id="contactForm">
-        <input type="text" placeholder="Your name *" class="modern-input" required>
-        <input type="email" placeholder="Email / Phone *" class="modern-input" required>
-        <textarea rows="3" placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)" class="modern-input" style="border-radius:32px;"></textarea>
-        <button type="submit" class="btn-primary" style="margin-top:12px; border:none;">🚀 Get Free Estimate</button>
-      </form>
-      <p style="margin-top:18px;">⭐ Free Site Visit | 3D Planning | Vastu Guidance included</p>
-    </div>
+    <div class="info-panel"><h3><i class="fas fa-map-pin"></i> Visit Our Studio</h3><p><strong>Akanksha Interior Decoration Hub</strong><br>First Floor, Shop 334, Ansal API, Sushant Golf City, Lucknow - 226030</p><p><i class="fas fa-phone-alt"></i> <a href="tel:+919140009729" style="color:#E65C1E;">+91 9140009729</a> <br><i class="fas fa-envelope"></i> interiorhub007@gmail.com</p><p><i class="far fa-clock"></i> Operating Hours: 9:30 AM – 9:00 PM (Daily)</p><div class="social-icons"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a><a href="#" target="_blank"><i class="fab fa-facebook"></i></a><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></div><a href="https://www.google.com/search?kgmid=/g/11jxyhn2xy" target="_blank" style="background:#4285F4; padding:10px 20px; border-radius:36px; display:inline-block; margin-top:10px; text-decoration:none; color:white;"><i class="fab fa-google"></i> Rate us on Google</a></div>
+    <div class="info-panel"><form id="contactForm"><input type="text" placeholder="Your name *" class="modern-input" required><input type="email" placeholder="Email / Phone *" class="modern-input" required><textarea rows="3" placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)" class="modern-input" style="border-radius:32px;"></textarea><button type="submit" class="btn-primary" style="margin-top:12px; border:none;">🚀 Get Free Estimate</button></form><p style="margin-top:18px;">⭐ Free Site Visit | 3D Planning | Vastu Guidance included</p></div>
   </div>
-  <div style="margin-top: 40px; border-radius: 48px; overflow:hidden; border:3px solid #FFB974;">
-    <iframe src="https://maps.google.com/maps?q=Sushant%20Golf%20City%20Lucknow%20Ansal%20API&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe>
-  </div>
+  <div style="margin-top: 40px; border-radius: 48px; overflow:hidden; border:3px solid #2e7d32;"><iframe src="https://maps.google.com/maps?q=Sushant%20Golf%20City%20Lucknow%20Ansal%20API&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen></iframe></div>
 </section>
 
-<footer>
-  <p>© 2026 AKANKSHA INTERIOR DECORATION HUB — Best Architect & Interior Designer, Vastu & Construction Experts Lucknow</p>
-  <p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture) | ISO 9001:2015</p>
-</footer>
+<footer><p>© 2026 AKANKSHA INTERIOR DECORATION HUB — Best Architect & Interior Designer, Vastu & Construction Experts Lucknow</p><p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture) | ISO 9001:2015</p></footer>
 
-<!-- Floating Buttons -->
 <a class="whatsapp-float" href="https://wa.me/919140009729" target="_blank"><i class="fab fa-whatsapp"></i></a>
 <a class="call-float" href="tel:+919140009729"><i class="fas fa-phone-alt"></i></a>
 
 <script>
-  // spark particles
   const sparkField = document.getElementById('particleField');
-  for(let i=0;i<80;i++){
-    let sp = document.createElement('div');
-    sp.classList.add('spark');
-    let size = Math.random()*6+2;
-    sp.style.width = size+'px';
-    sp.style.height = size+'px';
-    sp.style.left = Math.random()*100+'%';
-    sp.style.top = Math.random()*100+'%';
-    sp.style.animationDuration = Math.random()*12+6+'s';
-    sp.style.animationDelay = Math.random()*6+'s';
-    sparkField.appendChild(sp);
-  }
-  // project slider drag
-  const sliderDiv = document.getElementById('projectSlider');
-  let isDown = false, startX, scrollLeftPos;
-  if(sliderDiv){
-    sliderDiv.addEventListener('mousedown', (e) => {
-      isDown = true;
-      startX = e.pageX - sliderDiv.offsetLeft;
-      scrollLeftPos = sliderDiv.scrollLeft;
-      sliderDiv.style.cursor = 'grabbing';
-    });
-    sliderDiv.addEventListener('mouseleave', () => { isDown = false; sliderDiv.style.cursor = 'grab'; });
-    sliderDiv.addEventListener('mouseup', () => { isDown = false; sliderDiv.style.cursor = 'grab'; });
-    sliderDiv.addEventListener('mousemove', (e) => {
-      if(!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - sliderDiv.offsetLeft;
-      const walk = (x - startX)*1.5;
-      sliderDiv.scrollLeft = scrollLeftPos - walk;
-    });
-  }
-  // reviews carousel
-  const reviews = document.querySelectorAll('.review-card');
-  const dots = document.querySelectorAll('.dot');
-  let currentReview = 0;
-  function showReview(index){
-    reviews.forEach((rev,i)=>{
-      rev.classList.toggle('active', i===index);
-      if(dots[i]) dots[i].style.background = i===index ? '#FF8C42' : '#ddd';
-    });
-  }
-  if(reviews.length){
-    setInterval(()=>{
-      currentReview = (currentReview+1) % reviews.length;
-      showReview(currentReview);
-    }, 5200);
-    dots.forEach((dot,i)=>{
-      dot.addEventListener('click',()=>{
-        currentReview = i;
-        showReview(currentReview);
-      });
-    });
-    showReview(0);
-  }
-  // contact form
-  const cForm = document.getElementById('contactForm');
-  if(cForm){
-    cForm.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      alert("✨ Thank you! Our design expert will contact you within 2 hours with free consultation & site visit details. Welcome to Akanksha wonder!");
-      cForm.reset();
-    });
-  }
-  // smooth nav
-  document.querySelectorAll('nav a, .btn-primary[href="#contact"], .btn-outline[href="#gallery-main"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-      const hash = this.getAttribute('href');
-      if(hash && hash.startsWith('#')){
-        e.preventDefault();
-        const target = document.querySelector(hash);
-        if(target){
-          const offset = 70;
-          const pos = target.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({top: pos, behavior: 'smooth'});
-        }
-      }
-    });
-  });
+  for(let i=0;i<80;i++){ let sp = document.createElement('div'); sp.classList.add('spark'); let size = Math.random()*6+2; sp.style.width = size+'px'; sp.style.height = size+'px'; sp.style.left = Math.random()*100+'%'; sp.style.top = Math.random()*100+'%'; sp.style.animationDuration = Math.random()*12+6+'s'; sp.style.animationDelay = Math.random()*6+'s'; sparkField.appendChild(sp); }
+  const sliderDiv = document.getElementById('projectSlider'); let isDown = false, startX, scrollLeftPos; if(sliderDiv){ sliderDiv.addEventListener('mousedown', (e) => { isDown = true; startX = e.pageX - sliderDiv.offsetLeft; scrollLeftPos = sliderDiv.scrollLeft; sliderDiv.style.cursor = 'grabbing'; }); sliderDiv.addEventListener('mouseleave', () => { isDown = false; sliderDiv.style.cursor = 'grab'; }); sliderDiv.addEventListener('mouseup', () => { isDown = false; sliderDiv.style.cursor = 'grab'; }); sliderDiv.addEventListener('mousemove', (e) => { if(!isDown) return; e.preventDefault(); const x = e.pageX - sliderDiv.offsetLeft; const walk = (x - startX)*1.5; sliderDiv.scrollLeft = scrollLeftPos - walk; }); }
+  const reviews = document.querySelectorAll('.review-card'); const dots = document.querySelectorAll('.dot'); let currentReview = 0; function showReview(index){ reviews.forEach((rev,i)=>{ rev.classList.toggle('active', i===index); if(dots[i]) dots[i].style.background = i===index ? '#4caf50' : '#2e7d32'; }); } if(reviews.length){ setInterval(()=>{ currentReview = (currentReview+1) % reviews.length; showReview(currentReview); }, 5200); dots.forEach((dot,i)=>{ dot.addEventListener('click',()=>{ currentReview = i; showReview(currentReview); }); }); showReview(0); }
+  const cForm = document.getElementById('contactForm'); if(cForm){ cForm.addEventListener('submit', (e)=>{ e.preventDefault(); alert("✨ Thank you! Our design expert will contact you within 2 hours with free consultation & site visit details. Welcome to Akanksha wonder!"); cForm.reset(); }); }
+  document.querySelectorAll('nav a, .btn-primary[href="#contact"], .btn-outline[href="#gallery-main"]').forEach(anchor => { anchor.addEventListener('click', function(e){ const hash = this.getAttribute('href'); if(hash && hash.startsWith('#')){ e.preventDefault(); const target = document.querySelector(hash); if(target){ const offset = 70; const pos = target.getBoundingClientRect().top + window.scrollY - offset; window.scrollTo({top: pos, behavior: 'smooth'}); } } }); });
 </script>
 </body>
 </html>
