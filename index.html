@@ -340,8 +340,8 @@
       border-top: 2px solid #FFBC6E;
     }
 
-    /* ======= ONLY THE 3 CHANGES YOU ASKED FOR ======= */
-    /* 1. RED TEXT → WHITE (only elements that were originally red/orange-red) */
+    /* ========== EXACTLY AS REQUESTED: ONLY 3 CHANGES ========== */
+    /* 1. RED TEXT → WHITE (gradients and solid red/orange) */
     .logo h1,
     .hero h2,
     .section-title,
@@ -354,58 +354,59 @@
     .project-card p i,
     .btn-outline i,
     .hero-badge i,
-    .google-business-card .rating i,
     .btn-primary,
     .whatsapp-float i,
-    .call-float i {
+    .call-float i,
+    .logo p,
+    .hero-badge,
+    .google-business-card .rating i {
       color: white !important;
       background: none !important;
       -webkit-background-clip: unset !important;
       background-clip: unset !important;
     }
-    /* Gradient texts become solid white */
+    /* gradient text becomes solid white */
     .logo h1, .hero h2, .section-title {
       background: none !important;
       color: white !important;
     }
-    /* Keep stars yellow, that's not red */
+    .hero-badge {
+      background: rgba(0,0,0,0.7) !important; /* keep readable but blackish, not brown */
+      border-color: #2e7d32 !important;
+    }
+    /* keep stars yellow as they are not red */
     .stars i {
       color: #FFB81C !important;
     }
 
-    /* 2. BROWN BACKGROUND → BLACK (only tan/beige/brownish backgrounds) */
+    /* 2. BROWN BACKGROUND → BLACK (only originally brown/tan/beige backgrounds) */
     .project-card,
     .feature-card,
     .gallery-item,
     .reviews-slider,
-    .service-chip,
-    .google-business-card,
-    .info-panel,
     footer,
     .hero-badge,
-    .modern-input,
-    .slider-container .project-card,
+    .service-chip,
+    .project-card,
     .section#projects,
-    .contact-flex .info-panel {
+    .modern-input {
       background: #000000 !important;
     }
-    /* Keep the radiant gradient background untouched? No, user said only brown to black.
-       But radiant bg is not brown, so leave as is. */
-    /* However, to keep cards readable on black, set text color to light */
+    /* ensure text on black is readable */
     .project-card p, .project-card p i, .feature-card p, .feature-card h3,
     .gallery-caption, .reviews-slider p, .review-card h4,
-    .info-panel p, .info-panel h3, .google-business-card p, .google-business-card div,
-    .service-chip span, .service-chip, footer p, .modern-input,
-    .modern-input::placeholder, .btn-outline {
+    footer p, .modern-input, .modern-input::placeholder,
+    .service-chip span, .service-chip {
       color: white !important;
     }
     .modern-input {
       background: #222 !important;
       border-color: #2e7d32 !important;
     }
+    /* do NOT change white/transparent backgrounds like .google-business-card, .info-panel, header, etc. */
+
     /* 3. ORANGE OUTLINE → GREEN */
     .btn-outline,
-    .google-business-card,
     .gallery-item,
     .project-card,
     .modern-input,
@@ -413,12 +414,13 @@
     .service-chip,
     .feature-card,
     footer,
-    header,
     .feature-card,
     .gallery-item:hover,
     .slider-container .project-card,
     .reviews-slider,
-    .contact-flex .info-panel {
+    .btn-primary,
+    .whatsapp-float,
+    .call-float {
       border-color: #2e7d32 !important;
     }
     .btn-primary {
@@ -427,9 +429,6 @@
     }
     .btn-outline {
       border: 2px solid #2e7d32 !important;
-    }
-    .google-business-card {
-      box-shadow: 0 30px 45px -20px rgba(46,125,50,0.5), 0 0 0 1px #2e7d32 !important;
     }
     .service-chip {
       border: 1px solid #2e7d32 !important;
@@ -446,17 +445,16 @@
     .call-float {
       background: #0b3b0f !important;
     }
-    .hero-badge {
-      border: 1px solid #2e7d32 !important;
-    }
-    /* Ensure header border green */
-    header {
-      border-bottom: 3px solid #2e7d32 !important;
-    }
     footer {
       border-top: 2px solid #2e7d32 !important;
     }
-    /* Dot indicators for reviews */
+    header {
+      border-bottom: 3px solid #2e7d32 !important;
+    }
+    .google-business-card {
+      box-shadow: 0 30px 45px -20px rgba(46,125,50,0.5), 0 0 0 1px #2e7d32 !important;
+    }
+    /* review dots to green */
     .dot {
       background: #2e7d32 !important;
     }
@@ -532,7 +530,7 @@
   </div>
 </section>
 
-<section id="projects" class="section" style="background:#FFF5EA; border-radius: 70px; margin:0 6%;">
+<section id="projects" class="section" style="border-radius: 70px; margin:0 6%;">
   <div class="section-title">🏆 Award-Winning Portfolio</div>
   <div class="slider-container" id="projectSlider">
     <div class="project-card"><img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=600" alt="Pawan Singh Residence"><p><i class="fas fa-star-of-life"></i> Pawan Singh Residence | Studio Designing</p></div>
