@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>AKANSHA-INTERIOR | Best Architect & Interior Designer</title>
   <meta name="description" content="AKANSHA-INTERIOR - Award-winning modular kitchens, modern architecture, vastu, construction & turnkey projects.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -31,7 +31,7 @@
       height: 150%;
       top: -30%;
       left: -30%;
-      background: radial-gradient(ellipse at 40% 60%, rgba(255, 180, 80, 0.25), rgba(255, 100, 130, 0.15), transparent 70%);
+      background: radial-gradient(ellipse at 40% 60%, rgba(255, 180, 80, 0.3), rgba(255, 100, 130, 0.2), transparent 70%);
       animation: slowDrift 24s infinite alternate;
       z-index: -1;
       pointer-events: none;
@@ -49,21 +49,21 @@
     }
     .spark {
       position: absolute;
-      background: radial-gradient(circle, #FFB347, #FF6F61);
+      background: radial-gradient(circle, #FFD700, #FF8C00);
       border-radius: 50%;
-      opacity: 0.5;
+      opacity: 0.4;
       animation: floatSpark 13s infinite alternate;
     }
     @keyframes floatSpark {
-      0% { transform: translateY(0) scale(0.6); opacity: 0.2; }
-      100% { transform: translateY(-70px) scale(1.2); opacity: 0.8; }
+      0% { transform: translateY(0) scale(0.6); opacity: 0.15; }
+      100% { transform: translateY(-70px) scale(1.2); opacity: 0.6; }
     }
     header {
       position: sticky;
       top: 0;
       backdrop-filter: blur(20px);
-      background: rgba(255, 245, 230, 0.88);
-      border-bottom: 3px solid #2e7d32;
+      background: rgba(255, 245, 230, 0.92);
+      border-bottom: 3px solid #FF8C42;
       padding: 16px 5%;
       display: flex;
       justify-content: space-between;
@@ -74,7 +74,7 @@
     .logo h1 {
       font-size: 1.9rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #1F3B2C, #2e7d32);
+      background: linear-gradient(135deg, #E5571C, #FF8C42, #FF4D7A);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent !important;
@@ -82,17 +82,17 @@
     }
     .logo p {
       font-size: 0.7rem;
-      font-weight: 600;
-      color: #1F3B2C !important;
+      font-weight: 700;
+      color: #E55A1F !important;
     }
     nav a {
-      color: #3E2C23;
+      color: #5a3a2a;
       margin: 0 18px;
       font-weight: 700;
       text-decoration: none;
       transition: 0.2s;
     }
-    nav a:hover { color: #2e7d32 !important; text-shadow: 0 0 2px #a0c4ff; }
+    nav a:hover { color: #FF8C42 !important; text-shadow: 0 0 3px rgba(255,140,66,0.5); }
     .hero {
       min-height: 85vh;
       display: flex;
@@ -102,20 +102,20 @@
       padding: 60px 6%;
     }
     .hero-badge {
-      background: rgba(0,0,0,0.7) !important;
-      backdrop-filter: blur(8px);
+      background: linear-gradient(135deg, #1b5e20, #2e7d32);
       display: inline-block;
       padding: 8px 24px;
       border-radius: 60px;
       font-weight: 800;
       font-size: 0.9rem;
-      border: 1px solid #2e7d32 !important;
+      border: 1px solid #FFD700;
       margin-bottom: 20px;
-      color: #FFD966 !important;
+      color: #FFD700 !important;
+      box-shadow: 0 5px 15px rgba(46,125,50,0.3);
     }
     .hero h2 {
-      font-size: 4rem;
-      font-weight: 800;
+      font-size: 4.2rem;
+      font-weight: 900;
       background: linear-gradient(135deg, #FF6B35, #F7931E, #FFD700, #FF6B9D);
       -webkit-background-clip: text;
       background-clip: text;
@@ -126,7 +126,7 @@
     }
     @keyframes gentlePulse {
       0% { text-shadow: 0 0 20px rgba(255,107,53,0.3); }
-      50% { text-shadow: 0 0 40px rgba(255,215,0,0.5); }
+      50% { text-shadow: 0 0 45px rgba(255,215,0,0.5); }
       100% { text-shadow: 0 0 20px rgba(255,107,53,0.3); }
     }
     .btn-group {
@@ -137,27 +137,38 @@
       margin-top: 30px;
     }
     .btn-primary {
-      background: linear-gradient(105deg, #1b5e20, #2e7d32) !important;
+      background: linear-gradient(105deg, #1b5e20, #2e7d32);
       padding: 14px 38px;
       border-radius: 60px;
       font-weight: 800;
       color: white;
       font-size: 1rem;
       transition: 0.25s;
-      box-shadow: 0 12px 20px rgba(46,125,50,0.5) !important;
+      box-shadow: 0 12px 20px rgba(46,125,50,0.5);
       border: none;
       cursor: pointer;
       display: inline-block;
       text-decoration: none;
     }
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 25px rgba(46,125,50,0.6);
+    }
     .btn-outline {
-      background: transparent;
-      border: 2px solid #2e7d32 !important;
-      padding: 12px 32px;
+      background: linear-gradient(135deg, #FF8C42, #FF6B35);
+      border: none;
+      padding: 14px 38px;
       border-radius: 60px;
-      font-weight: 700;
-      color: #b8d8ff !important;
+      font-weight: 800;
+      color: white !important;
       text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 12px 20px rgba(255,107,53,0.4);
+      transition: 0.25s;
+    }
+    .btn-outline:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 25px rgba(255,107,53,0.6);
     }
     .section {
       padding: 80px 6%;
@@ -166,12 +177,13 @@
       font-size: 2.8rem;
       font-weight: 800;
       text-align: center;
-      background: linear-gradient(135deg, #b8d8ff, #7ab8e0, #b8d8ff);
+      background: linear-gradient(135deg, #00D2FF, #3A7BD5, #00E5FF);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent !important;
       margin-bottom: 40px;
-      text-shadow: 0 0 15px rgba(184,216,255,0.3);
+      text-shadow: 0 0 20px rgba(0,210,255,0.3);
+      letter-spacing: -0.5px;
     }
     .services-grid, .features-grid {
       display: flex;
@@ -181,46 +193,59 @@
       margin-bottom: 50px;
     }
     .service-chip {
-      background: #000000 !important;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
       border-radius: 80px;
       padding: 14px 32px;
       font-weight: 700;
-      border: 1px solid #2e7d32 !important;
+      border: 1px solid #FF8C42;
       color: #b8d8ff !important;
       transition: all 0.3s;
+      font-size: 1rem;
     }
-    .service-chip:hover { transform: scale(1.05); border-color: #FFD700; }
+    .service-chip:hover {
+      transform: scale(1.05);
+      border-color: #FFD700;
+      box-shadow: 0 0 15px rgba(255,215,0,0.3);
+    }
     .service-chip i { color: #FFD700 !important; margin-right: 12px; }
     .feature-card {
-      background: #000000 !important;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
       border-radius: 40px;
-      padding: 20px 24px;
+      padding: 25px 20px;
       width: 250px;
       text-align: center;
-      border-bottom: 4px solid #2e7d32 !important;
+      border-bottom: 4px solid #FF8C42;
       color: #b8d8ff !important;
       transition: all 0.3s;
     }
-    .feature-card:hover { transform: translateY(-8px); border-bottom-color: #FFD700; }
-    .feature-card i, .feature-card h3, .feature-card p { color: #b8d8ff !important; }
-    .feature-card i { color: #FFD700 !important; font-size: 2rem; margin-bottom: 12px; display: block; }
+    .feature-card:hover {
+      transform: translateY(-10px);
+      border-bottom-color: #FFD700;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.2);
+    }
+    .feature-card i { color: #FFD700 !important; font-size: 2.2rem; margin-bottom: 15px; display: block; }
+    .feature-card h3 { color: #FFD700 !important; margin-bottom: 10px; font-size: 1.3rem; }
+    .feature-card p { color: #ccc !important; font-size: 0.9rem; }
     .reviews-slider {
-      background: #000000 !important;
+      background: linear-gradient(135deg, #1a1a2e, #16213e);
       border-radius: 64px;
-      padding: 40px;
+      padding: 50px 40px;
       margin-top: 40px;
-      border: 1px solid #2e7d32;
+      border: 1px solid #FF8C42;
     }
     .review-card {
       text-align: center;
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
       display: none;
-      color: #b8d8ff !important;
+      color: #e0e0ff !important;
     }
-    .review-card.active { display: block; animation: fadeIn 0.5s; }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    .stars { color: #FFB81C !important; margin: 10px 0; }
+    .review-card.active { display: block; animation: fadeIn 0.6s; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+    .review-card i.fa-quote-left { font-size: 2.5rem; color: #FFD700; opacity: 0.6; margin-bottom: 15px; display: inline-block; }
+    .review-card p { font-size: 1.2rem; line-height: 1.5; margin-bottom: 15px; color: #e0e0ff; }
+    .stars { color: #FFD700 !important; margin: 15px 0; font-size: 1.1rem; }
+    .review-card h4 { color: #FFD700; font-weight: 700; }
     .contact-flex {
       display: flex;
       flex-wrap: wrap;
@@ -229,27 +254,30 @@
     }
     .info-panel {
       flex: 1;
-      background: #ffffffc9;
-      border-radius: 48px;
-      padding: 30px;
+      background: #ffffffdd;
       backdrop-filter: blur(5px);
+      border-radius: 48px;
+      padding: 35px;
+      border: 1px solid #FFB66F;
     }
-    .info-panel p, .info-panel h3 { color: #1F3B2C; }
+    .info-panel p, .info-panel h3 { color: #2a1a0a; }
     .modern-input {
       width: 100%;
-      padding: 14px;
-      margin: 8px 0;
+      padding: 14px 18px;
+      margin: 10px 0;
       border-radius: 60px;
-      border: 2px solid #2e7d32 !important;
-      background: #222 !important;
-      color: #b8d8ff !important;
+      border: 2px solid #FF8C42;
+      background: white;
+      color: #1F1A17;
+      font-size: 0.95rem;
     }
-    .modern-input::placeholder { color: #aaa; }
+    .modern-input:focus { outline: none; border-color: #E55A1F; }
+    .modern-input::placeholder { color: #999; }
     .whatsapp-float, .call-float {
       position: fixed;
       bottom: 28px;
       right: 28px;
-      background: #1b5e20 !important;
+      background: #25D366;
       width: 58px;
       height: 58px;
       border-radius: 50%;
@@ -260,32 +288,39 @@
       color: white;
       z-index: 99;
       text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
       transition: transform 0.2s;
     }
+    .call-float {
+      right: 110px;
+      background: #1E88E5;
+    }
     .whatsapp-float:hover, .call-float:hover { transform: scale(1.1); }
-    .call-float { right: 110px; background: #0b3b0f !important; }
     footer {
-      background: #000000 !important;
+      background: linear-gradient(135deg, #1a1a2e, #0f0f23);
       text-align: center;
       padding: 40px;
-      border-top: 2px solid #2e7d32 !important;
-      color: #b8d8ff !important;
+      border-top: 3px solid #FF8C42;
+      color: #b8d8ff;
     }
-    footer p { color: #b8d8ff !important; }
+    footer p { color: #b8d8ff; margin: 5px 0; }
     .dot {
       display: inline-block;
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: #2e7d32;
+      background: #FF8C42;
       margin: 0 6px;
       cursor: pointer;
+      transition: 0.2s;
     }
+    .dot.active, .dot:hover { background: #FFD700; transform: scale(1.2); }
     @media (max-width: 780px) {
       .hero h2 { font-size: 2.3rem; }
       .section-title { font-size: 2rem; }
       .call-float { right: 90px; }
-      nav a { margin: 0 10px; font-size: 0.9rem; }
+      nav a { margin: 0 12px; font-size: 0.85rem; }
+      .btn-outline, .btn-primary { padding: 10px 24px; font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -313,10 +348,10 @@
   <div>
     <div class="hero-badge"><i class="fas fa-certificate"></i> ISO 9001:2015 | Award Winner 2024 & 2025</div>
     <h2>Where Architecture Meets <br> Wonder & Vastu</h2>
-    <p style="font-size:1.2rem; max-width:700px; margin:20px auto; color:#2c2c2c;">🏆 Best Modular Kitchen Design 2024 | 🏅 Best Modern Architecture 2025 | Luxury Construction | 360° Turnkey</p>
+    <p style="font-size:1.2rem; max-width:700px; margin:20px auto; color:#5a3a2a; font-weight:500;">🏆 Best Modular Kitchen Design 2024 | 🏅 Best Modern Architecture 2025 | Luxury Construction | 360° Turnkey</p>
     <div class="btn-group">
       <a href="#contact" class="btn-primary"><i class="fas fa-calendar-alt"></i> Free Consultation</a>
-      <a href="gallery.html" class="btn-outline"><i class="fas fa-images"></i> View Gallery</a>
+      <a href="gallery.html" class="btn-outline"><i class="fas fa-images"></i> View Gallery ✨</a>
     </div>
   </div>
 </section>
@@ -346,11 +381,30 @@
   <div class="section-title">❤️ Client Reviews</div>
   <div class="reviews-slider">
     <div id="reviewContainer">
-      <div class="review-card active"><i class="fas fa-quote-left" style="color:#FFD700;"></i><p style="margin-top:15px;">"AKANSHA-INTERIOR delivered our hotel chain with excellence. Their hospitality expertise is unmatched."</p><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4>— Summit Hotels & Resorts</h4></div>
-      <div class="review-card"><i class="fas fa-quote-left" style="color:#FFD700;"></i><p style="margin-top:15px;">"The modular kitchen they designed for us won awards! Best investment for our celebrity home."</p><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4>— Pawan Singh</h4></div>
-      <div class="review-card"><i class="fas fa-quote-left" style="color:#FFD700;"></i><p style="margin-top:15px;">"Professional team, flawless execution for our corporate office. Highly recommended."</p><div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><h4>— Tata Motors</h4></div>
+      <div class="review-card active">
+        <i class="fas fa-quote-left"></i>
+        <p>"AKANSHA-INTERIOR delivered our hotel chain with excellence. Their hospitality expertise is unmatched."</p>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <h4>— Summit Hotels & Resorts</h4>
+      </div>
+      <div class="review-card">
+        <i class="fas fa-quote-left"></i>
+        <p>"The modular kitchen they designed for us won awards! Best investment for our celebrity home."</p>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <h4>— Pawan Singh</h4>
+      </div>
+      <div class="review-card">
+        <i class="fas fa-quote-left"></i>
+        <p>"Professional team, flawless execution for our corporate office. Highly recommended."</p>
+        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <h4>— Tata Motors</h4>
+      </div>
     </div>
-    <div style="text-align:center; margin-top:20px;"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+    <div style="text-align:center; margin-top:30px;">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
   </div>
 </section>
 
@@ -360,44 +414,85 @@
     <div class="info-panel">
       <h3><i class="fas fa-headset"></i> Consult Our Experts</h3>
       <p><strong>AKANSHA-INTERIOR</strong><br>ISO 9001:2015 Certified | Pan-India Presence</p>
-      <p><i class="fas fa-phone-alt"></i> <a href="tel:+919140097029">+91 9140097029</a><br><i class="fas fa-envelope"></i> interiorhub007@gmail.com</p>
+      <p><i class="fas fa-phone-alt"></i> <a href="tel:+919140097029" style="color:#E55A1F; text-decoration:none; font-weight:600;">+91 9140097029</a><br><i class="fas fa-envelope"></i> interiorhub007@gmail.com</p>
       <p><i class="far fa-clock"></i> Operating Hours: 9:30 AM – 9:00 PM (Daily)</p>
-      <div style="margin-top:15px;">
-        <a href="#" style="color:#E65C1E; margin-right:15px; font-size:28px;"><i class="fab fa-instagram"></i></a>
-        <a href="#" style="color:#E65C1E; font-size:28px;"><i class="fab fa-facebook"></i></a>
+      <div style="margin-top:20px;">
+        <a href="#" style="color:#E55A1F; margin-right:20px; font-size:28px;"><i class="fab fa-instagram"></i></a>
+        <a href="#" style="color:#E55A1F; font-size:28px;"><i class="fab fa-facebook"></i></a>
       </div>
     </div>
     <div class="info-panel">
       <form id="contactForm">
         <input type="text" placeholder="Your name *" class="modern-input" required>
-        <input type="email" placeholder="Email / Phone *" class="modern-input" required>
+        <input type="text" placeholder="Email / Phone *" class="modern-input" required>
         <textarea rows="3" placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)" class="modern-input" style="border-radius:32px;"></textarea>
-        <button type="submit" class="btn-primary" style="margin-top:12px;">🚀 Get Free Estimate</button>
+        <button type="submit" class="btn-primary" style="margin-top:12px; width:100%;">🚀 Get Free Estimate</button>
       </form>
-      <p style="margin-top:18px;">⭐ Free Site Visit | 3D Planning | Vastu Guidance included</p>
+      <p style="margin-top:20px; text-align:center; color:#E55A1F; font-weight:600;">⭐ Free Site Visit | 3D Planning | Vastu Guidance included</p>
     </div>
   </div>
 </section>
 
 <footer>
   <p>© 2026 AKANSHA-INTERIOR — Best Architect & Interior Designer | ISO 9001:2015 | Luxury & Hospitality Experts</p>
-  <p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</p>
+  <p><i class="fas fa-trophy" style="color:#FFD700;"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</p>
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank"><i class="fab fa-whatsapp"></i></a>
 <a class="call-float" href="tel:+919140097029"><i class="fas fa-phone-alt"></i></a>
 
 <script>
+  // Spark particles
   const sparkField = document.getElementById('particleField');
-  for(let i=0;i<60;i++){ let sp = document.createElement('div'); sp.classList.add('spark'); let size = Math.random()*6+2; sp.style.width = size+'px'; sp.style.height = size+'px'; sp.style.left = Math.random()*100+'%'; sp.style.top = Math.random()*100+'%'; sp.style.animationDuration = Math.random()*12+6+'s'; sparkField.appendChild(sp); }
+  for(let i=0;i<60;i++){ 
+    let sp = document.createElement('div'); 
+    sp.classList.add('spark'); 
+    let size = Math.random()*6+2; 
+    sp.style.width = size+'px'; 
+    sp.style.height = size+'px'; 
+    sp.style.left = Math.random()*100+'%'; 
+    sp.style.top = Math.random()*100+'%'; 
+    sp.style.animationDuration = Math.random()*14+6+'s'; 
+    sparkField.appendChild(sp); 
+  }
+  
+  // Review slider
   const reviews = document.querySelectorAll('.review-card');
   const dots = document.querySelectorAll('.dot');
   let current = 0;
-  function showReview(index) { reviews.forEach((r,i)=>{ r.classList.toggle('active', i===index); if(dots[i]) dots[i].style.background = i===index ? '#FFD700' : '#2e7d32'; }); }
-  if(reviews.length){ setInterval(()=>{ current = (current+1)%reviews.length; showReview(current); }, 5000); dots.forEach((dot,i)=>{ dot.addEventListener('click',()=>{ current=i; showReview(current); }); }); showReview(0); }
+  function showReview(index) {
+    reviews.forEach((r,i)=>{ r.classList.toggle('active', i===index); });
+    dots.forEach((d,i)=>{ d.classList.toggle('active', i===index); });
+  }
+  if(reviews.length){
+    setInterval(()=>{ current = (current+1)%reviews.length; showReview(current); }, 5500);
+    dots.forEach((dot,i)=>{ dot.addEventListener('click',()=>{ current=i; showReview(current); }); });
+  }
+  
+  // Contact form
   const cForm = document.getElementById('contactForm');
-  if(cForm){ cForm.addEventListener('submit', (e)=>{ e.preventDefault(); alert("✨ Thank you! Our design expert will contact you within 2 hours."); cForm.reset(); }); }
-  document.querySelectorAll('nav a[href^="#"], .btn-primary[href="#contact"]').forEach(anchor => { anchor.addEventListener('click', function(e){ const href = this.getAttribute('href'); if(href && href.startsWith('#')){ e.preventDefault(); const target = document.querySelector(href); if(target){ const offset = 70; window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth'}); } } }); });
+  if(cForm){
+    cForm.addEventListener('submit', (e)=>{ 
+      e.preventDefault(); 
+      alert("✨ Thank you! Our design expert will contact you within 2 hours with free consultation & site visit details.");
+      cForm.reset(); 
+    });
+  }
+  
+  // Smooth scroll
+  document.querySelectorAll('nav a[href^="#"], .btn-primary[href="#contact"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      const href = this.getAttribute('href');
+      if(href && href.startsWith('#')){
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if(target){
+          const offset = 70;
+          window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth'});
+        }
+      }
+    });
+  });
 </script>
 </body>
 </html>
