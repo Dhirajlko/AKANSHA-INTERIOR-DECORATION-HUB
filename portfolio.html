@@ -19,7 +19,6 @@
       color: #e0e0e0;
       line-height: 1.5;
     }
-    /* Background Pattern */
     .bg-pattern {
       position: fixed;
       top: 0;
@@ -37,7 +36,6 @@
       margin: 0 auto;
       padding: 0 5%;
     }
-    /* Header */
     header {
       position: sticky;
       top: 0;
@@ -73,7 +71,6 @@
       transition: 0.2s;
     }
     nav a:hover { color: #FFD700; }
-    /* Cards & Sections */
     .section {
       padding: 60px 0;
       border-bottom: 1px solid rgba(255,215,0,0.2);
@@ -102,7 +99,6 @@
       color: #FFD700;
       margin-bottom: 15px;
     }
-    /* Overview Card */
     .overview-card {
       background: rgba(20, 20, 40, 0.7);
       backdrop-filter: blur(10px);
@@ -125,7 +121,6 @@
       color: #FFD700;
       margin-top: 15px;
     }
-    /* Achievements Grid */
     .achievements-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -159,7 +154,6 @@
       color: #bbb;
       font-size: 0.9rem;
     }
-    /* Awards Gallery */
     .awards-gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -189,7 +183,6 @@
       color: #FFD700;
       background: rgba(0,0,0,0.5);
     }
-    /* Project Categories */
     .project-category {
       margin-bottom: 40px;
     }
@@ -223,7 +216,6 @@
       margin-right: 8px;
       color: #FFD700;
     }
-    /* Core Expertise */
     .expertise-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -251,7 +243,6 @@
       color: #bbb;
       font-size: 0.9rem;
     }
-    /* Service Table */
     .service-table {
       width: 100%;
       border-collapse: collapse;
@@ -274,39 +265,132 @@
     .service-table td {
       color: #ddd;
     }
-    /* Contact Info */
-    .contact-info {
-      background: linear-gradient(135deg, rgba(20,20,40,0.8), rgba(10,10,20,0.9));
-      border-radius: 32px;
-      padding: 35px;
+    /* ========== NEW FOOTER SECTION (from image) ========== */
+    .footer-section {
+      background: linear-gradient(135deg, #0d0d1a, #0a0a15);
+      border-radius: 48px;
+      padding: 50px 40px;
+      margin: 60px 0 40px;
+      border: 1px solid rgba(255,215,0,0.25);
+    }
+    .footer-title {
       text-align: center;
-      border: 1px solid rgba(255,215,0,0.3);
-      margin-top: 30px;
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #FFD700, #FF8C00);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 40px;
     }
-    .contact-info i {
-      font-size: 2rem;
+    .footer-two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+    .footer-left {
+      flex: 1;
+      min-width: 250px;
+    }
+    .footer-right {
+      flex: 1;
+      min-width: 280px;
+    }
+    .consult-box {
+      background: rgba(0,0,0,0.4);
+      border-radius: 28px;
+      padding: 28px;
+      border: 1px solid rgba(255,215,0,0.2);
+    }
+    .consult-box h3 {
+      font-size: 1.5rem;
       color: #FFD700;
-      margin: 0 10px;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
-    .contact-info p {
-      margin: 12px 0;
-      font-size: 1.1rem;
+    .consult-detail {
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
-    .contact-info a {
+    .consult-detail i {
+      width: 32px;
       color: #FFD700;
+      font-size: 1.2rem;
+    }
+    .consult-detail span, .consult-detail a {
+      color: #ddd;
       text-decoration: none;
     }
-    .contact-info a:hover {
-      text-decoration: underline;
+    .consult-detail a:hover {
+      color: #FFD700;
     }
-    /* Footer */
-    footer {
-      background: rgba(10, 10, 20, 0.95);
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      background: rgba(30,30,50,0.8);
+      border: 1px solid rgba(255,215,0,0.3);
+      border-radius: 60px;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      transition: 0.2s;
+    }
+    .form-group textarea {
+      border-radius: 28px;
+      resize: vertical;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: #FFD700;
+      background: rgba(30,30,50,1);
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder {
+      color: #888;
+    }
+    .submit-btn {
+      background: linear-gradient(135deg, #FFD700, #FF8C00);
+      border: none;
+      padding: 14px 35px;
+      border-radius: 60px;
+      font-weight: 800;
+      font-size: 1rem;
+      color: #1a1a1a;
+      cursor: pointer;
+      transition: transform 0.2s;
+      width: 100%;
+    }
+    .submit-btn:hover {
+      transform: scale(1.02);
+    }
+    .free-note {
       text-align: center;
-      padding: 35px;
+      margin-top: 25px;
+      padding-top: 20px;
       border-top: 1px solid rgba(255,215,0,0.2);
+      color: #FFD700;
+      font-weight: 500;
     }
-    /* Floating Buttons */
+    .copyright-bar {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 32px;
+      margin-top: 30px;
+    }
+    .copyright-bar p {
+      color: #aaa;
+      font-size: 0.85rem;
+      margin: 5px 0;
+    }
+    .copyright-bar i {
+      color: #FFD700;
+    }
     .whatsapp-float, .call-float {
       position: fixed;
       bottom: 28px;
@@ -339,6 +423,8 @@
       .overview-card { padding: 25px; }
       .service-table th, .service-table td { padding: 12px; font-size: 0.85rem; }
       .call-float { right: 90px; }
+      .footer-title { font-size: 1.8rem; }
+      .footer-section { padding: 30px 20px; }
     }
   </style>
 </head>
@@ -476,7 +562,7 @@
     <h2 class="section-title">📊 Service Portfolio</h2>
     <table class="service-table">
       <thead>
-        <tr><th>Service Category</th><th>Notable Projects</th><th>Features & Specializations</th</tr>
+        <tr><th>Service Category</th><th>Notable Projects</th><th>Features & Specializations</th></tr>
       </thead>
       <tbody>
         <tr><td><strong>Residential Interiors</strong></td><td>Studio Singh</td><td>Full-flat luxury renovations and master suites.</td></tr>
@@ -487,28 +573,55 @@
     </table>
   </div>
 
-  <!-- Contact Information -->
-  <div class="section">
-    <div class="contact-info">
-      <i class="fas fa-phone-alt"></i> <i class="fas fa-envelope"></i> <i class="fas fa-clock"></i>
-      <p><strong style="color:#FFD700;">Contact for Portfolio Consultation</strong></p>
-      <p><i class="fas fa-phone-alt"></i> <a href="tel:+919140097029">+91 9140097029</a> &nbsp;|&nbsp; <i class="fas fa-envelope"></i> interiorhub007@gmail.com</p>
-      <p><i class="fas fa-certificate" style="color:#FFD700;"></i> ISO 9001:2015 Certified &nbsp;|&nbsp; <i class="far fa-clock"></i> Operating Hours: 9:30 AM – 9:00 PM (Daily)</p>
-      <p style="margin-top: 20px;"><a href="index.html#contact" style="background: linear-gradient(135deg, #FFD700, #FF8C00); padding: 12px 35px; border-radius: 50px; color: #1a1a1a; text-decoration: none; font-weight: 700; display: inline-block;">← Back to Home & Contact</a></p>
+  <!-- ========== NEW FOOTER SECTION (Contact Form + Info) ========== -->
+  <div class="footer-section">
+    <div class="footer-title">✨ Let's Create Wonder Together ✨</div>
+    
+    <div class="footer-two-columns">
+      <!-- Left Column: Consult Our Experts -->
+      <div class="footer-left">
+        <div class="consult-box">
+          <h3><i class="fas fa-headset"></i> Consult Our Experts</h3>
+          <div class="consult-detail"><i class="fas fa-building"></i> <span><strong>AKANSHA-INTERIOR</strong><br>ISO 9001:2015 Certified | Pan-India Presence</span></div>
+          <div class="consult-detail"><i class="fas fa-phone-alt"></i> <a href="tel:+919140097029">+91 9140097029</a></div>
+          <div class="consult-detail"><i class="fas fa-envelope"></i> <span>interiorhub007@gmail.com</span></div>
+          <div class="consult-detail"><i class="far fa-clock"></i> <span>Operating Hours: 9:30 AM – 9:00 PM (Daily)</span></div>
+        </div>
+      </div>
+
+      <!-- Right Column: Contact Form -->
+      <div class="footer-right">
+        <form id="footerContactForm">
+          <div class="form-group">
+            <input type="text" placeholder="Your name *" required>
+          </div>
+          <div class="form-group">
+            <input type="text" placeholder="Email / Phone *" required>
+          </div>
+          <div class="form-group">
+            <textarea rows="3" placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">🚀 Get Free Estimate</button>
+        </form>
+        <div class="free-note">
+          ⭐ Free Site Visit | 3D Planning | Vastu Guidance included
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<footer>
-  <p>© 2026 AKANSHA-INTERIOR — Best Architect & Interior Designer | ISO 9001:2015 | Luxury & Hospitality Experts</p>
-  <p><i class="fas fa-trophy" style="color:#FFD700;"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</p>
-</footer>
+  <!-- Copyright Bar -->
+  <div class="copyright-bar">
+    <p>© 2026 AKANSHA-INTERIOR — Best Architect & Interior Designer | ISO 9001:2015 | Luxury & Hospitality Experts</p>
+    <p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</p>
+  </div>
+</div>
 
 <a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank"><i class="fab fa-whatsapp"></i></a>
 <a class="call-float" href="tel:+919140097029"><i class="fas fa-phone-alt"></i></a>
 
 <script>
-  // Spark particles for premium feel
+  // Spark particles
   const body = document.body;
   for(let i=0;i<40;i++){ 
     let spark = document.createElement('div'); 
@@ -528,6 +641,16 @@
   const style = document.createElement('style');
   style.textContent = `@keyframes floatSpark { 0% { transform: translateY(0px); opacity: 0.1; } 100% { transform: translateY(-40px); opacity: 0.5; } }`;
   document.head.appendChild(style);
+
+  // Form submission alert
+  const footerForm = document.getElementById('footerContactForm');
+  if(footerForm) {
+    footerForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("✨ Thank you! Our design expert will contact you within 2 hours with free consultation & site visit details.");
+      footerForm.reset();
+    });
+  }
 </script>
 </body>
 </html>
