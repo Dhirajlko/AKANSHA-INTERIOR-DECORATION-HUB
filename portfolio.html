@@ -15,65 +15,92 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-      color: #e0e0e0;
-      line-height: 1.5;
+      background: #FFFBF5;
+      overflow-x: hidden;
+      color: #1F1A17;
     }
-    .bg-pattern {
+    .radiant-bg {
       position: fixed;
-      top: 0;
-      left: 0;
+      inset: 0;
+      background: radial-gradient(circle at 30% 10%, #FFE9C7, #FFF0DD, #FFE1C4);
+      z-index: -2;
+    }
+    .glow-motion {
+      position: fixed;
+      width: 150%;
+      height: 150%;
+      top: -30%;
+      left: -30%;
+      background: radial-gradient(ellipse at 40% 60%, rgba(255, 180, 80, 0.25), rgba(255, 100, 130, 0.15), transparent 70%);
+      animation: slowDrift 24s infinite alternate;
+      z-index: -1;
+      pointer-events: none;
+    }
+    @keyframes slowDrift {
+      0% { transform: translate(0,0) scale(1); opacity: 0.6; }
+      100% { transform: translate(4%, -6%) scale(1.2); opacity: 1; }
+    }
+    .spark-particles {
+      position: fixed;
       width: 100%;
       height: 100%;
-      background-image: 
-        radial-gradient(circle at 20% 80%, rgba(255,215,0,0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255,140,0,0.05) 0%, transparent 50%);
       pointer-events: none;
       z-index: -1;
     }
-    .container {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 5%;
+    .spark {
+      position: absolute;
+      background: radial-gradient(circle, #FFB347, #FF6F61);
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: floatSpark 13s infinite alternate;
+    }
+    @keyframes floatSpark {
+      0% { transform: translateY(0) scale(0.6); opacity: 0.2; }
+      100% { transform: translateY(-70px) scale(1.2); opacity: 0.8; }
     }
     header {
       position: sticky;
       top: 0;
       backdrop-filter: blur(20px);
-      background: rgba(10, 10, 20, 0.92);
-      border-bottom: 2px solid #FFD700;
-      padding: 18px 5%;
+      background: rgba(255, 245, 230, 0.88);
+      border-bottom: 3px solid #2e7d32;
+      padding: 16px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 1000;
+      z-index: 100;
       flex-wrap: wrap;
     }
     .logo h1 {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #FFD700, #FF8C00);
+      background: linear-gradient(135deg, #1F3B2C, #2e7d32);
       -webkit-background-clip: text;
       background-clip: text;
-      color: transparent;
-      letter-spacing: -0.5px;
+      color: transparent !important;
+      letter-spacing: -0.3px;
     }
     .logo p {
       font-size: 0.7rem;
-      color: #FFD700;
-      font-weight: 500;
+      font-weight: 600;
+      color: #1F3B2C !important;
     }
     nav a {
-      color: #ccc;
+      color: #3E2C23;
       margin: 0 18px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       transition: 0.2s;
     }
-    nav a:hover { color: #FFD700; }
+    nav a:hover { color: #2e7d32 !important; text-shadow: 0 0 2px #a0c4ff; }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+    }
     .section {
       padding: 60px 0;
-      border-bottom: 1px solid rgba(255,215,0,0.2);
+      border-bottom: 1px solid rgba(255,140,0,0.15);
     }
     .section:last-child { border-bottom: none; }
     .section-title {
@@ -81,35 +108,36 @@
       font-weight: 800;
       margin-bottom: 30px;
       padding-bottom: 12px;
-      border-bottom: 3px solid #FFD700;
+      border-bottom: 3px solid #FF8C42;
       display: inline-block;
-      background: linear-gradient(135deg, #FFD700, #FF8C00);
+      background: linear-gradient(135deg, #E5571C, #FF8C42, #FF4D7A);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
     .badge {
       display: inline-block;
-      background: rgba(255,215,0,0.15);
-      border: 1px solid #FFD700;
+      background: rgba(255,140,66,0.15);
+      border: 1px solid #FF8C42;
       border-radius: 50px;
       padding: 6px 16px;
       font-size: 0.8rem;
       font-weight: 600;
-      color: #FFD700;
+      color: #E5571C;
       margin-bottom: 15px;
     }
     .overview-card {
-      background: rgba(20, 20, 40, 0.7);
-      backdrop-filter: blur(10px);
-      border-radius: 32px;
+      background: #ffffffdd;
+      backdrop-filter: blur(4px);
+      border-radius: 48px;
       padding: 40px;
-      border: 1px solid rgba(255,215,0,0.3);
+      border: 1px solid #FFB66F;
+      box-shadow: 0 30px 45px -20px rgba(0,0,0,0.1);
       margin-bottom: 40px;
     }
     .overview-card h2 {
       font-size: 1.8rem;
-      color: #FFD700;
+      color: #E55A1F;
       margin-bottom: 20px;
     }
     .iso-badge {
@@ -128,30 +156,29 @@
       margin: 30px 0;
     }
     .achievement-card {
-      background: rgba(20, 20, 40, 0.6);
-      border-radius: 24px;
+      background: #fef7e8;
+      border-radius: 40px;
       padding: 28px;
       text-align: center;
-      border: 1px solid rgba(255,215,0,0.2);
+      border-bottom: 4px solid #FF8C42;
       transition: all 0.3s;
     }
     .achievement-card:hover {
       transform: translateY(-5px);
-      border-color: #FFD700;
-      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     }
     .achievement-card i {
       font-size: 2.5rem;
-      color: #FFD700;
+      color: #E55A1F;
       margin-bottom: 15px;
     }
     .achievement-card h3 {
       font-size: 1.3rem;
-      color: #FFD700;
+      color: #C2470E;
       margin-bottom: 10px;
     }
     .achievement-card p {
-      color: #bbb;
+      color: #555;
       font-size: 0.9rem;
     }
     .awards-gallery {
@@ -161,15 +188,16 @@
       margin: 30px 0;
     }
     .award-item {
-      background: rgba(20, 20, 40, 0.6);
-      border-radius: 20px;
+      background: #fef7e8;
+      border-radius: 32px;
       overflow: hidden;
-      border: 1px solid rgba(255,215,0,0.2);
+      border: 2px solid #FFC48A;
       transition: all 0.3s;
     }
     .award-item:hover {
       transform: translateY(-5px);
-      border-color: #FFD700;
+      border-color: #F97316;
+      box-shadow: 0 20px 30px rgba(0,0,0,0.1);
     }
     .award-item img {
       width: 100%;
@@ -180,8 +208,8 @@
       padding: 12px;
       text-align: center;
       font-weight: 600;
-      color: #FFD700;
-      background: rgba(0,0,0,0.5);
+      color: #bc5a24;
+      background: #fffbf0;
     }
     .project-category {
       margin-bottom: 40px;
@@ -189,10 +217,10 @@
     .category-heading {
       font-size: 1.5rem;
       font-weight: 700;
-      color: #FFD700;
+      color: #E55A1F;
       margin-bottom: 20px;
       padding-left: 15px;
-      border-left: 4px solid #FFD700;
+      border-left: 4px solid #FF8C42;
     }
     .project-list {
       display: flex;
@@ -201,20 +229,22 @@
       margin-bottom: 20px;
     }
     .project-tag {
-      background: rgba(255,215,0,0.1);
-      border: 1px solid rgba(255,215,0,0.3);
-      border-radius: 50px;
+      background: #ffffffdd;
+      border: 1px solid #FFB66F;
+      border-radius: 80px;
       padding: 10px 24px;
-      font-weight: 500;
+      font-weight: 600;
+      color: #C2470E;
       transition: all 0.2s;
     }
     .project-tag:hover {
-      background: rgba(255,215,0,0.2);
-      border-color: #FFD700;
+      background: #fff0e0;
+      border-color: #F97316;
+      transform: scale(1.02);
     }
     .project-tag i {
       margin-right: 8px;
-      color: #FFD700;
+      color: #E55A1F;
     }
     .expertise-grid {
       display: grid;
@@ -223,61 +253,62 @@
       margin: 30px 0;
     }
     .expertise-card {
-      background: rgba(20, 20, 40, 0.6);
-      border-radius: 24px;
+      background: #fef7e8;
+      border-radius: 40px;
       padding: 28px;
       text-align: center;
-      border: 1px solid rgba(255,215,0,0.2);
+      border-bottom: 4px solid #FF8C42;
     }
     .expertise-card i {
       font-size: 2.2rem;
-      color: #FFD700;
+      color: #E55A1F;
       margin-bottom: 15px;
     }
     .expertise-card h3 {
       font-size: 1.2rem;
-      color: #FFD700;
+      color: #C2470E;
       margin-bottom: 12px;
     }
     .expertise-card p {
-      color: #bbb;
+      color: #555;
       font-size: 0.9rem;
     }
     .service-table {
       width: 100%;
       border-collapse: collapse;
-      background: rgba(20, 20, 40, 0.6);
-      border-radius: 20px;
+      background: #ffffffdd;
+      border-radius: 32px;
       overflow: hidden;
       margin: 30px 0;
+      border: 1px solid #FFB66F;
     }
     .service-table th, .service-table td {
       padding: 16px 20px;
       text-align: left;
-      border-bottom: 1px solid rgba(255,215,0,0.2);
+      border-bottom: 1px solid #FFE0C0;
     }
     .service-table th {
-      background: rgba(255,215,0,0.15);
-      color: #FFD700;
-      font-weight: 700;
+      background: #FFF2E2;
+      color: #E55A1F;
+      font-weight: 800;
       font-size: 1rem;
     }
     .service-table td {
-      color: #ddd;
+      color: #4a3a2a;
     }
-    /* ========== NEW FOOTER SECTION (from image) ========== */
+    /* Footer Section - Matching Live Site */
     .footer-section {
-      background: linear-gradient(135deg, #0d0d1a, #0a0a15);
-      border-radius: 48px;
+      background: #FFF2E2;
+      border-radius: 64px;
       padding: 50px 40px;
       margin: 60px 0 40px;
-      border: 1px solid rgba(255,215,0,0.25);
+      border: 1px solid #FFBC6E;
     }
     .footer-title {
       text-align: center;
       font-size: 2.5rem;
       font-weight: 800;
-      background: linear-gradient(135deg, #FFD700, #FF8C00);
+      background: linear-gradient(145deg, #E3621A, #D43F7A);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -297,14 +328,15 @@
       min-width: 280px;
     }
     .consult-box {
-      background: rgba(0,0,0,0.4);
-      border-radius: 28px;
+      background: white;
+      border-radius: 48px;
       padding: 28px;
-      border: 1px solid rgba(255,215,0,0.2);
+      border: 1px solid #FFB66F;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     }
     .consult-box h3 {
       font-size: 1.5rem;
-      color: #FFD700;
+      color: #E55A1F;
       margin-bottom: 20px;
       font-weight: 700;
     }
@@ -317,15 +349,15 @@
     }
     .consult-detail i {
       width: 32px;
-      color: #FFD700;
+      color: #E55A1F;
       font-size: 1.2rem;
     }
     .consult-detail span, .consult-detail a {
-      color: #ddd;
+      color: #3E2C23;
       text-decoration: none;
     }
     .consult-detail a:hover {
-      color: #FFD700;
+      color: #E55A1F;
     }
     .form-group {
       margin-bottom: 20px;
@@ -333,37 +365,34 @@
     .form-group input, .form-group textarea {
       width: 100%;
       padding: 14px 18px;
-      background: rgba(30,30,50,0.8);
-      border: 1px solid rgba(255,215,0,0.3);
+      background: white;
+      border: 2px solid #FFB15E;
       border-radius: 60px;
-      color: white;
+      color: #1F1A17;
       font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       transition: 0.2s;
     }
     .form-group textarea {
-      border-radius: 28px;
+      border-radius: 32px;
       resize: vertical;
     }
     .form-group input:focus, .form-group textarea:focus {
       outline: none;
-      border-color: #FFD700;
-      background: rgba(30,30,50,1);
-    }
-    .form-group input::placeholder, .form-group textarea::placeholder {
-      color: #888;
+      border-color: #F97316;
     }
     .submit-btn {
-      background: linear-gradient(135deg, #FFD700, #FF8C00);
+      background: linear-gradient(105deg, #1b5e20, #2e7d32);
       border: none;
       padding: 14px 35px;
       border-radius: 60px;
       font-weight: 800;
       font-size: 1rem;
-      color: #1a1a1a;
+      color: white;
       cursor: pointer;
       transition: transform 0.2s;
       width: 100%;
+      box-shadow: 0 12px 20px rgba(46,125,50,0.3);
     }
     .submit-btn:hover {
       transform: scale(1.02);
@@ -372,30 +401,31 @@
       text-align: center;
       margin-top: 25px;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,215,0,0.2);
-      color: #FFD700;
-      font-weight: 500;
+      border-top: 1px solid #FFBC6E;
+      color: #E55A1F;
+      font-weight: 600;
     }
     .copyright-bar {
       text-align: center;
       padding: 30px;
-      background: rgba(0,0,0,0.5);
-      border-radius: 32px;
+      background: #FFECD9;
+      border-radius: 48px;
       margin-top: 30px;
+      border: 1px solid #FFBC6E;
     }
     .copyright-bar p {
-      color: #aaa;
+      color: #4a3a2a;
       font-size: 0.85rem;
       margin: 5px 0;
     }
     .copyright-bar i {
-      color: #FFD700;
+      color: #E55A1F;
     }
     .whatsapp-float, .call-float {
       position: fixed;
       bottom: 28px;
       right: 28px;
-      background: #25D366;
+      background: #1b5e20;
       width: 58px;
       height: 58px;
       border-radius: 50%;
@@ -406,12 +436,12 @@
       color: white;
       z-index: 99;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
       transition: transform 0.2s;
     }
     .call-float {
       right: 110px;
-      background: #1E88E5;
+      background: #0b3b0f;
     }
     .whatsapp-float:hover, .call-float:hover {
       transform: scale(1.08);
@@ -429,7 +459,9 @@
   </style>
 </head>
 <body>
-<div class="bg-pattern"></div>
+<div class="radiant-bg"></div>
+<div class="glow-motion"></div>
+<div class="spark-particles" id="particleField"></div>
 
 <header>
   <div class="logo">
@@ -451,7 +483,7 @@
     <div class="overview-card">
       <span class="badge"><i class="fas fa-building"></i> Since 2015</span>
       <h2>Akanksha Interior Decoration Hub</h2>
-      <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 20px;">AKANSHA-INTERIOR is a premier interior design and architectural visualization firm. Recognized for technical precision and functional luxury, the firm is an <strong style="color:#FFD700;">ISO 9001:2015 Certified</strong> organization committed to international quality standards in design and execution.</p>
+      <p style="font-size: 1.05rem; line-height: 1.6; margin-bottom: 20px; color:#4a3a2a;">AKANSHA-INTERIOR is a premier interior design and architectural visualization firm. Recognized for technical precision and functional luxury, the firm is an <strong style="color:#E55A1F;">ISO 9001:2015 Certified</strong> organization committed to international quality standards in design and execution.</p>
       <div class="iso-badge"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified</div>
     </div>
   </div>
@@ -463,7 +495,7 @@
       <div class="achievement-card">
         <i class="fas fa-trophy"></i>
         <h3>2024 Architecture Summit Meet</h3>
-        <p>Best Architect & Interior Designer (Modular Kitchens) for excellence and innovation in modular kitchen design in Lucknow.</p>
+        <p>Best Architect & Interior Designer (Modular Kitchens) for excellence and innovation in modular kitchen design.</p>
       </div>
       <div class="achievement-card">
         <i class="fas fa-medal"></i>
@@ -573,12 +605,11 @@
     </table>
   </div>
 
-  <!-- ========== NEW FOOTER SECTION (Contact Form + Info) ========== -->
+  <!-- Footer Section - Exactly matching live site theme -->
   <div class="footer-section">
     <div class="footer-title">✨ Let's Create Wonder Together ✨</div>
     
     <div class="footer-two-columns">
-      <!-- Left Column: Consult Our Experts -->
       <div class="footer-left">
         <div class="consult-box">
           <h3><i class="fas fa-headset"></i> Consult Our Experts</h3>
@@ -588,8 +619,6 @@
           <div class="consult-detail"><i class="far fa-clock"></i> <span>Operating Hours: 9:30 AM – 9:00 PM (Daily)</span></div>
         </div>
       </div>
-
-      <!-- Right Column: Contact Form -->
       <div class="footer-right">
         <form id="footerContactForm">
           <div class="form-group">
@@ -610,7 +639,6 @@
     </div>
   </div>
 
-  <!-- Copyright Bar -->
   <div class="copyright-bar">
     <p>© 2026 AKANSHA-INTERIOR — Best Architect & Interior Designer | ISO 9001:2015 | Luxury & Hospitality Experts</p>
     <p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</p>
@@ -621,28 +649,18 @@
 <a class="call-float" href="tel:+919140097029"><i class="fas fa-phone-alt"></i></a>
 
 <script>
-  // Spark particles
-  const body = document.body;
-  for(let i=0;i<40;i++){ 
-    let spark = document.createElement('div'); 
-    spark.style.position = 'fixed';
-    spark.style.width = Math.random()*4+1+'px';
-    spark.style.height = spark.style.width;
-    spark.style.background = '#FFD700';
-    spark.style.borderRadius = '50%';
-    spark.style.opacity = Math.random()*0.3;
-    spark.style.pointerEvents = 'none';
-    spark.style.zIndex = '-1';
-    spark.style.left = Math.random()*100+'%';
-    spark.style.top = Math.random()*100+'%';
-    spark.style.animation = `floatSpark ${Math.random()*15+10}s infinite alternate`;
-    body.appendChild(spark);
+  const sparkField = document.getElementById('particleField');
+  for(let i=0;i<50;i++){ 
+    let sp = document.createElement('div'); 
+    sp.classList.add('spark'); 
+    let size = Math.random()*6+2; 
+    sp.style.width = size+'px'; 
+    sp.style.height = size+'px'; 
+    sp.style.left = Math.random()*100+'%'; 
+    sp.style.top = Math.random()*100+'%'; 
+    sp.style.animationDuration = Math.random()*12+6+'s'; 
+    sparkField.appendChild(sp); 
   }
-  const style = document.createElement('style');
-  style.textContent = `@keyframes floatSpark { 0% { transform: translateY(0px); opacity: 0.1; } 100% { transform: translateY(-40px); opacity: 0.5; } }`;
-  document.head.appendChild(style);
-
-  // Form submission alert
   const footerForm = document.getElementById('footerContactForm');
   if(footerForm) {
     footerForm.addEventListener('submit', function(e) {
