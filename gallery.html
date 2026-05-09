@@ -3,133 +3,1553 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>AKANSHA-INTERIOR | Project Gallery | Interior Design Portfolio</title>
-  <meta name="description" content="Complete project gallery of AKANSHA-INTERIOR - luxury interiors, modular kitchens, bedroom designs, award ceremonies, and more.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>AKANSHA-INTERIOR DECORATION HUB | Project Gallery | Interior Design Portfolio</title>
+  <meta name="description" content="Complete project gallery of AKANSHA-INTERIOR DECORATION HUB - luxury interiors, modular kitchens, bedroom designs, award ceremonies, and more.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #F5F5F5; overflow-x: hidden; color: #000000; }
-    .radiant-bg { position: fixed; inset: 0; background: radial-gradient(circle at 30% 10%, #E8E8E8, #F0F0F0, #E0E0E0); z-index: -2; }
-    .glow-motion { position: fixed; width: 150%; height: 150%; top: -30%; left: -30%; background: radial-gradient(ellipse at 40% 60%, rgba(160, 160, 160, 0.25), rgba(120, 120, 120, 0.15), transparent 70%); animation: slowDrift 24s infinite alternate; z-index: -1; pointer-events: none; }
-    @keyframes slowDrift { 0% { transform: translate(0,0) scale(1); opacity: 0.6; } 100% { transform: translate(4%, -6%) scale(1.2); opacity: 1; } }
-    .spark-particles { position: fixed; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
-    .spark { position: absolute; background: radial-gradient(circle, #A9A9A9, #808080); border-radius: 50%; opacity: 0.5; animation: floatSpark 13s infinite alternate; }
-    @keyframes floatSpark { 0% { transform: translateY(0) scale(0.6); opacity: 0.2; } 100% { transform: translateY(-70px) scale(1.2); opacity: 0.7; } }
-    header { position: sticky; top: 0; backdrop-filter: blur(20px); background: rgba(240, 240, 240, 0.92); border-bottom: 3px solid #A9A9A9; padding: 16px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 100; flex-wrap: wrap; }
-    .logo h1 { font-size: 1.9rem; font-weight: 800; background: linear-gradient(135deg, #2c2c2c, #4a4a4a); -webkit-background-clip: text; background-clip: text; color: transparent !important; letter-spacing: -0.3px; }
-    .logo p { font-size: 0.7rem; font-weight: 600; color: #000000 !important; }
-    nav a { color: #000000; margin: 0 18px; font-weight: 700; text-decoration: none; transition: 0.2s; }
-    nav a:hover { color: #A9A9A9 !important; }
-    .section { padding: 80px 6%; }
-    .section-title { font-size: 3rem; font-weight: 800; text-align: center; background: linear-gradient(135deg, #000000, #2a2a2a, #111111); -webkit-background-clip: text; background-clip: text; color: transparent !important; margin-bottom: 20px; text-shadow: 0 0 25px rgba(0,0,0,0.2); animation: vibrantGlow 3s ease-in-out infinite; }
-    @keyframes vibrantGlow { 0% { text-shadow: 0 0 15px rgba(0,0,0,0.2); } 50% { text-shadow: 0 0 35px rgba(60,60,60,0.4); } 100% { text-shadow: 0 0 15px rgba(0,0,0,0.2); } }
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; margin-top: 40px; }
-    .gallery-item { background: #1a1a1a !important; border-radius: 28px; overflow: hidden; border: 2px solid #A9A9A9 !important; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .gallery-item:hover { transform: translateY(-8px); box-shadow: 0 20px 30px rgba(0,0,0,0.3); border-color: #D3D3D3 !important; }
-    .gallery-item img { width: 100%; height: 280px; object-fit: cover; display: block; }
-    .gallery-caption { padding: 14px 16px; text-align: center; color: #e0e0e0 !important; font-weight: 600; background: #1a1a1a; font-size: 0.9rem; }
-    footer { background: #111111 !important; text-align: center; padding: 40px; border-top: 2px solid #A9A9A9 !important; color: #d0d0d0 !important; }
-    footer p { color: #d0d0d0 !important; }
-    .whatsapp-float, .call-float { position: fixed; bottom: 28px; right: 28px; background: #2c2c2c !important; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: white; z-index: 99; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s; }
-    .call-float { right: 110px; background: #1a1a1a !important; }
-    .whatsapp-float:hover, .call-float:hover { transform: scale(1.1); }
-    @media (max-width: 780px) { .section-title { font-size: 2.2rem; } .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); } nav a { margin: 0 10px; font-size: 0.8rem; } }
-    /* Force all text that might be blue to black */
-    a, .logo p, nav a, footer p, .gallery-caption, .section p {
-      color: #000000 !important;
+
+    :root {
+      --primary: #2E7D32;
+      --primary-dark: #1b5e20;
+      --primary-light: #4CAF50;
+      --accent: #FFD700;
+      --dark: #0a0a0a;
+      --dark-card: #1a1a1a;
+      --gray-50: #FAFAFA;
+      --gray-100: #F5F5F5;
+      --gray-200: #EEEEEE;
+      --gray-300: #E0E0E0;
+      --gray-400: #BDBDBD;
+      --gray-500: #9E9E9E;
+      --gray-600: #757575;
+      --gray-700: #616161;
+      --gray-800: #424242;
+      --gray-900: #212121;
+      --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+      --shadow-glow: 0 0 40px rgba(46,125,50,0.15);
     }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--gray-50);
+      overflow-x: hidden;
+      color: var(--gray-900);
+      line-height: 1.6;
+    }
+
+    /* ===== ANIMATED BACKGROUND ===== */
+    .radiant-bg {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 20%, rgba(46,125,50,0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(255,215,0,0.02) 0%, transparent 50%),
+        linear-gradient(180deg, var(--gray-50) 0%, var(--gray-100) 100%);
+      z-index: -3;
+    }
+
+    .glow-motion {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(46,125,50,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 60%, rgba(46,125,50,0.04) 0%, transparent 50%);
+      animation: slowDrift 20s ease-in-out infinite alternate;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    @keyframes slowDrift {
+      0% { transform: translate(0,0) scale(1); opacity: 0.5; }
+      50% { transform: translate(2%, -3%) scale(1.1); opacity: 0.8; }
+      100% { transform: translate(-1%, 2%) scale(1.05); opacity: 0.6; }
+    }
+
+    /* Floating geometric shapes */
+    .floating-shapes {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      opacity: 0.03;
+      animation: floatShape 25s ease-in-out infinite;
+    }
+
+    .shape-1 {
+      width: 300px;
+      height: 300px;
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      top: 10%;
+      left: -5%;
+      animation-delay: 0s;
+    }
+
+    .shape-2 {
+      width: 200px;
+      height: 200px;
+      border: 2px solid var(--primary);
+      transform: rotate(45deg);
+      top: 60%;
+      right: -3%;
+      animation-delay: -8s;
+    }
+
+    .shape-3 {
+      width: 150px;
+      height: 150px;
+      border: 2px solid var(--accent);
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+      top: 40%;
+      left: 60%;
+      animation-delay: -15s;
+    }
+
+    @keyframes floatShape {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      33% { transform: translateY(-30px) rotate(5deg); }
+      66% { transform: translateY(20px) rotate(-5deg); }
+    }
+
+    /* Spark particles */
+    .spark-particles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .spark {
+      position: absolute;
+      background: radial-gradient(circle, rgba(46,125,50,0.3), transparent);
+      border-radius: 50%;
+      opacity: 0;
+      animation: floatSpark 12s infinite ease-in-out;
+    }
+
+    @keyframes floatSpark {
+      0% { transform: translateY(0) scale(0); opacity: 0; }
+      20% { opacity: 0.4; }
+      80% { opacity: 0.2; }
+      100% { transform: translateY(-100px) scale(1); opacity: 0; }
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(20px) saturate(180%);
+      background: rgba(255,255,255,0.85) !important;
+      border-bottom: 1px solid rgba(46,125,50,0.15);
+      padding: 14px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      flex-wrap: wrap;
+      transition: all 0.3s ease;
+    }
+
+    header.scrolled {
+      padding: 10px 5%;
+      box-shadow: var(--shadow-md);
+      background: rgba(255,255,255,0.95) !important;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--gray-900);
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo h1 i {
+      color: var(--primary);
+      font-size: 1.6rem;
+    }
+
+    .logo p {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--gray-600);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      color: var(--gray-700);
+      padding: 8px 16px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border-radius: 30px;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+      background: rgba(46,125,50,0.08);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 60%;
+    }
+
+    /* ===== HERO / PAGE HEADER ===== */
+    .page-hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 6% 40px;
+      position: relative;
+    }
+
+    .page-hero-content {
+      max-width: 800px;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(46,125,50,0.1);
+      color: var(--primary);
+      padding: 8px 24px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+    }
+
+    .page-hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      color: var(--gray-900);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .page-hero h2 span {
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    .page-hero h2 span::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      width: 100%;
+      height: 12px;
+      background: rgba(46,125,50,0.15);
+      border-radius: 4px;
+      z-index: -1;
+    }
+
+    .page-hero p {
+      font-size: 1.1rem;
+      color: var(--gray-500);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ===== FILTER TABS ===== */
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 50px;
+      padding: 0 20px;
+    }
+
+    .filter-btn {
+      padding: 10px 24px;
+      border-radius: 30px;
+      border: 2px solid var(--gray-200);
+      background: white;
+      color: var(--gray-600);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--primary-light);
+      color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      border-color: var(--primary);
+      box-shadow: 0 4px 15px rgba(46,125,50,0.3);
+    }
+
+    /* ===== GALLERY ===== */
+    .gallery-section {
+      padding: 0 6% 100px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: var(--shadow-xl), var(--shadow-glow);
+      border-color: transparent;
+    }
+
+    .gallery-item.hidden {
+      display: none;
+    }
+
+    .gallery-image-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 280px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .view-btn {
+      background: white;
+      color: var(--gray-900);
+      padding: 10px 24px;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover .view-btn {
+      transform: translateY(0);
+    }
+
+    .view-btn:hover {
+      background: var(--primary);
+      color: white;
+    }
+
     .gallery-caption {
-      color: #e0e0e0 !important;
+      padding: 20px;
+      text-align: left;
+      background: white;
     }
-    footer p, footer i {
-      color: #d0d0d0 !important;
+
+    .gallery-caption h3 {
+      color: var(--gray-900);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .section p {
-      color: #333333 !important;
+
+    .gallery-caption p {
+      color: var(--gray-500);
+      font-size: 0.85rem;
+      font-weight: 500;
     }
-    .whatsapp-float i, .call-float i {
-      color: white !important;
+
+    .gallery-tag {
+      display: inline-block;
+      background: rgba(46,125,50,0.1);
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.95);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-caption {
+      color: white;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-close:hover {
+      background: rgba(255,255,255,0.2);
+      transform: rotate(90deg);
+    }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.1);
+      border: none;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-nav:hover {
+      background: var(--primary);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .lightbox-prev { left: -80px; }
+    .lightbox-next { right: -80px; }
+
+    @media (max-width: 768px) {
+      .lightbox-prev { left: 10px; }
+      .lightbox-next { right: 10px; }
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: linear-gradient(135deg, var(--dark), #0f0f0f);
+      text-align: center;
+      padding: 60px 20px 40px;
+      border-top: 1px solid rgba(46,125,50,0.2);
+      color: var(--gray-500);
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+
+    footer p {
+      margin: 8px 0;
+      font-size: 0.9rem;
+    }
+
+    footer .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    footer .footer-awards {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,215,0,0.1);
+      padding: 8px 20px;
+      border-radius: 30px;
+      margin-top: 16px;
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    /* ===== FLOATING BUTTONS ===== */
+    .whatsapp-float, .call-float {
+      position: fixed;
+      bottom: 28px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      color: white;
+      z-index: 99;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+
+    .whatsapp-float {
+      right: 28px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+    }
+
+    .call-float {
+      right: 100px;
+      background: linear-gradient(135deg, #1E88E5, #1565C0);
+    }
+
+    .whatsapp-float:hover, .call-float:hover {
+      transform: scale(1.15) rotate(-5deg);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .whatsapp-float::after, .call-float::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      right: 70px;
+      background: var(--gray-900);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      transform: translateX(10px);
+    }
+
+    .whatsapp-float:hover::after, .call-float:hover::after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header { padding: 12px 4%; }
+      nav { width: 100%; justify-content: center; margin-top: 12px; gap: 4px; }
+      nav a { padding: 6px 12px; font-size: 0.8rem; }
+
+      .page-hero { min-height: 40vh; padding: 60px 4% 30px; }
+      .gallery-section { padding: 0 4% 60px; }
+      .gallery-grid { grid-template-columns: 1fr; gap: 20px; }
+      .gallery-image-wrapper { height: 240px; }
+
+      .filter-tabs { gap: 8px; }
+      .filter-btn { padding: 8px 16px; font-size: 0.8rem; }
+
+      .whatsapp-float::after, .call-float::after { display: none; }
+    }
+
+    /* Scroll animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Selection color */
+    ::selection {
+      background: rgba(46,125,50,0.2);
+      color: var(--primary-dark);
+    }
+
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
-<div class="radiant-bg"></div>
-<div class="glow-motion"></div>
-<div class="spark-particles" id="particleField"></div>
-
-<header>
-  <div class="logo">
-    <h1><i class="fas fa-feather-alt"></i> AKANSHA-INTERIOR</h1>
-    <p>COMPLETE PROJECT GALLERY</p>
+  <div class="radiant-bg"></div>
+  <div class="glow-motion"></div>
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
   </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#reviews">Reviews</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-</header>
+  <div class="spark-particles" id="particleField"></div>
 
-<section class="section">
-  <div class="section-title">📸 Our Complete Design Gallery</div>
-  <p style="text-align: center; margin-bottom: 20px; font-size: 1.1rem;">👇 Explore our premium interior design projects — luxury bedrooms, modular kitchens, award ceremonies, and more.</p>
-  
-  <div class="gallery-grid">
-    <div class="gallery-item"><img src="images/01-spa-wellness-interior-design.jpg" alt="Spa Wellness"><div class="gallery-caption">✨ Spa & Wellness Interior Design</div></div>
-    <div class="gallery-item"><img src="images/02-luxury-bedroom-collage.jpg" alt="Luxury Bedroom"><div class="gallery-caption">🛏️ Luxury Bedroom Collection</div></div>
-    <div class="gallery-item"><img src="images/03-premium-bedroom-gallery.jpg" alt="Premium Bedroom"><div class="gallery-caption">🌟 Premium Bedroom Gallery</div></div>
-    <div class="gallery-item"><img src="images/04-modern-living-room-design.jpg" alt="Living Room"><div class="gallery-caption">🛋️ Modern Living Room Design</div></div>
-    <div class="gallery-item"><img src="images/05-master-bedroom-interior.jpg" alt="Master Bedroom"><div class="gallery-caption">👑 Master Bedroom Interior</div></div>
-    <div class="gallery-item"><img src="images/06-dining-wall-panel-design.jpg" alt="Dining Panel"><div class="gallery-caption">🍽️ Dining Wall Panel Design</div></div>
-    <div class="gallery-item"><img src="images/07-modern-tv-unit-design.jpg" alt="TV Unit"><div class="gallery-caption">📺 Modern TV Unit Design</div></div>
-    <div class="gallery-item"><img src="images/08-modular-kitchen-design-collage.jpg" alt="Modular Kitchen"><div class="gallery-caption">🍳 Award-Winning Modular Kitchens</div></div>
-    <div class="gallery-item"><img src="images/09-kitchen-interior-collection.jpg" alt="Kitchen Collection"><div class="gallery-caption">🏠 Kitchen Interior Collection</div></div>
-    <div class="gallery-item"><img src="images/10-wooden-modular-kitchen.jpg" alt="Wooden Kitchen"><div class="gallery-caption">🪵 Wooden Modular Kitchen</div></div>
-    <div class="gallery-item"><img src="images/11-luxury-dressing-room-design.jpg" alt="Dressing Room"><div class="gallery-caption">💎 Luxury Dressing Room</div></div>
-    <div class="gallery-item"><img src="images/12-modern-stair-lobby-design.jpg" alt="Stair Lobby"><div class="gallery-caption">🏛️ Modern Stair Lobby Design</div></div>
-    <div class="gallery-item"><img src="images/13-premium-bedroom-lightning.jpg" alt="Bedroom Lighting"><div class="gallery-caption">💡 Premium Bedroom Lighting</div></div>
-    <div class="gallery-item"><img src="images/14-luxury-tv-wall-design.jpg" alt="TV Wall"><div class="gallery-caption">📺 Luxury TV Wall Design</div></div>
-    <div class="gallery-item"><img src="images/15-white-golden-modular-kitchen.jpg" alt="White Golden Kitchen"><div class="gallery-caption">✨ White & Golden Modular Kitchen</div></div>
-    <div class="gallery-item"><img src="images/16-purple-modern-kitchen-design.jpg" alt="Purple Kitchen"><div class="gallery-caption">💜 Purple Modern Kitchen</div></div>
-    <div class="gallery-item"><img src="images/17-pooja-room-interior-design.jpg" alt="Pooja Room"><div class="gallery-caption">🕉️ Pooja Room Interior</div></div>
-    <div class="gallery-item"><img src="images/18-luxury-butterfly-bedroom.jpg" alt="Butterfly Bedroom"><div class="gallery-caption">🦋 Luxury Butterfly Bedroom</div></div>
-    <div class="gallery-item"><img src="images/19-false-ceiling-light-design.jpg" alt="False Ceiling"><div class="gallery-caption">✨ False Ceiling & Light Design</div></div>
-    <div class="gallery-item"><img src="images/20-modern-luxury-living-room.jpg" alt="Luxury Living Room"><div class="gallery-caption">🏡 Modern Luxury Living Room</div></div>
-    <div class="gallery-item"><img src="images/21-modern-bedroom-interior-design.jpg" alt="Modern Bedroom"><div class="gallery-caption">🛌 Modern Bedroom Interior</div></div>
-    <div class="gallery-item"><img src="images/22-luxury-tv-wall-unit-design.jpg" alt="TV Wall Unit"><div class="gallery-caption">📺 Luxury TV Wall Unit</div></div>
-    <div class="gallery-item"><img src="images/23-bedroom-wall-panel-lighting.jpg" alt="Wall Panel"><div class="gallery-caption">✨ Bedroom Wall Panel Lighting</div></div>
-    <div class="gallery-item"><img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Award"><div class="gallery-caption">🏆 Gold Sponsor Award 2025</div></div>
-    <div class="gallery-item"><img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards"><div class="gallery-caption">🏅 Architecture Awards Collage</div></div>
-    <div class="gallery-item"><img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO Certification"><div class="gallery-caption">📜 ISO 9001:2015 Certification</div></div>
-    <div class="gallery-item"><img src="images/27-company-profile-overview-akanksha.jpg" alt="Company Profile"><div class="gallery-caption">📊 Company Profile Overview</div></div>
-    <div class="gallery-item"><img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Award Ceremony"><div class="gallery-caption">🎉 Architecture Reconnect Award</div></div>
-    <div class="gallery-item"><img src="images/29-architect-wow-award-2024.jpg" alt="WOW Award"><div class="gallery-caption">🏆 Architect WOW Award 2024</div></div>
-    <div class="gallery-item"><img src="images/30-award-event-architecture-summit.jpg" alt="Award Event"><div class="gallery-caption">🎊 Architecture Summit Award</div></div>
-    <div class="gallery-item"><img src="images/31-award-recognition-collage-akanksha.jpg" alt="Award Recognition"><div class="gallery-caption">🏅 Award Recognition Collage</div></div>
-    <div class="gallery-item"><img src="images/32-modern-sliding-wardrobe-design.jpg" alt="Sliding Wardrobe"><div class="gallery-caption">🚪 Modern Sliding Wardrobe</div></div>
-    <div class="gallery-item"><img src="images/33-luxury-living-room-collage.jpg" alt="Luxury Living Collage"><div class="gallery-caption">🏡 Luxury Living Room Collage</div></div>
-    <div class="gallery-item"><img src="images/34-white-luxury-modular-kitchen.jpg" alt="White Luxury Kitchen"><div class="gallery-caption">🤍 White Luxury Modular Kitchen</div></div>
-    <div class="gallery-item"><img src="images/35-commercial-cafe-interior-design.jpg" alt="Commercial Cafe"><div class="gallery-caption">☕ Commercial Cafe Interior</div></div>
-    <div class="gallery-item"><img src="images/36-modern-pooja-room-design.jpg" alt="Modern Pooja Room"><div class="gallery-caption">🕉️ Modern Pooja Room Design</div></div>
-    <div class="gallery-item"><img src="images/37-modern-bar-unit-design.jpg" alt="Bar Unit"><div class="gallery-caption">🍸 Modern Bar Unit Design</div></div>
-    <div class="gallery-item"><img src="images/38-luxury-home-interior-work.jpg" alt="Luxury Home"><div class="gallery-caption">🏰 Luxury Home Interior Work</div></div>
-    <div class="gallery-item"><img src="images/39-modern-arch-wall-panel-design.jpg" alt="Arch Wall Panel"><div class="gallery-caption">🎨 Modern Arch Wall Panel Design</div></div>
+  <header id="mainHeader">
+    <div class="logo">
+      <h1><i class="fas fa-feather-alt"></i> AKANSHA-INTERIOR DECORATION HUB</h1>
+      <p>Complete Project Gallery</p>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <div class="page-badge"><i class="fas fa-camera"></i> Portfolio Showcase</div>
+      <h2>Our Complete <span>Design Gallery</span></h2>
+      <p>Explore our premium interior design projects — from luxury bedrooms and modular kitchens to award-winning architecture and commercial spaces.</p>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <div class="filter-tabs reveal">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="bedroom">Bedrooms</button>
+      <button class="filter-btn" data-filter="kitchen">Kitchens</button>
+      <button class="filter-btn" data-filter="living">Living Spaces</button>
+      <button class="filter-btn" data-filter="awards">Awards</button>
+      <button class="filter-btn" data-filter="other">Other</button>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Spa & Wellness -->
+      <div class="gallery-item reveal" data-category="other">
+        <div class="gallery-image-wrapper">
+          <img src="images/01-spa-wellness-interior-design.jpg" alt="Spa Wellness" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-spa"></i> Spa & Wellness Interior</h3>
+          <p>Tranquil wellness retreat design</p>
+          <span class="gallery-tag">Commercial</span>
+        </div>
+      </div>
+
+      <!-- Luxury Bedroom Collage -->
+      <div class="gallery-item reveal" data-category="bedroom">
+        <div class="gallery-image-wrapper">
+          <img src="images/02-luxury-bedroom-collage.jpg" alt="Luxury Bedroom" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-bed"></i> Luxury Bedroom Collection</h3>
+          <p>Premium bedroom design series</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Premium Bedroom Gallery -->
+      <div class="gallery-item reveal" data-category="bedroom">
+        <div class="gallery-image-wrapper">
+          <img src="images/03-premium-bedroom-gallery.jpg" alt="Premium Bedroom" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-star"></i> Premium Bedroom Gallery</h3>
+          <p>High-end bedroom interiors</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Modern Living Room -->
+      <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-image-wrapper">
+          <img src="images/04-modern-living-room-design.jpg" alt="Living Room" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-couch"></i> Modern Living Room</h3>
+          <p>Contemporary living space design</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Master Bedroom -->
+      <div class="gallery-item reveal" data-category="bedroom">
+        <div class="gallery-image-wrapper">
+          <img src="images/05-master-bedroom-interior.jpg" alt="Master Bedroom" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-crown"></i> Master Bedroom Interior</h3>
+          <p>Royal master suite design</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Dining Wall Panel -->
+      <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-image-wrapper">
+          <img src="images/06-dining-wall-panel-design.jpg" alt="Dining Panel" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-utensils"></i> Dining Wall Panel</h3>
+          <p>Statement wall design for dining</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- TV Unit -->
+      <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-image-wrapper">
+          <img src="images/07-modern-tv-unit-design.jpg" alt="TV Unit" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-tv"></i> Modern TV Unit Design</h3>
+          <p>Sleek entertainment center</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Modular Kitchen Collage -->
+      <div class="gallery-item reveal" data-category="kitchen">
+        <div class="gallery-image-wrapper">
+          <img src="images/08-modular-kitchen-design-collage.jpg" alt="Modular Kitchen" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-award"></i> Award-Winning Modular Kitchens</h3>
+          <p>Best Modular Kitchen Design 2024</p>
+          <span class="gallery-tag">Award Winner</span>
+        </div>
+      </div>
+
+      <!-- Kitchen Collection -->
+      <div class="gallery-item reveal" data-category="kitchen">
+        <div class="gallery-image-wrapper">
+          <img src="images/09-kitchen-interior-collection.jpg" alt="Kitchen Collection" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-blender"></i> Kitchen Interior Collection</h3>
+          <p>Curated kitchen designs</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Wooden Kitchen -->
+      <div class="gallery-item reveal" data-category="kitchen">
+        <div class="gallery-image-wrapper">
+          <img src="images/10-wooden-modular-kitchen.jpg" alt="Wooden Kitchen" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-tree"></i> Wooden Modular Kitchen</h3>
+          <p>Natural wood finish elegance</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Dressing Room -->
+      <div class="gallery-item reveal" data-category="bedroom">
+        <div class="gallery-image-wrapper">
+          <img src="images/11-luxury-dressing-room-design.jpg" alt="Dressing Room" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-gem"></i> Luxury Dressing Room</h3>
+          <p>Premium walk-in closet design</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Stair Lobby -->
+      <div class="gallery-item reveal" data-category="other">
+        <div class="gallery-image-wrapper">
+          <img src="images/12-modern-stair-lobby-design.jpg" alt="Stair Lobby" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-building"></i> Modern Stair Lobby</h3>
+          <p>Grand entrance architecture</p>
+          <span class="gallery-tag">Commercial</span>
+        </div>
+      </div>
+
+      <!-- Bedroom Lighting -->
+      <div class="gallery-item reveal" data-category="bedroom">
+        <div class="gallery-image-wrapper">
+          <img src="images/13-premium-bedroom-lightning.jpg" alt="Bedroom Lighting" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-lightbulb"></i> Premium Bedroom Lighting</h3>
+          <p>Ambient lighting solutions</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- TV Wall -->
+      <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-image-wrapper">
+          <img src="images/14-luxury-tv-wall-design.jpg" alt="TV Wall" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-tv"></i> Luxury TV Wall Design</h3>
+          <p>Feature wall with integrated lighting</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- White Golden Kitchen -->
+      <div class="gallery-item reveal" data-category="kitchen">
+        <div class="gallery-image-wrapper">
+          <img src="images/15-white-golden-modular-kitchen.jpg" alt="White Golden Kitchen" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-star"></i> White & Golden Kitchen</h3>
+          <p>Opulent kitchen design</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Purple Kitchen -->
+      <div class="gallery-item reveal" data-category="kitchen">
+        <div class="gallery-image-wrapper">
+          <img src="images/16-purple-modern-kitchen-design.jpg" alt="Purple Kitchen" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-palette"></i> Purple Modern Kitchen</h3>
+          <p>Bold color statement kitchen</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Pooja Room -->
+      <div class="gallery-item reveal" data-category="other">
+        <div class="gallery-image-wrapper">
+          <img src="images/17-pooja-room-interior-design.jpg" alt="Pooja Room" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-praying-hands"></i> Pooja Room Interior</h3>
+          <p>Sacred space design</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Butterfly Bedroom -->
+      <div class="gallery-item reveal" data-category="bedroom">
+        <div class="gallery-image-wrapper">
+          <img src="images/18-luxury-butterfly-bedroom.jpg" alt="Butterfly Bedroom" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-magic"></i> Luxury Butterfly Bedroom</h3>
+          <p>Whimsical themed bedroom</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- False Ceiling -->
+      <div class="gallery-item reveal" data-category="other">
+        <div class="gallery-image-wrapper">
+          <img src="images/19-false-ceiling-light-design.jpg" alt="False Ceiling" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-cloud"></i> False Ceiling & Light Design</h3>
+          <p>Architectural ceiling solutions</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Luxury Living Room -->
+      <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-image-wrapper">
+          <img src="images/20-modern-luxury-living-room.jpg" alt="Luxury Living Room" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-home"></i> Modern Luxury Living Room</h3>
+          <p>Contemporary luxury living</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Modern Bedroom -->
+      <div class="gallery-item reveal" data-category="bedroom">
+        <div class="gallery-image-wrapper">
+          <img src="images/21-modern-bedroom-interior-design.jpg" alt="Modern Bedroom" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-bed"></i> Modern Bedroom Interior</h3>
+          <p>Clean modern aesthetics</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- TV Wall Unit -->
+      <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-image-wrapper">
+          <img src="images/22-luxury-tv-wall-unit-design.jpg" alt="TV Wall Unit" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-tv"></i> Luxury TV Wall Unit</h3>
+          <p>Integrated storage & display</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Wall Panel Lighting -->
+      <div class="gallery-item reveal" data-category="bedroom">
+        <div class="gallery-image-wrapper">
+          <img src="images/23-bedroom-wall-panel-lighting.jpg" alt="Wall Panel" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-lightbulb"></i> Bedroom Wall Panel Lighting</h3>
+          <p>Backlit panel design</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Gold Sponsor Award -->
+      <div class="gallery-item reveal" data-category="awards">
+        <div class="gallery-image-wrapper">
+          <img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Award" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-trophy"></i> Gold Sponsor Award 2025</h3>
+          <p>Industry recognition</p>
+          <span class="gallery-tag">Award</span>
+        </div>
+      </div>
+
+      <!-- Architecture Awards -->
+      <div class="gallery-item reveal" data-category="awards">
+        <div class="gallery-image-wrapper">
+          <img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-medal"></i> Architecture Awards Collage</h3>
+          <p>Multiple award highlights</p>
+          <span class="gallery-tag">Award</span>
+        </div>
+      </div>
+
+      <!-- ISO Certification -->
+      <div class="gallery-item reveal" data-category="awards">
+        <div class="gallery-image-wrapper">
+          <img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO Certification" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-certificate"></i> ISO 9001:2015 Certification</h3>
+          <p>Quality management certified</p>
+          <span class="gallery-tag">Certification</span>
+        </div>
+      </div>
+
+      <!-- Company Profile -->
+      <div class="gallery-item reveal" data-category="awards">
+        <div class="gallery-image-wrapper">
+          <img src="images/27-company-profile-overview-akanksha.jpg" alt="Company Profile" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-chart-bar"></i> Company Profile Overview</h3>
+          <p>About AKANSHA-INTERIOR DECORATION HUB</p>
+          <span class="gallery-tag">Profile</span>
+        </div>
+      </div>
+
+      <!-- Award Ceremony -->
+      <div class="gallery-item reveal" data-category="awards">
+        <div class="gallery-image-wrapper">
+          <img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Award Ceremony" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-award"></i> Architecture Reconnect Award</h3>
+          <p>Ceremony highlights</p>
+          <span class="gallery-tag">Award</span>
+        </div>
+      </div>
+
+      <!-- WOW Award -->
+      <div class="gallery-item reveal" data-category="awards">
+        <div class="gallery-image-wrapper">
+          <img src="images/29-architect-wow-award-2024.jpg" alt="WOW Award" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-star"></i> Architect WOW Award 2024</h3>
+          <p>Best Modern Architecture</p>
+          <span class="gallery-tag">Award Winner</span>
+        </div>
+      </div>
+
+      <!-- Summit Award -->
+      <div class="gallery-item reveal" data-category="awards">
+        <div class="gallery-image-wrapper">
+          <img src="images/30-award-event-architecture-summit.jpg" alt="Award Event" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-trophy"></i> Architecture Summit Award</h3>
+          <p>Summit event recognition</p>
+          <span class="gallery-tag">Award</span>
+        </div>
+      </div>
+
+      <!-- Award Recognition -->
+      <div class="gallery-item reveal" data-category="awards">
+        <div class="gallery-image-wrapper">
+          <img src="images/31-award-recognition-collage-akanksha.jpg" alt="Award Recognition" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-medal"></i> Award Recognition Collage</h3>
+          <p>Collection of honors</p>
+          <span class="gallery-tag">Award</span>
+        </div>
+      </div>
+
+      <!-- Sliding Wardrobe -->
+      <div class="gallery-item reveal" data-category="bedroom">
+        <div class="gallery-image-wrapper">
+          <img src="images/32-modern-sliding-wardrobe-design.jpg" alt="Sliding Wardrobe" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-door-open"></i> Modern Sliding Wardrobe</h3>
+          <p>Space-saving storage solution</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Luxury Living Collage -->
+      <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-image-wrapper">
+          <img src="images/33-luxury-living-room-collage.jpg" alt="Luxury Living Collage" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-images"></i> Luxury Living Room Collage</h3>
+          <p>Multiple living concepts</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- White Luxury Kitchen -->
+      <div class="gallery-item reveal" data-category="kitchen">
+        <div class="gallery-image-wrapper">
+          <img src="images/34-white-luxury-modular-kitchen.jpg" alt="White Luxury Kitchen" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-heart"></i> White Luxury Modular Kitchen</h3>
+          <p>Minimalist kitchen elegance</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Commercial Cafe -->
+      <div class="gallery-item reveal" data-category="other">
+        <div class="gallery-image-wrapper">
+          <img src="images/35-commercial-cafe-interior-design.jpg" alt="Commercial Cafe" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-coffee"></i> Commercial Cafe Interior</h3>
+          <p>Modern cafe design</p>
+          <span class="gallery-tag">Commercial</span>
+        </div>
+      </div>
+
+      <!-- Modern Pooja Room -->
+      <div class="gallery-item reveal" data-category="other">
+        <div class="gallery-image-wrapper">
+          <img src="images/36-modern-pooja-room-design.jpg" alt="Modern Pooja Room" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-praying-hands"></i> Modern Pooja Room Design</h3>
+          <p>Contemporary sacred space</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Bar Unit -->
+      <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-image-wrapper">
+          <img src="images/37-modern-bar-unit-design.jpg" alt="Bar Unit" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-wine-glass"></i> Modern Bar Unit Design</h3>
+          <p>Home bar entertainment</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Luxury Home -->
+      <div class="gallery-item reveal" data-category="living">
+        <div class="gallery-image-wrapper">
+          <img src="images/38-luxury-home-interior-work.jpg" alt="Luxury Home" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-castle"></i> Luxury Home Interior Work</h3>
+          <p>Complete home transformation</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+
+      <!-- Arch Wall Panel -->
+      <div class="gallery-item reveal" data-category="other">
+        <div class="gallery-image-wrapper">
+          <img src="images/39-modern-arch-wall-panel-design.jpg" alt="Arch Wall Panel" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
+          </div>
+        </div>
+        <div class="gallery-caption">
+          <h3><i class="fas fa-paint-brush"></i> Modern Arch Wall Panel</h3>
+          <p>Artistic wall treatment</p>
+          <span class="gallery-tag">Residential</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
   </div>
-</section>
 
-<footer>
-  <p>© 2026 AKANSHA-INTERIOR — Best Architect & Interior Designer | ISO 9001:2015 | Luxury & Hospitality Experts</p>
-  <p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</p>
-</footer>
+  <footer>
+    <div class="footer-brand">AKANSHA-INTERIOR DECORATION HUB</div>
+    <p>© 2026 AKANSHA-INTERIOR DECORATION HUB — Best Architect & Interior Designer</p>
+    <p>ISO 9001:2015 Certified | Luxury & Hospitality Experts | Pan-India Presence</p>
+    <div class="footer-awards">
+      <i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)
+    </div>
+  </footer>
 
-<a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a class="call-float" href="tel:+919140097029"><i class="fas fa-phone-alt"></i></a>
+  <a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank" data-tooltip="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a class="call-float" href="tel:+919140097029" data-tooltip="Call Us Now">
+    <i class="fas fa-phone-alt"></i>
+  </a>
 
-<script>
-  const sparkField = document.getElementById('particleField');
-  for(let i=0;i<60;i++){ let sp = document.createElement('div'); sp.classList.add('spark'); let size = Math.random()*6+2; sp.style.width = size+'px'; sp.style.height = size+'px'; sp.style.left = Math.random()*100+'%'; sp.style.top = Math.random()*100+'%'; sp.style.animationDuration = Math.random()*12+6+'s'; sparkField.appendChild(sp); }
-</script>
+  <script>
+    // Spark particles
+    const sparkField = document.getElementById('particleField');
+    for(let i = 0; i < 40; i++) {
+      let sp = document.createElement('div');
+      sp.classList.add('spark');
+      let size = Math.random() * 4 + 2;
+      sp.style.width = size + 'px';
+      sp.style.height = size + 'px';
+      sp.style.left = Math.random() * 100 + '%';
+      sp.style.top = Math.random() * 100 + '%';
+      sp.style.animationDuration = Math.random() * 10 + 8 + 's';
+      sp.style.animationDelay = Math.random() * 5 + 's';
+      sparkField.appendChild(sp);
+    }
+
+    // Header scroll effect
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        // Filter items with animation
+        galleryItems.forEach((item, index) => {
+          const category = item.dataset.category;
+
+          if (filter === 'all' || category === filter) {
+            item.classList.remove('hidden');
+            // Staggered reveal animation
+            setTimeout(() => {
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, index * 50);
+          } else {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+              item.classList.add('hidden');
+            }, 300);
+          }
+        });
+      });
+    });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+
+    let currentImageIndex = 0;
+    const visibleItems = () => Array.from(galleryItems).filter(item => !item.classList.contains('hidden'));
+
+    galleryItems.forEach((item, index) => {
+      const viewBtn = item.querySelector('.view-btn');
+      const img = item.querySelector('img');
+      const caption = item.querySelector('h3').textContent;
+
+      viewBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openLightbox(img.src, caption, index);
+      });
+
+      item.addEventListener('click', () => {
+        openLightbox(img.src, caption, index);
+      });
+    });
+
+    function openLightbox(src, caption, index) {
+      currentImageIndex = index;
+      lightboxImg.src = src;
+      lightboxCaption.textContent = caption;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function showPrev() {
+      const items = visibleItems();
+      const currentItem = galleryItems[currentImageIndex];
+      let currentVisibleIndex = items.indexOf(currentItem);
+
+      if (currentVisibleIndex > 0) {
+        currentVisibleIndex--;
+      } else {
+        currentVisibleIndex = items.length - 1;
+      }
+
+      const newItem = items[currentVisibleIndex];
+      const img = newItem.querySelector('img');
+      const caption = newItem.querySelector('h3').textContent;
+      currentImageIndex = Array.from(galleryItems).indexOf(newItem);
+
+      lightboxImg.style.opacity = '0';
+      setTimeout(() => {
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = caption;
+        lightboxImg.style.opacity = '1';
+      }, 200);
+    }
+
+    function showNext() {
+      const items = visibleItems();
+      const currentItem = galleryItems[currentImageIndex];
+      let currentVisibleIndex = items.indexOf(currentItem);
+
+      if (currentVisibleIndex < items.length - 1) {
+        currentVisibleIndex++;
+      } else {
+        currentVisibleIndex = 0;
+      }
+
+      const newItem = items[currentVisibleIndex];
+      const img = newItem.querySelector('img');
+      const caption = newItem.querySelector('h3').textContent;
+      currentImageIndex = Array.from(galleryItems).indexOf(newItem);
+
+      lightboxImg.style.opacity = '0';
+      setTimeout(() => {
+        lightboxImg.src = img.src;
+        lightboxCaption.textContent = caption;
+        lightboxImg.style.opacity = '1';
+      }, 200);
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
+    lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'ArrowRight') showNext();
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // Parallax effect for shapes
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const shapes = document.querySelectorAll('.shape');
+      shapes.forEach((shape, index) => {
+        const speed = 0.1 + (index * 0.05);
+        shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.02}deg)`;
+      });
+    });
+  </script>
 </body>
 </html>
