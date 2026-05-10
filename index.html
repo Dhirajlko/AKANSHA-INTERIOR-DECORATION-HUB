@@ -7,6 +7,40 @@
   <meta name="description" content="AKANSHA-INTERIOR DECORATION HUB - Award-winning modular kitchens, modern architecture, vastu, construction & turnkey projects.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- SCHEMA MARKUP FOR LOCAL SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AKANSHA-INTERIOR DECORATION HUB",
+    "description": "Award-winning modular kitchens, modern architecture, vastu, construction & turnkey projects",
+    "image": "https://via.placeholder.com/400",
+    "telephone": "+919140097029",
+    "email": "interiorhub007@gmail.com",
+    "url": "https://akansha-interior.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lucknow",
+      "addressLocality": "Lucknow",
+      "addressRegion": "UP",
+      "postalCode": "226001",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹₹₹",
+    "areaServed": {
+      "@type": "City",
+      "name": "Lucknow"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "09:30",
+      "closes": "21:00"
+    },
+    "sameAs": ["https://www.instagram.com/akansha", "https://www.facebook.com/akansha"],
+    "knowsAbout": ["Interior Design", "Modular Kitchens", "Architecture", "Construction", "Vastu Consultation", "Turnkey Projects"]
+  }
+  </script>
   <style>
     * {
       margin: 0;
@@ -1152,14 +1186,14 @@
     </div>
     
     <div class="services-grid reveal">
-      <div class="service-chip"><i class="fas fa-couch"></i> Interior Designing</div>
-      <div class="service-chip"><i class="fas fa-utensils"></i> Modular Kitchen</div>
-      <div class="service-chip"><i class="fas fa-drafting-compass"></i> Architecture</div>
-      <div class="service-chip"><i class="fas fa-hard-hat"></i> Construction</div>
-      <div class="service-chip"><i class="fas fa-chart-line"></i> Vastu Consultation</div>
-      <div class="service-chip"><i class="fas fa-cube"></i> 3D Elevation</div>
-      <div class="service-chip"><i class="fas fa-key"></i> Turnkey Projects</div>
-      <div class="service-chip"><i class="fas fa-spa"></i> Hospitality & Spa Design</div>
+      <a href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20am%20interested%20in%20interior%20designing%20consultation." class="service-chip"><i class="fas fa-couch"></i> Interior Designing</a>
+      <a href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20want%20to%20discuss%20modular%20kitchen%20options.%20Can%20you%20help%3F" class="service-chip"><i class="fas fa-utensils"></i> Modular Kitchen</a>
+      <a href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20need%20architectural%20consultation%20for%20my%20project." class="service-chip"><i class="fas fa-drafting-compass"></i> Architecture</a>
+      <a href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20have%20a%20construction%20project.%20Can%20we%20discuss%3F" class="service-chip"><i class="fas fa-hard-hat"></i> Construction</a>
+      <a href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20want%20Vastu%20consultation%20for%20my%20space.%20Are%20you%20available%3F" class="service-chip"><i class="fas fa-chart-line"></i> Vastu Consultation</a>
+      <a href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20Can%20you%20create%203D%20elevation%20for%20my%20project%3F" class="service-chip"><i class="fas fa-cube"></i> 3D Elevation</a>
+      <a href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20am%20looking%20for%20a%20complete%20turnkey%20project.%20Can%20we%20discuss%3F" class="service-chip"><i class="fas fa-key"></i> Turnkey Projects</a>
+      <a href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20need%20help%20with%20hospitality%20and%20spa%20design.%20Are%20you%20interested%3F" class="service-chip"><i class="fas fa-spa"></i> Hospitality & Spa Design</a>
     </div>
 
     <div class="section-header reveal" style="margin-top: 80px;">
@@ -1290,10 +1324,11 @@
       </div>
 
       <div class="info-panel">
-        <form id="contactForm">
-          <input type="text" placeholder="Your full name *" class="modern-input" required>
-          <input type="text" placeholder="Email address or phone number *" class="modern-input" required>
-          <textarea placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)" class="modern-input" required></textarea>
+        <!-- FIXED FORM: Now submits to FormSpree -->
+        <form id="contactForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+          <input type="text" name="name" placeholder="Your full name *" class="modern-input" required>
+          <input type="text" name="contact" placeholder="Email address or phone number *" class="modern-input" required>
+          <textarea name="project" placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)" class="modern-input" required></textarea>
           <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
             <i class="fas fa-paper-plane"></i> Get Free Estimate
           </button>
@@ -1314,7 +1349,7 @@
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank" data-tooltip="Chat on WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20am%20interested%20in%20your%20services.%20Can%20you%20help%20me%20with%20a%20consultation%3F" target="_blank" data-tooltip="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
   <a class="call-float" href="tel:+919140097029" data-tooltip="Call Us Now">
@@ -1371,47 +1406,46 @@
       });
     }
 
-    // Contact form
+    // Contact form - FormSpree will handle submission
     const cForm = document.getElementById('contactForm');
     if(cForm) {
       cForm.addEventListener('submit', (e) => { 
-        e.preventDefault(); 
-        
-        // Create custom toast notification
-        const toast = document.createElement('div');
-        toast.style.cssText = `
-          position: fixed;
-          top: 100px;
-          left: 50%;
-          transform: translateX(-50%) translateY(-20px);
-          background: linear-gradient(135deg, #1b5e20, #2e7d32);
-          color: white;
-          padding: 16px 32px;
-          border-radius: 16px;
-          font-weight: 600;
-          box-shadow: 0 10px 40px rgba(46,125,50,0.3);
-          z-index: 1000;
-          opacity: 0;
-          transition: all 0.4s ease;
-          display: flex;
-          align-items: center;
-          gap: 12px;
-        `;
-        toast.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Our expert will contact you within 2 hours.';
-        document.body.appendChild(toast);
-        
-        requestAnimationFrame(() => {
-          toast.style.opacity = '1';
-          toast.style.transform = 'translateX(-50%) translateY(0)';
-        });
-        
+        // Let FormSpree handle the form submission
+        // Just show success message after a short delay
         setTimeout(() => {
-          toast.style.opacity = '0';
-          toast.style.transform = 'translateX(-50%) translateY(-20px)';
-          setTimeout(() => toast.remove(), 400);
-        }, 4000);
-        
-        cForm.reset(); 
+          const toast = document.createElement('div');
+          toast.style.cssText = `
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 16px;
+            font-weight: 600;
+            box-shadow: 0 10px 40px rgba(46,125,50,0.3);
+            z-index: 1000;
+            opacity: 0;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          `;
+          toast.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Our expert will contact you within 2 hours.';
+          document.body.appendChild(toast);
+          
+          requestAnimationFrame(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateX(-50%) translateY(0)';
+          });
+          
+          setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(-50%) translateY(-20px)';
+            setTimeout(() => toast.remove(), 400);
+          }, 4000);
+        }, 500);
       });
     }
 
