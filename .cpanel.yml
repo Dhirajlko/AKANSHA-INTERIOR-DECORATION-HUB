@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/leocomp1/akankshainterior.in/
+    - export DEPLOYPATH=/home/leocomp1/public_html/
     - /bin/cp -R * $DEPLOYPATH
