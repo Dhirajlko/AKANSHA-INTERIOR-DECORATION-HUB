@@ -5,14 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>AKANSHA-INTERIOR DECORATION HUB | Portfolio | Awards & Projects</title>
   <meta name="description" content="Complete portfolio of AKANSHA-INTERIOR DECORATION HUB - Award-winning interior design, architecture, hospitality, and corporate projects.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
       --primary: #2E7D32;
@@ -48,8 +44,7 @@
 
     /* ===== ANIMATED BACKGROUND ===== */
     .radiant-bg {
-      position: fixed;
-      inset: 0;
+      position: fixed; inset: 0;
       background:
         radial-gradient(ellipse at 20% 20%, rgba(46,125,50,0.03) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 80%, rgba(255,215,0,0.02) 0%, transparent 50%),
@@ -58,844 +53,479 @@
     }
 
     .glow-motion {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+      position: fixed; width: 100%; height: 100%; top: 0; left: 0;
       background:
         radial-gradient(ellipse at 30% 20%, rgba(46,125,50,0.06) 0%, transparent 50%),
         radial-gradient(ellipse at 70% 60%, rgba(46,125,50,0.04) 0%, transparent 50%);
       animation: slowDrift 20s ease-in-out infinite alternate;
-      z-index: -2;
-      pointer-events: none;
+      z-index: -2; pointer-events: none;
     }
 
     @keyframes slowDrift {
-      0% { transform: translate(0,0) scale(1); opacity: 0.5; }
-      50% { transform: translate(2%, -3%) scale(1.1); opacity: 0.8; }
-      100% { transform: translate(-1%, 2%) scale(1.05); opacity: 0.6; }
+      0%   { transform: translate(0,0) scale(1); opacity: 0.5; }
+      50%  { transform: translate(2%,-3%) scale(1.1); opacity: 0.8; }
+      100% { transform: translate(-1%,2%) scale(1.05); opacity: 0.6; }
     }
 
-    /* Floating geometric shapes */
-    .floating-shapes {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .shape {
-      position: absolute;
-      opacity: 0.03;
-      animation: floatShape 25s ease-in-out infinite;
-    }
-
-    .shape-1 {
-      width: 300px;
-      height: 300px;
-      border: 2px solid var(--primary);
-      border-radius: 50%;
-      top: 10%;
-      left: -5%;
-      animation-delay: 0s;
-    }
-
-    .shape-2 {
-      width: 200px;
-      height: 200px;
-      border: 2px solid var(--primary);
-      transform: rotate(45deg);
-      top: 60%;
-      right: -3%;
-      animation-delay: -8s;
-    }
-
-    .shape-3 {
-      width: 150px;
-      height: 150px;
-      border: 2px solid var(--accent);
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      top: 40%;
-      left: 60%;
-      animation-delay: -15s;
-    }
+    .floating-shapes { position: fixed; width: 100%; height: 100%; pointer-events: none; z-index: -1; overflow: hidden; }
+    .shape { position: absolute; opacity: 0.03; animation: floatShape 25s ease-in-out infinite; }
+    .shape-1 { width:300px; height:300px; border:2px solid var(--primary); border-radius:50%; top:10%; left:-5%; }
+    .shape-2 { width:200px; height:200px; border:2px solid var(--primary); transform:rotate(45deg); top:60%; right:-3%; animation-delay:-8s; }
+    .shape-3 { width:150px; height:150px; border:2px solid var(--accent); border-radius:30% 70% 70% 30%/30% 30% 70% 70%; top:40%; left:60%; animation-delay:-15s; }
 
     @keyframes floatShape {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      33% { transform: translateY(-30px) rotate(5deg); }
-      66% { transform: translateY(20px) rotate(-5deg); }
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      33%      { transform: translateY(-30px) rotate(5deg); }
+      66%      { transform: translateY(20px) rotate(-5deg); }
     }
 
-    /* Spark particles */
-    .spark-particles {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-    }
-
+    .spark-particles { position: fixed; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
     .spark {
       position: absolute;
       background: radial-gradient(circle, rgba(46,125,50,0.3), transparent);
-      border-radius: 50%;
-      opacity: 0;
+      border-radius: 50%; opacity: 0;
       animation: floatSpark 12s infinite ease-in-out;
     }
-
     @keyframes floatSpark {
-      0% { transform: translateY(0) scale(0); opacity: 0; }
-      20% { opacity: 0.4; }
-      80% { opacity: 0.2; }
+      0%   { transform: translateY(0) scale(0); opacity: 0; }
+      20%  { opacity: 0.4; }
+      80%  { opacity: 0.2; }
       100% { transform: translateY(-100px) scale(1); opacity: 0; }
     }
 
     /* ===== HEADER ===== */
     header {
-      position: sticky;
-      top: 0;
+      position: sticky; top: 0;
       backdrop-filter: blur(20px) saturate(180%);
       background: rgba(255,255,255,0.85) !important;
       border-bottom: 1px solid rgba(46,125,50,0.15);
       padding: 14px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-      flex-wrap: wrap;
-      transition: all 0.3s ease;
+      display: flex; justify-content: space-between; align-items: center;
+      z-index: 100; flex-wrap: wrap; transition: all 0.3s ease;
     }
 
-    header.scrolled {
-      padding: 10px 5%;
-      box-shadow: var(--shadow-md);
-      background: rgba(255,255,255,0.95) !important;
-    }
+    header.scrolled { padding: 10px 5%; box-shadow: var(--shadow-md); background: rgba(255,255,255,0.95) !important; }
 
-    .logo h1 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--gray-900);
-      letter-spacing: -0.5px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .logo h1 { font-size: 1.8rem; font-weight: 800; color: var(--gray-900); letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; }
+    .logo h1 i { color: var(--primary); font-size: 1.6rem; }
+    .logo p { font-size: 0.65rem; font-weight: 700; color: var(--gray-600); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
 
-    .logo h1 i {
-      color: var(--primary);
-      font-size: 1.6rem;
-    }
-
-    .logo p {
-      font-size: 0.65rem;
-      font-weight: 700;
-      color: var(--gray-600);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+    nav { display: flex; align-items: center; gap: 8px; }
 
     nav a {
-      color: var(--gray-700);
-      padding: 8px 16px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border-radius: 30px;
-      position: relative;
+      color: var(--gray-700); padding: 8px 16px; font-weight: 600; font-size: 0.9rem;
+      text-decoration: none; transition: all 0.3s ease; border-radius: 30px; position: relative;
     }
 
-    nav a:hover {
-      color: var(--primary);
-      background: rgba(46,125,50,0.08);
-    }
+    nav a:hover { color: var(--primary); background: rgba(46,125,50,0.08); }
 
     nav a::after {
-      content: '';
-      position: absolute;
-      bottom: 4px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 2px;
-      background: var(--primary);
-      border-radius: 2px;
-      transition: width 0.3s ease;
+      content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
+      width: 0; height: 2px; background: var(--primary); border-radius: 2px; transition: width 0.3s ease;
     }
 
-    nav a:hover::after {
-      width: 60%;
-    }
+    nav a:hover::after { width: 60%; }
 
-    /* ===== PAGE HERO ===== */
+    nav a.active { color: var(--primary); background: rgba(46,125,50,0.1); }
+    nav a.active::after { width: 60%; }
+
+    /* ===== HERO ===== */
     .page-hero {
-      min-height: 50vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 6% 40px;
-      position: relative;
+      min-height: 56vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 80px 6% 50px; position: relative;
     }
 
-    .page-hero-content {
-      max-width: 800px;
-      animation: fadeInUp 1s ease-out;
-    }
+    .page-hero-content { max-width: 860px; animation: fadeInUp 1s ease-out; }
 
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    .page-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(46,125,50,0.1);
-      color: var(--primary);
-      padding: 8px 24px;
-      border-radius: 60px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 24px;
+    /* Badge — matches index */
+    .hero-badge {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 28px; border-radius: 60px;
+      font-weight: 700; font-size: 0.85rem; color: #fff;
+      box-shadow: 0 4px 15px rgba(46,125,50,0.3);
+      margin-bottom: 28px; letter-spacing: 0.5px;
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .page-hero h2 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 800;
-      color: var(--gray-900);
-      line-height: 1.1;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
+      font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800;
+      color: var(--gray-900); line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px;
     }
 
     .page-hero h2 span {
-      color: var(--primary);
-      position: relative;
-      display: inline-block;
+      color: var(--primary); position: relative; display: inline-block;
     }
 
     .page-hero h2 span::after {
-      content: '';
-      position: absolute;
-      bottom: 5px;
-      left: 0;
-      width: 100%;
-      height: 12px;
-      background: rgba(46,125,50,0.15);
-      border-radius: 4px;
-      z-index: -1;
+      content: ''; position: absolute; bottom: 5px; left: 0;
+      width: 100%; height: 12px;
+      background: rgba(46,125,50,0.15); border-radius: 4px; z-index: -1;
     }
 
-    .page-hero p {
-      font-size: 1.1rem;
-      color: var(--gray-500);
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.7;
+    .page-hero p { font-size: 1.1rem; color: var(--gray-500); max-width: 620px; margin: 0 auto 32px; line-height: 1.7; }
+
+    /* Award pills */
+    .hero-awards { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 36px; }
+
+    .award-pill {
+      background: white; padding: 8px 20px; border-radius: 40px;
+      font-size: 0.85rem; font-weight: 600; color: var(--gray-700);
+      box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200);
+      display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;
     }
+
+    .award-pill:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--primary-light); }
+    .award-pill i { color: var(--accent); }
+
+    /* Btn group */
+    .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 14px 32px; border-radius: 60px; font-weight: 700; color: white;
+      font-size: 0.95rem; transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(46,125,50,0.35);
+      border: none; cursor: pointer;
+      display: inline-flex; align-items: center; gap: 10px;
+      text-decoration: none; position: relative; overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: ''; position: absolute; top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(46,125,50,0.45); }
+    .btn-primary:hover::before { left: 100%; }
+
+    .btn-outline {
+      background: white; border: 2px solid var(--gray-300);
+      padding: 14px 32px; border-radius: 60px; font-weight: 700;
+      color: var(--gray-800); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 10px;
+      transition: all 0.3s ease; box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      display: flex; justify-content: center; flex-wrap: wrap;
+      max-width: 900px; margin: 60px auto 0;
+      background: white; border-radius: 24px;
+      border: 1px solid var(--gray-200); box-shadow: var(--shadow-md); overflow: hidden;
+    }
+
+    .stat-item {
+      flex: 1; min-width: 160px; padding: 28px 20px;
+      text-align: center; position: relative; transition: background 0.3s ease;
+    }
+
+    .stat-item:not(:last-child)::after {
+      content: ''; position: absolute; right: 0; top: 20%; height: 60%;
+      width: 1px; background: var(--gray-200);
+    }
+
+    .stat-item:hover { background: rgba(46,125,50,0.03); }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif; font-size: 2.2rem;
+      font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 6px;
+    }
+
+    .stat-label { font-size: 0.8rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; }
 
     /* ===== SECTIONS ===== */
-    .section {
-      padding: 80px 6%;
-      position: relative;
-    }
+    .section { padding: 80px 6%; position: relative; }
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 60px;
-    }
+    .section-header { text-align: center; margin-bottom: 60px; }
 
     .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(46,125,50,0.1);
-      color: var(--primary);
-      padding: 6px 20px;
-      border-radius: 30px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 16px;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(46,125,50,0.1); color: var(--primary);
+      padding: 6px 20px; border-radius: 30px; font-size: 0.8rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;
     }
 
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      color: var(--gray-900);
-      margin-bottom: 16px;
-      letter-spacing: -0.5px;
+      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+      color: var(--gray-900); margin-bottom: 16px; letter-spacing: -0.5px;
     }
 
-    .section-subtitle {
-      color: var(--gray-500);
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto;
-    }
+    .section-subtitle { color: var(--gray-500); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
 
     /* ===== ACHIEVEMENT CARDS ===== */
     .achievements-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin: 30px 0;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px; max-width: 1200px; margin: 0 auto;
     }
 
     .achievement-card {
-      background: white;
-      border-radius: 24px;
-      padding: 40px 30px;
-      text-align: center;
-      border: 1px solid var(--gray-200);
+      background: white; border-radius: 24px; padding: 40px 30px;
+      text-align: center; border: 1px solid var(--gray-200);
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
+      position: relative; overflow: hidden; box-shadow: var(--shadow-sm);
     }
 
     .achievement-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 100%; height: 4px;
       background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--primary-light));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
+      transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
     }
 
-    .achievement-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-xl);
-      border-color: transparent;
+    .achievement-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); border-color: transparent; }
+    .achievement-card:hover::before { transform: scaleX(1); }
+
+    .achievement-icon {
+      width: 70px; height: 70px; margin: 0 auto 20px;
+      background: linear-gradient(135deg, rgba(46,125,50,0.1), rgba(46,125,50,0.05));
+      border-radius: 20px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; color: var(--primary); transition: all 0.3s ease;
     }
 
-    .achievement-card:hover::before {
-      transform: scaleX(1);
+    .achievement-card:hover .achievement-icon {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white; transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 10px 25px rgba(46,125,50,0.3);
     }
 
-    .achievement-card i {
-      font-size: 2.8rem;
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
-
-    .achievement-card h3 {
-      font-size: 1.3rem;
-      color: var(--gray-900);
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .achievement-card p {
-      color: var(--gray-600);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
+    .achievement-card h3 { font-size: 1.2rem; color: var(--gray-900); margin-bottom: 12px; font-weight: 700; }
+    .achievement-card p  { color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; }
 
     /* ===== AWARDS GALLERY ===== */
     .awards-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 25px;
-      margin: 30px 0;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 25px; max-width: 1200px; margin: 0 auto;
     }
 
     .award-item {
-      background: white;
-      border-radius: 24px;
-      overflow: hidden;
+      background: white; border-radius: 24px; overflow: hidden;
       border: 1px solid var(--gray-200);
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       box-shadow: var(--shadow-sm);
     }
 
-    .award-item:hover {
-      transform: translateY(-10px) scale(1.02);
-      border-color: transparent;
-      box-shadow: var(--shadow-xl), var(--shadow-glow);
-    }
+    .award-item:hover { transform: translateY(-10px) scale(1.02); border-color: transparent; box-shadow: var(--shadow-xl), var(--shadow-glow); }
 
-    .award-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s ease;
-    }
+    .award-image-wrap { position: relative; overflow: hidden; height: 200px; }
 
-    .award-item:hover img {
-      transform: scale(1.1);
-    }
+    .award-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+    .award-item:hover img { transform: scale(1.1); }
 
     .award-item p {
-      padding: 20px;
-      text-align: center;
-      font-weight: 600;
-      color: var(--gray-900);
-      background: white;
-      font-size: 0.95rem;
+      padding: 16px 20px; text-align: center;
+      font-weight: 600; color: var(--gray-900); background: white; font-size: 0.9rem;
     }
 
     /* ===== PROJECT CATEGORIES ===== */
-    .project-category {
-      margin-bottom: 50px;
-    }
+    .project-category { margin-bottom: 50px; }
 
     .category-heading {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 24px;
-      padding-left: 15px;
+      font-size: 1.3rem; font-weight: 700; color: var(--primary);
+      margin-bottom: 20px; padding-left: 16px;
       border-left: 4px solid var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 12px;
+      display: flex; align-items: center; gap: 12px;
     }
 
-    .project-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
+    .project-list { display: flex; flex-wrap: wrap; gap: 12px; }
 
     .project-tag {
-      background: white;
-      border: 2px solid var(--gray-200);
-      border-radius: 30px;
-      padding: 12px 24px;
-      font-weight: 600;
-      color: var(--gray-700);
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: var(--shadow-sm);
+      background: white; border: 2px solid var(--gray-200); border-radius: 30px;
+      padding: 10px 20px; font-weight: 600; color: var(--gray-700);
+      transition: all 0.3s ease; font-size: 0.9rem;
+      display: flex; align-items: center; gap: 10px;
+      box-shadow: var(--shadow-sm); cursor: default;
     }
 
     .project-tag:hover {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
+      background: var(--primary); border-color: var(--primary); color: white;
+      transform: translateY(-3px); box-shadow: var(--shadow-md);
     }
 
-    .project-tag i {
-      font-size: 1rem;
-      transition: transform 0.3s;
-    }
-
-    .project-tag:hover i {
-      transform: scale(1.2);
-    }
+    .project-tag i { font-size: 0.9rem; transition: transform 0.3s; }
+    .project-tag:hover i { transform: scale(1.2); }
 
     /* ===== EXPERTISE GRID ===== */
     .expertise-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin: 30px 0;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px; max-width: 1200px; margin: 0 auto;
     }
 
     .expertise-card {
-      background: white;
-      border-radius: 24px;
-      padding: 40px 30px;
-      text-align: center;
-      border: 1px solid var(--gray-200);
+      background: white; border-radius: 24px; padding: 40px 30px;
+      text-align: center; border: 1px solid var(--gray-200);
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
+      position: relative; overflow: hidden; box-shadow: var(--shadow-sm);
     }
 
     .expertise-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 100%; height: 4px;
       background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--primary-light));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
+      transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
     }
 
-    .expertise-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-xl);
-      border-color: transparent;
+    .expertise-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); border-color: transparent; }
+    .expertise-card:hover::before { transform: scaleX(1); }
+
+    .expertise-icon {
+      width: 70px; height: 70px; margin: 0 auto 20px;
+      background: linear-gradient(135deg, rgba(46,125,50,0.1), rgba(46,125,50,0.05));
+      border-radius: 20px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.8rem; color: var(--primary); transition: all 0.3s ease;
     }
 
-    .expertise-card:hover::before {
-      transform: scaleX(1);
+    .expertise-card:hover .expertise-icon {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white; transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 10px 25px rgba(46,125,50,0.3);
     }
 
-    .expertise-card i {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
-
-    .expertise-card h3 {
-      font-size: 1.25rem;
-      color: var(--gray-900);
-      margin-bottom: 12px;
-      font-weight: 700;
-    }
-
-    .expertise-card p {
-      color: var(--gray-600);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
+    .expertise-card h3 { font-size: 1.2rem; color: var(--gray-900); margin-bottom: 12px; font-weight: 700; }
+    .expertise-card p  { color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; }
 
     /* ===== SERVICE TABLE ===== */
     .service-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 24px;
-      overflow: hidden;
-      margin: 30px 0;
-      border: 1px solid var(--gray-200);
-      box-shadow: var(--shadow-sm);
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%; border-collapse: collapse; background: white;
+      border-radius: 24px; overflow: hidden; margin: 0 auto;
+      border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); max-width: 1200px;
     }
 
-    .service-table th, .service-table td {
-      padding: 16px 20px;
-      text-align: left;
-      border-bottom: 1px solid var(--gray-200);
+    .service-table th, .service-table td { padding: 16px 22px; text-align: left; border-bottom: 1px solid var(--gray-200); }
+    .service-table th { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: white; font-weight: 700; font-size: 0.9rem; }
+    .service-table td { color: var(--gray-700); font-size: 0.9rem; }
+    .service-table tbody tr:hover { background: var(--gray-50); }
+    .service-table tbody tr:last-child td { border-bottom: none; }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-flex {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 40px; max-width: 1100px; margin: 0 auto;
     }
 
-    .service-table th {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: white;
-      font-weight: 800;
-      font-size: 0.95rem;
+    .info-panel {
+      background: white; border-radius: 28px; padding: 40px;
+      border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); transition: all 0.3s ease;
     }
 
-    .service-table td {
-      color: var(--gray-700);
-      font-size: 0.95rem;
+    .info-panel:hover { box-shadow: var(--shadow-lg); }
+
+    .info-panel h3 { color: var(--gray-900); font-size: 1.4rem; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
+    .info-panel h3 i { color: var(--primary); font-size: 1.2rem; }
+
+    .contact-detail {
+      display: flex; align-items: flex-start; gap: 16px;
+      margin-bottom: 16px; padding: 14px; border-radius: 16px; transition: all 0.3s ease;
     }
 
-    .service-table tbody tr:hover {
-      background: var(--gray-50);
+    .contact-detail:hover { background: var(--gray-50); }
+
+    .contact-detail i {
+      width: 40px; height: 40px; background: rgba(46,125,50,0.1);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      color: var(--primary); font-size: 1rem; flex-shrink: 0;
     }
 
-    /* ===== FOOTER SECTION ===== */
-    .footer-section {
-      background: white;
-      border-radius: 40px;
-      padding: 80px 60px;
-      margin: 80px auto;
-      border: 1px solid var(--gray-200);
-      box-shadow: var(--shadow-lg);
-      max-width: 1100px;
-      position: relative;
-      overflow: hidden;
+    .contact-detail div strong { color: var(--gray-900); font-size: 0.9rem; display: block; margin-bottom: 3px; }
+    .contact-detail div span,
+    .contact-detail div a { color: var(--gray-600); font-size: 0.88rem; text-decoration: none; transition: color 0.3s; }
+    .contact-detail div a:hover { color: var(--primary); }
+
+    .social-links { display: flex; gap: 12px; margin-top: 24px; }
+
+    .social-links a {
+      width: 44px; height: 44px; border-radius: 12px; background: var(--gray-100);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray-600); font-size: 1.2rem;
+      transition: all 0.3s ease; text-decoration: none;
     }
 
-    .footer-title {
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      margin-bottom: 50px;
-      font-family: 'Playfair Display', serif;
+    .social-links a:hover { background: var(--primary); color: white; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(46,125,50,0.3); }
+
+    .modern-input {
+      width: 100%; padding: 16px 20px; margin-bottom: 16px;
+      border-radius: 16px; border: 2px solid var(--gray-200);
+      background: var(--gray-50); color: var(--gray-900);
+      font-size: 0.95rem; font-family: 'Inter', sans-serif; transition: all 0.3s ease;
     }
 
-    .footer-two-columns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
+    .modern-input:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(46,125,50,0.1); }
+    .modern-input::placeholder { color: var(--gray-400); }
+    textarea.modern-input { border-radius: 20px; resize: vertical; min-height: 120px; }
+
+    .form-footer {
+      margin-top: 16px; text-align: center; padding: 14px;
+      background: rgba(46,125,50,0.05); border-radius: 14px;
+      color: var(--gray-600); font-size: 0.88rem; font-weight: 600;
     }
 
-    .consult-box {
-      background: var(--gray-50);
-      border-radius: 24px;
-      padding: 40px;
-      border: 1px solid var(--gray-200);
-      box-shadow: var(--shadow-sm);
-    }
+    .form-footer i { color: var(--accent); }
 
-    .consult-box h3 {
-      font-size: 1.4rem;
-      color: var(--primary);
-      margin-bottom: 24px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .consult-detail {
-      margin: 16px 0;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      padding: 12px 0;
-    }
-
-    .consult-detail i {
-      width: 32px;
-      color: var(--primary);
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .consult-detail span, .consult-detail a {
-      color: var(--gray-700);
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    .consult-detail a:hover {
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    /* ===== FORM ===== */
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 14px 18px;
-      background: var(--gray-50);
-      border: 2px solid var(--gray-200);
-      border-radius: 16px;
-      color: var(--gray-900);
-      font-family: 'Inter', sans-serif;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-    }
-
-    .form-group textarea {
-      border-radius: 20px;
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .form-group input:focus, .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      background: white;
-      box-shadow: 0 0 0 4px rgba(46,125,50,0.1);
-    }
-
-    .submit-btn {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      border: none;
-      padding: 16px 35px;
-      border-radius: 30px;
-      font-weight: 800;
-      font-size: 1rem;
-      color: white;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      width: 100%;
-      box-shadow: 0 8px 25px rgba(46,125,50,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .submit-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 35px rgba(46,125,50,0.45);
-    }
-
-    .free-note {
-      text-align: center;
-      margin-top: 25px;
-      padding-top: 20px;
-      border-top: 1px solid var(--gray-200);
-      color: var(--primary);
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    .copyright-bar {
-      text-align: center;
-      padding: 30px;
+    /* ===== FOOTER ===== */
+    footer {
       background: linear-gradient(135deg, var(--dark), #0f0f0f);
-      border-radius: 24px;
-      margin-top: 40px;
-      border: 1px solid rgba(46,125,50,0.2);
-      color: var(--gray-500);
+      text-align: center; padding: 60px 20px 40px;
+      border-top: 1px solid rgba(46,125,50,0.2);
+      color: var(--gray-500); position: relative; overflow: hidden;
     }
 
-    .copyright-bar p {
-      font-size: 0.85rem;
-      margin: 8px 0;
+    footer::before {
+      content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 100px; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
     }
 
-    .copyright-bar i {
-      color: var(--accent);
+    footer p { margin: 8px 0; font-size: 0.9rem; }
+
+    footer .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 8px; }
+
+    footer .footer-awards {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,215,0,0.1); padding: 8px 20px;
+      border-radius: 30px; margin-top: 16px;
+      color: var(--accent); font-weight: 600; font-size: 0.85rem;
     }
 
     /* ===== FLOATING BUTTONS ===== */
     .whatsapp-float, .call-float {
-      position: fixed;
-      bottom: 28px;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      color: white;
-      z-index: 99;
-      text-decoration: none;
+      position: fixed; bottom: 28px; width: 56px; height: 56px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 26px; color: white; z-index: 99; text-decoration: none;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       border: 2px solid rgba(255,255,255,0.2);
     }
 
-    .whatsapp-float {
-      right: 28px;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-    }
+    .whatsapp-float { right: 28px; background: linear-gradient(135deg, #25D366, #128C7E); }
+    .call-float    { right: 100px; background: linear-gradient(135deg, #1E88E5, #1565C0); }
 
-    .call-float {
-      right: 100px;
-      background: linear-gradient(135deg, #1E88E5, #1565C0);
-    }
+    .whatsapp-float:hover, .call-float:hover { transform: scale(1.15) rotate(-5deg); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
 
-    .whatsapp-float:hover, .call-float:hover {
-      transform: scale(1.15) rotate(-5deg);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    }
-
-    /* Tooltip for floating buttons */
     .whatsapp-float::after, .call-float::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      right: 70px;
-      background: var(--gray-900);
-      color: white;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease;
-      transform: translateX(10px);
+      content: attr(data-tooltip); position: absolute; right: 70px;
+      background: var(--gray-900); color: white; padding: 6px 14px;
+      border-radius: 8px; font-size: 0.8rem; font-weight: 600;
+      white-space: nowrap; opacity: 0; pointer-events: none;
+      transition: all 0.3s ease; transform: translateX(10px);
     }
 
-    .whatsapp-float:hover::after, .call-float:hover::after {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    .whatsapp-float:hover::after, .call-float:hover::after { opacity: 1; transform: translateX(0); }
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: linear-gradient(135deg, var(--dark), #0f0f0f);
-      text-align: center;
-      padding: 60px 20px 40px;
-      border-top: 1px solid rgba(46,125,50,0.2);
-      color: var(--gray-500);
-      position: relative;
-      overflow: hidden;
-    }
-
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100px;
-      height: 3px;
-      background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    }
-
-    footer p {
-      margin: 8px 0;
-      font-size: 0.9rem;
-    }
-
-    footer .footer-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 8px;
-    }
-
-    footer .footer-awards {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,215,0,0.1);
-      padding: 8px 20px;
-      border-radius: 30px;
-      margin-top: 16px;
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    /* Scroll animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    /* ===== SCROLL REVEAL ===== */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
@@ -903,350 +533,447 @@
       nav { width: 100%; justify-content: center; margin-top: 12px; gap: 4px; }
       nav a { padding: 6px 12px; font-size: 0.8rem; }
 
-      .page-hero { min-height: 40vh; padding: 60px 4% 30px; }
+      .page-hero { min-height: auto; padding: 60px 4% 30px; }
+      .stats-bar { margin: 40px 4% 0; border-radius: 18px; }
+      .stat-item { min-width: 120px; padding: 20px 14px; }
+      .stat-number { font-size: 1.7rem; }
+
       .section { padding: 60px 4%; }
+      .achievements-grid, .expertise-grid, .awards-gallery { grid-template-columns: 1fr; }
+      .contact-flex { grid-template-columns: 1fr; gap: 24px; }
+      .info-panel { padding: 28px; }
 
-      .achievements-grid, .expertise-grid, .awards-gallery {
-        grid-template-columns: 1fr;
-      }
+      .service-table th, .service-table td { padding: 12px; font-size: 0.8rem; }
 
-      .footer-two-columns {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .footer-section {
-        padding: 40px 20px;
-      }
-
-      .project-list {
-        gap: 10px;
-      }
-
-      .project-tag {
-        padding: 10px 16px;
-        font-size: 0.85rem;
-      }
-
-      .service-table th, .service-table td {
-        padding: 12px;
-        font-size: 0.8rem;
-      }
-
-      .whatsapp-float::after, .call-float::after {
-        display: none;
-      }
-
-      .call-float {
-        right: 90px;
-      }
+      .whatsapp-float::after, .call-float::after { display: none; }
     }
 
-    /* Selection color */
-    ::selection {
-      background: rgba(46,125,50,0.2);
-      color: var(--primary-dark);
-    }
-
+    ::selection { background: rgba(46,125,50,0.2); color: var(--primary-dark); }
     html { scroll-behavior: smooth; }
   </style>
 </head>
 <body>
-<div class="radiant-bg"></div>
-<div class="glow-motion"></div>
-<div class="floating-shapes">
-  <div class="shape shape-1"></div>
-  <div class="shape shape-2"></div>
-  <div class="shape shape-3"></div>
-</div>
-<div class="spark-particles" id="particleField"></div>
-
-<header id="mainHeader">
-  <div class="logo">
-    <h1><i class="fas fa-feather-alt"></i> AKANSHA-INTERIOR DECORATION HUB</h1>
-    <p>ISO 9001:2015 | Best Architect • Interior • Vastu • Turnkey</p>
+  <div class="radiant-bg"></div>
+  <div class="glow-motion"></div>
+  <div class="floating-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
   </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="index.html#services">Services</a>
-    <a href="index.html#reviews">Reviews</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-</header>
+  <div class="spark-particles" id="particleField"></div>
 
-<section class="page-hero">
-  <div class="page-hero-content">
-    <div class="page-badge"><i class="fas fa-briefcase"></i> Portfolio & Awards</div>
-    <h2>Our Premium <span>Portfolio</span></h2>
-    <p>Explore our award-winning projects across luxury residences, modular kitchens, hospitality, and corporate installations.</p>
+  <!-- HEADER — matches index exactly -->
+  <header id="mainHeader">
+    <div class="logo">
+      <h1><i class="fas fa-feather-alt"></i> AKANSHA-INTERIOR DECORATION HUB</h1>
+      <p>ISO 9001:2015 | Best Architect • Interior • Vastu • Turnkey</p>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="index.html#reviews">Reviews</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO — matches index/gallery style -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-briefcase"></i> Awards, Clients & Project Portfolio
+      </div>
+      <h2>Our Premium <span>Portfolio</span></h2>
+      <p>Award-winning projects across luxury residences, modular kitchens, hospitality chains, and Fortune 500 corporate installations.</p>
+
+      <div class="hero-awards">
+        <div class="award-pill"><i class="fas fa-trophy"></i> Best Modular Kitchen 2024</div>
+        <div class="award-pill"><i class="fas fa-medal"></i> Best Modern Architecture 2025</div>
+        <div class="award-pill"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified</div>
+      </div>
+
+      <div class="btn-group">
+        <a href="index.html#contact" class="btn-primary"><i class="fas fa-calendar-alt"></i> Free Consultation</a>
+        <a href="gallery.html" class="btn-outline"><i class="fas fa-images"></i> View Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar reveal">
+    <div class="stat-item">
+      <div class="stat-number">10+</div>
+      <div class="stat-label">Years Active</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">8+</div>
+      <div class="stat-label">Awards Won</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">50+</div>
+      <div class="stat-label">Clients</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">5★</div>
+      <div class="stat-label">Rated</div>
+    </div>
   </div>
-</section>
 
-<div style="max-width: 1400px; margin: 0 auto;">
-  <!-- Company Overview Section -->
-  <section class="section reveal">
-    <div class="section-header">
-      <div class="section-label"><i class="fas fa-building"></i> Since 2015</div>
-      <h2 class="section-title">Akanksha Interior Decoration Hub</h2>
-    </div>
-    <p style="font-size: 1.05rem; line-height: 1.8; color: var(--gray-600); max-width: 900px; margin: 0 auto; text-align: center;">AKANSHA-INTERIOR DECORATION HUB is a premier interior design and architectural visualization firm. Recognized for technical excellence, innovative design solutions, and award-winning projects across residential, commercial, hospitality, and corporate sectors. ISO 9001:2015 Certified for quality and excellence.</p>
-  </section>
+  <div style="max-width: 1400px; margin: 0 auto;">
 
-  <!-- Major Achievements -->
-  <section class="section reveal">
-    <div class="section-header">
-      <div class="section-label"><i class="fas fa-trophy"></i> Recognition</div>
-      <h2 class="section-title">🏆 Major Achievements</h2>
-    </div>
-    <div class="achievements-grid">
-      <div class="achievement-card reveal">
-        <i class="fas fa-trophy"></i>
-        <h3>2024 Architecture Summit Meet</h3>
-        <p>Best Architect & Interior Designer (Modular Kitchens) for excellence and innovation in modular kitchen design.</p>
+    <!-- Company Overview -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div class="section-label"><i class="fas fa-building"></i> Since 2015</div>
+        <h2 class="section-title">About AKANSHA-INTERIOR DECORATION HUB</h2>
+        <p class="section-subtitle">A premier interior design and architectural firm recognized for technical excellence and innovative design solutions across residential, commercial, and hospitality sectors.</p>
       </div>
-      <div class="achievement-card reveal">
-        <i class="fas fa-medal"></i>
-        <h3>2025 Architecture Summit Meet</h3>
-        <p>Best Architect & Interior Designer (Modern Architecture) for pioneering contributions to modern architectural aesthetics.</p>
+    </section>
+
+    <!-- Major Achievements -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div class="section-label"><i class="fas fa-trophy"></i> Recognition</div>
+        <h2 class="section-title">Major Achievements</h2>
+        <p class="section-subtitle">Nationally recognized for design excellence and innovation</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Awards Gallery -->
-  <section class="section reveal">
-    <div class="section-header">
-      <div class="section-label"><i class="fas fa-award"></i> Recognition</div>
-      <h2 class="section-title">🏅 Awards & Recognitions</h2>
-    </div>
-    <div class="awards-gallery">
-      <div class="award-item reveal"><img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Sponsor Award"><p>🏆 Gold Sponsor Award 2025</p></div>
-      <div class="award-item reveal"><img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards"><p>🏅 Architecture Awards Collage</p></div>
-      <div class="award-item reveal"><img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO Certification"><p>📜 ISO 9001:2015 Certification</p></div>
-      <div class="award-item reveal"><img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Award Ceremony"><p>🎉 Architecture Reconnect Award</p></div>
-      <div class="award-item reveal"><img src="images/29-architect-wow-award-2024.jpg" alt="WOW Award"><p>🌟 Architect WOW Award 2024</p></div>
-      <div class="award-item reveal"><img src="images/30-award-event-architecture-summit.jpg" alt="Summit Award"><p>🎊 Architecture Summit Award</p></div>
-      <div class="award-item reveal"><img src="images/31-award-recognition-collage-akanksha.jpg" alt="Recognition"><p>🏅 Award Recognition Collage</p></div>
-    </div>
-  </section>
-
-  <!-- Premium Project Portfolio -->
-  <section class="section reveal">
-    <div class="section-header">
-      <div class="section-label"><i class="fas fa-briefcase"></i> Projects</div>
-      <h2 class="section-title">📁 Premium Project Portfolio</h2>
-    </div>
-
-    <div class="project-category reveal">
-      <div class="category-heading"><i class="fas fa-star"></i> Celebrity & High-End Residential</div>
-      <div class="project-list">
-        <div class="project-tag"><i class="fas fa-user-tie"></i> Pawan Singh Residence (Studio Designing & Execution)</div>
-        <div class="project-tag"><i class="fas fa-building"></i> Shalimar Valencia</div>
-        <div class="project-tag"><i class="fas fa-building"></i> Shalimar Mannat</div>
-        <div class="project-tag"><i class="fas fa-hard-hat"></i> Amrawati Developer</div>
+      <div class="achievements-grid">
+        <div class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+          <h3>2024 Architecture Summit Meet</h3>
+          <p>Best Architect & Interior Designer — Modular Kitchens category, for excellence and innovation in modular kitchen design.</p>
+        </div>
+        <div class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+          <h3>2025 Architecture Summit Meet</h3>
+          <p>Best Architect & Interior Designer — Modern Architecture category, for pioneering contributions to modern architectural aesthetics.</p>
+        </div>
+        <div class="achievement-card reveal">
+          <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+          <h3>ISO 9001:2015 Certified</h3>
+          <p>International quality management certification affirming our commitment to consistent excellence and client satisfaction.</p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="project-category reveal">
-      <div class="category-heading"><i class="fas fa-hotel"></i> Commercial & Hospitality</div>
-      <div class="project-list">
-        <div class="project-tag"><i class="fas fa-mall"></i> Lulu Mall – Coffee Cup outlet</div>
-        <div class="project-tag"><i class="fas fa-hotel"></i> Summit Hotels & Resorts (full execution)</div>
-        <div class="project-tag"><i class="fas fa-spa"></i> Bodycraft Salon & Spa</div>
-        <div class="project-tag"><i class="fas fa-spa"></i> Ads Spa (full designing & execution)</div>
-        <div class="project-tag"><i class="fas fa-hotel"></i> Cherks Group of Hotels</div>
-        <div class="project-tag"><i class="fas fa-hotel"></i> Levana Group of Hotels</div>
-        <div class="project-tag"><i class="fas fa-building"></i> Best Western Hotels (as per norms)</div>
-        <div class="project-tag"><i class="fas fa-cut"></i> Slimming Center & Saloon – Perfect Personality</div>
+    <!-- Awards Gallery -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div class="section-label"><i class="fas fa-award"></i> Awards</div>
+        <h2 class="section-title">Awards & Recognitions</h2>
+        <p class="section-subtitle">A decade of industry honors and certifications</p>
       </div>
-    </div>
-
-    <div class="project-category reveal">
-      <div class="category-heading"><i class="fas fa-handshake"></i> Real Estate Partnerships</div>
-      <div class="project-list">
-        <div class="project-tag"><i class="fas fa-chart-line"></i> Sample flat development & premium project executing</div>
-        <div class="project-tag"><i class="fas fa-handshake"></i> Rishita Builders & Levana Builders (consulting)</div>
+      <div class="awards-gallery">
+        <div class="award-item reveal">
+          <div class="award-image-wrap"><img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Sponsor Award 2025" loading="lazy"></div>
+          <p><i class="fas fa-trophy" style="color:var(--accent)"></i> Gold Sponsor Award 2025</p>
+        </div>
+        <div class="award-item reveal">
+          <div class="award-image-wrap"><img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards" loading="lazy"></div>
+          <p><i class="fas fa-medal" style="color:var(--accent)"></i> Architecture Awards Collage</p>
+        </div>
+        <div class="award-item reveal">
+          <div class="award-image-wrap"><img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO Certification" loading="lazy"></div>
+          <p><i class="fas fa-certificate" style="color:var(--accent)"></i> ISO 9001:2015 Certification</p>
+        </div>
+        <div class="award-item reveal">
+          <div class="award-image-wrap"><img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Award Ceremony" loading="lazy"></div>
+          <p><i class="fas fa-award" style="color:var(--accent)"></i> Architecture Reconnect Award</p>
+        </div>
+        <div class="award-item reveal">
+          <div class="award-image-wrap"><img src="images/29-architect-wow-award-2024.jpg" alt="WOW Award 2024" loading="lazy"></div>
+          <p><i class="fas fa-star" style="color:var(--accent)"></i> Architect WOW Award 2024</p>
+        </div>
+        <div class="award-item reveal">
+          <div class="award-image-wrap"><img src="images/30-award-event-architecture-summit.jpg" alt="Summit Award" loading="lazy"></div>
+          <p><i class="fas fa-trophy" style="color:var(--accent)"></i> Architecture Summit Award</p>
+        </div>
+        <div class="award-item reveal">
+          <div class="award-image-wrap"><img src="images/31-award-recognition-collage-akanksha.jpg" alt="Award Recognition" loading="lazy"></div>
+          <p><i class="fas fa-medal" style="color:var(--accent)"></i> Award Recognition Collage</p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="project-category reveal">
-      <div class="category-heading"><i class="fas fa-industry"></i> Corporate & Industrial Clients</div>
-      <div class="project-list">
-        <div class="project-tag"><i class="fas fa-industry"></i> Lafarge India Ltd</div>
-        <div class="project-tag"><i class="fas fa-car"></i> Tata Motors</div>
-        <div class="project-tag"><i class="fas fa-chart-line"></i> Tata Steel</div>
-        <div class="project-tag"><i class="fas fa-cogs"></i> Tata Timken</div>
-        <div class="project-tag"><i class="fas fa-truck"></i> Tata Cummins</div>
+    <!-- Project Portfolio -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div class="section-label"><i class="fas fa-briefcase"></i> Projects</div>
+        <h2 class="section-title">Premium Project Portfolio</h2>
+        <p class="section-subtitle">Trusted by celebrities, corporates, hotel chains, and homeowners across India</p>
       </div>
-    </div>
-  </section>
 
-  <!-- Core Expertise -->
-  <section class="section reveal">
-    <div class="section-header">
-      <div class="section-label"><i class="fas fa-sparkles"></i> Services</div>
-      <h2 class="section-title">🔧 Core Expertise</h2>
-    </div>
-    <div class="expertise-grid">
-      <div class="expertise-card reveal">
-        <i class="fas fa-cube"></i>
-        <h3>Architectural Visualization</h3>
-        <p>High-resolution 3D rendering and detailed 2D floor planning with vertical spatial design.</p>
+      <div class="project-category reveal">
+        <div class="category-heading"><i class="fas fa-star"></i> Celebrity & High-End Residential</div>
+        <div class="project-list">
+          <div class="project-tag"><i class="fas fa-user-tie"></i> Pawan Singh Residence (Studio Designing & Execution)</div>
+          <div class="project-tag"><i class="fas fa-building"></i> Shalimar Valencia</div>
+          <div class="project-tag"><i class="fas fa-building"></i> Shalimar Mannat</div>
+          <div class="project-tag"><i class="fas fa-hard-hat"></i> Amrawati Developer</div>
+        </div>
       </div>
-      <div class="expertise-card reveal">
-        <i class="fas fa-utensils"></i>
-        <h3>Modular Solutions</h3>
-        <p>Award-winning modular kitchens featuring feature-rich chimneys and vertical storage systems.</p>
+
+      <div class="project-category reveal">
+        <div class="category-heading"><i class="fas fa-hotel"></i> Commercial & Hospitality</div>
+        <div class="project-list">
+          <div class="project-tag"><i class="fas fa-shopping-bag"></i> Lulu Mall — Coffee Cup Outlet</div>
+          <div class="project-tag"><i class="fas fa-hotel"></i> Summit Hotels & Resorts (Full Execution)</div>
+          <div class="project-tag"><i class="fas fa-spa"></i> Bodycraft Salon & Spa</div>
+          <div class="project-tag"><i class="fas fa-spa"></i> Ads Spa (Full Designing & Execution)</div>
+          <div class="project-tag"><i class="fas fa-hotel"></i> Cherks Group of Hotels</div>
+          <div class="project-tag"><i class="fas fa-hotel"></i> Levana Group of Hotels</div>
+          <div class="project-tag"><i class="fas fa-building"></i> Best Western Hotels (As Per Norms)</div>
+          <div class="project-tag"><i class="fas fa-cut"></i> Perfect Personality — Slimming Center & Saloon</div>
+        </div>
       </div>
-      <div class="expertise-card reveal">
-        <i class="fas fa-concierge-bell"></i>
-        <h3>Turnkey Hospitality Focus</h3>
-        <p>Integrate new projects from interior civil to final finishing with premium finishes and materials.</p>
+
+      <div class="project-category reveal">
+        <div class="category-heading"><i class="fas fa-handshake"></i> Real Estate Partnerships</div>
+        <div class="project-list">
+          <div class="project-tag"><i class="fas fa-home"></i> Sample Flat Development & Premium Project Executing</div>
+          <div class="project-tag"><i class="fas fa-handshake"></i> Rishita Builders & Levana Builders (Consulting)</div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Service Portfolio Table -->
-  <section class="section reveal">
-    <div class="section-header">
-      <div class="section-label"><i class="fas fa-list"></i> Services</div>
-      <h2 class="section-title">📊 Service Portfolio</h2>
-    </div>
-    <table class="service-table">
-      <thead>
-        <tr>
-          <th>Service Category</th>
-          <th>Notable Projects</th>
-          <th>Features & Specializations</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Residential Interiors</strong></td>
-          <td>Studio Singh</td>
-          <td>Full-flat luxury renovations and master suites.</td>
-        </tr>
-        <tr>
-          <td><strong>Modular Kitchens</strong></td>
-          <td>Residences & Commercial Places</td>
-          <td>2024 Award-Winning layouts with premium finishes.</td>
-        </tr>
-        <tr>
-          <td><strong>Hospitality & Wellness</strong></td>
-          <td>Pawan Singh (Celebrity), Hotels</td>
-          <td>Specialized Spa and Salon design and technical execution.</td>
-        </tr>
-        <tr>
-          <td><strong>Modern Architecture</strong></td>
-          <td>Multiple Corporate & Residential</td>
-          <td>2025 Award-Winning structural and aesthetic planning.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+      <div class="project-category reveal">
+        <div class="category-heading"><i class="fas fa-industry"></i> Corporate & Industrial Clients</div>
+        <div class="project-list">
+          <div class="project-tag"><i class="fas fa-industry"></i> Lafarge India Ltd</div>
+          <div class="project-tag"><i class="fas fa-car"></i> Tata Motors</div>
+          <div class="project-tag"><i class="fas fa-chart-line"></i> Tata Steel</div>
+          <div class="project-tag"><i class="fas fa-cogs"></i> Tata Timken</div>
+          <div class="project-tag"><i class="fas fa-truck"></i> Tata Cummins</div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Footer Section -->
-  <div class="footer-section reveal">
-    <div class="footer-title">✨ Let's Create Wonder Together ✨</div>
+    <!-- Core Expertise -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div class="section-label"><i class="fas fa-gem"></i> Expertise</div>
+        <h2 class="section-title">Core Expertise</h2>
+        <p class="section-subtitle">Comprehensive design and execution capabilities under one roof</p>
+      </div>
+      <div class="expertise-grid">
+        <div class="expertise-card reveal">
+          <div class="expertise-icon"><i class="fas fa-cube"></i></div>
+          <h3>Architectural Visualization</h3>
+          <p>High-resolution 3D rendering and detailed 2D floor planning with vertical spatial design.</p>
+        </div>
+        <div class="expertise-card reveal">
+          <div class="expertise-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Modular Solutions</h3>
+          <p>Award-winning modular kitchens featuring premium chimneys and intelligent vertical storage systems.</p>
+        </div>
+        <div class="expertise-card reveal">
+          <div class="expertise-icon"><i class="fas fa-key"></i></div>
+          <h3>Turnkey Hospitality</h3>
+          <p>End-to-end project delivery from interior civil works to final finishing with premium materials.</p>
+        </div>
+        <div class="expertise-card reveal">
+          <div class="expertise-icon"><i class="fas fa-drafting-compass"></i></div>
+          <h3>Vastu Consultation</h3>
+          <p>Integrating traditional Vastu principles with modern architecture for harmony and prosperity.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="footer-two-columns">
-      <div>
-        <div class="consult-box">
+    <!-- Service Portfolio Table -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div class="section-label"><i class="fas fa-list"></i> Services</div>
+        <h2 class="section-title">Service Portfolio</h2>
+        <p class="section-subtitle">From concept to completion across every design discipline</p>
+      </div>
+      <table class="service-table">
+        <thead>
+          <tr>
+            <th>Service Category</th>
+            <th>Notable Projects</th>
+            <th>Features & Specializations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Residential Interiors</strong></td>
+            <td>Studio Singh, Shalimar Valencia</td>
+            <td>Full-flat luxury renovations and master suites</td>
+          </tr>
+          <tr>
+            <td><strong>Modular Kitchens</strong></td>
+            <td>Residences & Commercial Spaces</td>
+            <td>2024 Award-Winning layouts with premium finishes</td>
+          </tr>
+          <tr>
+            <td><strong>Hospitality & Wellness</strong></td>
+            <td>Summit Hotels, Bodycraft Spa</td>
+            <td>Specialized spa, salon design and technical execution</td>
+          </tr>
+          <tr>
+            <td><strong>Modern Architecture</strong></td>
+            <td>Corporate & Residential Projects</td>
+            <td>2025 Award-Winning structural and aesthetic planning</td>
+          </tr>
+          <tr>
+            <td><strong>Corporate Installations</strong></td>
+            <td>Tata Motors, Tata Steel, Lafarge</td>
+            <td>Large-scale industrial and office interior fit-outs</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section reveal">
+      <div class="section-header">
+        <div class="section-label"><i class="fas fa-paper-plane"></i> Get In Touch</div>
+        <h2 class="section-title">Let's Create Wonder Together</h2>
+        <p class="section-subtitle">Ready to transform your space? Reach out for a free consultation</p>
+      </div>
+
+      <div class="contact-flex">
+        <div class="info-panel">
           <h3><i class="fas fa-headset"></i> Consult Our Experts</h3>
-          <div class="consult-detail"><i class="fas fa-building"></i> <span><strong>AKANSHA-INTERIOR DECORATION HUB</strong><br>ISO 9001:2015 Certified | Pan-India Presence</span></div>
-          <div class="consult-detail"><i class="fas fa-phone-alt"></i> <a href="tel:+919140097029">+91 9140097029</a></div>
-          <div class="consult-detail"><i class="fas fa-envelope"></i> <span>interiorhub007@gmail.com</span></div>
-          <div class="consult-detail"><i class="far fa-clock"></i> <span>Operating Hours: 9:30 AM – 9:00 PM (Daily)</span></div>
+
+          <div class="contact-detail">
+            <i class="fas fa-building"></i>
+            <div>
+              <strong>AKANSHA-INTERIOR DECORATION HUB</strong>
+              <span>ISO 9001:2015 Certified | Pan-India Presence</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <i class="fas fa-phone-alt"></i>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+919140097029">+91 91400 97029</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:interiorhub007@gmail.com">interiorhub007@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <i class="far fa-clock"></i>
+            <div>
+              <strong>Operating Hours</strong>
+              <span>9:30 AM – 9:00 PM (Daily)</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="info-panel">
+          <form id="contactForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
+            <input type="text" name="name" placeholder="Your full name *" class="modern-input" required>
+            <input type="text" name="contact" placeholder="Email address or phone number *" class="modern-input" required>
+            <textarea name="project" placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)" class="modern-input" required></textarea>
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
+              <i class="fas fa-paper-plane"></i> Get Free Estimate
+            </button>
+          </form>
+          <div class="form-footer">
+            <i class="fas fa-gift"></i> Free Site Visit • 3D Planning • Vastu Guidance included
+          </div>
         </div>
       </div>
-      <div>
-        <form id="footerContactForm">
-          <div class="form-group">
-            <input type="text" placeholder="Your name *" required>
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Email / Phone *" required>
-          </div>
-          <div class="form-group">
-            <textarea rows="3" placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)"></textarea>
-          </div>
-          <button type="submit" class="submit-btn"><i class="fas fa-rocket"></i> Get Free Estimate</button>
-        </form>
-        <div class="free-note">
-          ⭐ Free Site Visit | 3D Planning | Vastu Guidance included
-        </div>
-      </div>
+    </section>
+
+  </div><!-- /max-width wrapper -->
+
+  <footer>
+    <div class="footer-brand">AKANSHA-INTERIOR DECORATION HUB</div>
+    <p>© 2026 AKANSHA-INTERIOR DECORATION HUB — Best Architect & Interior Designer</p>
+    <p>ISO 9001:2015 Certified | Luxury & Hospitality Experts | Pan-India Presence</p>
+    <div class="footer-awards">
+      <i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)
     </div>
-  </div>
+  </footer>
 
-  <div class="copyright-bar reveal">
-    <p>© 2026 AKANSHA-INTERIOR DECORATION HUB — Best Architect & Interior Designer | ISO 9001:2015 | Luxury & Hospitality Experts</p>
-    <p><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</p>
-  </div>
-</div>
+  <a class="whatsapp-float" href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20am%20interested%20in%20your%20services.%20Can%20you%20help%20me%20with%20a%20consultation%3F" target="_blank" data-tooltip="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a class="call-float" href="tel:+919140097029" data-tooltip="Call Us Now">
+    <i class="fas fa-phone-alt"></i>
+  </a>
 
-<a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank" data-tooltip="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-<a class="call-float" href="tel:+919140097029" data-tooltip="Call"><i class="fas fa-phone-alt"></i></a>
-
-<footer>
-  <div class="footer-brand">AKANSHA-INTERIOR DECORATION HUB</div>
-  <p>Transforming spaces into masterpieces</p>
-  <div class="footer-awards"><i class="fas fa-award"></i> Award-Winning Design Excellence</div>
-</footer>
-
-<script>
-  // Particle generation
-  const sparkField = document.getElementById('particleField');
-  for(let i=0; i<50; i++){
-    let sp = document.createElement('div');
-    sp.classList.add('spark');
-    let size = Math.random()*6+2;
-    sp.style.width = size+'px';
-    sp.style.height = size+'px';
-    sp.style.left = Math.random()*100+'%';
-    sp.style.top = Math.random()*100+'%';
-    sp.style.animationDuration = Math.random()*12+6+'s';
-    sparkField.appendChild(sp);
-  }
-
-  // Scroll animations
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-  };
-
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Header scroll effect
-  let lastScroll = 0;
-  const header = document.getElementById('mainHeader');
-  window.addEventListener('scroll', function() {
-    lastScroll = window.scrollY;
-    if(lastScroll > 100) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
+  <script>
+    // Spark particles
+    const sparkField = document.getElementById('particleField');
+    for (let i = 0; i < 40; i++) {
+      const sp = document.createElement('div');
+      sp.classList.add('spark');
+      const size = Math.random() * 4 + 2;
+      sp.style.width  = size + 'px';
+      sp.style.height = size + 'px';
+      sp.style.left   = Math.random() * 100 + '%';
+      sp.style.top    = Math.random() * 100 + '%';
+      sp.style.animationDuration = (Math.random() * 10 + 8) + 's';
+      sp.style.animationDelay   = (Math.random() * 5) + 's';
+      sparkField.appendChild(sp);
     }
-  });
 
-  // Form submission
-  const footerForm = document.getElementById('footerContactForm');
-  if(footerForm) {
-    footerForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert("✨ Thank you! Our design expert will contact you within 2 hours with free consultation & site visit details.");
-      footerForm.reset();
+    // Header scroll
+    const header = document.getElementById('mainHeader');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
     });
-  }
-</script>
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Parallax shapes
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      document.querySelectorAll('.shape').forEach((shape, i) => {
+        const speed = 0.1 + i * 0.05;
+        shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.02}deg)`;
+      });
+    });
+
+    // Contact form
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', () => {
+        setTimeout(() => {
+          const toast = document.createElement('div');
+          toast.style.cssText = `
+            position:fixed; top:100px; left:50%;
+            transform:translateX(-50%) translateY(-20px);
+            background:linear-gradient(135deg,#1b5e20,#2e7d32);
+            color:white; padding:16px 32px; border-radius:16px;
+            font-weight:600; box-shadow:0 10px 40px rgba(46,125,50,0.3);
+            z-index:1000; opacity:0; transition:all 0.4s ease;
+            display:flex; align-items:center; gap:12px; font-family:Inter,sans-serif;
+          `;
+          toast.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Our expert will contact you within 2 hours.';
+          document.body.appendChild(toast);
+          requestAnimationFrame(() => { toast.style.opacity = '1'; toast.style.transform = 'translateX(-50%) translateY(0)'; });
+          setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(-50%) translateY(-20px)';
+            setTimeout(() => toast.remove(), 400);
+          }, 4000);
+        }, 500);
+      });
+    }
+  </script>
 </body>
 </html>
