@@ -57,8 +57,7 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       background:
         radial-gradient(ellipse at 30% 20%, rgba(46,125,50,0.06) 0%, transparent 50%),
         radial-gradient(ellipse at 70% 60%, rgba(46,125,50,0.04) 0%, transparent 50%);
@@ -68,85 +67,42 @@
     }
 
     @keyframes slowDrift {
-      0% { transform: translate(0,0) scale(1); opacity: 0.5; }
-      50% { transform: translate(2%, -3%) scale(1.1); opacity: 0.8; }
-      100% { transform: translate(-1%, 2%) scale(1.05); opacity: 0.6; }
+      0%   { transform: translate(0,0) scale(1); opacity: 0.5; }
+      50%  { transform: translate(2%,-3%) scale(1.1); opacity: 0.8; }
+      100% { transform: translate(-1%,2%) scale(1.05); opacity: 0.6; }
     }
 
-    /* Floating geometric shapes */
     .floating-shapes {
       position: fixed;
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       pointer-events: none;
       z-index: -1;
       overflow: hidden;
     }
 
-    .shape {
-      position: absolute;
-      opacity: 0.03;
-      animation: floatShape 25s ease-in-out infinite;
-    }
-
-    .shape-1 {
-      width: 300px;
-      height: 300px;
-      border: 2px solid var(--primary);
-      border-radius: 50%;
-      top: 10%;
-      left: -5%;
-      animation-delay: 0s;
-    }
-
-    .shape-2 {
-      width: 200px;
-      height: 200px;
-      border: 2px solid var(--primary);
-      transform: rotate(45deg);
-      top: 60%;
-      right: -3%;
-      animation-delay: -8s;
-    }
-
-    .shape-3 {
-      width: 150px;
-      height: 150px;
-      border: 2px solid var(--accent);
-      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-      top: 40%;
-      left: 60%;
-      animation-delay: -15s;
-    }
+    .shape { position: absolute; opacity: 0.03; animation: floatShape 25s ease-in-out infinite; }
+    .shape-1 { width:300px; height:300px; border:2px solid var(--primary); border-radius:50%; top:10%; left:-5%; animation-delay:0s; }
+    .shape-2 { width:200px; height:200px; border:2px solid var(--primary); transform:rotate(45deg); top:60%; right:-3%; animation-delay:-8s; }
+    .shape-3 { width:150px; height:150px; border:2px solid var(--accent); border-radius:30% 70% 70% 30%/30% 30% 70% 70%; top:40%; left:60%; animation-delay:-15s; }
 
     @keyframes floatShape {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      33% { transform: translateY(-30px) rotate(5deg); }
-      66% { transform: translateY(20px) rotate(-5deg); }
+      0%,100% { transform:translateY(0) rotate(0deg); }
+      33%      { transform:translateY(-30px) rotate(5deg); }
+      66%      { transform:translateY(20px) rotate(-5deg); }
     }
 
-    /* Spark particles */
-    .spark-particles {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: -1;
-    }
-
+    .spark-particles { position:fixed; width:100%; height:100%; pointer-events:none; z-index:-1; }
     .spark {
       position: absolute;
       background: radial-gradient(circle, rgba(46,125,50,0.3), transparent);
-      border-radius: 50%;
-      opacity: 0;
+      border-radius: 50%; opacity: 0;
       animation: floatSpark 12s infinite ease-in-out;
     }
-
     @keyframes floatSpark {
-      0% { transform: translateY(0) scale(0); opacity: 0; }
-      20% { opacity: 0.4; }
-      80% { opacity: 0.2; }
-      100% { transform: translateY(-100px) scale(1); opacity: 0; }
+      0%   { transform:translateY(0) scale(0); opacity:0; }
+      20%  { opacity:0.4; }
+      80%  { opacity:0.2; }
+      100% { transform:translateY(-100px) scale(1); opacity:0; }
     }
 
     /* ===== HEADER ===== */
@@ -181,10 +137,7 @@
       gap: 10px;
     }
 
-    .logo h1 i {
-      color: var(--primary);
-      font-size: 1.6rem;
-    }
+    .logo h1 i { color: var(--primary); font-size: 1.6rem; }
 
     .logo p {
       font-size: 0.65rem;
@@ -195,11 +148,7 @@
       margin-top: 2px;
     }
 
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+    nav { display:flex; align-items:center; gap:8px; }
 
     nav a {
       color: var(--gray-700);
@@ -212,62 +161,64 @@
       position: relative;
     }
 
-    nav a:hover {
-      color: var(--primary);
-      background: rgba(46,125,50,0.08);
-    }
+    nav a:hover { color:var(--primary); background:rgba(46,125,50,0.08); }
 
     nav a::after {
       content: '';
       position: absolute;
-      bottom: 4px;
-      left: 50%;
+      bottom: 4px; left: 50%;
       transform: translateX(-50%);
-      width: 0;
-      height: 2px;
+      width: 0; height: 2px;
       background: var(--primary);
       border-radius: 2px;
       transition: width 0.3s ease;
     }
 
-    nav a:hover::after {
-      width: 60%;
+    nav a:hover::after { width: 60%; }
+
+    nav a.active {
+      color: var(--primary);
+      background: rgba(46,125,50,0.1);
     }
 
-    /* ===== HERO / PAGE HEADER ===== */
+    nav a.active::after { width: 60%; }
+
+    /* ===== HERO ===== */
     .page-hero {
-      min-height: 50vh;
+      min-height: 56vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 6% 40px;
+      padding: 80px 6% 50px;
       position: relative;
     }
 
     .page-hero-content {
-      max-width: 800px;
+      max-width: 860px;
       animation: fadeInUp 1s ease-out;
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      from { opacity:0; transform:translateY(40px); }
+      to   { opacity:1; transform:translateY(0); }
     }
 
-    .page-badge {
+    /* Badge — matches index hero-badge */
+    .hero-badge {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(46,125,50,0.1);
-      color: var(--primary);
-      padding: 8px 24px;
+      padding: 10px 28px;
       border-radius: 60px;
       font-weight: 700;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 24px;
+      font-size: 0.85rem;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(46,125,50,0.3);
+      margin-bottom: 28px;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .page-hero h2 {
@@ -289,10 +240,8 @@
     .page-hero h2 span::after {
       content: '';
       position: absolute;
-      bottom: 5px;
-      left: 0;
-      width: 100%;
-      height: 12px;
+      bottom: 5px; left: 0;
+      width: 100%; height: 12px;
       background: rgba(46,125,50,0.15);
       border-radius: 4px;
       z-index: -1;
@@ -301,12 +250,148 @@
     .page-hero p {
       font-size: 1.1rem;
       color: var(--gray-500);
-      max-width: 600px;
-      margin: 0 auto;
+      max-width: 620px;
+      margin: 0 auto 32px;
       line-height: 1.7;
     }
 
+    /* Award pills — matches index */
+    .hero-awards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .award-pill {
+      background: white;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gray-700);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .award-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-light);
+    }
+
+    .award-pill i { color: var(--accent); }
+
+    /* Btn group */
+    .btn-group { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-weight: 700;
+      color: white;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(46,125,50,0.35);
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 35px rgba(46,125,50,0.45); }
+    .btn-primary:hover::before { left:100%; }
+
+    .btn-outline {
+      background: white;
+      border: 2px solid var(--gray-300);
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-weight: 700;
+      color: var(--gray-800);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-outline:hover { border-color:var(--primary); color:var(--primary); transform:translateY(-3px); box-shadow:var(--shadow-md); }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      max-width: 900px;
+      margin: 60px auto 0;
+      background: white;
+      border-radius: 24px;
+      border: 1px solid var(--gray-200);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .stat-item {
+      flex: 1;
+      min-width: 160px;
+      padding: 28px 20px;
+      text-align: center;
+      position: relative;
+      transition: background 0.3s ease;
+    }
+
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0; top: 20%; height: 60%;
+      width: 1px;
+      background: var(--gray-200);
+    }
+
+    .stat-item:hover { background: rgba(46,125,50,0.03); }
+
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
     /* ===== FILTER TABS ===== */
+    .gallery-section { padding: 60px 6% 100px; }
+
     .filter-tabs {
       display: flex;
       justify-content: center;
@@ -343,11 +428,7 @@
       box-shadow: 0 4px 15px rgba(46,125,50,0.3);
     }
 
-    /* ===== GALLERY ===== */
-    .gallery-section {
-      padding: 0 6% 100px;
-    }
-
+    /* ===== GALLERY GRID ===== */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -373,27 +454,18 @@
       border-color: transparent;
     }
 
-    .gallery-item.hidden {
-      display: none;
-    }
+    .gallery-item.hidden { display: none; }
 
-    .gallery-image-wrapper {
-      position: relative;
-      overflow: hidden;
-      height: 280px;
-    }
+    .gallery-image-wrapper { position:relative; overflow:hidden; height:280px; }
 
     .gallery-item img {
-      width: 100%;
-      height: 100%;
+      width: 100%; height: 100%;
       object-fit: cover;
       display: block;
       transition: transform 0.6s ease;
     }
 
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
+    .gallery-item:hover img { transform: scale(1.1); }
 
     .gallery-overlay {
       position: absolute;
@@ -407,9 +479,7 @@
       padding-bottom: 20px;
     }
 
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
 
     .view-btn {
       background: white;
@@ -427,20 +497,10 @@
       cursor: pointer;
     }
 
-    .gallery-item:hover .view-btn {
-      transform: translateY(0);
-    }
+    .gallery-item:hover .view-btn { transform: translateY(0); }
+    .view-btn:hover { background: var(--primary); color: white; }
 
-    .view-btn:hover {
-      background: var(--primary);
-      color: white;
-    }
-
-    .gallery-caption {
-      padding: 20px;
-      text-align: left;
-      background: white;
-    }
+    .gallery-caption { padding: 20px; text-align: left; background: white; }
 
     .gallery-caption h3 {
       color: var(--gray-900);
@@ -452,11 +512,7 @@
       gap: 8px;
     }
 
-    .gallery-caption p {
-      color: var(--gray-500);
-      font-size: 0.85rem;
-      font-weight: 500;
-    }
+    .gallery-caption p { color: var(--gray-500); font-size: 0.85rem; font-weight: 500; }
 
     .gallery-tag {
       display: inline-block;
@@ -484,10 +540,7 @@
       transition: opacity 0.3s ease;
     }
 
-    .lightbox.active {
-      display: flex;
-      opacity: 1;
-    }
+    .lightbox.active { display: flex; opacity: 1; }
 
     .lightbox-content {
       position: relative;
@@ -504,69 +557,40 @@
       object-fit: contain;
       border-radius: 16px;
       box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+      transition: opacity 0.2s ease;
     }
 
-    .lightbox-caption {
-      color: white;
-      margin-top: 20px;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-align: center;
-    }
+    .lightbox-caption { color:white; margin-top:20px; font-size:1.2rem; font-weight:600; text-align:center; }
 
     .lightbox-close {
       position: absolute;
-      top: -50px;
-      right: 0;
+      top: -50px; right: 0;
       background: rgba(255,255,255,0.1);
-      border: none;
-      color: white;
-      width: 44px;
-      height: 44px;
+      border: none; color: white;
+      width: 44px; height: 44px;
       border-radius: 50%;
-      font-size: 1.2rem;
-      cursor: pointer;
+      font-size: 1.2rem; cursor: pointer;
       transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
     }
 
-    .lightbox-close:hover {
-      background: rgba(255,255,255,0.2);
-      transform: rotate(90deg);
-    }
+    .lightbox-close:hover { background:rgba(255,255,255,0.2); transform:rotate(90deg); }
 
     .lightbox-nav {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 50%; transform: translateY(-50%);
       background: rgba(255,255,255,0.1);
-      border: none;
-      color: white;
-      width: 50px;
-      height: 50px;
+      border: none; color: white;
+      width: 50px; height: 50px;
       border-radius: 50%;
-      font-size: 1.2rem;
-      cursor: pointer;
+      font-size: 1.2rem; cursor: pointer;
       transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
     }
 
-    .lightbox-nav:hover {
-      background: var(--primary);
-      transform: translateY(-50%) scale(1.1);
-    }
-
+    .lightbox-nav:hover { background:var(--primary); transform:translateY(-50%) scale(1.1); }
     .lightbox-prev { left: -80px; }
     .lightbox-next { right: -80px; }
-
-    @media (max-width: 768px) {
-      .lightbox-prev { left: 10px; }
-      .lightbox-next { right: 10px; }
-    }
 
     /* ===== FOOTER ===== */
     footer {
@@ -582,25 +606,18 @@
     footer::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 50%;
+      top: 0; left: 50%;
       transform: translateX(-50%);
-      width: 100px;
-      height: 3px;
+      width: 100px; height: 3px;
       background: linear-gradient(90deg, transparent, var(--primary), transparent);
     }
 
-    footer p {
-      margin: 8px 0;
-      font-size: 0.9rem;
-    }
+    footer p { margin:8px 0; font-size:0.9rem; }
 
     footer .footer-brand {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: white;
-      margin-bottom: 8px;
+      font-size: 1.5rem; font-weight: 700;
+      color: white; margin-bottom: 8px;
     }
 
     footer .footer-awards {
@@ -620,8 +637,7 @@
     .whatsapp-float, .call-float {
       position: fixed;
       bottom: 28px;
-      width: 56px;
-      height: 56px;
+      width: 56px; height: 56px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -635,15 +651,8 @@
       border: 2px solid rgba(255,255,255,0.2);
     }
 
-    .whatsapp-float {
-      right: 28px;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-    }
-
-    .call-float {
-      right: 100px;
-      background: linear-gradient(135deg, #1E88E5, #1565C0);
-    }
+    .whatsapp-float { right:28px; background:linear-gradient(135deg,#25D366,#128C7E); }
+    .call-float    { right:100px; background:linear-gradient(135deg,#1E88E5,#1565C0); }
 
     .whatsapp-float:hover, .call-float:hover {
       transform: scale(1.15) rotate(-5deg);
@@ -667,26 +676,30 @@
       transform: translateX(10px);
     }
 
-    .whatsapp-float:hover::after, .call-float:hover::after {
-      opacity: 1;
-      transform: translateX(0);
-    }
+    .whatsapp-float:hover::after, .call-float:hover::after { opacity:1; transform:translateX(0); }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      header { padding: 12px 4%; }
-      nav { width: 100%; justify-content: center; margin-top: 12px; gap: 4px; }
-      nav a { padding: 6px 12px; font-size: 0.8rem; }
+      header { padding:12px 4%; }
+      nav { width:100%; justify-content:center; margin-top:12px; gap:4px; }
+      nav a { padding:6px 12px; font-size:0.8rem; }
 
-      .page-hero { min-height: 40vh; padding: 60px 4% 30px; }
-      .gallery-section { padding: 0 4% 60px; }
-      .gallery-grid { grid-template-columns: 1fr; gap: 20px; }
-      .gallery-image-wrapper { height: 240px; }
+      .page-hero { min-height:auto; padding:60px 4% 30px; }
+      .stats-bar { margin:40px 4% 0; border-radius:18px; }
+      .stat-item { min-width:120px; padding:20px 14px; }
+      .stat-number { font-size:1.7rem; }
 
-      .filter-tabs { gap: 8px; }
-      .filter-btn { padding: 8px 16px; font-size: 0.8rem; }
+      .gallery-section { padding:40px 4% 60px; }
+      .gallery-grid { grid-template-columns:1fr; gap:20px; }
+      .gallery-image-wrapper { height:240px; }
 
-      .whatsapp-float::after, .call-float::after { display: none; }
+      .filter-tabs { gap:8px; }
+      .filter-btn { padding:8px 16px; font-size:0.8rem; }
+
+      .lightbox-prev { left:10px; }
+      .lightbox-next { right:10px; }
+
+      .whatsapp-float::after, .call-float::after { display:none; }
     }
 
     /* Scroll animations */
@@ -696,18 +709,10 @@
       transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.active { opacity:1; transform:translateY(0); }
 
-    /* Selection color */
-    ::selection {
-      background: rgba(46,125,50,0.2);
-      color: var(--primary-dark);
-    }
-
-    html { scroll-behavior: smooth; }
+    ::selection { background:rgba(46,125,50,0.2); color:var(--primary-dark); }
+    html { scroll-behavior:smooth; }
   </style>
 </head>
 <body>
@@ -720,28 +725,65 @@
   </div>
   <div class="spark-particles" id="particleField"></div>
 
+  <!-- HEADER — matches index exactly -->
   <header id="mainHeader">
     <div class="logo">
       <h1><i class="fas fa-feather-alt"></i> AKANSHA-INTERIOR DECORATION HUB</h1>
-      <p>Complete Project Gallery</p>
+      <p>ISO 9001:2015 | Best Architect • Interior • Vastu • Turnkey</p>
     </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
       <a href="index.html#services">Services</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="portfolio.html">Portfolio</a>
       <a href="index.html#reviews">Reviews</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
+  <!-- HERO — matches index hero style -->
   <section class="page-hero">
     <div class="page-hero-content">
-      <div class="page-badge"><i class="fas fa-camera"></i> Portfolio Showcase</div>
+      <div class="hero-badge">
+        <i class="fas fa-camera"></i> Complete Project Gallery · 39 Premium Projects
+      </div>
       <h2>Our Complete <span>Design Gallery</span></h2>
-      <p>Explore our premium interior design projects — from luxury bedrooms and modular kitchens to award-winning architecture and commercial spaces.</p>
+      <p>Explore our award-winning interior design projects — from luxury bedrooms and modular kitchens to commercial spaces and celebrated architecture.</p>
+
+      <div class="hero-awards">
+        <div class="award-pill"><i class="fas fa-trophy"></i> Best Modular Kitchen 2024</div>
+        <div class="award-pill"><i class="fas fa-medal"></i> Best Modern Architecture 2025</div>
+        <div class="award-pill"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified</div>
+      </div>
+
+      <div class="btn-group">
+        <a href="index.html#contact" class="btn-primary"><i class="fas fa-calendar-alt"></i> Free Consultation</a>
+        <a href="index.html" class="btn-outline"><i class="fas fa-home"></i> Back to Home</a>
+      </div>
     </div>
   </section>
 
+  <!-- STATS BAR -->
+  <div class="stats-bar reveal">
+    <div class="stat-item">
+      <div class="stat-number">39+</div>
+      <div class="stat-label">Projects</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">6</div>
+      <div class="stat-label">Categories</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">8+</div>
+      <div class="stat-label">Awards Won</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">5★</div>
+      <div class="stat-label">Rated</div>
+    </div>
+  </div>
+
+  <!-- GALLERY -->
   <section class="gallery-section">
     <div class="filter-tabs reveal">
       <button class="filter-btn active" data-filter="all">All Projects</button>
@@ -753,13 +795,11 @@
     </div>
 
     <div class="gallery-grid" id="galleryGrid">
-      <!-- Spa & Wellness -->
+
       <div class="gallery-item reveal" data-category="other">
         <div class="gallery-image-wrapper">
           <img src="images/01-spa-wellness-interior-design.jpg" alt="Spa Wellness" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-spa"></i> Spa & Wellness Interior</h3>
@@ -768,13 +808,10 @@
         </div>
       </div>
 
-      <!-- Luxury Bedroom Collage -->
       <div class="gallery-item reveal" data-category="bedroom">
         <div class="gallery-image-wrapper">
           <img src="images/02-luxury-bedroom-collage.jpg" alt="Luxury Bedroom" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-bed"></i> Luxury Bedroom Collection</h3>
@@ -783,13 +820,10 @@
         </div>
       </div>
 
-      <!-- Premium Bedroom Gallery -->
       <div class="gallery-item reveal" data-category="bedroom">
         <div class="gallery-image-wrapper">
           <img src="images/03-premium-bedroom-gallery.jpg" alt="Premium Bedroom" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-star"></i> Premium Bedroom Gallery</h3>
@@ -798,13 +832,10 @@
         </div>
       </div>
 
-      <!-- Modern Living Room -->
       <div class="gallery-item reveal" data-category="living">
         <div class="gallery-image-wrapper">
           <img src="images/04-modern-living-room-design.jpg" alt="Living Room" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-couch"></i> Modern Living Room</h3>
@@ -813,13 +844,10 @@
         </div>
       </div>
 
-      <!-- Master Bedroom -->
       <div class="gallery-item reveal" data-category="bedroom">
         <div class="gallery-image-wrapper">
           <img src="images/05-master-bedroom-interior.jpg" alt="Master Bedroom" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-crown"></i> Master Bedroom Interior</h3>
@@ -828,13 +856,10 @@
         </div>
       </div>
 
-      <!-- Dining Wall Panel -->
       <div class="gallery-item reveal" data-category="living">
         <div class="gallery-image-wrapper">
           <img src="images/06-dining-wall-panel-design.jpg" alt="Dining Panel" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-utensils"></i> Dining Wall Panel</h3>
@@ -843,13 +868,10 @@
         </div>
       </div>
 
-      <!-- TV Unit -->
       <div class="gallery-item reveal" data-category="living">
         <div class="gallery-image-wrapper">
           <img src="images/07-modern-tv-unit-design.jpg" alt="TV Unit" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-tv"></i> Modern TV Unit Design</h3>
@@ -858,13 +880,10 @@
         </div>
       </div>
 
-      <!-- Modular Kitchen Collage -->
       <div class="gallery-item reveal" data-category="kitchen">
         <div class="gallery-image-wrapper">
           <img src="images/08-modular-kitchen-design-collage.jpg" alt="Modular Kitchen" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-award"></i> Award-Winning Modular Kitchens</h3>
@@ -873,13 +892,10 @@
         </div>
       </div>
 
-      <!-- Kitchen Collection -->
       <div class="gallery-item reveal" data-category="kitchen">
         <div class="gallery-image-wrapper">
           <img src="images/09-kitchen-interior-collection.jpg" alt="Kitchen Collection" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-blender"></i> Kitchen Interior Collection</h3>
@@ -888,13 +904,10 @@
         </div>
       </div>
 
-      <!-- Wooden Kitchen -->
       <div class="gallery-item reveal" data-category="kitchen">
         <div class="gallery-image-wrapper">
           <img src="images/10-wooden-modular-kitchen.jpg" alt="Wooden Kitchen" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-tree"></i> Wooden Modular Kitchen</h3>
@@ -903,13 +916,10 @@
         </div>
       </div>
 
-      <!-- Dressing Room -->
       <div class="gallery-item reveal" data-category="bedroom">
         <div class="gallery-image-wrapper">
           <img src="images/11-luxury-dressing-room-design.jpg" alt="Dressing Room" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-gem"></i> Luxury Dressing Room</h3>
@@ -918,13 +928,10 @@
         </div>
       </div>
 
-      <!-- Stair Lobby -->
       <div class="gallery-item reveal" data-category="other">
         <div class="gallery-image-wrapper">
           <img src="images/12-modern-stair-lobby-design.jpg" alt="Stair Lobby" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-building"></i> Modern Stair Lobby</h3>
@@ -933,13 +940,10 @@
         </div>
       </div>
 
-      <!-- Bedroom Lighting -->
       <div class="gallery-item reveal" data-category="bedroom">
         <div class="gallery-image-wrapper">
           <img src="images/13-premium-bedroom-lightning.jpg" alt="Bedroom Lighting" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-lightbulb"></i> Premium Bedroom Lighting</h3>
@@ -948,13 +952,10 @@
         </div>
       </div>
 
-      <!-- TV Wall -->
       <div class="gallery-item reveal" data-category="living">
         <div class="gallery-image-wrapper">
           <img src="images/14-luxury-tv-wall-design.jpg" alt="TV Wall" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-tv"></i> Luxury TV Wall Design</h3>
@@ -963,13 +964,10 @@
         </div>
       </div>
 
-      <!-- White Golden Kitchen -->
       <div class="gallery-item reveal" data-category="kitchen">
         <div class="gallery-image-wrapper">
           <img src="images/15-white-golden-modular-kitchen.jpg" alt="White Golden Kitchen" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-star"></i> White & Golden Kitchen</h3>
@@ -978,13 +976,10 @@
         </div>
       </div>
 
-      <!-- Purple Kitchen -->
       <div class="gallery-item reveal" data-category="kitchen">
         <div class="gallery-image-wrapper">
           <img src="images/16-purple-modern-kitchen-design.jpg" alt="Purple Kitchen" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-palette"></i> Purple Modern Kitchen</h3>
@@ -993,13 +988,10 @@
         </div>
       </div>
 
-      <!-- Pooja Room -->
       <div class="gallery-item reveal" data-category="other">
         <div class="gallery-image-wrapper">
           <img src="images/17-pooja-room-interior-design.jpg" alt="Pooja Room" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-praying-hands"></i> Pooja Room Interior</h3>
@@ -1008,13 +1000,10 @@
         </div>
       </div>
 
-      <!-- Butterfly Bedroom -->
       <div class="gallery-item reveal" data-category="bedroom">
         <div class="gallery-image-wrapper">
           <img src="images/18-luxury-butterfly-bedroom.jpg" alt="Butterfly Bedroom" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-magic"></i> Luxury Butterfly Bedroom</h3>
@@ -1023,13 +1012,10 @@
         </div>
       </div>
 
-      <!-- False Ceiling -->
       <div class="gallery-item reveal" data-category="other">
         <div class="gallery-image-wrapper">
           <img src="images/19-false-ceiling-light-design.jpg" alt="False Ceiling" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-cloud"></i> False Ceiling & Light Design</h3>
@@ -1038,13 +1024,10 @@
         </div>
       </div>
 
-      <!-- Luxury Living Room -->
       <div class="gallery-item reveal" data-category="living">
         <div class="gallery-image-wrapper">
           <img src="images/20-modern-luxury-living-room.jpg" alt="Luxury Living Room" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-home"></i> Modern Luxury Living Room</h3>
@@ -1053,13 +1036,10 @@
         </div>
       </div>
 
-      <!-- Modern Bedroom -->
       <div class="gallery-item reveal" data-category="bedroom">
         <div class="gallery-image-wrapper">
           <img src="images/21-modern-bedroom-interior-design.jpg" alt="Modern Bedroom" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-bed"></i> Modern Bedroom Interior</h3>
@@ -1068,13 +1048,10 @@
         </div>
       </div>
 
-      <!-- TV Wall Unit -->
       <div class="gallery-item reveal" data-category="living">
         <div class="gallery-image-wrapper">
           <img src="images/22-luxury-tv-wall-unit-design.jpg" alt="TV Wall Unit" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-tv"></i> Luxury TV Wall Unit</h3>
@@ -1083,13 +1060,10 @@
         </div>
       </div>
 
-      <!-- Wall Panel Lighting -->
       <div class="gallery-item reveal" data-category="bedroom">
         <div class="gallery-image-wrapper">
           <img src="images/23-bedroom-wall-panel-lighting.jpg" alt="Wall Panel" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-lightbulb"></i> Bedroom Wall Panel Lighting</h3>
@@ -1098,13 +1072,10 @@
         </div>
       </div>
 
-      <!-- Gold Sponsor Award -->
       <div class="gallery-item reveal" data-category="awards">
         <div class="gallery-image-wrapper">
           <img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Award" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-trophy"></i> Gold Sponsor Award 2025</h3>
@@ -1113,13 +1084,10 @@
         </div>
       </div>
 
-      <!-- Architecture Awards -->
       <div class="gallery-item reveal" data-category="awards">
         <div class="gallery-image-wrapper">
           <img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-medal"></i> Architecture Awards Collage</h3>
@@ -1128,13 +1096,10 @@
         </div>
       </div>
 
-      <!-- ISO Certification -->
       <div class="gallery-item reveal" data-category="awards">
         <div class="gallery-image-wrapper">
           <img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO Certification" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-certificate"></i> ISO 9001:2015 Certification</h3>
@@ -1143,13 +1108,10 @@
         </div>
       </div>
 
-      <!-- Company Profile -->
       <div class="gallery-item reveal" data-category="awards">
         <div class="gallery-image-wrapper">
           <img src="images/27-company-profile-overview-akanksha.jpg" alt="Company Profile" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-chart-bar"></i> Company Profile Overview</h3>
@@ -1158,13 +1120,10 @@
         </div>
       </div>
 
-      <!-- Award Ceremony -->
       <div class="gallery-item reveal" data-category="awards">
         <div class="gallery-image-wrapper">
           <img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Award Ceremony" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-award"></i> Architecture Reconnect Award</h3>
@@ -1173,13 +1132,10 @@
         </div>
       </div>
 
-      <!-- WOW Award -->
       <div class="gallery-item reveal" data-category="awards">
         <div class="gallery-image-wrapper">
           <img src="images/29-architect-wow-award-2024.jpg" alt="WOW Award" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-star"></i> Architect WOW Award 2024</h3>
@@ -1188,13 +1144,10 @@
         </div>
       </div>
 
-      <!-- Summit Award -->
       <div class="gallery-item reveal" data-category="awards">
         <div class="gallery-image-wrapper">
           <img src="images/30-award-event-architecture-summit.jpg" alt="Award Event" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-trophy"></i> Architecture Summit Award</h3>
@@ -1203,13 +1156,10 @@
         </div>
       </div>
 
-      <!-- Award Recognition -->
       <div class="gallery-item reveal" data-category="awards">
         <div class="gallery-image-wrapper">
           <img src="images/31-award-recognition-collage-akanksha.jpg" alt="Award Recognition" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-medal"></i> Award Recognition Collage</h3>
@@ -1218,13 +1168,10 @@
         </div>
       </div>
 
-      <!-- Sliding Wardrobe -->
       <div class="gallery-item reveal" data-category="bedroom">
         <div class="gallery-image-wrapper">
           <img src="images/32-modern-sliding-wardrobe-design.jpg" alt="Sliding Wardrobe" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-door-open"></i> Modern Sliding Wardrobe</h3>
@@ -1233,13 +1180,10 @@
         </div>
       </div>
 
-      <!-- Luxury Living Collage -->
       <div class="gallery-item reveal" data-category="living">
         <div class="gallery-image-wrapper">
           <img src="images/33-luxury-living-room-collage.jpg" alt="Luxury Living Collage" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-images"></i> Luxury Living Room Collage</h3>
@@ -1248,13 +1192,10 @@
         </div>
       </div>
 
-      <!-- White Luxury Kitchen -->
       <div class="gallery-item reveal" data-category="kitchen">
         <div class="gallery-image-wrapper">
           <img src="images/34-white-luxury-modular-kitchen.jpg" alt="White Luxury Kitchen" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-heart"></i> White Luxury Modular Kitchen</h3>
@@ -1263,13 +1204,10 @@
         </div>
       </div>
 
-      <!-- Commercial Cafe -->
       <div class="gallery-item reveal" data-category="other">
         <div class="gallery-image-wrapper">
           <img src="images/35-commercial-cafe-interior-design.jpg" alt="Commercial Cafe" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-coffee"></i> Commercial Cafe Interior</h3>
@@ -1278,13 +1216,10 @@
         </div>
       </div>
 
-      <!-- Modern Pooja Room -->
       <div class="gallery-item reveal" data-category="other">
         <div class="gallery-image-wrapper">
           <img src="images/36-modern-pooja-room-design.jpg" alt="Modern Pooja Room" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-praying-hands"></i> Modern Pooja Room Design</h3>
@@ -1293,13 +1228,10 @@
         </div>
       </div>
 
-      <!-- Bar Unit -->
       <div class="gallery-item reveal" data-category="living">
         <div class="gallery-image-wrapper">
           <img src="images/37-modern-bar-unit-design.jpg" alt="Bar Unit" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-wine-glass"></i> Modern Bar Unit Design</h3>
@@ -1308,13 +1240,10 @@
         </div>
       </div>
 
-      <!-- Luxury Home -->
       <div class="gallery-item reveal" data-category="living">
         <div class="gallery-image-wrapper">
           <img src="images/38-luxury-home-interior-work.jpg" alt="Luxury Home" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-castle"></i> Luxury Home Interior Work</h3>
@@ -1323,13 +1252,10 @@
         </div>
       </div>
 
-      <!-- Arch Wall Panel -->
       <div class="gallery-item reveal" data-category="other">
         <div class="gallery-image-wrapper">
           <img src="images/39-modern-arch-wall-panel-design.jpg" alt="Arch Wall Panel" loading="lazy">
-          <div class="gallery-overlay">
-            <button class="view-btn"><i class="fas fa-expand"></i> View Project</button>
-          </div>
+          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
         </div>
         <div class="gallery-caption">
           <h3><i class="fas fa-paint-brush"></i> Modern Arch Wall Panel</h3>
@@ -1337,10 +1263,11 @@
           <span class="gallery-tag">Residential</span>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- Lightbox -->
+  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <div class="lightbox-content">
       <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
@@ -1360,7 +1287,7 @@
     </div>
   </footer>
 
-  <a class="whatsapp-float" href="https://wa.me/919140097029" target="_blank" data-tooltip="Chat on WhatsApp">
+  <a class="whatsapp-float" href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20am%20interested%20in%20your%20services.%20Can%20you%20help%20me%20with%20a%20consultation%3F" target="_blank" data-tooltip="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
   <a class="call-float" href="tel:+919140097029" data-tooltip="Call Us Now">
@@ -1370,91 +1297,72 @@
   <script>
     // Spark particles
     const sparkField = document.getElementById('particleField');
-    for(let i = 0; i < 40; i++) {
-      let sp = document.createElement('div');
+    for (let i = 0; i < 40; i++) {
+      const sp = document.createElement('div');
       sp.classList.add('spark');
-      let size = Math.random() * 4 + 2;
-      sp.style.width = size + 'px';
+      const size = Math.random() * 4 + 2;
+      sp.style.width  = size + 'px';
       sp.style.height = size + 'px';
-      sp.style.left = Math.random() * 100 + '%';
-      sp.style.top = Math.random() * 100 + '%';
-      sp.style.animationDuration = Math.random() * 10 + 8 + 's';
-      sp.style.animationDelay = Math.random() * 5 + 's';
+      sp.style.left   = Math.random() * 100 + '%';
+      sp.style.top    = Math.random() * 100 + '%';
+      sp.style.animationDuration = (Math.random() * 10 + 8) + 's';
+      sp.style.animationDelay   = (Math.random() * 5) + 's';
       sparkField.appendChild(sp);
     }
 
     // Header scroll effect
     const header = document.getElementById('mainHeader');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+      header.classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    // Filter functionality
-    const filterBtns = document.querySelectorAll('.filter-btn');
+    // Filter
+    const filterBtns  = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Update active button
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-
         const filter = btn.dataset.filter;
 
-        // Filter items with animation
         galleryItems.forEach((item, index) => {
-          const category = item.dataset.category;
-
-          if (filter === 'all' || category === filter) {
+          const match = filter === 'all' || item.dataset.category === filter;
+          if (match) {
             item.classList.remove('hidden');
-            // Staggered reveal animation
-            setTimeout(() => {
-              item.style.opacity = '1';
-              item.style.transform = 'translateY(0)';
-            }, index * 50);
+            setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'translateY(0)'; }, index * 40);
           } else {
             item.style.opacity = '0';
             item.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-              item.classList.add('hidden');
-            }, 300);
+            setTimeout(() => item.classList.add('hidden'), 300);
           }
         });
       });
     });
 
-    // Lightbox functionality
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
+    // Lightbox
+    const lightbox        = document.getElementById('lightbox');
+    const lightboxImg     = document.getElementById('lightboxImg');
     const lightboxCaption = document.getElementById('lightboxCaption');
-    const lightboxClose = document.getElementById('lightboxClose');
-    const lightboxPrev = document.getElementById('lightboxPrev');
-    const lightboxNext = document.getElementById('lightboxNext');
+    const lightboxClose   = document.getElementById('lightboxClose');
+    const lightboxPrev    = document.getElementById('lightboxPrev');
+    const lightboxNext    = document.getElementById('lightboxNext');
 
-    let currentImageIndex = 0;
-    const visibleItems = () => Array.from(galleryItems).filter(item => !item.classList.contains('hidden'));
+    let currentIndex = 0;
+    const visibleItems = () => Array.from(galleryItems).filter(i => !i.classList.contains('hidden'));
 
     galleryItems.forEach((item, index) => {
       const viewBtn = item.querySelector('.view-btn');
-      const img = item.querySelector('img');
+      const img     = item.querySelector('img');
       const caption = item.querySelector('h3').textContent;
 
-      viewBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        openLightbox(img.src, caption, index);
-      });
-
-      item.addEventListener('click', () => {
-        openLightbox(img.src, caption, index);
-      });
+      const open = () => openLightbox(img.src, caption, index);
+      viewBtn.addEventListener('click', e => { e.stopPropagation(); open(); });
+      item.addEventListener('click', open);
     });
 
     function openLightbox(src, caption, index) {
-      currentImageIndex = index;
+      currentIndex = index;
       lightboxImg.src = src;
       lightboxCaption.textContent = caption;
       lightbox.classList.add('active');
@@ -1466,87 +1374,45 @@
       document.body.style.overflow = '';
     }
 
-    function showPrev() {
+    function navigate(dir) {
       const items = visibleItems();
-      const currentItem = galleryItems[currentImageIndex];
-      let currentVisibleIndex = items.indexOf(currentItem);
-
-      if (currentVisibleIndex > 0) {
-        currentVisibleIndex--;
-      } else {
-        currentVisibleIndex = items.length - 1;
-      }
-
-      const newItem = items[currentVisibleIndex];
-      const img = newItem.querySelector('img');
-      const caption = newItem.querySelector('h3').textContent;
-      currentImageIndex = Array.from(galleryItems).indexOf(newItem);
-
+      const currentItem = galleryItems[currentIndex];
+      let vi = items.indexOf(currentItem);
+      vi = (vi + dir + items.length) % items.length;
+      const next = items[vi];
+      currentIndex = Array.from(galleryItems).indexOf(next);
       lightboxImg.style.opacity = '0';
       setTimeout(() => {
-        lightboxImg.src = img.src;
-        lightboxCaption.textContent = caption;
-        lightboxImg.style.opacity = '1';
-      }, 200);
-    }
-
-    function showNext() {
-      const items = visibleItems();
-      const currentItem = galleryItems[currentImageIndex];
-      let currentVisibleIndex = items.indexOf(currentItem);
-
-      if (currentVisibleIndex < items.length - 1) {
-        currentVisibleIndex++;
-      } else {
-        currentVisibleIndex = 0;
-      }
-
-      const newItem = items[currentVisibleIndex];
-      const img = newItem.querySelector('img');
-      const caption = newItem.querySelector('h3').textContent;
-      currentImageIndex = Array.from(galleryItems).indexOf(newItem);
-
-      lightboxImg.style.opacity = '0';
-      setTimeout(() => {
-        lightboxImg.src = img.src;
-        lightboxCaption.textContent = caption;
+        lightboxImg.src = next.querySelector('img').src;
+        lightboxCaption.textContent = next.querySelector('h3').textContent;
         lightboxImg.style.opacity = '1';
       }, 200);
     }
 
     lightboxClose.addEventListener('click', closeLightbox);
-    lightboxPrev.addEventListener('click', (e) => { e.stopPropagation(); showPrev(); });
-    lightboxNext.addEventListener('click', (e) => { e.stopPropagation(); showNext(); });
+    lightboxPrev.addEventListener('click', e => { e.stopPropagation(); navigate(-1); });
+    lightboxNext.addEventListener('click', e => { e.stopPropagation(); navigate(1);  });
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       if (!lightbox.classList.contains('active')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') showPrev();
-      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'Escape')      closeLightbox();
+      if (e.key === 'ArrowLeft')   navigate(-1);
+      if (e.key === 'ArrowRight')  navigate(1);
     });
 
-    // Scroll reveal animation
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // Parallax effect for shapes
+    // Parallax shapes
     window.addEventListener('scroll', () => {
       const scrolled = window.pageYOffset;
-      const shapes = document.querySelectorAll('.shape');
-      shapes.forEach((shape, index) => {
-        const speed = 0.1 + (index * 0.05);
+      document.querySelectorAll('.shape').forEach((shape, i) => {
+        const speed = 0.1 + i * 0.05;
         shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.02}deg)`;
       });
     });
