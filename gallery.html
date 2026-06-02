@@ -3,1271 +3,527 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>AKANSHA-INTERIOR DECORATION HUB | Project Gallery | Interior Design Portfolio</title>
-  <meta name="description" content="Complete project gallery of AKANSHA-INTERIOR DECORATION HUB - luxury interiors, modular kitchens, bedroom designs, award ceremonies, and more.">
+  <title>AKANSHA-INTERIOR DECORATION HUB | Design Gallery</title>
+  <base href="https://akankshainterior.in/">
+  <meta name="description" content="Design inspiration gallery - luxury interiors, modular kitchens, bedrooms, living rooms by AKANSHA-INTERIOR DECORATION HUB Lucknow.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --primary: #2E7D32;
-      --primary-dark: #1b5e20;
-      --primary-light: #4CAF50;
-      --accent: #FFD700;
-      --dark: #0a0a0a;
-      --dark-card: #1a1a1a;
-      --gray-50: #FAFAFA;
-      --gray-100: #F5F5F5;
-      --gray-200: #EEEEEE;
-      --gray-300: #E0E0E0;
-      --gray-400: #BDBDBD;
-      --gray-500: #9E9E9E;
-      --gray-600: #757575;
-      --gray-700: #616161;
-      --gray-800: #424242;
-      --gray-900: #212121;
-      --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-      --shadow-glow: 0 0 40px rgba(46,125,50,0.15);
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--gray-50);
-      overflow-x: hidden;
-      color: var(--gray-900);
-      line-height: 1.6;
-    }
-
-    /* ===== ANIMATED BACKGROUND ===== */
-    .radiant-bg {
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 20%, rgba(46,125,50,0.03) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(255,215,0,0.02) 0%, transparent 50%),
-        linear-gradient(180deg, var(--gray-50) 0%, var(--gray-100) 100%);
-      z-index: -3;
-    }
-
-    .glow-motion {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0; left: 0;
-      background:
-        radial-gradient(ellipse at 30% 20%, rgba(46,125,50,0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 60%, rgba(46,125,50,0.04) 0%, transparent 50%);
-      animation: slowDrift 20s ease-in-out infinite alternate;
-      z-index: -2;
-      pointer-events: none;
-    }
-
-    @keyframes slowDrift {
-      0%   { transform: translate(0,0) scale(1); opacity: 0.5; }
-      50%  { transform: translate(2%,-3%) scale(1.1); opacity: 0.8; }
-      100% { transform: translate(-1%,2%) scale(1.05); opacity: 0.6; }
-    }
-
-    .floating-shapes {
-      position: fixed;
-      width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .shape { position: absolute; opacity: 0.03; animation: floatShape 25s ease-in-out infinite; }
-    .shape-1 { width:300px; height:300px; border:2px solid var(--primary); border-radius:50%; top:10%; left:-5%; animation-delay:0s; }
-    .shape-2 { width:200px; height:200px; border:2px solid var(--primary); transform:rotate(45deg); top:60%; right:-3%; animation-delay:-8s; }
-    .shape-3 { width:150px; height:150px; border:2px solid var(--accent); border-radius:30% 70% 70% 30%/30% 30% 70% 70%; top:40%; left:60%; animation-delay:-15s; }
-
-    @keyframes floatShape {
-      0%,100% { transform:translateY(0) rotate(0deg); }
-      33%      { transform:translateY(-30px) rotate(5deg); }
-      66%      { transform:translateY(20px) rotate(-5deg); }
-    }
-
-    .spark-particles { position:fixed; width:100%; height:100%; pointer-events:none; z-index:-1; }
-    .spark {
-      position: absolute;
-      background: radial-gradient(circle, rgba(46,125,50,0.3), transparent);
-      border-radius: 50%; opacity: 0;
-      animation: floatSpark 12s infinite ease-in-out;
-    }
-    @keyframes floatSpark {
-      0%   { transform:translateY(0) scale(0); opacity:0; }
-      20%  { opacity:0.4; }
-      80%  { opacity:0.2; }
-      100% { transform:translateY(-100px) scale(1); opacity:0; }
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(20px) saturate(180%);
-      background: rgba(255,255,255,0.85) !important;
-      border-bottom: 1px solid rgba(46,125,50,0.15);
-      padding: 14px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-      flex-wrap: wrap;
-      transition: all 0.3s ease;
-    }
-
-    header.scrolled {
-      padding: 10px 5%;
-      box-shadow: var(--shadow-md);
-      background: rgba(255,255,255,0.95) !important;
-    }
-
-    .logo h1 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--gray-900);
-      letter-spacing: -0.5px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .logo h1 i { color: var(--primary); font-size: 1.6rem; }
-
-    .logo p {
-      font-size: 0.65rem;
-      font-weight: 700;
-      color: var(--gray-600);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-
-    nav { display:flex; align-items:center; gap:8px; }
-
-    nav a {
-      color: var(--gray-700);
-      padding: 8px 16px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      border-radius: 30px;
-      position: relative;
-    }
-
-    nav a:hover { color:var(--primary); background:rgba(46,125,50,0.08); }
-
-    nav a::after {
-      content: '';
-      position: absolute;
-      bottom: 4px; left: 50%;
-      transform: translateX(-50%);
-      width: 0; height: 2px;
-      background: var(--primary);
-      border-radius: 2px;
-      transition: width 0.3s ease;
-    }
-
-    nav a:hover::after { width: 60%; }
-
-    nav a.active {
-      color: var(--primary);
-      background: rgba(46,125,50,0.1);
-    }
-
-    nav a.active::after { width: 60%; }
-
-    /* ===== HERO ===== */
-    .page-hero {
-      min-height: 56vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 6% 50px;
-      position: relative;
-    }
-
-    .page-hero-content {
-      max-width: 860px;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity:0; transform:translateY(40px); }
-      to   { opacity:1; transform:translateY(0); }
-    }
-
-    /* Badge — matches index hero-badge */
-    .hero-badge {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 28px;
-      border-radius: 60px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: #fff;
-      box-shadow: 0 4px 15px rgba(46,125,50,0.3);
-      margin-bottom: 28px;
-      letter-spacing: 0.5px;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .page-hero h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 800;
-      color: var(--gray-900);
-      line-height: 1.1;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
-    }
-
-    .page-hero h2 span {
-      color: var(--primary);
-      position: relative;
-      display: inline-block;
-    }
-
-    .page-hero h2 span::after {
-      content: '';
-      position: absolute;
-      bottom: 5px; left: 0;
-      width: 100%; height: 12px;
-      background: rgba(46,125,50,0.15);
-      border-radius: 4px;
-      z-index: -1;
-    }
-
-    .page-hero p {
-      font-size: 1.1rem;
-      color: var(--gray-500);
-      max-width: 620px;
-      margin: 0 auto 32px;
-      line-height: 1.7;
-    }
-
-    /* Award pills — matches index */
-    .hero-awards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 36px;
-    }
-
-    .award-pill {
-      background: white;
-      padding: 8px 20px;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--gray-700);
-      box-shadow: var(--shadow-sm);
-      border: 1px solid var(--gray-200);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.3s ease;
-    }
-
-    .award-pill:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--primary-light);
-    }
-
-    .award-pill i { color: var(--accent); }
-
-    /* Btn group */
-    .btn-group { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      padding: 14px 32px;
-      border-radius: 60px;
-      font-weight: 700;
-      color: white;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 8px 25px rgba(46,125,50,0.35);
-      border: none;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-primary::before {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s ease;
-    }
-
-    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 35px rgba(46,125,50,0.45); }
-    .btn-primary:hover::before { left:100%; }
-
-    .btn-outline {
-      background: white;
-      border: 2px solid var(--gray-300);
-      padding: 14px 32px;
-      border-radius: 60px;
-      font-weight: 700;
-      color: var(--gray-800);
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: all 0.3s ease;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .btn-outline:hover { border-color:var(--primary); color:var(--primary); transform:translateY(-3px); box-shadow:var(--shadow-md); }
-
-    /* ===== STATS BAR ===== */
-    .stats-bar {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 0;
-      max-width: 900px;
-      margin: 60px auto 0;
-      background: white;
-      border-radius: 24px;
-      border: 1px solid var(--gray-200);
-      box-shadow: var(--shadow-md);
-      overflow: hidden;
-    }
-
-    .stat-item {
-      flex: 1;
-      min-width: 160px;
-      padding: 28px 20px;
-      text-align: center;
-      position: relative;
-      transition: background 0.3s ease;
-    }
-
-    .stat-item:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: 0; top: 20%; height: 60%;
-      width: 1px;
-      background: var(--gray-200);
-    }
-
-    .stat-item:hover { background: rgba(46,125,50,0.03); }
-
-    .stat-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 800;
-      color: var(--primary);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .stat-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--gray-500);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== FILTER TABS ===== */
-    .gallery-section { padding: 60px 6% 100px; }
-
-    .filter-tabs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 50px;
-      padding: 0 20px;
-    }
-
-    .filter-btn {
-      padding: 10px 24px;
-      border-radius: 30px;
-      border: 2px solid var(--gray-200);
-      background: white;
-      color: var(--gray-600);
-      font-weight: 600;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .filter-btn:hover {
-      border-color: var(--primary-light);
-      color: var(--primary);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .filter-btn.active {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: white;
-      border-color: var(--primary);
-      box-shadow: 0 4px 15px rgba(46,125,50,0.3);
-    }
-
-    /* ===== GALLERY GRID ===== */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .gallery-item {
-      background: white;
-      border-radius: 24px;
-      overflow: hidden;
-      border: 1px solid var(--gray-200);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative;
-      box-shadow: var(--shadow-sm);
-      cursor: pointer;
-    }
-
-    .gallery-item:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: var(--shadow-xl), var(--shadow-glow);
-      border-color: transparent;
-    }
-
-    .gallery-item.hidden { display: none; }
-
-    .gallery-image-wrapper { position:relative; overflow:hidden; height:280px; }
-
-    .gallery-item img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s ease;
-    }
-
-    .gallery-item:hover img { transform: scale(1.1); }
-
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 20px;
-    }
-
-    .gallery-item:hover .gallery-overlay { opacity: 1; }
-
-    .view-btn {
-      background: white;
-      color: var(--gray-900);
-      padding: 10px 24px;
-      border-radius: 30px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      transform: translateY(20px);
-      transition: all 0.4s ease;
-      border: none;
-      cursor: pointer;
-    }
-
-    .gallery-item:hover .view-btn { transform: translateY(0); }
-    .view-btn:hover { background: var(--primary); color: white; }
-
-    .gallery-caption { padding: 20px; text-align: left; background: white; }
-
-    .gallery-caption h3 {
-      color: var(--gray-900);
-      font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .gallery-caption p { color: var(--gray-500); font-size: 0.85rem; font-weight: 500; }
-
-    .gallery-tag {
-      display: inline-block;
-      background: rgba(46,125,50,0.1);
-      color: var(--primary);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 700;
-      margin-top: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* ===== LIGHTBOX ===== */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.95);
-      z-index: 1000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-
-    .lightbox.active { display: flex; opacity: 1; }
-
-    .lightbox-content {
-      position: relative;
-      max-width: 90vw;
-      max-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .lightbox-img {
-      max-width: 100%;
-      max-height: 80vh;
-      object-fit: contain;
-      border-radius: 16px;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-      transition: opacity 0.2s ease;
-    }
-
-    .lightbox-caption { color:white; margin-top:20px; font-size:1.2rem; font-weight:600; text-align:center; }
-
-    .lightbox-close {
-      position: absolute;
-      top: -50px; right: 0;
-      background: rgba(255,255,255,0.1);
-      border: none; color: white;
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      font-size: 1.2rem; cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    .lightbox-close:hover { background:rgba(255,255,255,0.2); transform:rotate(90deg); }
-
-    .lightbox-nav {
-      position: absolute;
-      top: 50%; transform: translateY(-50%);
-      background: rgba(255,255,255,0.1);
-      border: none; color: white;
-      width: 50px; height: 50px;
-      border-radius: 50%;
-      font-size: 1.2rem; cursor: pointer;
-      transition: all 0.3s ease;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    .lightbox-nav:hover { background:var(--primary); transform:translateY(-50%) scale(1.1); }
-    .lightbox-prev { left: -80px; }
-    .lightbox-next { right: -80px; }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: linear-gradient(135deg, var(--dark), #0f0f0f);
-      text-align: center;
-      padding: 60px 20px 40px;
-      border-top: 1px solid rgba(46,125,50,0.2);
-      color: var(--gray-500);
-      position: relative;
-      overflow: hidden;
-    }
-
-    footer::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 50%;
-      transform: translateX(-50%);
-      width: 100px; height: 3px;
-      background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    }
-
-    footer p { margin:8px 0; font-size:0.9rem; }
-
-    footer .footer-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem; font-weight: 700;
-      color: white; margin-bottom: 8px;
-    }
-
-    footer .footer-awards {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(255,215,0,0.1);
-      padding: 8px 20px;
-      border-radius: 30px;
-      margin-top: 16px;
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    /* ===== FLOATING BUTTONS ===== */
-    .whatsapp-float, .call-float {
-      position: fixed;
-      bottom: 28px;
-      width: 56px; height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 26px;
-      color: white;
-      z-index: 99;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      border: 2px solid rgba(255,255,255,0.2);
-    }
-
-    .whatsapp-float { right:28px; background:linear-gradient(135deg,#25D366,#128C7E); }
-    .call-float    { right:100px; background:linear-gradient(135deg,#1E88E5,#1565C0); }
-
-    .whatsapp-float:hover, .call-float:hover {
-      transform: scale(1.15) rotate(-5deg);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    }
-
-    .whatsapp-float::after, .call-float::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      right: 70px;
-      background: var(--gray-900);
-      color: white;
-      padding: 6px 14px;
-      border-radius: 8px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      white-space: nowrap;
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease;
-      transform: translateX(10px);
-    }
-
-    .whatsapp-float:hover::after, .call-float:hover::after { opacity:1; transform:translateX(0); }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      header { padding:12px 4%; }
-      nav { width:100%; justify-content:center; margin-top:12px; gap:4px; }
-      nav a { padding:6px 12px; font-size:0.8rem; }
-
-      .page-hero { min-height:auto; padding:60px 4% 30px; }
-      .stats-bar { margin:40px 4% 0; border-radius:18px; }
-      .stat-item { min-width:120px; padding:20px 14px; }
-      .stat-number { font-size:1.7rem; }
-
-      .gallery-section { padding:40px 4% 60px; }
-      .gallery-grid { grid-template-columns:1fr; gap:20px; }
-      .gallery-image-wrapper { height:240px; }
-
-      .filter-tabs { gap:8px; }
-      .filter-btn { padding:8px 16px; font-size:0.8rem; }
-
-      .lightbox-prev { left:10px; }
-      .lightbox-next { right:10px; }
-
-      .whatsapp-float::after, .call-float::after { display:none; }
-    }
-
-    /* Scroll animations */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    .reveal.active { opacity:1; transform:translateY(0); }
-
-    ::selection { background:rgba(46,125,50,0.2); color:var(--primary-dark); }
-    html { scroll-behavior:smooth; }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{--primary:#2E7D32;--primary-dark:#1b5e20;--primary-light:#4CAF50;--accent:#FFD700;--dark:#0a0a0a;--gray-50:#FAFAFA;--gray-100:#F5F5F5;--gray-200:#EEEEEE;--gray-300:#E0E0E0;--gray-500:#9E9E9E;--gray-600:#757575;--gray-700:#616161;--gray-800:#424242;--gray-900:#212121;--shadow-sm:0 1px 2px 0 rgba(0,0,0,0.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,0.1);--shadow-xl:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);--shadow-glow:0 0 40px rgba(46,125,50,0.15);--shadow-gold:0 0 40px rgba(255,215,0,0.15);}
+    body{font-family:'Inter',sans-serif;background:var(--gray-50);overflow-x:hidden;color:var(--gray-900);line-height:1.6;}
+    .radiant-bg{position:fixed;inset:0;background:radial-gradient(ellipse at 20% 20%,rgba(46,125,50,0.03) 0%,transparent 50%),linear-gradient(180deg,var(--gray-50) 0%,var(--gray-100) 100%);z-index:-3;}
+    .glow-motion{position:fixed;width:100%;height:100%;top:0;left:0;background:radial-gradient(ellipse at 30% 20%,rgba(46,125,50,0.06) 0%,transparent 50%);animation:slowDrift 20s ease-in-out infinite alternate;z-index:-2;pointer-events:none;}
+    @keyframes slowDrift{0%{transform:translate(0,0) scale(1);opacity:0.5;}100%{transform:translate(-1%,2%) scale(1.05);opacity:0.6;}}
+    .spark-particles{position:fixed;width:100%;height:100%;pointer-events:none;z-index:-1;}
+    .spark{position:absolute;background:radial-gradient(circle,rgba(46,125,50,0.3),transparent);border-radius:50%;opacity:0;animation:floatSpark 12s infinite ease-in-out;}
+    @keyframes floatSpark{0%{transform:translateY(0) scale(0);opacity:0;}20%{opacity:0.4;}80%{opacity:0.2;}100%{transform:translateY(-100px) scale(1);opacity:0;}}
+    header{position:sticky;top:0;backdrop-filter:blur(20px) saturate(180%);background:rgba(255,255,255,0.85)!important;border-bottom:1px solid rgba(46,125,50,0.15);padding:14px 5%;display:flex;justify-content:space-between;align-items:center;z-index:100;flex-wrap:wrap;transition:all 0.3s ease;}
+    header.scrolled{padding:10px 5%;box-shadow:var(--shadow-md);background:rgba(255,255,255,0.95)!important;}
+    .logo h1{font-size:1.8rem;font-weight:800;color:var(--gray-900);letter-spacing:-0.5px;display:flex;align-items:center;gap:10px;}
+    .logo h1 i{color:var(--primary);font-size:1.6rem;}
+    .logo p{font-size:0.65rem;font-weight:700;color:var(--gray-600);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+    nav{display:flex;align-items:center;gap:8px;}
+    nav a{color:var(--gray-700);padding:8px 16px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.3s ease;border-radius:30px;position:relative;}
+    nav a:hover,nav a.active{color:var(--primary);background:rgba(46,125,50,0.08);}
+    nav a::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:0;height:2px;background:var(--primary);border-radius:2px;transition:width 0.3s ease;}
+    nav a:hover::after,nav a.active::after{width:60%;}
+    .page-hero{min-height:auto;display:flex;align-items:center;justify-content:center;text-align:center;padding:36px 6% 26px;}
+    .page-hero-content{max-width:860px;animation:fadeInUp 1s ease-out;}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+    .hero-badge{background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:inline-flex;align-items:center;gap:8px;padding:10px 28px;border-radius:60px;font-weight:700;font-size:0.85rem;color:#fff;box-shadow:0 4px 15px rgba(46,125,50,0.3);margin-bottom:28px;letter-spacing:0.5px;}
+    .page-hero h2{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;color:var(--gray-900);line-height:1.1;margin-bottom:20px;letter-spacing:-1px;}
+    .page-hero h2 span{color:var(--primary);position:relative;display:inline-block;}
+    .page-hero h2 span::after{content:'';position:absolute;bottom:5px;left:0;width:100%;height:12px;background:rgba(46,125,50,0.15);border-radius:4px;z-index:-1;}
+    .page-hero p{font-size:1.1rem;color:var(--gray-500);max-width:620px;margin:0 auto 32px;line-height:1.7;}
+    .hero-awards{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-bottom:36px;}
+    .award-pill{background:white;padding:8px 20px;border-radius:40px;font-size:0.85rem;font-weight:600;color:var(--gray-700);box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);display:flex;align-items:center;gap:8px;}
+    .award-pill i{color:var(--accent);}
+    .btn-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    .btn-primary{background:linear-gradient(135deg,var(--primary-dark),var(--primary));padding:14px 32px;border-radius:60px;font-weight:700;color:white;font-size:0.95rem;transition:all 0.3s ease;box-shadow:0 8px 25px rgba(46,125,50,0.35);border:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;text-decoration:none;}
+    .btn-primary:hover{transform:translateY(-3px);}
+    .btn-outline{background:white;border:2px solid var(--gray-300);padding:14px 32px;border-radius:60px;font-weight:700;color:var(--gray-800);text-decoration:none;display:inline-flex;align-items:center;gap:10px;transition:all 0.3s ease;box-shadow:var(--shadow-sm);}
+    .btn-outline:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-3px);}
+    .stats-bar{display:flex;justify-content:center;flex-wrap:wrap;max-width:900px;margin:24px auto 0;background:white;border-radius:24px;border:1px solid var(--gray-200);box-shadow:var(--shadow-md);overflow:hidden;}
+    .stat-item{flex:1;min-width:160px;padding:28px 20px;text-align:center;position:relative;}
+    .stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:var(--gray-200);}
+    .stat-number{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:800;color:var(--primary);line-height:1;margin-bottom:6px;}
+    .stat-label{font-size:0.8rem;font-weight:600;color:var(--gray-500);text-transform:uppercase;letter-spacing:0.5px;}
+    .notice-banner{max-width:900px;margin:24px auto 0;background:linear-gradient(135deg,rgba(46,125,50,0.08),rgba(46,125,50,0.04));border:1px solid rgba(46,125,50,0.2);border-radius:16px;padding:16px 24px;display:flex;align-items:center;gap:16px;}
+    .notice-banner i{color:var(--primary);font-size:1.4rem;flex-shrink:0;}
+    .notice-banner p{color:var(--gray-700);font-size:0.92rem;}
+    .notice-banner a{color:var(--primary);font-weight:700;text-decoration:none;}
+    .section-block{padding:34px 6% 20px;}
+    .section-head{display:flex;align-items:center;gap:20px;margin-bottom:40px;}
+    .section-head-icon{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;flex-shrink:0;}
+    .section-head-icon.green{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:white;box-shadow:0 8px 20px rgba(46,125,50,0.3);}
+    .section-head-icon.gold{background:linear-gradient(135deg,#b8860b,#FFD700);color:white;box-shadow:0 8px 20px rgba(255,215,0,0.35);}
+    .section-head-text h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--gray-900);margin-bottom:4px;}
+    .section-head-text p{color:var(--gray-500);font-size:0.9rem;}
+    .section-divider{height:3px;max-width:80px;border-radius:3px;margin-bottom:40px;}
+    .section-divider.green{background:linear-gradient(90deg,var(--primary-dark),var(--primary-light));}
+    .section-divider.gold{background:linear-gradient(90deg,#b8860b,#FFD700);}
+    .offer-banner{background:linear-gradient(135deg,#ff6b35,#f7931e);border-radius:20px;padding:24px 32px;margin-bottom:40px;display:flex;align-items:center;gap:20px;box-shadow:0 8px 30px rgba(255,107,53,0.3);}
+    .offer-banner img{width:80px;height:80px;object-fit:cover;border-radius:12px;flex-shrink:0;}
+    .offer-banner-text h3{color:white;font-size:1.3rem;font-weight:800;margin-bottom:6px;}
+    .offer-banner-text p{color:rgba(255,255,255,0.85);font-size:0.9rem;}
+    .offer-btn{background:white;color:#ff6b35;padding:10px 24px;border-radius:30px;font-weight:700;font-size:0.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;margin-top:12px;transition:all 0.3s ease;}
+    .offer-btn:hover{background:#ff6b35;color:white;transform:translateY(-2px);}
+    .filter-tabs{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;}
+    .filter-btn{padding:10px 24px;border-radius:30px;border:2px solid var(--gray-200);background:white;color:var(--gray-600);font-weight:600;font-size:0.9rem;cursor:pointer;transition:all 0.3s ease;font-family:'Inter',sans-serif;}
+    .filter-btn:hover{border-color:var(--primary-light);color:var(--primary);transform:translateY(-2px);}
+    .filter-btn.active{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:white;border-color:var(--primary);box-shadow:0 4px 15px rgba(46,125,50,0.3);}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;max-width:1400px;}
+    .gallery-item{background:white;border-radius:20px;overflow:hidden;border:1px solid var(--gray-200);transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);box-shadow:var(--shadow-sm);cursor:pointer;}
+    .gallery-item:hover{transform:translateY(-8px) scale(1.02);box-shadow:var(--shadow-xl),var(--shadow-glow);border-color:transparent;}
+    .gallery-item.hidden{display:none;}
+    .img-wrap{position:relative;overflow:hidden;height:260px;background:linear-gradient(135deg,#2E7D32,#0a0a0a);}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;}
+    .gallery-item:hover img{transform:scale(1.1);}
+    .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 60%);opacity:0;transition:opacity 0.4s ease;display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;}
+    .gallery-item:hover .overlay{opacity:1;}
+    .view-btn{background:white;color:var(--gray-900);padding:8px 20px;border-radius:30px;font-weight:700;font-size:0.82rem;display:flex;align-items:center;gap:6px;transform:translateY(15px);transition:all 0.4s ease;border:none;cursor:pointer;}
+    .gallery-item:hover .view-btn{transform:translateY(0);}
+    .view-btn:hover{background:var(--primary);color:white;}
+    .item-tag{padding:8px 14px 10px;background:white;}
+    .gallery-tag{display:inline-block;background:rgba(46,125,50,0.1);color:var(--primary);padding:3px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;}
+    .awards-section{background:linear-gradient(135deg,#0f0f0f,#1a1500);border-radius:32px;padding:60px;margin:0 6% 80px;position:relative;overflow:hidden;border:1px solid rgba(255,215,0,0.1);}
+    .awards-section::before{content:'';position:absolute;top:-40%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,215,0,0.08),transparent 70%);pointer-events:none;}
+    .awards-section .section-head-text h2{color:white;}
+    .awards-section .section-head-text p{color:rgba(255,255,255,0.5);}
+    .awards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;}
+    .award-card{border-radius:18px;overflow:hidden;cursor:pointer;border:1px solid rgba(255,215,0,0.15);transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);background:rgba(255,255,255,0.04);}
+    .award-card:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 20px 40px rgba(0,0,0,0.4),var(--shadow-gold);border-color:rgba(255,215,0,0.4);}
+    .award-card .img-wrap{height:240px;}
+    .award-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;}
+    .award-card:hover img{transform:scale(1.08);}
+    .award-card .overlay{background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,transparent 60%);}
+    .award-card:hover .overlay{opacity:1;}
+    .award-card .view-btn{background:var(--accent);color:#000;}
+    .award-card .view-btn:hover{background:white;}
+    .award-tag-wrap{padding:10px 14px;background:rgba(255,255,255,0.05);}
+    .award-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,215,0,0.15);color:var(--accent);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;border:1px solid rgba(255,215,0,0.2);}
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.96);z-index:1000;display:none;align-items:center;justify-content:center;}
+    .lightbox.active{display:flex;}
+    .lightbox-content{position:relative;max-width:92vw;max-height:92vh;display:flex;flex-direction:column;align-items:center;}
+    .lightbox-img{max-width:100%;max-height:82vh;object-fit:contain;border-radius:16px;box-shadow:0 25px 50px rgba(0,0,0,0.5);transition:opacity 0.2s ease;}
+    .lightbox-caption{color:white;margin-top:14px;font-size:1rem;font-weight:600;text-align:center;opacity:0.9;}
+    .lightbox-counter{color:rgba(255,255,255,0.4);margin-top:4px;font-size:0.82rem;text-align:center;}
+    .lightbox-close{position:absolute;top:-48px;right:0;background:rgba(255,255,255,0.1);border:none;color:white;width:40px;height:40px;border-radius:50%;font-size:1.1rem;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;}
+    .lightbox-close:hover{background:rgba(255,255,255,0.25);transform:rotate(90deg);}
+    .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:white;width:48px;height:48px;border-radius:50%;font-size:1.1rem;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;}
+    .lightbox-nav:hover{background:var(--primary);transform:translateY(-50%) scale(1.1);}
+    .lightbox-prev{left:-70px;}.lightbox-next{right:-70px;}
+    footer{background:linear-gradient(135deg,var(--dark),#0f0f0f);text-align:center;padding:60px 20px 40px;border-top:1px solid rgba(46,125,50,0.2);color:var(--gray-500);position:relative;overflow:hidden;}
+    footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:100px;height:3px;background:linear-gradient(90deg,transparent,var(--primary),transparent);}
+    footer p{margin:8px 0;font-size:0.9rem;}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:white;margin-bottom:8px;}
+    .footer-awards{display:inline-flex;align-items:center;gap:8px;background:rgba(255,215,0,0.1);padding:8px 20px;border-radius:30px;margin-top:16px;color:var(--accent);font-weight:600;font-size:0.85rem;}
+    .whatsapp-float,.call-float{position:fixed;bottom:28px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:white;z-index:99;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:all 0.3s cubic-bezier(0.175,0.885,0.32,1.275);border:2px solid rgba(255,255,255,0.2);}
+    .whatsapp-float{right:28px;background:linear-gradient(135deg,#25D366,#128C7E);}
+    .call-float{right:100px;background:linear-gradient(135deg,#1E88E5,#1565C0);}
+    .whatsapp-float:hover,.call-float:hover{transform:scale(1.15) rotate(-5deg);}
+    .whatsapp-float::after,.call-float::after{content:attr(data-tooltip);position:absolute;right:70px;background:var(--gray-900);color:white;padding:6px 14px;border-radius:8px;font-size:0.8rem;font-weight:600;white-space:nowrap;opacity:0;pointer-events:none;transition:all 0.3s ease;transform:translateX(10px);}
+    .whatsapp-float:hover::after,.call-float:hover::after{opacity:1;transform:translateX(0);}
+    @media(max-width:768px){header{padding:12px 4%;}nav{width:100%;justify-content:center;margin-top:12px;gap:4px;}nav a{padding:6px 12px;font-size:0.8rem;}.page-hero{padding:60px 4% 30px;}.stats-bar{margin:40px 4% 0;}.notice-banner{margin:24px 4% 0;flex-direction:column;gap:10px;}.section-block{padding:40px 4% 20px;}.gallery-grid{grid-template-columns:1fr 1fr;gap:14px;}.img-wrap{height:180px;}.awards-section{padding:36px 20px;margin:0 4% 60px;border-radius:20px;}.awards-grid{grid-template-columns:1fr 1fr;gap:14px;}.award-card .img-wrap{height:180px;}.filter-btn{padding:8px 16px;font-size:0.8rem;}.lightbox-prev{left:8px;}.lightbox-next{right:8px;}.whatsapp-float::after,.call-float::after{display:none;}.offer-banner{flex-direction:column;text-align:center;}}
+    @media(max-width:480px){.gallery-grid,.awards-grid{grid-template-columns:1fr;}}
+    .reveal{opacity:1!important;transform:none!important;transition:all 0.8s cubic-bezier(0.175,0.885,0.32,1.275);}
+    .reveal.active{opacity:1;transform:translateY(0);}
+    .item-cap{padding:8px 14px 10px;background:white;}.item-cap span{font-size:0.78rem;font-weight:600;color:#616161;display:block;}
+    html{scroll-behavior:smooth;}::selection{background:rgba(46,125,50,0.2);color:var(--primary-dark);}
   </style>
 </head>
 <body>
   <div class="radiant-bg"></div>
   <div class="glow-motion"></div>
-  <div class="floating-shapes">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-  </div>
   <div class="spark-particles" id="particleField"></div>
 
-  <!-- HEADER — matches index exactly -->
   <header id="mainHeader">
     <div class="logo">
       <h1><i class="fas fa-feather-alt"></i> AKANSHA-INTERIOR DECORATION HUB</h1>
-      <p>ISO 9001:2015 | Best Architect • Interior • Vastu • Turnkey</p>
+      <p>ISO 9001:2015 | Best Architect &bull; Interior &bull; Vastu &bull; Turnkey</p>
     </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
       <a href="gallery.html" class="active">Gallery</a>
       <a href="portfolio.html">Portfolio</a>
+      <a href="index.html#videos">Videos</a>
       <a href="index.html#reviews">Reviews</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO — matches index hero style -->
   <section class="page-hero">
     <div class="page-hero-content">
-      <div class="hero-badge">
-        <i class="fas fa-camera"></i> Complete Project Gallery · 39 Premium Projects
-      </div>
-      <h2>Our Complete <span>Design Gallery</span></h2>
-      <p>Explore our award-winning interior design projects — from luxury bedrooms and modular kitchens to commercial spaces and celebrated architecture.</p>
-
+      <div class="hero-badge"><i class="fas fa-palette"></i> Design Inspiration Gallery</div>
+      <h2>Design <span>Inspiration Gallery</span></h2>
+      <p>Bedrooms se kitchens tak, living rooms se award ceremonies tak &mdash; hamare kaam ki jhalak.</p>
       <div class="hero-awards">
         <div class="award-pill"><i class="fas fa-trophy"></i> Best Modular Kitchen 2024</div>
         <div class="award-pill"><i class="fas fa-medal"></i> Best Modern Architecture 2025</div>
         <div class="award-pill"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified</div>
       </div>
-
       <div class="btn-group">
         <a href="index.html#contact" class="btn-primary"><i class="fas fa-calendar-alt"></i> Free Consultation</a>
-        <a href="index.html" class="btn-outline"><i class="fas fa-home"></i> Back to Home</a>
+        <a href="portfolio.html" class="btn-outline"><i class="fas fa-briefcase"></i> Completed Projects</a>
       </div>
     </div>
   </section>
 
-  <!-- STATS BAR -->
   <div class="stats-bar reveal">
-    <div class="stat-item">
-      <div class="stat-number">39+</div>
-      <div class="stat-label">Projects</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">6</div>
-      <div class="stat-label">Categories</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">8+</div>
-      <div class="stat-label">Awards Won</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">5★</div>
-      <div class="stat-label">Rated</div>
-    </div>
+    <div class="stat-item"><div class="stat-number">3000+</div><div class="stat-label">Design Photos</div></div>
+    <div class="stat-item"><div class="stat-number">9+</div><div class="stat-label">Awards Won</div></div>
+    <div class="stat-item"><div class="stat-number">ISO</div><div class="stat-label">9001:2015</div></div>
+    <div class="stat-item"><div class="stat-number">5&#9733;</div><div class="stat-label">Client Rating</div></div>
   </div>
 
-  <!-- GALLERY -->
-  <section class="gallery-section">
-    <div class="filter-tabs reveal">
-      <button class="filter-btn active" data-filter="all">All Projects</button>
+  <div class="notice-banner reveal">
+    <i class="fas fa-info-circle"></i>
+    <p><strong>Gallery</strong> = Design inspirations. Real completed projects dekhne ke liye <a href="portfolio.html">Portfolio &rarr;</a></p>
+  </div>
+
+  <!-- DESIGN GALLERY -->
+  <div class="section-block reveal">
+    <div class="section-head">
+      <div class="section-head-icon green"><i class="fas fa-palette"></i></div>
+      <div class="section-head-text">
+        <h2>Design Gallery</h2>
+        <p>Interior inspirations &mdash; bedrooms, kitchens, living spaces &amp; more</p>
+      </div>
+    </div>
+    <div class="section-divider green"></div>
+
+    <!-- OFFER BANNER -->
+    <div class="offer-banner">
+      <img src="images/offers.jpeg" alt="Summer Discount Offer">
+      <div class="offer-banner-text">
+        <h3>&#127881; Summer Special Offer &mdash; Limited Time!</h3>
+        <p>Abhi contact karein aur apne dream interior pe special discount paayein. Free consultation bhi available hai!</p>
+        <a href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20Summer%20offer%20ke%20baare%20mein%20jaanna%20chahta%20hoon" class="offer-btn" target="_blank"><i class="fab fa-whatsapp"></i> Offer Claim Karein</a>
+      </div>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="bedroom">Bedrooms</button>
       <button class="filter-btn" data-filter="kitchen">Kitchens</button>
       <button class="filter-btn" data-filter="living">Living Spaces</button>
-      <button class="filter-btn" data-filter="awards">Awards</button>
+      <button class="filter-btn" data-filter="commercial">Commercial</button>
       <button class="filter-btn" data-filter="other">Other</button>
     </div>
 
     <div class="gallery-grid" id="galleryGrid">
 
-      <div class="gallery-item reveal" data-category="other">
-        <div class="gallery-image-wrapper">
-          <img src="images/01-spa-wellness-interior-design.jpg" alt="Spa Wellness" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-spa"></i> Spa & Wellness Interior</h3>
-          <p>Tranquil wellness retreat design</p>
-          <span class="gallery-tag">Commercial</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="reception"><div class="img-wrap"><img src="images/reception.jpg" alt="Luxury Reception Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">reception</span></div></div>
 
-      <div class="gallery-item reveal" data-category="bedroom">
-        <div class="gallery-image-wrapper">
-          <img src="images/02-luxury-bedroom-collage.jpg" alt="Luxury Bedroom" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-bed"></i> Luxury Bedroom Collection</h3>
-          <p>Premium bedroom design series</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/bedroom.jpg" alt="Contemporary Bedroom Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
 
-      <div class="gallery-item reveal" data-category="bedroom">
-        <div class="gallery-image-wrapper">
-          <img src="images/03-premium-bedroom-gallery.jpg" alt="Premium Bedroom" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-star"></i> Premium Bedroom Gallery</h3>
-          <p>High-end bedroom interiors</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/akanksha-interior-custom-home-design-showcase.jpg" alt="Custom Home Design Showcase" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="living">
-        <div class="gallery-image-wrapper">
-          <img src="images/04-modern-living-room-design.jpg" alt="Living Room" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-couch"></i> Modern Living Room</h3>
-          <p>Contemporary living space design</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/collage.jpg" alt="Luxury Home Interior Collage" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="bedroom">
-        <div class="gallery-image-wrapper">
-          <img src="images/05-master-bedroom-interior.jpg" alt="Master Bedroom" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-crown"></i> Master Bedroom Interior</h3>
-          <p>Royal master suite design</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/akanksha-interior-master-bedroom-project.jpg" alt="Master Bedroom Project" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
 
-      <div class="gallery-item reveal" data-category="living">
-        <div class="gallery-image-wrapper">
-          <img src="images/06-dining-wall-panel-design.jpg" alt="Dining Panel" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-utensils"></i> Dining Wall Panel</h3>
-          <p>Statement wall design for dining</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/Decorative_Partition_Display_Shelf.jpg" alt="Metal Grill Laser Cut Partition Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="living">
-        <div class="gallery-image-wrapper">
-          <img src="images/07-modern-tv-unit-design.jpg" alt="TV Unit" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-tv"></i> Modern TV Unit Design</h3>
-          <p>Sleek entertainment center</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/bedroom show.jpeg" alt="Modern Bedroom Dark Theme" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
 
-      <div class="gallery-item reveal" data-category="kitchen">
-        <div class="gallery-image-wrapper">
-          <img src="images/08-modular-kitchen-design-collage.jpg" alt="Modular Kitchen" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-award"></i> Award-Winning Modular Kitchens</h3>
-          <p>Best Modular Kitchen Design 2024</p>
-          <span class="gallery-tag">Award Winner</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/bedroom-modern-lighting.jpeg" alt="Modern Bedroom Light Theme" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">reception</span></div></div>
 
-      <div class="gallery-item reveal" data-category="kitchen">
-        <div class="gallery-image-wrapper">
-          <img src="images/09-kitchen-interior-collection.jpg" alt="Kitchen Collection" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-blender"></i> Kitchen Interior Collection</h3>
-          <p>Curated kitchen designs</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/dining-living-area-view.jpeg" alt="Modular Living Concept Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
 
-      <div class="gallery-item reveal" data-category="kitchen">
-        <div class="gallery-image-wrapper">
-          <img src="images/10-wooden-modular-kitchen.jpg" alt="Wooden Kitchen" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-tree"></i> Wooden Modular Kitchen</h3>
-          <p>Natural wood finish elegance</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/plans.jpg" alt="Modular Residence Evolution Floor Plan" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="bedroom">
-        <div class="gallery-image-wrapper">
-          <img src="images/11-luxury-dressing-room-design.jpg" alt="Dressing Room" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-gem"></i> Luxury Dressing Room</h3>
-          <p>Premium walk-in closet design</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-09-modern-villa-exterior-night-view.jpg" alt="Residential Elevation Design Gallery" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="other">
-        <div class="gallery-image-wrapper">
-          <img src="images/12-modern-stair-lobby-design.jpg" alt="Stair Lobby" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-building"></i> Modern Stair Lobby</h3>
-          <p>Grand entrance architecture</p>
-          <span class="gallery-tag">Commercial</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/akanksha-interior-salon-bedroom-project-gallery.jpg" alt="Salon Bedroom Project Gallery" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="bedroom">
-        <div class="gallery-image-wrapper">
-          <img src="images/13-premium-bedroom-lightning.jpg" alt="Bedroom Lighting" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-lightbulb"></i> Premium Bedroom Lighting</h3>
-          <p>Ambient lighting solutions</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/house-floor-plan.jpeg" alt="House Floor Plan" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="living">
-        <div class="gallery-image-wrapper">
-          <img src="images/14-luxury-tv-wall-design.jpg" alt="TV Wall" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-tv"></i> Luxury TV Wall Design</h3>
-          <p>Feature wall with integrated lighting</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="kitchen"><div class="img-wrap"><img src="images/modern-kitchen-layout.jpeg" alt="Modern Kitchen Layout" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="kitchen">
-        <div class="gallery-image-wrapper">
-          <img src="images/15-white-golden-modular-kitchen.jpg" alt="White Golden Kitchen" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-star"></i> White & Golden Kitchen</h3>
-          <p>Opulent kitchen design</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="kitchen"><div class="img-wrap"><img src="images/Kitchen_High_Gloss_Modular_Storage.jpg" alt="Kitchen Cabinets Storage" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Kitchen</span></div></div>
 
-      <div class="gallery-item reveal" data-category="kitchen">
-        <div class="gallery-image-wrapper">
-          <img src="images/16-purple-modern-kitchen-design.jpg" alt="Purple Kitchen" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-palette"></i> Purple Modern Kitchen</h3>
-          <p>Bold color statement kitchen</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="kitchen"><div class="img-wrap"><img src="images/Kitchen_L_Shape_Full_View.jpg" alt="L-Shaped Kitchen Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">store cabinet</span></div></div>
 
-      <div class="gallery-item reveal" data-category="other">
-        <div class="gallery-image-wrapper">
-          <img src="images/17-pooja-room-interior-design.jpg" alt="Pooja Room" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-praying-hands"></i> Pooja Room Interior</h3>
-          <p>Sacred space design</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/akanksha-interior-luxury-home-bedroom.jpg" alt="Master Bedroom Wooden Panel" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
 
-      <div class="gallery-item reveal" data-category="bedroom">
-        <div class="gallery-image-wrapper">
-          <img src="images/18-luxury-butterfly-bedroom.jpg" alt="Butterfly Bedroom" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-magic"></i> Luxury Butterfly Bedroom</h3>
-          <p>Whimsical themed bedroom</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/bedroom-balcony-view.jpeg" alt="Bedroom Balcony View" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="other">
-        <div class="gallery-image-wrapper">
-          <img src="images/19-false-ceiling-light-design.jpg" alt="False Ceiling" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-cloud"></i> False Ceiling & Light Design</h3>
-          <p>Architectural ceiling solutions</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/modern-washroom-design.jpeg" alt="Modern Washroom Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="living">
-        <div class="gallery-image-wrapper">
-          <img src="images/20-modern-luxury-living-room.jpg" alt="Luxury Living Room" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-home"></i> Modern Luxury Living Room</h3>
-          <p>Contemporary luxury living</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="kitchen"><div class="img-wrap"><img src="images/Modular_Kitchen_Counter_and_Storage.jpg" alt="Kitchen Dining Area" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Kitchen</span></div></div>
 
-      <div class="gallery-item reveal" data-category="bedroom">
-        <div class="gallery-image-wrapper">
-          <img src="images/21-modern-bedroom-interior-design.jpg" alt="Modern Bedroom" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-bed"></i> Modern Bedroom Interior</h3>
-          <p>Clean modern aesthetics</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/collage (2).jpg" alt="Balcony Garden Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="living">
-        <div class="gallery-image-wrapper">
-          <img src="images/22-luxury-tv-wall-unit-design.jpg" alt="TV Wall Unit" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-tv"></i> Luxury TV Wall Unit</h3>
-          <p>Integrated storage & display</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/Modern_Bathroom_Vanity_Mirror.jpg" alt="Luxury Bathroom" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">bathroom</span></div></div>
 
-      <div class="gallery-item reveal" data-category="bedroom">
-        <div class="gallery-image-wrapper">
-          <img src="images/23-bedroom-wall-panel-lighting.jpg" alt="Wall Panel" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-lightbulb"></i> Bedroom Wall Panel Lighting</h3>
-          <p>Backlit panel design</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Modern_Wardrobe_Design_Interior.jpg" alt="Bedroom Wardrobe Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Hall</span></div></div>
 
-      <div class="gallery-item reveal" data-category="awards">
-        <div class="gallery-image-wrapper">
-          <img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Award" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-trophy"></i> Gold Sponsor Award 2025</h3>
-          <p>Industry recognition</p>
-          <span class="gallery-tag">Award</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="kitchen"><div class="img-wrap"><img src="images/modular-kitchen-black-white.jpeg" alt="U-Shaped Kitchen" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Kitchen</span></div></div>
 
-      <div class="gallery-item reveal" data-category="awards">
-        <div class="gallery-image-wrapper">
-          <img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-medal"></i> Architecture Awards Collage</h3>
-          <p>Multiple award highlights</p>
-          <span class="gallery-tag">Award</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Bedroom_Wood_AC_False_Ceiling.jpg" alt="Bedroom False Ceiling" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
 
-      <div class="gallery-item reveal" data-category="awards">
-        <div class="gallery-image-wrapper">
-          <img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO Certification" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-certificate"></i> ISO 9001:2015 Certification</h3>
-          <p>Quality management certified</p>
-          <span class="gallery-tag">Certification</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/3d-home-interior-layout.jpeg" alt="3D Home Interior Layout" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
 
-      <div class="gallery-item reveal" data-category="awards">
-        <div class="gallery-image-wrapper">
-          <img src="images/27-company-profile-overview-akanksha.jpg" alt="Company Profile" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-chart-bar"></i> Company Profile Overview</h3>
-          <p>About AKANSHA-INTERIOR DECORATION HUB</p>
-          <span class="gallery-tag">Profile</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/2bhk-floor-design.jpeg" alt="2BHK Floor Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
 
-      <div class="gallery-item reveal" data-category="awards">
-        <div class="gallery-image-wrapper">
-          <img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Award Ceremony" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-award"></i> Architecture Reconnect Award</h3>
-          <p>Ceremony highlights</p>
-          <span class="gallery-tag">Award</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/bedroom-tv-unit.jpeg" alt="Bedroom TV Unit" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
 
-      <div class="gallery-item reveal" data-category="awards">
-        <div class="gallery-image-wrapper">
-          <img src="images/29-architect-wow-award-2024.jpg" alt="WOW Award" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-star"></i> Architect WOW Award 2024</h3>
-          <p>Best Modern Architecture</p>
-          <span class="gallery-tag">Award Winner</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/plan.jpeg" alt="Residential Layout Plan" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="awards">
-        <div class="gallery-image-wrapper">
-          <img src="images/30-award-event-architecture-summit.jpg" alt="Award Event" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-trophy"></i> Architecture Summit Award</h3>
-          <p>Summit event recognition</p>
-          <span class="gallery-tag">Award</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/plan02.jpeg" alt="Detailed Floor Plan" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="awards">
-        <div class="gallery-image-wrapper">
-          <img src="images/31-award-recognition-collage-akanksha.jpg" alt="Award Recognition" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-medal"></i> Award Recognition Collage</h3>
-          <p>Collection of honors</p>
-          <span class="gallery-tag">Award</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/plans00.jpg" alt="Complete Home Plan" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="bedroom">
-        <div class="gallery-image-wrapper">
-          <img src="images/32-modern-sliding-wardrobe-design.jpg" alt="Sliding Wardrobe" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-door-open"></i> Modern Sliding Wardrobe</h3>
-          <p>Space-saving storage solution</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <!-- PORTFOLIO IMAGES ADDED TO GALLERY -->
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/wash-area-crockery-unit.jpeg" alt="Gold Sponsor Award 2025" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="living">
-        <div class="gallery-image-wrapper">
-          <img src="images/33-luxury-living-room-collage.jpg" alt="Luxury Living Collage" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-images"></i> Luxury Living Room Collage</h3>
-          <p>Multiple living concepts</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/Walk_in_Closet_White_Shelving.jpg" alt="Architecture Awards Collage" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="kitchen">
-        <div class="gallery-image-wrapper">
-          <img src="images/34-white-luxury-modular-kitchen.jpg" alt="White Luxury Kitchen" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-heart"></i> White Luxury Modular Kitchen</h3>
-          <p>Minimalist kitchen elegance</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/Purple_Velvet_Lounge_Sofa.jpg" alt="ISO 9001:2015 Certification" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="other">
-        <div class="gallery-image-wrapper">
-          <img src="images/35-commercial-cafe-interior-design.jpg" alt="Commercial Cafe" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-coffee"></i> Commercial Cafe Interior</h3>
-          <p>Modern cafe design</p>
-          <span class="gallery-tag">Commercial</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/Purple_Velvet_Chaise_Lounge.jpg" alt="Architecture Reconnect Award Ceremony" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="other">
-        <div class="gallery-image-wrapper">
-          <img src="images/36-modern-pooja-room-design.jpg" alt="Modern Pooja Room" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-praying-hands"></i> Modern Pooja Room Design</h3>
-          <p>Contemporary sacred space</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/Modular_Kitchen_Counter_and_Storage.jpg" alt="Architect WOW Award 2024" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="living">
-        <div class="gallery-image-wrapper">
-          <img src="images/37-modern-bar-unit-design.jpg" alt="Bar Unit" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-wine-glass"></i> Modern Bar Unit Design</h3>
-          <p>Home bar entertainment</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/modern-washroom-design.jpeg" alt="Architecture Summit Award Event" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="living">
-        <div class="gallery-image-wrapper">
-          <img src="images/38-luxury-home-interior-work.jpg" alt="Luxury Home" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-castle"></i> Luxury Home Interior Work</h3>
-          <p>Complete home transformation</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/coffee-cafe-front-counter-design-02.jpeg" alt="Award Recognition Collage" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
 
-      <div class="gallery-item reveal" data-category="other">
-        <div class="gallery-image-wrapper">
-          <img src="images/39-modern-arch-wall-panel-design.jpg" alt="Arch Wall Panel" loading="lazy">
-          <div class="gallery-overlay"><button class="view-btn"><i class="fas fa-expand"></i> View Project</button></div>
-        </div>
-        <div class="gallery-caption">
-          <h3><i class="fas fa-paint-brush"></i> Modern Arch Wall Panel</h3>
-          <p>Artistic wall treatment</p>
-          <span class="gallery-tag">Residential</span>
-        </div>
-      </div>
+      <!-- WELLNESS BEAUTY SALON & SPA -->
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-01-luxury-hair-wash-station.jpg" alt="Luxury Hair Wash Station" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-02-salon-corridor-interior.jpg" alt="Salon Corridor Interior" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-03-beauty-treatment-corridor.jpg" alt="Beauty Treatment Corridor" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-04-skin-consultation-room.jpg" alt="Skin Consultation Room" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-05-premium-hair-styling-area.jpg" alt="Premium Hair Styling Area" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-06-grooming-chair-station.jpg" alt="Grooming Chair Station" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-07-luxury-salon-workstations.jpg" alt="Luxury Salon Workstations" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-08-hair-spa-shampoo-lounge.jpg" alt="Hair Spa Shampoo Lounge" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-09-spa-therapy-room.jpg" alt="Spa Therapy Room" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-10-facial-treatment-room.jpg" alt="Facial Treatment Room" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-11-wellness-relaxation-room.jpg" alt="Wellness Relaxation Room" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-12-salon-interior-overview.jpg" alt="Salon Interior Overview" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-13-spa-treatment-suite.jpg" alt="Spa Treatment Suite" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-14-salon-premium-washroom.jpg" alt="Salon Premium Washroom" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+
+      <!-- CONSTRUCTION WORK -->
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-01-fire-damaged-commercial-interior.jpg" alt="Commercial Interior Renovation" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-02-commercial-metal-partition-framework.jpg" alt="Metal Partition Framework" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-03-interior-brick-partition-work.jpg" alt="Brick Partition Work" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-04-interior-demolition-work.jpg" alt="Interior Demolition Work" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-05-steel-frame-partition-installation.jpg" alt="Steel Frame Partition" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-06-structural-demolition-phase.jpg" alt="Structural Demolition Phase" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-07-g3-building-construction-front-view.jpg" alt="G3 Building Front View" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-08-g3-building-construction-side-view.jpg" alt="G3 Building Side View" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-10-residential-construction-project.jpg" alt="Residential Construction Project" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/construction-project-11-multi-storey-building-under-construction.jpg" alt="Multi Storey Building Construction" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+
+      <!-- LULU MALL COFFEE SHOP -->
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/coffee-shop-counter-interior-01.jpeg" alt="Coffee Shop Counter Interior" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+      <div class="gallery-item reveal" data-category="commercial"><div class="img-wrap"><img src="images/coffee-cafe-front-counter-design-02.jpeg" alt="Coffee Cafe Front Counter Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Commercial</span></div></div>
+
+      <!-- PREMIUM LUXURY APARTMENT -->
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/bedroom-beige-theme.jpeg" alt="Bedroom Beige Theme" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/living-room-sofa-luxury.jpeg" alt="Luxury Living Room Sofa" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/master-bedroom-blue-theme.jpeg" alt="Master Bedroom Blue Theme" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="kitchen"><div class="img-wrap"><img src="images/wash-area-crockery-unit.jpeg" alt="Wash Area Crockery Unit" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Kitchen</span></div></div>
+
+      <!-- ULTRA LUXURY VILLA - ALL ROOMS -->
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Bedroom_Bed_Corner_with_Shelving.jpg" alt="Bedroom Bed Corner With Shelving" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Bedroom_Green_Slat_Wall_and_Wardrobe.jpg" alt="Bedroom Green Slat Wall And Wardrobe" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Bedroom_Green_Wardrobe_Full_View.jpg" alt="Bedroom Green Wardrobe Full View" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Bedroom_Grey_Wardrobe_Vanity.jpg" alt="Bedroom Grey Wardrobe Vanity" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Bedroom_Grey_Wardrobe_with_Vanity.jpg" alt="Bedroom Grey Wardrobe With Vanity" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Bedroom_Wood_Chevron_Accent_Wall.jpg" alt="Bedroom Wood Chevron Accent Wall" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Bedroom_Wood_Dressing_Vanity.jpg" alt="Bedroom Wood Dressing Vanity" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Bedroom_Wood_Window_Storage_Bench.jpg" alt="Bedroom Wood Window Storage Bench" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Guest_Room_Blue_Bed_Shelving.jpg" alt="Guest Room Blue Bed Shelving" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Guest_Room_Built_in_Closet.jpg" alt="Guest Room Built In Closet" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Guest_Room_Compact_Storage_Unit.jpg" alt="Guest Room Compact Storage Unit" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Guest_Room_Single_Bed_Bookshelf.jpg" alt="Guest Room Single Bed Bookshelf" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Master_Bedroom_Green_Paneled_Wall.jpg" alt="Master Bedroom Green Paneled Wall" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Master_Bedroom_LED_Backlit_Wall.jpg" alt="Master Bedroom Led Backlit Wall" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Entrance_Foyer_Steps_Design.jpg" alt="Entrance Foyer Steps Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Entrance_Main_Door_Wood_Paneling.jpg" alt="Entrance Main Door Wood Paneling" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Entry_Hallway_Wood_Wardrobe.jpg" alt="Entry Hallway Wood Wardrobe" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Entry_Lobby_Lift_Area.jpg" alt="Entry Lobby Lift Area" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Entryway_Fluted_Panel_with_Mirror.jpg" alt="Entryway Fluted Panel With Mirror" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Hallway_Dark_Wood_Closet_View.jpg" alt="Hallway Dark Wood Closet View" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Hallway_Decorative_Wall_Molding.jpg" alt="Hallway Decorative Wall Molding" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Hallway_Floral_Wallpaper_Mirror.jpg" alt="Hallway Floral Wallpaper Mirror" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Living_Area_False_Ceiling_Design.jpg" alt="Living Area False Ceiling Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Living_Room_Bar_Display_Unit.jpg" alt="Living Room Bar Display Unit" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Living_Room_Divider_Shelf_Unit.jpg" alt="Living Room Divider Shelf Unit" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Living_Room_Glass_Partition_Shelf.jpg" alt="Living Room Glass Partition Shelf" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Living_Room_TV_Unit_Divider.jpg" alt="Living Room TV Unit Divider" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Living_Room_Yellow_Sectional_Sofa.jpg" alt="Living Room Yellow Sectional Sofa" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Living_Room_Yellow_Sofa_View.jpg" alt="Living Room Yellow Sofa View" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Main_Entrance_Fluted_Wood_Design.jpg" alt="Main Entrance Fluted Wood Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Purple_Velvet_Chaise_Lounge.jpg" alt="Purple Velvet Chaise Lounge" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/Purple_Velvet_Lounge_Sofa.jpg" alt="Purple Velvet Lounge Sofa" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/Walk_in_Closet_White_Shelving.jpg" alt="Walk In Closet White Shelving" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="kitchen"><div class="img-wrap"><img src="images/Kitchen_Cabinet_Installation_View.jpg" alt="Kitchen Cabinet Installation View" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Kitchen</span></div></div>
+      <div class="gallery-item reveal" data-category="kitchen"><div class="img-wrap"><img src="images/Kitchen_Under_Cabinet_LED_Lighting.jpg" alt="Kitchen Under Cabinet LED Lighting" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Kitchen</span></div></div>
+      <div class="gallery-item reveal" data-category="kitchen"><div class="img-wrap"><img src="images/Modern_Kitchen_Cream_Cabinets.jpg" alt="Modern Kitchen Cream Cabinets" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Kitchen</span></div></div>
+      <div class="gallery-item reveal" data-category="other"><div class="img-wrap"><img src="images/Modern_TV_Console_Glossy_Finish.jpg" alt="Modern TV Console Glossy Finish" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Other</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-01.jpg" alt="Luxury Villa Interior 01" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="bedroom"><div class="img-wrap"><img src="images/rishita-mulberry-flats-02.jpg" alt="Luxury Villa Interior 02" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Bedroom</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-03.jpg" alt="Luxury Villa Dining Room" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-04.jpg" alt="Luxury Villa Dining Wooden Table" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-05.jpg" alt="Luxury Villa Dining And Living" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-06.jpg" alt="Luxury Villa Living Grey Sofas" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-07.jpg" alt="Luxury Villa Living Leather Sofas" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-08.jpg" alt="Luxury Villa Photo Room Sofa Bed" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-09.jpg" alt="Luxury Villa Interior 09" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-10.jpg" alt="Luxury Villa Interior 10" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-11.jpg" alt="Luxury Villa Interior 11" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-12.jpg" alt="Luxury Villa Interior 12" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-13.jpg" alt="Luxury Villa Interior 13" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-14.jpg" alt="Luxury Villa Interior 14" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-15.jpg" alt="Luxury Villa Interior 15" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-16.jpg" alt="Luxury Villa Interior 16" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-17.jpg" alt="Luxury Villa Interior 17" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-18.jpg" alt="Luxury Villa Interior 18" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
+      <div class="gallery-item reveal" data-category="living"><div class="img-wrap"><img src="images/rishita-mulberry-flats-19.jpg" alt="Luxury Villa Interior 19" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="item-tag"><span class="gallery-tag">Living</span></div></div>
 
     </div>
-  </section>
+  </div>
 
-  <!-- LIGHTBOX -->
+  <!-- VIDEO SECTION IN GALLERY -->
+  <div class="section-block reveal" style="padding-top:20px;">
+    <div class="section-head">
+      <div class="section-head-icon green"><i class="fas fa-film"></i></div>
+      <div class="section-head-text">
+        <h2>Project Videos</h2>
+        <p>Walkthrough videos &mdash; hamare completed projects ki real footage</p>
+      </div>
+    </div>
+    <div class="section-divider green"></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;max-width:1400px;">
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/coffee-shop-counter-interior-01.jpeg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/coffee-shop-interior-walkthrough-video.mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Lulu Mall Coffee Shop Walkthrough</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-09.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-05-31 at 19.00.31 (1).mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Ultra Luxury Villa Walkthrough 1</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-10.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-05-31 at 19.00.31 (2).mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Ultra Luxury Villa Walkthrough 2</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-11.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-05-31 at 19.00.31.mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Ultra Luxury Villa Walkthrough 3</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-12.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-05-31 at 19.00.32 (1).mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Ultra Luxury Villa Walkthrough 4</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-13.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-05-31 at 19.00.32.mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Ultra Luxury Villa Walkthrough 5</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-14.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-05-31 at 19.00.43 (1).mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Ultra Luxury Villa Walkthrough 6</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-15.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-05-31 at 19.00.43.mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Ultra Luxury Villa Walkthrough 7</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-16.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-05-31 at 19.00.44.mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Ultra Luxury Villa Walkthrough 8</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-17.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-05-31 at 19.00.46.mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> Ultra Luxury Villa Walkthrough 9</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-01.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-06-01 at 22.14.37.mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> New Luxury Walkthrough 1</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-02.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-06-01 at 22.14.38 (1).mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> New Luxury Walkthrough 2</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-03.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-06-01 at 22.14.38.mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> New Luxury Walkthrough 3</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-04.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-06-01 at 22.14.39 (1).mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> New Luxury Walkthrough 4</div>
+      </div>
+      <div style="border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);background:#000;">
+        <video controls preload="none" poster="images/rishita-mulberry-flats-05.jpg" style="width:100%;height:240px;object-fit:cover;display:block;">
+          <source src="videos/WhatsApp Video 2026-06-01 at 22.14.39.mp4" type="video/mp4">
+        </video>
+        <div style="padding:12px 16px;background:#111;color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;"><i class="fas fa-play-circle" style="color:#ff4444;"></i> New Luxury Walkthrough 5</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AWARDS SECTION -->
+  <div class="awards-section reveal" id="awards">
+    <div class="section-head" style="margin-bottom:30px;">
+      <div class="section-head-icon gold"><i class="fas fa-trophy"></i></div>
+      <div class="section-head-text">
+        <h2>Awards &amp; Recognition</h2>
+        <p>Industry honors &amp; certifications &mdash; hamare kaam ki pahchaan</p>
+      </div>
+    </div>
+    <div class="section-divider gold" style="margin-bottom:36px;"></div>
+    <div class="awards-grid" id="awardsGrid">
+      <div class="award-card"><div class="img-wrap"><img src="images/awards101.jpg" alt="Gold Sponsor Appreciation Award" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="award-tag-wrap"><span class="award-tag"><i class="fas fa-star"></i> Gold Sponsor 2025</span></div></div>
+
+      <div class="award-card"><div class="img-wrap"><img src="images/akanksha-interior-architecture-summit-award-winner.jpg" alt="Architecture Summit Award Winner" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="award-tag-wrap"><span class="award-tag"><i class="fas fa-trophy"></i> Summit Award</span></div></div>
+
+      <div class="award-card"><div class="img-wrap"><img src="images/akanksha-interior-award-ceremony-stage-photo.jpg" alt="Award Ceremony Stage Photo" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="award-tag-wrap"><span class="award-tag"><i class="fas fa-award"></i> Award Ceremony</span></div></div>
+
+      <div class="award-card"><div class="img-wrap"><img src="images/awards33.jpeg" alt="Awards Achievements Collage" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="award-tag-wrap"><span class="award-tag"><i class="fas fa-medal"></i> Achievements</span></div></div>
+
+      <div class="award-card"><div class="img-wrap"><img src="images/awards44.jpeg" alt="Bedroom Design Award Showcase" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="award-tag-wrap"><span class="award-tag"><i class="fas fa-trophy"></i> Design Award</span></div></div>
+
+      <div class="award-card"><div class="img-wrap"><img src="images/awards66.jpg" alt="WOW Award Modular Kitchen Design" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="award-tag-wrap"><span class="award-tag"><i class="fas fa-star"></i> WOW Award 2024</span></div></div>
+
+      <div class="award-card"><div class="img-wrap"><img src="images/busines card.jpg" alt="Company Profile" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="award-tag-wrap"><span class="award-tag"><i class="fas fa-building"></i> Company Profile</span></div></div>
+
+      <div class="award-card"><div class="img-wrap"><img src="images/awards88.jpg" alt="Interior Design Recognition" loading="lazy"><div class="overlay"><button class="view-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="award-tag-wrap"><span class="award-tag"><i class="fas fa-award"></i> Recognition</span></div></div>
+    </div>
+  </div>
+
   <div class="lightbox" id="lightbox">
     <div class="lightbox-content">
       <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
@@ -1275,147 +531,60 @@
       <button class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
       <img src="" alt="" class="lightbox-img" id="lightboxImg">
       <div class="lightbox-caption" id="lightboxCaption"></div>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
     </div>
   </div>
 
   <footer>
     <div class="footer-brand">AKANSHA-INTERIOR DECORATION HUB</div>
-    <p>© 2026 AKANSHA-INTERIOR DECORATION HUB — Best Architect & Interior Designer</p>
-    <p>ISO 9001:2015 Certified | Luxury & Hospitality Experts | Pan-India Presence</p>
-    <div class="footer-awards">
-      <i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)
-    </div>
+    <p>&copy; 2026 AKANSHA-INTERIOR DECORATION HUB &mdash; Best Architect &amp; Interior Designer</p>
+    <p>ISO 9001:2015 Certified | Luxury &amp; Hospitality Experts | Pan-India Presence</p>
+    <div class="footer-awards"><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</div>
   </footer>
-
-  <a class="whatsapp-float" href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20am%20interested%20in%20your%20services.%20Can%20you%20help%20me%20with%20a%20consultation%3F" target="_blank" data-tooltip="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a class="call-float" href="tel:+919140097029" data-tooltip="Call Us Now">
-    <i class="fas fa-phone-alt"></i>
-  </a>
+  <a class="whatsapp-float" href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20am%20interested%20in%20your%20services." target="_blank" data-tooltip="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <a class="call-float" href="tel:+919140097029" data-tooltip="Call Us Now"><i class="fas fa-phone-alt"></i></a>
 
   <script>
-    // Spark particles
-    const sparkField = document.getElementById('particleField');
-    for (let i = 0; i < 40; i++) {
-      const sp = document.createElement('div');
-      sp.classList.add('spark');
-      const size = Math.random() * 4 + 2;
-      sp.style.width  = size + 'px';
-      sp.style.height = size + 'px';
-      sp.style.left   = Math.random() * 100 + '%';
-      sp.style.top    = Math.random() * 100 + '%';
-      sp.style.animationDuration = (Math.random() * 10 + 8) + 's';
-      sp.style.animationDelay   = (Math.random() * 5) + 's';
-      sparkField.appendChild(sp);
+    function makeImageFallback(img){
+      if(img.dataset.fallbackApplied)return;
+      img.dataset.fallbackApplied='true';
+      const escapeSvg=value=>String(value||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
+      const label=escapeSvg(img.alt||'Image not available');
+      const src=escapeSvg(img.getAttribute('src')||'');
+      const svg='<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="%232E7D32"/><stop offset="1" stop-color="%230a0a0a"/></linearGradient></defs><rect width="900" height="650" fill="url(%23g)"/><rect x="42" y="42" width="816" height="566" rx="34" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.28)" stroke-width="4"/><text x="450" y="285" fill="%23FFD700" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" text-anchor="middle">AKANSHA INTERIOR</text><text x="450" y="348" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="600" text-anchor="middle">'+label+'</text><text x="450" y="405" fill="rgba(255,255,255,0.78)" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">Check cPanel file: '+src+'</text></svg>';
+      img.src='data:image/svg+xml;charset=UTF-8,'+encodeURIComponent(svg);
     }
-
-    // Header scroll effect
-    const header = document.getElementById('mainHeader');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 50);
+    document.querySelectorAll('img').forEach(img=>{
+      img.loading='eager';
+      img.decoding='async';
+      img.addEventListener('error',()=>makeImageFallback(img));
+      if(img.complete&&img.naturalWidth===0)makeImageFallback(img);
     });
-
-    // Filter
-    const filterBtns  = document.querySelectorAll('.filter-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-
-        galleryItems.forEach((item, index) => {
-          const match = filter === 'all' || item.dataset.category === filter;
-          if (match) {
-            item.classList.remove('hidden');
-            setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'translateY(0)'; }, index * 40);
-          } else {
-            item.style.opacity = '0';
-            item.style.transform = 'translateY(20px)';
-            setTimeout(() => item.classList.add('hidden'), 300);
-          }
-        });
-      });
-    });
-
-    // Lightbox
-    const lightbox        = document.getElementById('lightbox');
-    const lightboxImg     = document.getElementById('lightboxImg');
-    const lightboxCaption = document.getElementById('lightboxCaption');
-    const lightboxClose   = document.getElementById('lightboxClose');
-    const lightboxPrev    = document.getElementById('lightboxPrev');
-    const lightboxNext    = document.getElementById('lightboxNext');
-
-    let currentIndex = 0;
-    const visibleItems = () => Array.from(galleryItems).filter(i => !i.classList.contains('hidden'));
-
-    galleryItems.forEach((item, index) => {
-      const viewBtn = item.querySelector('.view-btn');
-      const img     = item.querySelector('img');
-      const caption = item.querySelector('h3').textContent;
-
-      const open = () => openLightbox(img.src, caption, index);
-      viewBtn.addEventListener('click', e => { e.stopPropagation(); open(); });
-      item.addEventListener('click', open);
-    });
-
-    function openLightbox(src, caption, index) {
-      currentIndex = index;
-      lightboxImg.src = src;
-      lightboxCaption.textContent = caption;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    function navigate(dir) {
-      const items = visibleItems();
-      const currentItem = galleryItems[currentIndex];
-      let vi = items.indexOf(currentItem);
-      vi = (vi + dir + items.length) % items.length;
-      const next = items[vi];
-      currentIndex = Array.from(galleryItems).indexOf(next);
-      lightboxImg.style.opacity = '0';
-      setTimeout(() => {
-        lightboxImg.src = next.querySelector('img').src;
-        lightboxCaption.textContent = next.querySelector('h3').textContent;
-        lightboxImg.style.opacity = '1';
-      }, 200);
-    }
-
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightboxPrev.addEventListener('click', e => { e.stopPropagation(); navigate(-1); });
-    lightboxNext.addEventListener('click', e => { e.stopPropagation(); navigate(1);  });
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-
-    document.addEventListener('keydown', e => {
-      if (!lightbox.classList.contains('active')) return;
-      if (e.key === 'Escape')      closeLightbox();
-      if (e.key === 'ArrowLeft')   navigate(-1);
-      if (e.key === 'ArrowRight')  navigate(1);
-    });
-
-    // Scroll reveal
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // Parallax shapes
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      document.querySelectorAll('.shape').forEach((shape, i) => {
-        const speed = 0.1 + i * 0.05;
-        shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.02}deg)`;
-      });
-    });
+    window.addEventListener('load',()=>setTimeout(()=>document.querySelectorAll('img').forEach(img=>{
+      if(!img.dataset.fallbackApplied&&img.naturalWidth===0)makeImageFallback(img);
+    }),800));
+    const pf=document.getElementById('particleField');
+    for(let i=0;i<40;i++){const s=document.createElement('div');s.className='spark';const sz=Math.random()*4+2;s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;animation-duration:${Math.random()*10+8}s;animation-delay:${Math.random()*5}s`;pf.appendChild(s);}
+    window.addEventListener('scroll',()=>document.getElementById('mainHeader').classList.toggle('scrolled',window.scrollY>50));
+    const filterBtns=document.querySelectorAll('.filter-btn');
+    const galleryItems=document.querySelectorAll('#galleryGrid .gallery-item');
+    filterBtns.forEach(btn=>{btn.addEventListener('click',()=>{filterBtns.forEach(b=>b.classList.remove('active'));btn.classList.add('active');const filter=btn.dataset.filter;galleryItems.forEach((item,i)=>{const match=filter==='all'||item.dataset.category===filter;if(match){item.classList.remove('hidden');setTimeout(()=>{item.style.opacity='1';item.style.transform='translateY(0)';},i*20);}else{item.style.opacity='0';item.style.transform='translateY(20px)';setTimeout(()=>item.classList.add('hidden'),300);}});});});
+    const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightboxImg'),lbCap=document.getElementById('lightboxCaption'),lbCtr=document.getElementById('lightboxCounter');
+    let allLbItems=[],curIdx=0;
+    const designItems=Array.from(document.querySelectorAll('#galleryGrid .gallery-item'));
+    designItems.forEach((item,idx)=>{const open=()=>{allLbItems=designItems.filter(i=>!i.classList.contains('hidden'));curIdx=allLbItems.indexOf(item);openLB(item.querySelector('img').src,item.querySelector('img').alt,curIdx,allLbItems.length);};item.addEventListener('click',open);item.querySelector('.view-btn').addEventListener('click',e=>{e.stopPropagation();open();});});
+    const awardItems=Array.from(document.querySelectorAll('#awardsGrid .award-card'));
+    awardItems.forEach((item,idx)=>{const open=()=>{allLbItems=awardItems;curIdx=idx;openLB(item.querySelector('img').src,item.querySelector('img').alt,idx,awardItems.length);};item.addEventListener('click',open);item.querySelector('.view-btn').addEventListener('click',e=>{e.stopPropagation();open();});});
+    function openLB(src,cap,idx,total){lbImg.src=src;lbCap.textContent=cap;lbCtr.textContent=(idx+1)+' / '+total;lb.classList.add('active');document.body.style.overflow='hidden';}
+    function closeLB(){lb.classList.remove('active');document.body.style.overflow='';}
+    function nav(d){curIdx=(curIdx+d+allLbItems.length)%allLbItems.length;const next=allLbItems[curIdx];lbImg.style.opacity='0';setTimeout(()=>{lbImg.src=next.querySelector('img').src;lbCap.textContent=next.querySelector('img').alt;lbCtr.textContent=(curIdx+1)+' / '+allLbItems.length;lbImg.style.opacity='1';},200);}
+    document.getElementById('lightboxClose').addEventListener('click',closeLB);
+    document.getElementById('lightboxPrev').addEventListener('click',e=>{e.stopPropagation();nav(-1);});
+    document.getElementById('lightboxNext').addEventListener('click',e=>{e.stopPropagation();nav(1);});
+    lb.addEventListener('click',e=>{if(e.target===lb)closeLB();});
+    document.addEventListener('keydown',e=>{if(!lb.classList.contains('active'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')nav(-1);if(e.key==='ArrowRight')nav(1);});
+    const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active');}),{threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
   </script>
 </body>
 </html>

@@ -3,977 +3,404 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>AKANSHA-INTERIOR DECORATION HUB | Portfolio | Awards & Projects</title>
-  <meta name="description" content="Complete portfolio of AKANSHA-INTERIOR DECORATION HUB - Award-winning interior design, architecture, hospitality, and corporate projects.">
+  <title>AKANSHA-INTERIOR DECORATION HUB | Portfolio | Project Gallery</title>
+  <meta name="description" content="Our completed interior design projects - Wellness Beauty Salon, Lulu Mall, Premium Luxury Apartment, Ultra Luxury Flats & Villa Projects, Construction Work.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --primary: #2E7D32;
-      --primary-dark: #1b5e20;
-      --primary-light: #4CAF50;
-      --accent: #FFD700;
-      --dark: #0a0a0a;
-      --dark-card: #1a1a1a;
-      --gray-50: #FAFAFA;
-      --gray-100: #F5F5F5;
-      --gray-200: #EEEEEE;
-      --gray-300: #E0E0E0;
-      --gray-400: #BDBDBD;
-      --gray-500: #9E9E9E;
-      --gray-600: #757575;
-      --gray-700: #616161;
-      --gray-800: #424242;
-      --gray-900: #212121;
-      --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
-      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
-      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
-      --shadow-glow: 0 0 40px rgba(46,125,50,0.15);
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--gray-50);
-      overflow-x: hidden;
-      color: var(--gray-900);
-      line-height: 1.6;
-    }
-
-    /* ===== ANIMATED BACKGROUND ===== */
-    .radiant-bg {
-      position: fixed; inset: 0;
-      background:
-        radial-gradient(ellipse at 20% 20%, rgba(46,125,50,0.03) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(255,215,0,0.02) 0%, transparent 50%),
-        linear-gradient(180deg, var(--gray-50) 0%, var(--gray-100) 100%);
-      z-index: -3;
-    }
-
-    .glow-motion {
-      position: fixed; width: 100%; height: 100%; top: 0; left: 0;
-      background:
-        radial-gradient(ellipse at 30% 20%, rgba(46,125,50,0.06) 0%, transparent 50%),
-        radial-gradient(ellipse at 70% 60%, rgba(46,125,50,0.04) 0%, transparent 50%);
-      animation: slowDrift 20s ease-in-out infinite alternate;
-      z-index: -2; pointer-events: none;
-    }
-
-    @keyframes slowDrift {
-      0%   { transform: translate(0,0) scale(1); opacity: 0.5; }
-      50%  { transform: translate(2%,-3%) scale(1.1); opacity: 0.8; }
-      100% { transform: translate(-1%,2%) scale(1.05); opacity: 0.6; }
-    }
-
-    .floating-shapes { position: fixed; width: 100%; height: 100%; pointer-events: none; z-index: -1; overflow: hidden; }
-    .shape { position: absolute; opacity: 0.03; animation: floatShape 25s ease-in-out infinite; }
-    .shape-1 { width:300px; height:300px; border:2px solid var(--primary); border-radius:50%; top:10%; left:-5%; }
-    .shape-2 { width:200px; height:200px; border:2px solid var(--primary); transform:rotate(45deg); top:60%; right:-3%; animation-delay:-8s; }
-    .shape-3 { width:150px; height:150px; border:2px solid var(--accent); border-radius:30% 70% 70% 30%/30% 30% 70% 70%; top:40%; left:60%; animation-delay:-15s; }
-
-    @keyframes floatShape {
-      0%,100% { transform: translateY(0) rotate(0deg); }
-      33%      { transform: translateY(-30px) rotate(5deg); }
-      66%      { transform: translateY(20px) rotate(-5deg); }
-    }
-
-    .spark-particles { position: fixed; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
-    .spark {
-      position: absolute;
-      background: radial-gradient(circle, rgba(46,125,50,0.3), transparent);
-      border-radius: 50%; opacity: 0;
-      animation: floatSpark 12s infinite ease-in-out;
-    }
-    @keyframes floatSpark {
-      0%   { transform: translateY(0) scale(0); opacity: 0; }
-      20%  { opacity: 0.4; }
-      80%  { opacity: 0.2; }
-      100% { transform: translateY(-100px) scale(1); opacity: 0; }
-    }
-
-    /* ===== HEADER ===== */
-    header {
-      position: sticky; top: 0;
-      backdrop-filter: blur(20px) saturate(180%);
-      background: rgba(255,255,255,0.85) !important;
-      border-bottom: 1px solid rgba(46,125,50,0.15);
-      padding: 14px 5%;
-      display: flex; justify-content: space-between; align-items: center;
-      z-index: 100; flex-wrap: wrap; transition: all 0.3s ease;
-    }
-
-    header.scrolled { padding: 10px 5%; box-shadow: var(--shadow-md); background: rgba(255,255,255,0.95) !important; }
-
-    .logo h1 { font-size: 1.8rem; font-weight: 800; color: var(--gray-900); letter-spacing: -0.5px; display: flex; align-items: center; gap: 10px; }
-    .logo h1 i { color: var(--primary); font-size: 1.6rem; }
-    .logo p { font-size: 0.65rem; font-weight: 700; color: var(--gray-600); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
-
-    nav { display: flex; align-items: center; gap: 8px; }
-
-    nav a {
-      color: var(--gray-700); padding: 8px 16px; font-weight: 600; font-size: 0.9rem;
-      text-decoration: none; transition: all 0.3s ease; border-radius: 30px; position: relative;
-    }
-
-    nav a:hover { color: var(--primary); background: rgba(46,125,50,0.08); }
-
-    nav a::after {
-      content: ''; position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%);
-      width: 0; height: 2px; background: var(--primary); border-radius: 2px; transition: width 0.3s ease;
-    }
-
-    nav a:hover::after { width: 60%; }
-
-    nav a.active { color: var(--primary); background: rgba(46,125,50,0.1); }
-    nav a.active::after { width: 60%; }
-
-    /* ===== HERO ===== */
-    .page-hero {
-      min-height: 56vh;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center; padding: 80px 6% 50px; position: relative;
-    }
-
-    .page-hero-content { max-width: 860px; animation: fadeInUp 1s ease-out; }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Badge — matches index */
-    .hero-badge {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 28px; border-radius: 60px;
-      font-weight: 700; font-size: 0.85rem; color: #fff;
-      box-shadow: 0 4px 15px rgba(46,125,50,0.3);
-      margin-bottom: 28px; letter-spacing: 0.5px;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .page-hero h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800;
-      color: var(--gray-900); line-height: 1.1; margin-bottom: 20px; letter-spacing: -1px;
-    }
-
-    .page-hero h2 span {
-      color: var(--primary); position: relative; display: inline-block;
-    }
-
-    .page-hero h2 span::after {
-      content: ''; position: absolute; bottom: 5px; left: 0;
-      width: 100%; height: 12px;
-      background: rgba(46,125,50,0.15); border-radius: 4px; z-index: -1;
-    }
-
-    .page-hero p { font-size: 1.1rem; color: var(--gray-500); max-width: 620px; margin: 0 auto 32px; line-height: 1.7; }
-
-    /* Award pills */
-    .hero-awards { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-bottom: 36px; }
-
-    .award-pill {
-      background: white; padding: 8px 20px; border-radius: 40px;
-      font-size: 0.85rem; font-weight: 600; color: var(--gray-700);
-      box-shadow: var(--shadow-sm); border: 1px solid var(--gray-200);
-      display: flex; align-items: center; gap: 8px; transition: all 0.3s ease;
-    }
-
-    .award-pill:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--primary-light); }
-    .award-pill i { color: var(--accent); }
-
-    /* Btn group */
-    .btn-group { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      padding: 14px 32px; border-radius: 60px; font-weight: 700; color: white;
-      font-size: 0.95rem; transition: all 0.3s ease;
-      box-shadow: 0 8px 25px rgba(46,125,50,0.35);
-      border: none; cursor: pointer;
-      display: inline-flex; align-items: center; gap: 10px;
-      text-decoration: none; position: relative; overflow: hidden;
-    }
-
-    .btn-primary::before {
-      content: ''; position: absolute; top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s ease;
-    }
-
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(46,125,50,0.45); }
-    .btn-primary:hover::before { left: 100%; }
-
-    .btn-outline {
-      background: white; border: 2px solid var(--gray-300);
-      padding: 14px 32px; border-radius: 60px; font-weight: 700;
-      color: var(--gray-800); text-decoration: none;
-      display: inline-flex; align-items: center; gap: 10px;
-      transition: all 0.3s ease; box-shadow: var(--shadow-sm);
-    }
-
-    .btn-outline:hover { border-color: var(--primary); color: var(--primary); transform: translateY(-3px); box-shadow: var(--shadow-md); }
-
-    /* ===== STATS BAR ===== */
-    .stats-bar {
-      display: flex; justify-content: center; flex-wrap: wrap;
-      max-width: 900px; margin: 60px auto 0;
-      background: white; border-radius: 24px;
-      border: 1px solid var(--gray-200); box-shadow: var(--shadow-md); overflow: hidden;
-    }
-
-    .stat-item {
-      flex: 1; min-width: 160px; padding: 28px 20px;
-      text-align: center; position: relative; transition: background 0.3s ease;
-    }
-
-    .stat-item:not(:last-child)::after {
-      content: ''; position: absolute; right: 0; top: 20%; height: 60%;
-      width: 1px; background: var(--gray-200);
-    }
-
-    .stat-item:hover { background: rgba(46,125,50,0.03); }
-
-    .stat-number {
-      font-family: 'Playfair Display', serif; font-size: 2.2rem;
-      font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 6px;
-    }
-
-    .stat-label { font-size: 0.8rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.5px; }
-
-    /* ===== SECTIONS ===== */
-    .section { padding: 80px 6%; position: relative; }
-
-    .section-header { text-align: center; margin-bottom: 60px; }
-
-    .section-label {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(46,125,50,0.1); color: var(--primary);
-      padding: 6px 20px; border-radius: 30px; font-size: 0.8rem;
-      font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
-      color: var(--gray-900); margin-bottom: 16px; letter-spacing: -0.5px;
-    }
-
-    .section-subtitle { color: var(--gray-500); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
-
-    /* ===== ACHIEVEMENT CARDS ===== */
-    .achievements-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px; max-width: 1200px; margin: 0 auto;
-    }
-
-    .achievement-card {
-      background: white; border-radius: 24px; padding: 40px 30px;
-      text-align: center; border: 1px solid var(--gray-200);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative; overflow: hidden; box-shadow: var(--shadow-sm);
-    }
-
-    .achievement-card::before {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 100%; height: 4px;
-      background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--primary-light));
-      transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
-    }
-
-    .achievement-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); border-color: transparent; }
-    .achievement-card:hover::before { transform: scaleX(1); }
-
-    .achievement-icon {
-      width: 70px; height: 70px; margin: 0 auto 20px;
-      background: linear-gradient(135deg, rgba(46,125,50,0.1), rgba(46,125,50,0.05));
-      border-radius: 20px; display: flex; align-items: center; justify-content: center;
-      font-size: 1.8rem; color: var(--primary); transition: all 0.3s ease;
-    }
-
-    .achievement-card:hover .achievement-icon {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: white; transform: scale(1.1) rotate(-5deg);
-      box-shadow: 0 10px 25px rgba(46,125,50,0.3);
-    }
-
-    .achievement-card h3 { font-size: 1.2rem; color: var(--gray-900); margin-bottom: 12px; font-weight: 700; }
-    .achievement-card p  { color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; }
-
-    /* ===== AWARDS GALLERY ===== */
-    .awards-gallery {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 25px; max-width: 1200px; margin: 0 auto;
-    }
-
-    .award-item {
-      background: white; border-radius: 24px; overflow: hidden;
-      border: 1px solid var(--gray-200);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .award-item:hover { transform: translateY(-10px) scale(1.02); border-color: transparent; box-shadow: var(--shadow-xl), var(--shadow-glow); }
-
-    .award-image-wrap { position: relative; overflow: hidden; height: 200px; }
-
-    .award-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
-    .award-item:hover img { transform: scale(1.1); }
-
-    .award-item p {
-      padding: 16px 20px; text-align: center;
-      font-weight: 600; color: var(--gray-900); background: white; font-size: 0.9rem;
-    }
-
-    /* ===== PROJECT CATEGORIES ===== */
-    .project-category { margin-bottom: 50px; }
-
-    .category-heading {
-      font-size: 1.3rem; font-weight: 700; color: var(--primary);
-      margin-bottom: 20px; padding-left: 16px;
-      border-left: 4px solid var(--primary);
-      display: flex; align-items: center; gap: 12px;
-    }
-
-    .project-list { display: flex; flex-wrap: wrap; gap: 12px; }
-
-    .project-tag {
-      background: white; border: 2px solid var(--gray-200); border-radius: 30px;
-      padding: 10px 20px; font-weight: 600; color: var(--gray-700);
-      transition: all 0.3s ease; font-size: 0.9rem;
-      display: flex; align-items: center; gap: 10px;
-      box-shadow: var(--shadow-sm); cursor: default;
-    }
-
-    .project-tag:hover {
-      background: var(--primary); border-color: var(--primary); color: white;
-      transform: translateY(-3px); box-shadow: var(--shadow-md);
-    }
-
-    .project-tag i { font-size: 0.9rem; transition: transform 0.3s; }
-    .project-tag:hover i { transform: scale(1.2); }
-
-    /* ===== EXPERTISE GRID ===== */
-    .expertise-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px; max-width: 1200px; margin: 0 auto;
-    }
-
-    .expertise-card {
-      background: white; border-radius: 24px; padding: 40px 30px;
-      text-align: center; border: 1px solid var(--gray-200);
-      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      position: relative; overflow: hidden; box-shadow: var(--shadow-sm);
-    }
-
-    .expertise-card::before {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 100%; height: 4px;
-      background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--primary-light));
-      transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
-    }
-
-    .expertise-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); border-color: transparent; }
-    .expertise-card:hover::before { transform: scaleX(1); }
-
-    .expertise-icon {
-      width: 70px; height: 70px; margin: 0 auto 20px;
-      background: linear-gradient(135deg, rgba(46,125,50,0.1), rgba(46,125,50,0.05));
-      border-radius: 20px; display: flex; align-items: center; justify-content: center;
-      font-size: 1.8rem; color: var(--primary); transition: all 0.3s ease;
-    }
-
-    .expertise-card:hover .expertise-icon {
-      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: white; transform: scale(1.1) rotate(-5deg);
-      box-shadow: 0 10px 25px rgba(46,125,50,0.3);
-    }
-
-    .expertise-card h3 { font-size: 1.2rem; color: var(--gray-900); margin-bottom: 12px; font-weight: 700; }
-    .expertise-card p  { color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; }
-
-    /* ===== SERVICE TABLE ===== */
-    .service-table {
-      width: 100%; border-collapse: collapse; background: white;
-      border-radius: 24px; overflow: hidden; margin: 0 auto;
-      border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); max-width: 1200px;
-    }
-
-    .service-table th, .service-table td { padding: 16px 22px; text-align: left; border-bottom: 1px solid var(--gray-200); }
-    .service-table th { background: linear-gradient(135deg, var(--primary-dark), var(--primary)); color: white; font-weight: 700; font-size: 0.9rem; }
-    .service-table td { color: var(--gray-700); font-size: 0.9rem; }
-    .service-table tbody tr:hover { background: var(--gray-50); }
-    .service-table tbody tr:last-child td { border-bottom: none; }
-
-    /* ===== CONTACT SECTION ===== */
-    .contact-flex {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 40px; max-width: 1100px; margin: 0 auto;
-    }
-
-    .info-panel {
-      background: white; border-radius: 28px; padding: 40px;
-      border: 1px solid var(--gray-200); box-shadow: var(--shadow-sm); transition: all 0.3s ease;
-    }
-
-    .info-panel:hover { box-shadow: var(--shadow-lg); }
-
-    .info-panel h3 { color: var(--gray-900); font-size: 1.4rem; margin-bottom: 24px; display: flex; align-items: center; gap: 12px; }
-    .info-panel h3 i { color: var(--primary); font-size: 1.2rem; }
-
-    .contact-detail {
-      display: flex; align-items: flex-start; gap: 16px;
-      margin-bottom: 16px; padding: 14px; border-radius: 16px; transition: all 0.3s ease;
-    }
-
-    .contact-detail:hover { background: var(--gray-50); }
-
-    .contact-detail i {
-      width: 40px; height: 40px; background: rgba(46,125,50,0.1);
-      border-radius: 10px; display: flex; align-items: center; justify-content: center;
-      color: var(--primary); font-size: 1rem; flex-shrink: 0;
-    }
-
-    .contact-detail div strong { color: var(--gray-900); font-size: 0.9rem; display: block; margin-bottom: 3px; }
-    .contact-detail div span,
-    .contact-detail div a { color: var(--gray-600); font-size: 0.88rem; text-decoration: none; transition: color 0.3s; }
-    .contact-detail div a:hover { color: var(--primary); }
-
-    .social-links { display: flex; gap: 12px; margin-top: 24px; }
-
-    .social-links a {
-      width: 44px; height: 44px; border-radius: 12px; background: var(--gray-100);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--gray-600); font-size: 1.2rem;
-      transition: all 0.3s ease; text-decoration: none;
-    }
-
-    .social-links a:hover { background: var(--primary); color: white; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(46,125,50,0.3); }
-
-    .modern-input {
-      width: 100%; padding: 16px 20px; margin-bottom: 16px;
-      border-radius: 16px; border: 2px solid var(--gray-200);
-      background: var(--gray-50); color: var(--gray-900);
-      font-size: 0.95rem; font-family: 'Inter', sans-serif; transition: all 0.3s ease;
-    }
-
-    .modern-input:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(46,125,50,0.1); }
-    .modern-input::placeholder { color: var(--gray-400); }
-    textarea.modern-input { border-radius: 20px; resize: vertical; min-height: 120px; }
-
-    .form-footer {
-      margin-top: 16px; text-align: center; padding: 14px;
-      background: rgba(46,125,50,0.05); border-radius: 14px;
-      color: var(--gray-600); font-size: 0.88rem; font-weight: 600;
-    }
-
-    .form-footer i { color: var(--accent); }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: linear-gradient(135deg, var(--dark), #0f0f0f);
-      text-align: center; padding: 60px 20px 40px;
-      border-top: 1px solid rgba(46,125,50,0.2);
-      color: var(--gray-500); position: relative; overflow: hidden;
-    }
-
-    footer::before {
-      content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-      width: 100px; height: 3px;
-      background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    }
-
-    footer p { margin: 8px 0; font-size: 0.9rem; }
-
-    footer .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 8px; }
-
-    footer .footer-awards {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(255,215,0,0.1); padding: 8px 20px;
-      border-radius: 30px; margin-top: 16px;
-      color: var(--accent); font-weight: 600; font-size: 0.85rem;
-    }
-
-    /* ===== FLOATING BUTTONS ===== */
-    .whatsapp-float, .call-float {
-      position: fixed; bottom: 28px; width: 56px; height: 56px;
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-size: 26px; color: white; z-index: 99; text-decoration: none;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      border: 2px solid rgba(255,255,255,0.2);
-    }
-
-    .whatsapp-float { right: 28px; background: linear-gradient(135deg, #25D366, #128C7E); }
-    .call-float    { right: 100px; background: linear-gradient(135deg, #1E88E5, #1565C0); }
-
-    .whatsapp-float:hover, .call-float:hover { transform: scale(1.15) rotate(-5deg); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
-
-    .whatsapp-float::after, .call-float::after {
-      content: attr(data-tooltip); position: absolute; right: 70px;
-      background: var(--gray-900); color: white; padding: 6px 14px;
-      border-radius: 8px; font-size: 0.8rem; font-weight: 600;
-      white-space: nowrap; opacity: 0; pointer-events: none;
-      transition: all 0.3s ease; transform: translateX(10px);
-    }
-
-    .whatsapp-float:hover::after, .call-float:hover::after { opacity: 1; transform: translateX(0); }
-
-    /* ===== SCROLL REVEAL ===== */
-    .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-    .reveal.active { opacity: 1; transform: translateY(0); }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      header { padding: 12px 4%; }
-      nav { width: 100%; justify-content: center; margin-top: 12px; gap: 4px; }
-      nav a { padding: 6px 12px; font-size: 0.8rem; }
-
-      .page-hero { min-height: auto; padding: 60px 4% 30px; }
-      .stats-bar { margin: 40px 4% 0; border-radius: 18px; }
-      .stat-item { min-width: 120px; padding: 20px 14px; }
-      .stat-number { font-size: 1.7rem; }
-
-      .section { padding: 60px 4%; }
-      .achievements-grid, .expertise-grid, .awards-gallery { grid-template-columns: 1fr; }
-      .contact-flex { grid-template-columns: 1fr; gap: 24px; }
-      .info-panel { padding: 28px; }
-
-      .service-table th, .service-table td { padding: 12px; font-size: 0.8rem; }
-
-      .whatsapp-float::after, .call-float::after { display: none; }
-    }
-
-    ::selection { background: rgba(46,125,50,0.2); color: var(--primary-dark); }
-    html { scroll-behavior: smooth; }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{--primary:#2E7D32;--primary-dark:#1b5e20;--primary-light:#4CAF50;--accent:#FFD700;--dark:#0a0a0a;--dark-card:#1a1a1a;--gray-50:#FAFAFA;--gray-100:#F5F5F5;--gray-200:#EEEEEE;--gray-300:#E0E0E0;--gray-400:#BDBDBD;--gray-500:#9E9E9E;--gray-600:#757575;--gray-700:#616161;--gray-800:#424242;--gray-900:#212121;--shadow-sm:0 1px 2px 0 rgba(0,0,0,0.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);--shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);--shadow-xl:0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04);--shadow-glow:0 0 40px rgba(46,125,50,0.15);}
+    body{font-family:'Inter',sans-serif;background:var(--gray-50);overflow-x:hidden;color:var(--gray-900);line-height:1.6;}
+    .radiant-bg{position:fixed;inset:0;background:radial-gradient(ellipse at 20% 20%,rgba(46,125,50,0.03) 0%,transparent 50%),linear-gradient(180deg,var(--gray-50) 0%,var(--gray-100) 100%);z-index:-3;}
+    .glow-motion{position:fixed;width:100%;height:100%;top:0;left:0;background:radial-gradient(ellipse at 30% 20%,rgba(46,125,50,0.06) 0%,transparent 50%);animation:slowDrift 20s ease-in-out infinite alternate;z-index:-2;pointer-events:none;}
+    @keyframes slowDrift{0%{transform:translate(0,0) scale(1);opacity:0.5;}100%{transform:translate(-1%,2%) scale(1.05);opacity:0.6;}}
+    .spark-particles{position:fixed;width:100%;height:100%;pointer-events:none;z-index:-1;}
+    .spark{position:absolute;background:radial-gradient(circle,rgba(46,125,50,0.3),transparent);border-radius:50%;opacity:0;animation:floatSpark 12s infinite ease-in-out;}
+    @keyframes floatSpark{0%{transform:translateY(0) scale(0);opacity:0;}20%{opacity:0.4;}80%{opacity:0.2;}100%{transform:translateY(-100px) scale(1);opacity:0;}}
+    header{position:sticky;top:0;backdrop-filter:blur(20px) saturate(180%);background:rgba(255,255,255,0.85)!important;border-bottom:1px solid rgba(46,125,50,0.15);padding:14px 5%;display:flex;justify-content:space-between;align-items:center;z-index:100;flex-wrap:wrap;transition:all 0.3s ease;}
+    header.scrolled{padding:10px 5%;box-shadow:var(--shadow-md);background:rgba(255,255,255,0.95)!important;}
+    .logo h1{font-size:1.8rem;font-weight:800;color:var(--gray-900);letter-spacing:-0.5px;display:flex;align-items:center;gap:10px;}
+    .logo h1 i{color:var(--primary);font-size:1.6rem;}
+    .logo p{font-size:0.65rem;font-weight:700;color:var(--gray-600);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+    nav{display:flex;align-items:center;gap:8px;}
+    nav a{color:var(--gray-700);padding:8px 16px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.3s ease;border-radius:30px;position:relative;}
+    nav a:hover,nav a.active{color:var(--primary);background:rgba(46,125,50,0.08);}
+    nav a::after{content:'';position:absolute;bottom:4px;left:50%;transform:translateX(-50%);width:0;height:2px;background:var(--primary);border-radius:2px;transition:width 0.3s ease;}
+    nav a:hover::after,nav a.active::after{width:60%;}
+    .page-hero{min-height:50vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 6% 50px;position:relative;}
+    .page-hero-content{max-width:860px;animation:fadeInUp 1s ease-out;}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;transform:translateY(0);}}
+    .hero-badge{background:linear-gradient(135deg,var(--primary-dark),var(--primary));display:inline-flex;align-items:center;gap:8px;padding:10px 28px;border-radius:60px;font-weight:700;font-size:0.85rem;color:#fff;box-shadow:0 4px 15px rgba(46,125,50,0.3);margin-bottom:28px;letter-spacing:0.5px;}
+    .page-hero h2{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,4rem);font-weight:800;color:var(--gray-900);line-height:1.1;margin-bottom:20px;letter-spacing:-1px;}
+    .page-hero h2 span{color:var(--primary);position:relative;display:inline-block;}
+    .page-hero h2 span::after{content:'';position:absolute;bottom:5px;left:0;width:100%;height:12px;background:rgba(46,125,50,0.15);border-radius:4px;z-index:-1;}
+    .page-hero p{font-size:1.1rem;color:var(--gray-500);max-width:620px;margin:0 auto 32px;line-height:1.7;}
+    .stats-bar{display:flex;justify-content:center;flex-wrap:wrap;max-width:860px;margin:0 auto 80px;background:linear-gradient(135deg,#fdf8f0,#f5ede0);border-radius:28px;border:1px solid rgba(184,134,11,0.2);box-shadow:0 8px 40px rgba(184,134,11,0.12);overflow:hidden;position:relative;}
+    .stats-bar::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:60%;height:2px;background:linear-gradient(90deg,transparent,rgba(184,134,11,0.5),transparent);}
+    .stat-item{flex:1;min-width:160px;padding:40px 24px;text-align:center;position:relative;transition:background 0.3s ease;}
+    .stat-item:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;height:60%;width:1px;background:rgba(184,134,11,0.2);}
+    .stat-item:hover{background:rgba(184,134,11,0.05);}
+    .stat-number{font-family:'Playfair Display',serif;font-size:3rem;font-weight:800;color:#b8860b;line-height:1;margin-bottom:10px;letter-spacing:-1px;}
+    .stat-label{font-size:0.85rem;font-weight:600;color:#6b5c3e;text-transform:uppercase;letter-spacing:1px;line-height:1.4;}
+    .project-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;padding:20px 6%;position:sticky;top:70px;z-index:50;background:rgba(250,250,250,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-200);}
+    .project-tab{padding:10px 22px;border-radius:30px;border:2px solid var(--gray-200);background:white;color:var(--gray-600);font-weight:600;font-size:0.88rem;cursor:pointer;transition:all 0.3s ease;font-family:'Inter',sans-serif;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+    .project-tab:hover{border-color:var(--primary-light);color:var(--primary);transform:translateY(-2px);box-shadow:var(--shadow-sm);}
+    .project-tab.active{background:linear-gradient(135deg,var(--primary-dark),var(--primary));color:white;border-color:var(--primary);box-shadow:0 4px 15px rgba(46,125,50,0.3);}
+    .projects-wrapper{padding:60px 6% 100px;}
+    .project-section{margin-bottom:100px;scroll-margin-top:140px;}
+    .project-header{display:flex;align-items:flex-start;gap:24px;margin-bottom:40px;padding:32px;background:white;border-radius:24px;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);}
+    .project-icon{width:70px;height:70px;flex-shrink:0;background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:white;box-shadow:0 8px 20px rgba(46,125,50,0.3);}
+    .project-info h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;color:var(--gray-900);margin-bottom:8px;}
+    .project-info p{color:var(--gray-500);font-size:0.95rem;line-height:1.6;margin-bottom:12px;}
+    .project-meta{display:flex;flex-wrap:wrap;gap:10px;}
+    .meta-pill{background:rgba(46,125,50,0.08);color:var(--primary);padding:4px 14px;border-radius:20px;font-size:0.78rem;font-weight:700;}
+    .media-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;}
+    .media-item{border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);cursor:pointer;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);background:var(--gray-900);}
+    .media-item:hover{transform:translateY(-8px) scale(1.02);box-shadow:var(--shadow-xl),var(--shadow-glow);border-color:transparent;}
+    .media-item .img-wrap{position:relative;height:240px;overflow:hidden;}
+    .media-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s ease;}
+    .media-item:hover img{transform:scale(1.1);}
+    .media-item .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 60%);opacity:0;transition:opacity 0.4s ease;display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;}
+    .media-item:hover .overlay{opacity:1;}
+    .expand-btn{background:white;color:var(--gray-900);padding:8px 20px;border-radius:30px;font-weight:700;font-size:0.82rem;display:flex;align-items:center;gap:6px;transform:translateY(15px);transition:all 0.4s ease;border:none;cursor:pointer;}
+    .media-item:hover .expand-btn{transform:translateY(0);}
+    .expand-btn:hover{background:var(--primary);color:white;}
+    .video-item{border-radius:18px;overflow:hidden;border:1px solid var(--gray-200);box-shadow:var(--shadow-sm);transition:all 0.4s ease;background:#000;}
+    .video-item:hover{transform:translateY(-6px);box-shadow:var(--shadow-xl);}
+    .video-item video{width:100%;height:240px;object-fit:cover;display:block;}
+    .video-label{padding:14px 16px;background:var(--gray-900);color:white;font-size:0.85rem;font-weight:600;display:flex;align-items:center;gap:8px;}
+    .video-label i{color:#ff4444;}
+    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,0.96);z-index:9999;display:none;align-items:center;justify-content:center;}
+    .lightbox.active{display:flex;}
+    .lb-content{position:relative;max-width:92vw;max-height:92vh;display:flex;flex-direction:column;align-items:center;}
+    .lb-img{max-width:100%;max-height:82vh;object-fit:contain;border-radius:12px;box-shadow:0 25px 60px rgba(0,0,0,0.6);transition:opacity 0.2s ease;}
+    .lb-caption{color:white;margin-top:16px;font-size:1rem;font-weight:600;text-align:center;opacity:0.9;}
+    .lb-counter{color:rgba(255,255,255,0.5);font-size:0.82rem;text-align:center;margin-top:4px;}
+    .lb-close{position:absolute;top:-48px;right:0;background:rgba(255,255,255,0.1);border:none;color:white;width:40px;height:40px;border-radius:50%;font-size:1.1rem;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;}
+    .lb-close:hover{background:rgba(255,255,255,0.25);transform:rotate(90deg);}
+    .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:white;width:48px;height:48px;border-radius:50%;font-size:1.1rem;cursor:pointer;transition:all 0.3s ease;display:flex;align-items:center;justify-content:center;}
+    .lb-nav:hover{background:var(--primary);transform:translateY(-50%) scale(1.1);}
+    .lb-prev{left:-70px;}.lb-next{right:-70px;}
+    footer{background:linear-gradient(135deg,var(--dark),#0f0f0f);text-align:center;padding:60px 20px 40px;border-top:1px solid rgba(46,125,50,0.2);color:var(--gray-500);position:relative;overflow:hidden;}
+    footer::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:100px;height:3px;background:linear-gradient(90deg,transparent,var(--primary),transparent);}
+    footer p{margin:8px 0;font-size:0.9rem;}
+    .footer-brand{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:white;margin-bottom:8px;}
+    .footer-awards{display:inline-flex;align-items:center;gap:8px;background:rgba(255,215,0,0.1);padding:8px 20px;border-radius:30px;margin-top:16px;color:var(--accent);font-weight:600;font-size:0.85rem;}
+    .whatsapp-float,.call-float{position:fixed;bottom:28px;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:white;z-index:99;text-decoration:none;box-shadow:0 4px 20px rgba(0,0,0,0.2);transition:all 0.3s cubic-bezier(0.175,0.885,0.32,1.275);border:2px solid rgba(255,255,255,0.2);}
+    .whatsapp-float{right:28px;background:linear-gradient(135deg,#25D366,#128C7E);}
+    .call-float{right:100px;background:linear-gradient(135deg,#1E88E5,#1565C0);}
+    .whatsapp-float:hover,.call-float:hover{transform:scale(1.15) rotate(-5deg);}
+    .reveal{opacity:0;transform:translateY(40px);transition:all 0.8s cubic-bezier(0.175,0.885,0.32,1.275);}
+    .reveal.active{opacity:1;transform:translateY(0);}
+    @media(max-width:768px){header{padding:12px 4%;}nav{width:100%;justify-content:center;margin-top:12px;gap:4px;}nav a{padding:6px 12px;font-size:0.8rem;}.page-hero{padding:60px 4% 30px;}.project-nav{top:60px;padding:12px 4%;}.project-tab{padding:8px 14px;font-size:0.8rem;}.projects-wrapper{padding:40px 4% 60px;}.project-header{flex-direction:column;gap:16px;padding:24px;}.media-grid{grid-template-columns:1fr 1fr;gap:12px;}.media-item .img-wrap,.video-item video{height:180px;}.lb-prev{left:8px;}.lb-next{right:8px;}.stats-bar{margin:0 4% 60px;}}
+    .media-caption{padding:10px 14px 12px;background:white;}
+    .media-caption span{font-size:0.8rem;font-weight:600;color:#616161;display:block;}
+    html{scroll-behavior:smooth;}::selection{background:rgba(46,125,50,0.2);color:var(--primary-dark);}
   </style>
 </head>
 <body>
   <div class="radiant-bg"></div>
   <div class="glow-motion"></div>
-  <div class="floating-shapes">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-  </div>
   <div class="spark-particles" id="particleField"></div>
-
-  <!-- HEADER — matches index exactly -->
   <header id="mainHeader">
     <div class="logo">
       <h1><i class="fas fa-feather-alt"></i> AKANSHA-INTERIOR DECORATION HUB</h1>
-      <p>ISO 9001:2015 | Best Architect • Interior • Vastu • Turnkey</p>
+      <p>ISO 9001:2015 | Best Architect &bull; Interior &bull; Vastu &bull; Turnkey</p>
     </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
       <a href="gallery.html">Gallery</a>
       <a href="portfolio.html" class="active">Portfolio</a>
+      <a href="index.html#videos">Videos</a>
       <a href="index.html#reviews">Reviews</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- HERO — matches index/gallery style -->
   <section class="page-hero">
     <div class="page-hero-content">
-      <div class="hero-badge">
-        <i class="fas fa-briefcase"></i> Awards, Clients & Project Portfolio
-      </div>
-      <h2>Our Premium <span>Portfolio</span></h2>
-      <p>Award-winning projects across luxury residences, modular kitchens, hospitality chains, and Fortune 500 corporate installations.</p>
-
-      <div class="hero-awards">
-        <div class="award-pill"><i class="fas fa-trophy"></i> Best Modular Kitchen 2024</div>
-        <div class="award-pill"><i class="fas fa-medal"></i> Best Modern Architecture 2025</div>
-        <div class="award-pill"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified</div>
-      </div>
-
-      <div class="btn-group">
-        <a href="index.html#contact" class="btn-primary"><i class="fas fa-calendar-alt"></i> Free Consultation</a>
-        <a href="gallery.html" class="btn-outline"><i class="fas fa-images"></i> View Gallery</a>
-      </div>
+      <div class="hero-badge"><i class="fas fa-briefcase"></i> 5 Completed Projects &middot; Real Work &middot; Real Results</div>
+      <h2>Our <span>Project Portfolio</span></h2>
+      <p>Every project tells a story. From luxury salons to premium ultra luxury apartments &amp; villas &mdash; see the spaces we transformed with passion, precision and artistry.</p>
     </div>
   </section>
 
-  <!-- STATS BAR -->
-  <div class="stats-bar reveal">
-    <div class="stat-item">
-      <div class="stat-number">10+</div>
-      <div class="stat-label">Years Active</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">8+</div>
-      <div class="stat-label">Awards Won</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">50+</div>
-      <div class="stat-label">Clients</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">5★</div>
-      <div class="stat-label">Rated</div>
+  <div class="stats-bar reveal" style="margin:0 6% 80px;">
+    <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Projects<br>Completed</div></div>
+    <div class="stat-item"><div class="stat-number">3000+</div><div class="stat-label">Photos &amp;<br>Videos</div></div>
+    <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Years<br>Experience</div></div>
+    <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">% Client<br>Satisfaction</div></div>
+  </div>
+
+  <div class="project-nav">
+    <a href="#wellness-salon" class="project-tab active"><i class="fas fa-spa"></i> Wellness Beauty Salon</a>
+    <a href="#construction" class="project-tab"><i class="fas fa-hard-hat"></i> Construction Work</a>
+    <a href="#lulu-mall" class="project-tab"><i class="fas fa-store"></i> Lulu Mall</a>
+    <a href="#luxury-apartment" class="project-tab"><i class="fas fa-home"></i> Luxury Apartment</a>
+    <a href="#ultra-luxury-villa" class="project-tab"><i class="fas fa-building"></i> Ultra Luxury Flats &amp; Villa</a>
+  </div>
+
+  <div class="projects-wrapper">
+
+    <!-- WELLNESS BEAUTY SALON & SPA (formerly Body Craft) -->
+    <section class="project-section reveal" id="wellness-salon">
+      <div class="project-header">
+        <div class="project-icon"><i class="fas fa-spa"></i></div>
+        <div class="project-info">
+          <h2>Wellness Beauty Salon &amp; Spa</h2>
+          <p>Luxury salon and spa interior &mdash; green velvet shampoo stations, gold-framed mirrors, treatment rooms, and a premium corridor design with ambient lighting.</p>
+          <div class="project-meta">
+            <span class="meta-pill"><i class="fas fa-tag"></i> Hospitality &amp; Spa</span>
+            <span class="meta-pill"><i class="fas fa-images"></i> 14 Photos</span>
+            <span class="meta-pill"><i class="fas fa-map-marker-alt"></i> Lucknow</span>
+          </div>
+        </div>
+      </div>
+      <div class="media-grid" id="grid-wellness-salon">
+        <div class="media-item" data-project="wellness-salon" data-index="0"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-01-luxury-hair-wash-station.jpg" alt="Luxury Hair Wash Station" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Luxury Hair Wash Station</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="1"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-02-salon-corridor-interior.jpg" alt="Salon Corridor Interior" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Salon Corridor Interior</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="2"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-03-beauty-treatment-corridor.jpg" alt="Beauty Treatment Corridor" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Beauty Treatment Corridor</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="3"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-04-skin-consultation-room.jpg" alt="Skin Consultation Room" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Skin Consultation Room</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="4"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-05-premium-hair-styling-area.jpg" alt="Premium Hair Styling Area" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Premium Hair Styling Area</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="5"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-06-grooming-chair-station.jpg" alt="Grooming Chair Station" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Grooming Chair Station</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="6"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-07-luxury-salon-workstations.jpg" alt="Luxury Salon Workstations" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Luxury Salon Workstations</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="7"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-08-hair-spa-shampoo-lounge.jpg" alt="Hair Spa Shampoo Lounge" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Hair Spa Shampoo Lounge</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="8"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-09-spa-therapy-room.jpg" alt="Spa Therapy Room" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Spa Therapy Room</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="9"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-10-facial-treatment-room.jpg" alt="Facial Treatment Room" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Facial Treatment Room</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="10"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-11-wellness-relaxation-room.jpg" alt="Wellness Relaxation Room" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Wellness Relaxation Room</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="11"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-12-salon-interior-overview.jpg" alt="Salon Interior Overview" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Salon Interior Overview</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="12"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-13-spa-treatment-suite.jpg" alt="Spa Treatment Suite" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Spa Treatment Suite</span></div></div>
+        <div class="media-item" data-project="wellness-salon" data-index="13"><div class="img-wrap"><img src="images/bodycraft-salon-lucknow-14-salon-premium-washroom.jpg" alt="Salon Premium Washroom" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Salon Premium Washroom</span></div></div>
+      </div>
+    </section>
+
+    <!-- CONSTRUCTION WORK -->
+    <section class="project-section reveal" id="construction">
+      <div class="project-header">
+        <div class="project-icon"><i class="fas fa-hard-hat"></i></div>
+        <div class="project-info">
+          <h2>Construction Work</h2>
+          <p>On-site construction and civil work &mdash; showcasing the quality of structural and finishing work we deliver on every project.</p>
+          <div class="project-meta">
+            <span class="meta-pill"><i class="fas fa-tag"></i> Construction</span>
+            <span class="meta-pill"><i class="fas fa-images"></i> 11 Photos</span>
+            <span class="meta-pill"><i class="fas fa-map-marker-alt"></i> Pan-India</span>
+          </div>
+        </div>
+      </div>
+      <div class="media-grid" id="grid-construction">
+        <div class="media-item" data-project="construction" data-index="0"><div class="img-wrap"><img src="images/construction-project-01-fire-damaged-commercial-interior.jpg" alt="Commercial Interior Renovation" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Commercial Interior Renovation</span></div></div>
+        <div class="media-item" data-project="construction" data-index="1"><div class="img-wrap"><img src="images/construction-project-02-commercial-metal-partition-framework.jpg" alt="Metal Partition Framework" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Metal Partition Framework</span></div></div>
+        <div class="media-item" data-project="construction" data-index="2"><div class="img-wrap"><img src="images/construction-project-03-interior-brick-partition-work.jpg" alt="Brick Partition Work" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Brick Partition Work</span></div></div>
+        <div class="media-item" data-project="construction" data-index="3"><div class="img-wrap"><img src="images/construction-project-04-interior-demolition-work.jpg" alt="Interior Demolition Work" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Interior Demolition Work</span></div></div>
+        <div class="media-item" data-project="construction" data-index="4"><div class="img-wrap"><img src="images/construction-project-05-steel-frame-partition-installation.jpg" alt="Steel Frame Partition" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Steel Frame Partition</span></div></div>
+        <div class="media-item" data-project="construction" data-index="5"><div class="img-wrap"><img src="images/construction-project-06-structural-demolition-phase.jpg" alt="Structural Demolition Phase" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Structural Demolition Phase</span></div></div>
+        <div class="media-item" data-project="construction" data-index="6"><div class="img-wrap"><img src="images/construction-project-07-g3-building-construction-front-view.jpg" alt="G3 Building Front View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>G3 Building Front View</span></div></div>
+        <div class="media-item" data-project="construction" data-index="7"><div class="img-wrap"><img src="images/construction-project-08-g3-building-construction-side-view.jpg" alt="G3 Building Side View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>G3 Building Side View</span></div></div>
+        <div class="media-item" data-project="construction" data-index="8"><div class="img-wrap"><img src="images/construction-project-09-modern-villa-exterior-night-view.jpg" alt="Modern Villa Exterior Night View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Modern Villa Exterior Night View</span></div></div>
+        <div class="media-item" data-project="construction" data-index="9"><div class="img-wrap"><img src="images/construction-project-10-residential-construction-project.jpg" alt="Residential Construction Project" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Residential Construction Project</span></div></div>
+        <div class="media-item" data-project="construction" data-index="10"><div class="img-wrap"><img src="images/construction-project-11-multi-storey-building-under-construction.jpg" alt="Multi Storey Building Construction" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Multi Storey Building Construction</span></div></div>
+      </div>
+    </section>
+
+    <!-- LULU MALL -->
+    <section class="project-section reveal" id="lulu-mall">
+      <div class="project-header">
+        <div class="project-icon"><i class="fas fa-store"></i></div>
+        <div class="project-info">
+          <h2>Lulu Mall &mdash; Coffee Shop</h2>
+          <p>Premium coffee shop interior design at Lulu Mall &mdash; modern counter design, elegant customer seating, and complete commercial transformation.</p>
+          <div class="project-meta">
+            <span class="meta-pill"><i class="fas fa-tag"></i> Commercial</span>
+            <span class="meta-pill"><i class="fas fa-images"></i> 2 Photos</span>
+            <span class="meta-pill"><i class="fas fa-video"></i> 1 Video</span>
+          </div>
+        </div>
+      </div>
+      <div class="media-grid" id="grid-lulu">
+        <div class="media-item" data-project="lulu" data-index="0"><div class="img-wrap"><img src="images/coffee-shop-counter-interior-01.jpeg" alt="Coffee Shop Counter Interior" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Coffee Shop Counter Interior</span></div></div>
+        <div class="media-item" data-project="lulu" data-index="1"><div class="img-wrap"><img src="images/coffee-cafe-front-counter-design-02.jpeg" alt="Coffee Cafe Front Counter Design" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Coffee Cafe Front Counter Design</span></div></div>
+      </div>
+      <div style="margin-top:24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+        <div class="video-item"><video controls preload="none" poster="images/coffee-shop-counter-interior-01.jpeg"><source src="images/coffee-shop-interior-walkthrough-video.mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Lulu Mall Coffee Shop &mdash; Walkthrough Video</div></div>
+      </div>
+    </section>
+
+    <!-- PREMIUM LUXURY APARTMENT PROJECT (formerly Pawan Singh) -->
+    <section class="project-section reveal" id="luxury-apartment">
+      <div class="project-header">
+        <div class="project-icon"><i class="fas fa-home"></i></div>
+        <div class="project-info">
+          <h2>Premium Luxury Apartment Project</h2>
+          <p>Premium luxury apartment interior design &mdash; award-winning modular kitchen, premium bedroom suites, luxury living and dining spaces crafted with exceptional artistry.</p>
+          <div class="project-meta">
+            <span class="meta-pill"><i class="fas fa-tag"></i> Premium Luxury Residential</span>
+            <span class="meta-pill"><i class="fas fa-images"></i> 7 Photos</span>
+            <span class="meta-pill"><i class="fas fa-trophy"></i> Award Winning</span>
+          </div>
+        </div>
+      </div>
+      <div class="media-grid" id="grid-luxury-apartment">
+        <div class="media-item" data-project="luxury-apartment" data-index="0"><div class="img-wrap"><img src="images/bedroom-beige-theme.jpeg" alt="Bedroom Beige Theme" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Beige Theme</span></div></div>
+        <div class="media-item" data-project="luxury-apartment" data-index="1"><div class="img-wrap"><img src="images/bedroom.jpeg" alt="Bedroom Design" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Design</span></div></div>
+        <div class="media-item" data-project="luxury-apartment" data-index="2"><div class="img-wrap"><img src="images/dining-living-area-view.jpeg" alt="Dining Living Area View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Dining Living Area View</span></div></div>
+        <div class="media-item" data-project="luxury-apartment" data-index="3"><div class="img-wrap"><img src="images/living-room-sofa-luxury.jpeg" alt="Luxury Living Room Sofa" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Luxury Living Room Sofa</span></div></div>
+        <div class="media-item" data-project="luxury-apartment" data-index="4"><div class="img-wrap"><img src="images/master-bedroom-blue-theme.jpeg" alt="Master Bedroom Blue Theme" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Master Bedroom Blue Theme</span></div></div>
+        <div class="media-item" data-project="luxury-apartment" data-index="5"><div class="img-wrap"><img src="images/modular-kitchen-black-white.jpeg" alt="Modular Kitchen Black White" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Modular Kitchen Black White</span></div></div>
+        <div class="media-item" data-project="luxury-apartment" data-index="6"><div class="img-wrap"><img src="images/wash-area-crockery-unit.jpeg" alt="Wash Area Crockery Unit" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Wash Area Crockery Unit</span></div></div>
+      </div>
+    </section>
+
+    <!-- PREMIUM ULTRA LUXURY FLATS & VILLA PROJECTS (formerly Rishita Mulberry Flats) -->
+    <section class="project-section reveal" id="ultra-luxury-villa">
+      <div class="project-header">
+        <div class="project-icon"><i class="fas fa-building"></i></div>
+        <div class="project-info">
+          <h2>Premium Ultra Luxury Flats &amp; Villa Projects</h2>
+          <p>Premium ultra luxury residential apartments and villa interiors &mdash; modern finishes, elegant living spaces, and smart space utilization crafted for the most discerning clients.</p>
+          <div class="project-meta">
+            <span class="meta-pill"><i class="fas fa-tag"></i> Ultra Luxury Residential</span>
+            <span class="meta-pill"><i class="fas fa-images"></i> 63 Photos</span>
+            <span class="meta-pill"><i class="fas fa-video"></i> 9 Walkthrough Videos</span>
+            <span class="meta-pill"><i class="fas fa-map-marker-alt"></i> Lucknow</span>
+          </div>
+        </div>
+      </div>
+      <div class="media-grid" id="grid-ultra-luxury">
+        <div class="media-item" data-project="ultra-luxury" data-index="0"><div class="img-wrap"><img src="images/Bedroom_Bed_Corner_with_Shelving.jpg" alt="Bedroom Bed Corner With Shelving" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Bed Corner With Shelving</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="1"><div class="img-wrap"><img src="images/Bedroom_Green_Slat_Wall_and_Wardrobe.jpg" alt="Bedroom Green Slat Wall And Wardrobe" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Green Slat Wall And Wardrobe</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="2"><div class="img-wrap"><img src="images/Bedroom_Green_Wardrobe_Full_View.jpg" alt="Bedroom Green Wardrobe Full View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Green Wardrobe Full View</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="3"><div class="img-wrap"><img src="images/Bedroom_Grey_Wardrobe_Vanity.jpg" alt="Bedroom Grey Wardrobe Vanity" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Grey Wardrobe Vanity</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="4"><div class="img-wrap"><img src="images/Bedroom_Grey_Wardrobe_with_Vanity.jpg" alt="Bedroom Grey Wardrobe With Vanity" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Grey Wardrobe With Vanity</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="5"><div class="img-wrap"><img src="images/Bedroom_Wood_AC_False_Ceiling.jpg" alt="Bedroom Wood Ac False Ceiling" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Wood Ac False Ceiling</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="6"><div class="img-wrap"><img src="images/Bedroom_Wood_Chevron_Accent_Wall.jpg" alt="Bedroom Wood Chevron Accent Wall" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Wood Chevron Accent Wall</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="7"><div class="img-wrap"><img src="images/Bedroom_Wood_Dressing_Vanity.jpg" alt="Bedroom Wood Dressing Vanity" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Wood Dressing Vanity</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="8"><div class="img-wrap"><img src="images/Bedroom_Wood_Window_Storage_Bench.jpg" alt="Bedroom Wood Window Storage Bench" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Wood Window Storage Bench</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="9"><div class="img-wrap"><img src="images/Decorative_Partition_Display_Shelf.jpg" alt="Decorative Partition Display Shelf" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Decorative Partition Display Shelf</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="10"><div class="img-wrap"><img src="images/Entrance_Foyer_Steps_Design.jpg" alt="Entrance Foyer Steps Design" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Entrance Foyer Steps Design</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="11"><div class="img-wrap"><img src="images/Entrance_Main_Door_Wood_Paneling.jpg" alt="Entrance Main Door Wood Paneling" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Entrance Main Door Wood Paneling</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="12"><div class="img-wrap"><img src="images/Entry_Hallway_Wood_Wardrobe.jpg" alt="Entry Hallway Wood Wardrobe" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Entry Hallway Wood Wardrobe</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="13"><div class="img-wrap"><img src="images/Entry_Lobby_Lift_Area.jpg" alt="Entry Lobby Lift Area" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Entry Lobby Lift Area</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="14"><div class="img-wrap"><img src="images/Entryway_Fluted_Panel_with_Mirror.jpg" alt="Entryway Fluted Panel With Mirror" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Entryway Fluted Panel With Mirror</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="15"><div class="img-wrap"><img src="images/Guest_Room_Blue_Bed_Shelving.jpg" alt="Guest Room Blue Bed Shelving" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Guest Room Blue Bed Shelving</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="16"><div class="img-wrap"><img src="images/Guest_Room_Built_in_Closet.jpg" alt="Guest Room Built In Closet" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Guest Room Built In Closet</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="17"><div class="img-wrap"><img src="images/Guest_Room_Compact_Storage_Unit.jpg" alt="Guest Room Compact Storage Unit" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Guest Room Compact Storage Unit</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="18"><div class="img-wrap"><img src="images/Guest_Room_Single_Bed_Bookshelf.jpg" alt="Guest Room Single Bed Bookshelf" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Guest Room Single Bed Bookshelf</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="19"><div class="img-wrap"><img src="images/Hallway_Dark_Wood_Closet_View.jpg" alt="Hallway Dark Wood Closet View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Hallway Dark Wood Closet View</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="20"><div class="img-wrap"><img src="images/Hallway_Decorative_Wall_Molding.jpg" alt="Hallway Decorative Wall Molding" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Hallway Decorative Wall Molding</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="21"><div class="img-wrap"><img src="images/Hallway_Floral_Wallpaper_Mirror.jpg" alt="Hallway Floral Wallpaper Mirror" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Hallway Floral Wallpaper Mirror</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="22"><div class="img-wrap"><img src="images/Kitchen_Cabinet_Installation_View.jpg" alt="Kitchen Cabinet Installation View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Kitchen Cabinet Installation View</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="23"><div class="img-wrap"><img src="images/Kitchen_High_Gloss_Modular_Storage.jpg" alt="Kitchen High Gloss Modular Storage" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Kitchen High Gloss Modular Storage</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="24"><div class="img-wrap"><img src="images/Kitchen_L_Shape_Full_View.jpg" alt="Kitchen L Shape Full View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Kitchen L Shape Full View</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="25"><div class="img-wrap"><img src="images/Kitchen_Under_Cabinet_LED_Lighting.jpg" alt="Kitchen Under Cabinet Led Lighting" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Kitchen Under Cabinet Led Lighting</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="26"><div class="img-wrap"><img src="images/Living_Area_False_Ceiling_Design.jpg" alt="Living Area False Ceiling Design" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Living Area False Ceiling Design</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="27"><div class="img-wrap"><img src="images/Living_Room_Bar_Display_Unit.jpg" alt="Living Room Bar Display Unit" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Living Room Bar Display Unit</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="28"><div class="img-wrap"><img src="images/Living_Room_Divider_Shelf_Unit.jpg" alt="Living Room Divider Shelf Unit" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Living Room Divider Shelf Unit</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="29"><div class="img-wrap"><img src="images/Living_Room_Glass_Partition_Shelf.jpg" alt="Living Room Glass Partition Shelf" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Living Room Glass Partition Shelf</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="30"><div class="img-wrap"><img src="images/Living_Room_TV_Unit_Divider.jpg" alt="Living Room Tv Unit Divider" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Living Room Tv Unit Divider</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="31"><div class="img-wrap"><img src="images/Living_Room_Yellow_Sectional_Sofa.jpg" alt="Living Room Yellow Sectional Sofa" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Living Room Yellow Sectional Sofa</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="32"><div class="img-wrap"><img src="images/Living_Room_Yellow_Sofa_View.jpg" alt="Living Room Yellow Sofa View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Living Room Yellow Sofa View</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="33"><div class="img-wrap"><img src="images/Main_Entrance_Fluted_Wood_Design.jpg" alt="Main Entrance Fluted Wood Design" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Main Entrance Fluted Wood Design</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="34"><div class="img-wrap"><img src="images/Master_Bedroom_Green_Paneled_Wall.jpg" alt="Master Bedroom Green Paneled Wall" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Master Bedroom Green Paneled Wall</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="35"><div class="img-wrap"><img src="images/Master_Bedroom_LED_Backlit_Wall.jpg" alt="Master Bedroom Led Backlit Wall" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Master Bedroom Led Backlit Wall</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="36"><div class="img-wrap"><img src="images/Modern_Bathroom_Vanity_Mirror.jpg" alt="Modern Bathroom Vanity Mirror" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Modern Bathroom Vanity Mirror</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="37"><div class="img-wrap"><img src="images/Modern_Kitchen_Cream_Cabinets.jpg" alt="Modern Kitchen Cream Cabinets" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Modern Kitchen Cream Cabinets</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="38"><div class="img-wrap"><img src="images/Modern_TV_Console_Glossy_Finish.jpg" alt="Modern Tv Console Glossy Finish" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Modern Tv Console Glossy Finish</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="39"><div class="img-wrap"><img src="images/Modern_Wardrobe_Design_Interior.jpg" alt="Modern Wardrobe Design Interior" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Modern Wardrobe Design Interior</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="40"><div class="img-wrap"><img src="images/Modular_Kitchen_Counter_and_Storage.jpg" alt="Modular Kitchen Counter And Storage" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Modular Kitchen Counter And Storage</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="41"><div class="img-wrap"><img src="images/Purple_Velvet_Chaise_Lounge.jpg" alt="Purple Velvet Chaise Lounge" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Purple Velvet Chaise Lounge</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="42"><div class="img-wrap"><img src="images/Purple_Velvet_Lounge_Sofa.jpg" alt="Purple Velvet Lounge Sofa" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Purple Velvet Lounge Sofa</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="43"><div class="img-wrap"><img src="images/Walk_in_Closet_White_Shelving.jpg" alt="Walk In Closet White Shelving" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Walk In Closet White Shelving</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="44"><div class="img-wrap"><img src="images/rishita-mulberry-flats-01.jpg" alt="Bedroom Canopy Bed Balcony View" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Canopy Bed Balcony View</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="45"><div class="img-wrap"><img src="images/rishita-mulberry-flats-02.jpg" alt="Bedroom Interior Bed Pendant Light" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Bedroom Interior Bed Pendant Light</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="46"><div class="img-wrap"><img src="images/rishita-mulberry-flats-03.jpg" alt="Dining Room Interior Apartment" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Dining Room Interior Apartment</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="47"><div class="img-wrap"><img src="images/rishita-mulberry-flats-04.jpg" alt="Dining Room Interior Wooden Table Beige Chairs" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Dining Room Interior Wooden Table Beige Chairs</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="48"><div class="img-wrap"><img src="images/rishita-mulberry-flats-05.jpg" alt="Interior Dining And Living Room" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Interior Dining And Living Room</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="49"><div class="img-wrap"><img src="images/rishita-mulberry-flats-06.jpg" alt="Living Room Interior Grey Sofas" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Living Room Interior Grey Sofas</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="50"><div class="img-wrap"><img src="images/rishita-mulberry-flats-07.jpg" alt="Living Room Leather Sofas Chandelier" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Living Room Leather Sofas Chandelier</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="51"><div class="img-wrap"><img src="images/rishita-mulberry-flats-08.jpg" alt="Photo Room Interior Sofa Bed" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Photo Room Interior Sofa Bed</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="52"><div class="img-wrap"><img src="images/rishita-mulberry-flats-09.jpg" alt="Ultra Luxury Villa Interior View 09" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 09</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="53"><div class="img-wrap"><img src="images/rishita-mulberry-flats-10.jpg" alt="Ultra Luxury Villa Interior View 10" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 10</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="54"><div class="img-wrap"><img src="images/rishita-mulberry-flats-11.jpg" alt="Ultra Luxury Villa Interior View 11" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 11</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="55"><div class="img-wrap"><img src="images/rishita-mulberry-flats-12.jpg" alt="Ultra Luxury Villa Interior View 12" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 12</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="56"><div class="img-wrap"><img src="images/rishita-mulberry-flats-13.jpg" alt="Ultra Luxury Villa Interior View 13" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 13</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="57"><div class="img-wrap"><img src="images/rishita-mulberry-flats-14.jpg" alt="Ultra Luxury Villa Interior View 14" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 14</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="58"><div class="img-wrap"><img src="images/rishita-mulberry-flats-15.jpg" alt="Ultra Luxury Villa Interior View 15" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 15</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="59"><div class="img-wrap"><img src="images/rishita-mulberry-flats-16.jpg" alt="Ultra Luxury Villa Interior View 16" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 16</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="60"><div class="img-wrap"><img src="images/rishita-mulberry-flats-17.jpg" alt="Ultra Luxury Villa Interior View 17" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 17</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="61"><div class="img-wrap"><img src="images/rishita-mulberry-flats-18.jpg" alt="Ultra Luxury Villa Interior View 18" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 18</span></div></div>
+        <div class="media-item" data-project="ultra-luxury" data-index="62"><div class="img-wrap"><img src="images/rishita-mulberry-flats-19.jpg" alt="Ultra Luxury Villa Interior View 19" loading="lazy"><div class="overlay"><button class="expand-btn"><i class="fas fa-expand"></i> View</button></div></div><div class="media-caption"><span>Ultra Luxury Villa Interior View 19</span></div></div>
+      </div>
+      <div style="margin-top:32px;">
+        <h3 style="font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gray-900);margin-bottom:20px;display:flex;align-items:center;gap:10px;"><i class="fas fa-film" style="color:var(--primary);"></i> Premium Luxury Apartment and Villa Projects &mdash; Walkthrough Videos</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+          <div class="video-item"><video controls preload="none" poster="images/rishita-mulberry-flats-09.jpg"><source src="images/WhatsApp Video 2026-05-31 at 19.00.31 (1).mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Premium Luxury Apartment &amp; Villa &mdash; Walkthrough 1</div></div>
+          <div class="video-item"><video controls preload="none" poster="images/rishita-mulberry-flats-10.jpg"><source src="images/WhatsApp Video 2026-05-31 at 19.00.31 (2).mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Premium Luxury Apartment &amp; Villa &mdash; Walkthrough 2</div></div>
+          <div class="video-item"><video controls preload="none" poster="images/rishita-mulberry-flats-11.jpg"><source src="images/WhatsApp Video 2026-05-31 at 19.00.31.mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Premium Luxury Apartment &amp; Villa &mdash; Walkthrough 3</div></div>
+          <div class="video-item"><video controls preload="none" poster="images/rishita-mulberry-flats-12.jpg"><source src="images/WhatsApp Video 2026-05-31 at 19.00.32 (1).mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Premium Luxury Apartment &amp; Villa &mdash; Walkthrough 4</div></div>
+          <div class="video-item"><video controls preload="none" poster="images/rishita-mulberry-flats-13.jpg"><source src="images/WhatsApp Video 2026-05-31 at 19.00.32.mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Premium Luxury Apartment &amp; Villa &mdash; Walkthrough 5</div></div>
+          <div class="video-item"><video controls preload="none" poster="images/rishita-mulberry-flats-14.jpg"><source src="images/WhatsApp Video 2026-05-31 at 19.00.43 (1).mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Premium Luxury Apartment &amp; Villa &mdash; Walkthrough 6</div></div>
+          <div class="video-item"><video controls preload="none" poster="images/rishita-mulberry-flats-15.jpg"><source src="images/WhatsApp Video 2026-05-31 at 19.00.43.mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Premium Luxury Apartment &amp; Villa &mdash; Walkthrough 7</div></div>
+          <div class="video-item"><video controls preload="none" poster="images/rishita-mulberry-flats-16.jpg"><source src="images/WhatsApp Video 2026-05-31 at 19.00.44.mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Premium Luxury Apartment &amp; Villa &mdash; Walkthrough 8</div></div>
+          <div class="video-item"><video controls preload="none" poster="images/rishita-mulberry-flats-17.jpg"><source src="images/WhatsApp Video 2026-05-31 at 19.00.46.mp4" type="video/mp4"></video><div class="video-label"><i class="fas fa-play-circle"></i> Premium Luxury Apartment &amp; Villa &mdash; Walkthrough 9</div></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <div class="lb-content">
+      <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
+      <button class="lb-nav lb-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
+      <button class="lb-nav lb-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
+      <img src="" alt="" class="lb-img" id="lbImg">
+      <div class="lb-caption" id="lbCaption"></div>
+      <div class="lb-counter" id="lbCounter"></div>
     </div>
   </div>
 
-  <div style="max-width: 1400px; margin: 0 auto;">
-
-    <!-- Company Overview -->
-    <section class="section reveal">
-      <div class="section-header">
-        <div class="section-label"><i class="fas fa-building"></i> Since 2015</div>
-        <h2 class="section-title">About AKANSHA-INTERIOR DECORATION HUB</h2>
-        <p class="section-subtitle">A premier interior design and architectural firm recognized for technical excellence and innovative design solutions across residential, commercial, and hospitality sectors.</p>
-      </div>
-    </section>
-
-    <!-- Major Achievements -->
-    <section class="section reveal">
-      <div class="section-header">
-        <div class="section-label"><i class="fas fa-trophy"></i> Recognition</div>
-        <h2 class="section-title">Major Achievements</h2>
-        <p class="section-subtitle">Nationally recognized for design excellence and innovation</p>
-      </div>
-      <div class="achievements-grid">
-        <div class="achievement-card reveal">
-          <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
-          <h3>2024 Architecture Summit Meet</h3>
-          <p>Best Architect & Interior Designer — Modular Kitchens category, for excellence and innovation in modular kitchen design.</p>
-        </div>
-        <div class="achievement-card reveal">
-          <div class="achievement-icon"><i class="fas fa-medal"></i></div>
-          <h3>2025 Architecture Summit Meet</h3>
-          <p>Best Architect & Interior Designer — Modern Architecture category, for pioneering contributions to modern architectural aesthetics.</p>
-        </div>
-        <div class="achievement-card reveal">
-          <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
-          <h3>ISO 9001:2015 Certified</h3>
-          <p>International quality management certification affirming our commitment to consistent excellence and client satisfaction.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Awards Gallery -->
-    <section class="section reveal">
-      <div class="section-header">
-        <div class="section-label"><i class="fas fa-award"></i> Awards</div>
-        <h2 class="section-title">Awards & Recognitions</h2>
-        <p class="section-subtitle">A decade of industry honors and certifications</p>
-      </div>
-      <div class="awards-gallery">
-        <div class="award-item reveal">
-          <div class="award-image-wrap"><img src="images/24-gold-sponsor-award-2025.jpg" alt="Gold Sponsor Award 2025" loading="lazy"></div>
-          <p><i class="fas fa-trophy" style="color:var(--accent)"></i> Gold Sponsor Award 2025</p>
-        </div>
-        <div class="award-item reveal">
-          <div class="award-image-wrap"><img src="images/25-architecture-awards-collage.jpg" alt="Architecture Awards" loading="lazy"></div>
-          <p><i class="fas fa-medal" style="color:var(--accent)"></i> Architecture Awards Collage</p>
-        </div>
-        <div class="award-item reveal">
-          <div class="award-image-wrap"><img src="images/26-iso-9001-certification-akanksha.jpg" alt="ISO Certification" loading="lazy"></div>
-          <p><i class="fas fa-certificate" style="color:var(--accent)"></i> ISO 9001:2015 Certification</p>
-        </div>
-        <div class="award-item reveal">
-          <div class="award-image-wrap"><img src="images/28-architecture-reconnect-award-ceremony.jpg" alt="Award Ceremony" loading="lazy"></div>
-          <p><i class="fas fa-award" style="color:var(--accent)"></i> Architecture Reconnect Award</p>
-        </div>
-        <div class="award-item reveal">
-          <div class="award-image-wrap"><img src="images/29-architect-wow-award-2024.jpg" alt="WOW Award 2024" loading="lazy"></div>
-          <p><i class="fas fa-star" style="color:var(--accent)"></i> Architect WOW Award 2024</p>
-        </div>
-        <div class="award-item reveal">
-          <div class="award-image-wrap"><img src="images/30-award-event-architecture-summit.jpg" alt="Summit Award" loading="lazy"></div>
-          <p><i class="fas fa-trophy" style="color:var(--accent)"></i> Architecture Summit Award</p>
-        </div>
-        <div class="award-item reveal">
-          <div class="award-image-wrap"><img src="images/31-award-recognition-collage-akanksha.jpg" alt="Award Recognition" loading="lazy"></div>
-          <p><i class="fas fa-medal" style="color:var(--accent)"></i> Award Recognition Collage</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Project Portfolio -->
-    <section class="section reveal">
-      <div class="section-header">
-        <div class="section-label"><i class="fas fa-briefcase"></i> Projects</div>
-        <h2 class="section-title">Premium Project Portfolio</h2>
-        <p class="section-subtitle">Trusted by celebrities, corporates, hotel chains, and homeowners across India</p>
-      </div>
-
-      <div class="project-category reveal">
-        <div class="category-heading"><i class="fas fa-star"></i> Celebrity & High-End Residential</div>
-        <div class="project-list">
-          <div class="project-tag"><i class="fas fa-user-tie"></i> Pawan Singh Residence (Studio Designing & Execution)</div>
-          <div class="project-tag"><i class="fas fa-building"></i> Shalimar Valencia</div>
-          <div class="project-tag"><i class="fas fa-building"></i> Shalimar Mannat</div>
-          <div class="project-tag"><i class="fas fa-hard-hat"></i> Amrawati Developer</div>
-        </div>
-      </div>
-
-      <div class="project-category reveal">
-        <div class="category-heading"><i class="fas fa-hotel"></i> Commercial & Hospitality</div>
-        <div class="project-list">
-          <div class="project-tag"><i class="fas fa-shopping-bag"></i> Lulu Mall — Coffee Cup Outlet</div>
-          <div class="project-tag"><i class="fas fa-hotel"></i> Summit Hotels & Resorts (Full Execution)</div>
-          <div class="project-tag"><i class="fas fa-spa"></i> Bodycraft Salon & Spa</div>
-          <div class="project-tag"><i class="fas fa-spa"></i> Ads Spa (Full Designing & Execution)</div>
-          <div class="project-tag"><i class="fas fa-hotel"></i> Cherks Group of Hotels</div>
-          <div class="project-tag"><i class="fas fa-hotel"></i> Levana Group of Hotels</div>
-          <div class="project-tag"><i class="fas fa-building"></i> Best Western Hotels (As Per Norms)</div>
-          <div class="project-tag"><i class="fas fa-cut"></i> Perfect Personality — Slimming Center & Saloon</div>
-        </div>
-      </div>
-
-      <div class="project-category reveal">
-        <div class="category-heading"><i class="fas fa-handshake"></i> Real Estate Partnerships</div>
-        <div class="project-list">
-          <div class="project-tag"><i class="fas fa-home"></i> Sample Flat Development & Premium Project Executing</div>
-          <div class="project-tag"><i class="fas fa-handshake"></i> Rishita Builders & Levana Builders (Consulting)</div>
-        </div>
-      </div>
-
-      <div class="project-category reveal">
-        <div class="category-heading"><i class="fas fa-industry"></i> Corporate & Industrial Clients</div>
-        <div class="project-list">
-          <div class="project-tag"><i class="fas fa-industry"></i> Lafarge India Ltd</div>
-          <div class="project-tag"><i class="fas fa-car"></i> Tata Motors</div>
-          <div class="project-tag"><i class="fas fa-chart-line"></i> Tata Steel</div>
-          <div class="project-tag"><i class="fas fa-cogs"></i> Tata Timken</div>
-          <div class="project-tag"><i class="fas fa-truck"></i> Tata Cummins</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Core Expertise -->
-    <section class="section reveal">
-      <div class="section-header">
-        <div class="section-label"><i class="fas fa-gem"></i> Expertise</div>
-        <h2 class="section-title">Core Expertise</h2>
-        <p class="section-subtitle">Comprehensive design and execution capabilities under one roof</p>
-      </div>
-      <div class="expertise-grid">
-        <div class="expertise-card reveal">
-          <div class="expertise-icon"><i class="fas fa-cube"></i></div>
-          <h3>Architectural Visualization</h3>
-          <p>High-resolution 3D rendering and detailed 2D floor planning with vertical spatial design.</p>
-        </div>
-        <div class="expertise-card reveal">
-          <div class="expertise-icon"><i class="fas fa-utensils"></i></div>
-          <h3>Modular Solutions</h3>
-          <p>Award-winning modular kitchens featuring premium chimneys and intelligent vertical storage systems.</p>
-        </div>
-        <div class="expertise-card reveal">
-          <div class="expertise-icon"><i class="fas fa-key"></i></div>
-          <h3>Turnkey Hospitality</h3>
-          <p>End-to-end project delivery from interior civil works to final finishing with premium materials.</p>
-        </div>
-        <div class="expertise-card reveal">
-          <div class="expertise-icon"><i class="fas fa-drafting-compass"></i></div>
-          <h3>Vastu Consultation</h3>
-          <p>Integrating traditional Vastu principles with modern architecture for harmony and prosperity.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Service Portfolio Table -->
-    <section class="section reveal">
-      <div class="section-header">
-        <div class="section-label"><i class="fas fa-list"></i> Services</div>
-        <h2 class="section-title">Service Portfolio</h2>
-        <p class="section-subtitle">From concept to completion across every design discipline</p>
-      </div>
-      <table class="service-table">
-        <thead>
-          <tr>
-            <th>Service Category</th>
-            <th>Notable Projects</th>
-            <th>Features & Specializations</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Residential Interiors</strong></td>
-            <td>Studio Singh, Shalimar Valencia</td>
-            <td>Full-flat luxury renovations and master suites</td>
-          </tr>
-          <tr>
-            <td><strong>Modular Kitchens</strong></td>
-            <td>Residences & Commercial Spaces</td>
-            <td>2024 Award-Winning layouts with premium finishes</td>
-          </tr>
-          <tr>
-            <td><strong>Hospitality & Wellness</strong></td>
-            <td>Summit Hotels, Bodycraft Spa</td>
-            <td>Specialized spa, salon design and technical execution</td>
-          </tr>
-          <tr>
-            <td><strong>Modern Architecture</strong></td>
-            <td>Corporate & Residential Projects</td>
-            <td>2025 Award-Winning structural and aesthetic planning</td>
-          </tr>
-          <tr>
-            <td><strong>Corporate Installations</strong></td>
-            <td>Tata Motors, Tata Steel, Lafarge</td>
-            <td>Large-scale industrial and office interior fit-outs</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section reveal">
-      <div class="section-header">
-        <div class="section-label"><i class="fas fa-paper-plane"></i> Get In Touch</div>
-        <h2 class="section-title">Let's Create Wonder Together</h2>
-        <p class="section-subtitle">Ready to transform your space? Reach out for a free consultation</p>
-      </div>
-
-      <div class="contact-flex">
-        <div class="info-panel">
-          <h3><i class="fas fa-headset"></i> Consult Our Experts</h3>
-
-          <div class="contact-detail">
-            <i class="fas fa-building"></i>
-            <div>
-              <strong>AKANSHA-INTERIOR DECORATION HUB</strong>
-              <span>ISO 9001:2015 Certified | Pan-India Presence</span>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <i class="fas fa-phone-alt"></i>
-            <div>
-              <strong>Phone</strong>
-              <a href="tel:+919140097029">+91 91400 97029</a>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:interiorhub007@gmail.com">interiorhub007@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <i class="far fa-clock"></i>
-            <div>
-              <strong>Operating Hours</strong>
-              <span>9:30 AM – 9:00 PM (Daily)</span>
-            </div>
-          </div>
-
-          <div class="social-links">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          </div>
-        </div>
-
-        <div class="info-panel">
-          <form id="contactForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" placeholder="Your full name *" class="modern-input" required>
-            <input type="text" name="contact" placeholder="Email address or phone number *" class="modern-input" required>
-            <textarea name="project" placeholder="Tell us about your dream project (Home, Office, Modular Kitchen, Vastu, etc.)" class="modern-input" required></textarea>
-            <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
-              <i class="fas fa-paper-plane"></i> Get Free Estimate
-            </button>
-          </form>
-          <div class="form-footer">
-            <i class="fas fa-gift"></i> Free Site Visit • 3D Planning • Vastu Guidance included
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div><!-- /max-width wrapper -->
-
   <footer>
     <div class="footer-brand">AKANSHA-INTERIOR DECORATION HUB</div>
-    <p>© 2026 AKANSHA-INTERIOR DECORATION HUB — Best Architect & Interior Designer</p>
-    <p>ISO 9001:2015 Certified | Luxury & Hospitality Experts | Pan-India Presence</p>
-    <div class="footer-awards">
-      <i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)
-    </div>
+    <p>&copy; 2026 AKANSHA-INTERIOR DECORATION HUB &mdash; Best Architect &amp; Interior Designer</p>
+    <p>ISO 9001:2015 Certified | Luxury &amp; Hospitality Experts | Pan-India Presence</p>
+    <div class="footer-awards"><i class="fas fa-trophy"></i> Award Winner 2024 (Modular Kitchens) | 2025 (Modern Architecture)</div>
   </footer>
-
-  <a class="whatsapp-float" href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20am%20interested%20in%20your%20services.%20Can%20you%20help%20me%20with%20a%20consultation%3F" target="_blank" data-tooltip="Chat on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <a class="call-float" href="tel:+919140097029" data-tooltip="Call Us Now">
-    <i class="fas fa-phone-alt"></i>
-  </a>
+  <a class="whatsapp-float" href="https://wa.me/919140097029?text=Hi%20AKANSHA%2C%20I%20am%20interested%20in%20your%20services." target="_blank"><i class="fab fa-whatsapp"></i></a>
+  <a class="call-float" href="tel:+919140097029"><i class="fas fa-phone-alt"></i></a>
 
   <script>
-    // Spark particles
-    const sparkField = document.getElementById('particleField');
-    for (let i = 0; i < 40; i++) {
-      const sp = document.createElement('div');
-      sp.classList.add('spark');
-      const size = Math.random() * 4 + 2;
-      sp.style.width  = size + 'px';
-      sp.style.height = size + 'px';
-      sp.style.left   = Math.random() * 100 + '%';
-      sp.style.top    = Math.random() * 100 + '%';
-      sp.style.animationDuration = (Math.random() * 10 + 8) + 's';
-      sp.style.animationDelay   = (Math.random() * 5) + 's';
-      sparkField.appendChild(sp);
-    }
-
-    // Header scroll
-    const header = document.getElementById('mainHeader');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // Scroll reveal
-    const revealObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // Parallax shapes
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      document.querySelectorAll('.shape').forEach((shape, i) => {
-        const speed = 0.1 + i * 0.05;
-        shape.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.02}deg)`;
+    const pf=document.getElementById('particleField');
+    for(let i=0;i<40;i++){const s=document.createElement('div');s.className='spark';const sz=Math.random()*4+2;s.style.cssText=`width:${sz}px;height:${sz}px;left:${Math.random()*100}%;top:${Math.random()*100}%;animation-duration:${Math.random()*10+8}s;animation-delay:${Math.random()*5}s`;pf.appendChild(s);}
+    window.addEventListener('scroll',()=>document.getElementById('mainHeader').classList.toggle('scrolled',window.scrollY>50));
+    const sections=document.querySelectorAll('.project-section');
+    const tabs=document.querySelectorAll('.project-tab');
+    window.addEventListener('scroll',()=>{let cur='';sections.forEach(s=>{if(window.scrollY>=s.offsetTop-200)cur=s.id;});tabs.forEach(t=>{t.classList.toggle('active',t.getAttribute('href')==='#'+cur);});});
+    const lb=document.getElementById('lightbox');
+    const lbImg=document.getElementById('lbImg');
+    const lbCaption=document.getElementById('lbCaption');
+    const lbCounter=document.getElementById('lbCounter');
+    let allImgs=[],curIdx=0;
+    document.querySelectorAll('.media-item').forEach(item=>{
+      item.addEventListener('click',()=>{
+        const proj=item.dataset.project;
+        const projItems=Array.from(document.querySelectorAll(`.media-item[data-project="${proj}"]`));
+        allImgs=projItems.map(p=>({src:p.querySelector('img').src,alt:p.querySelector('img').alt}));
+        curIdx=parseInt(item.dataset.index);
+        openLB();
       });
     });
-
-    // Contact form
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', () => {
-        setTimeout(() => {
-          const toast = document.createElement('div');
-          toast.style.cssText = `
-            position:fixed; top:100px; left:50%;
-            transform:translateX(-50%) translateY(-20px);
-            background:linear-gradient(135deg,#1b5e20,#2e7d32);
-            color:white; padding:16px 32px; border-radius:16px;
-            font-weight:600; box-shadow:0 10px 40px rgba(46,125,50,0.3);
-            z-index:1000; opacity:0; transition:all 0.4s ease;
-            display:flex; align-items:center; gap:12px; font-family:Inter,sans-serif;
-          `;
-          toast.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Our expert will contact you within 2 hours.';
-          document.body.appendChild(toast);
-          requestAnimationFrame(() => { toast.style.opacity = '1'; toast.style.transform = 'translateX(-50%) translateY(0)'; });
-          setTimeout(() => {
-            toast.style.opacity = '0';
-            toast.style.transform = 'translateX(-50%) translateY(-20px)';
-            setTimeout(() => toast.remove(), 400);
-          }, 4000);
-        }, 500);
-      });
-    }
+    function openLB(){lbImg.src=allImgs[curIdx].src;lbCaption.textContent=allImgs[curIdx].alt;lbCounter.textContent=(curIdx+1)+' / '+allImgs.length;lb.classList.add('active');document.body.style.overflow='hidden';}
+    function closeLB(){lb.classList.remove('active');document.body.style.overflow='';}
+    function nav(d){curIdx=(curIdx+d+allImgs.length)%allImgs.length;lbImg.style.opacity='0';setTimeout(()=>{lbImg.src=allImgs[curIdx].src;lbCaption.textContent=allImgs[curIdx].alt;lbCounter.textContent=(curIdx+1)+' / '+allImgs.length;lbImg.style.opacity='1';},180);}
+    document.getElementById('lbClose').addEventListener('click',closeLB);
+    document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();nav(-1);});
+    document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();nav(1);});
+    lb.addEventListener('click',e=>{if(e.target===lb)closeLB();});
+    document.addEventListener('keydown',e=>{if(!lb.classList.contains('active'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')nav(-1);if(e.key==='ArrowRight')nav(1);});
+    const ro=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('active');}),{threshold:0.08});
+    document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
   </script>
 </body>
 </html>
